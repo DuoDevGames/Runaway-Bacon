@@ -1,11 +1,5 @@
-[gd_scene load_steps=39 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=22 format=3 uid="uid://ctp0qyrr86hdc"]
 
-[ext_resource type="Script" path="res://Lombinho.gd" id="1_y2e1g"]
-[ext_resource type="Texture2D" uid="uid://d0jyo2buahj4r" path="res://Sprites - Lombinho/Lombinho-Pulando6.png" id="2_6yxv6"]
-[ext_resource type="Texture2D" uid="uid://dkufmcqpelsbh" path="res://Sprites - Lombinho/Lombinho-Correndo1.png" id="2_bi6t4"]
-[ext_resource type="Texture2D" uid="uid://cfnbw2xdt0oyw" path="res://Sprites - Lombinho/Lombinho-Correndo2.png" id="3_1udp6"]
-[ext_resource type="Texture2D" uid="uid://c3lb8tcvy1m8u" path="res://Sprites - Lombinho/Lombinho-Pulando5.png" id="3_er6bu"]
-[ext_resource type="Texture2D" uid="uid://of31my4guo7e" path="res://Sprites - Lombinho/Lombinho-Piscando1.png" id="6_why8s"]
 [ext_resource type="Texture2D" uid="uid://di3pywfrpok0b" path="res://Objetos - Mundo 1/MadeiraEmPéMeio.png" id="7_gepag"]
 [ext_resource type="Texture2D" uid="uid://bg446ap2fi1qj" path="res://Objetos - Mundo 1/MadeiraEmPéCima.png" id="8_a87cv"]
 [ext_resource type="Texture2D" uid="uid://cowgxp5ata358" path="res://Objetos - Mundo 1/Chao704.png" id="8_jsy0b"]
@@ -17,65 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://cohee5gtfo55r" path="res://Objetos - Mundo 1/NuvemPequenaAlegre.png" id="11_gq7em"]
 [ext_resource type="Texture2D" uid="uid://bk6qta12r5cd2" path="res://Objetos - Mundo 1/Escada Direita.png" id="12_2pjbs"]
 [ext_resource type="Texture2D" uid="uid://18ecladimmdo" path="res://Objetos - Mundo 1/Céu.png" id="12_bwlyj"]
-[ext_resource type="Script" path="res://Scripts/BlocosVoadores 1.gd" id="15_n0h6a"]
-[ext_resource type="Texture2D" uid="uid://db6fgvwco0lse" path="res://Objetos - Mundo 1/Blocos Voadores/Bloco Vermelho/BlocoVoadorVermelho1.png" id="16_kbkmn"]
-[ext_resource type="Texture2D" uid="uid://du1h6fa7jsc6q" path="res://Objetos - Mundo 1/Blocos Voadores/Bloco Vermelho/BlocoVoadorVermelho2.png" id="17_bn4jt"]
-[ext_resource type="Texture2D" uid="uid://bdgspgyebebhb" path="res://Objetos - Mundo 1/Blocos Voadores/Bloco Vermelho/BlocoVoadorVermelho3.png" id="18_nqhs1"]
-[ext_resource type="Script" path="res://Bloco Voador Verde.gd" id="19_qiiri"]
-[ext_resource type="Texture2D" uid="uid://jxmatt5m4anh" path="res://Objetos - Mundo 1/Blocos Voadores/Bloco Verde/BlocoVerde1.png" id="20_y57ar"]
-[ext_resource type="Texture2D" uid="uid://c5qecikf5gh0f" path="res://Objetos - Mundo 1/Blocos Voadores/Bloco Verde/BlocoVerde2.png" id="21_k4j31"]
-[ext_resource type="Texture2D" uid="uid://k85nprk7f5ve" path="res://Objetos - Mundo 1/Blocos Voadores/Bloco Verde/BlocoVerde3.png" id="22_dy4s8"]
+[ext_resource type="PackedScene" uid="uid://c8q4vxqrdjdpd" path="res://Characters/lombinho.tscn" id="14_jqb0o"]
+[ext_resource type="PackedScene" uid="uid://dwleqb8kqxlqw" path="res://Blocks/bloco_voador_vermelho.tscn" id="18_np7pi"]
+[ext_resource type="PackedScene" uid="uid://0xdkw760671" path="res://Blocks/bloco_voador_verde.tscn" id="19_fikcx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3b5rq"]
 size = Vector2(20, 496)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_qrejp"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_6yxv6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_er6bu")
-}],
-"loop": false,
-"name": &"Jump",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_bi6t4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_1udp6")
-}],
-"loop": true,
-"name": &"Run",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_bi6t4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_bi6t4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_bi6t4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_bi6t4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_why8s")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ntuk"]
-size = Vector2(32.3501, 56.0238)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_622au"]
 size = Vector2(859.027, 128.261)
@@ -88,46 +29,6 @@ size = Vector2(685.206, 128.34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sgkuy"]
 size = Vector2(31.9541, 31.7438)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_yrne7"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("16_kbkmn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_bn4jt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_nqhs1")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3oga0"]
-size = Vector2(32.4796, 32.3745)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_e0igt"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("20_y57ar")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_k4j31")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_dy4s8")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k86lv"]
-size = Vector2(31.7438, 31.7438)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fw375"]
 animations = [{
@@ -146,32 +47,20 @@ radius = 15.7735
 [node name="Node2D" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [517.031]
 
+[node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer"]
+position = Vector2(1793, 252)
+scale = Vector2(5.60331, 2.12174)
+texture = ExtResource("12_bwlyj")
+
 [node name="InvisibleWall" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWall"]
 position = Vector2(-8, 296)
 shape = SubResource("RectangleShape2D_3b5rq")
-
-[node name="Lombinho" type="CharacterBody2D" parent="."]
-light_mask = 9
-position = Vector2(2666.25, 470.487)
-script = ExtResource("1_y2e1g")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Lombinho"]
-sprite_frames = SubResource("SpriteFrames_qrejp")
-autoplay = "default"
-frame_progress = 0.56394
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lombinho"]
-position = Vector2(0.0927124, 4.05176)
-shape = SubResource("RectangleShape2D_1ntuk")
-
-[node name="Camera2D" type="Camera2D" parent="Lombinho"]
-position = Vector2(0, 2)
-scale = Vector2(1e-05, 1e-05)
-zoom = Vector2(2, 2)
-limit_left = 10
-limit_bottom = 610
 
 [node name="Chão" type="Node" parent="."]
 
@@ -424,36 +313,6 @@ texture = ExtResource("12_2pjbs")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstáculos/Escada2"]
 polygon = PackedVector2Array(-80.0974, -80.0863, -47.7914, -79.9979, -47.8953, -48.3164, -15.8, -48.1676, -15.9489, -16.5188, 16.196, -16.3203, 16.1464, 15.7253, 48.0432, 15.7749, 47.944, 47.9198, 79.9897, 47.771, 80.0393, 80.0647, -80.0402, 80.0151)
 
-[node name="Bloco Voador 1" type="Node2D" parent="Obstáculos"]
-position = Vector2(2852.58, 437.292)
-script = ExtResource("15_n0h6a")
-
-[node name="Bloco Voador Vermelho" type="AnimatableBody2D" parent="Obstáculos/Bloco Voador 1"]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Obstáculos/Bloco Voador 1/Bloco Voador Vermelho"]
-sprite_frames = SubResource("SpriteFrames_yrne7")
-autoplay = "default"
-frame_progress = 0.596297
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Bloco Voador 1/Bloco Voador Vermelho"]
-position = Vector2(0.176014, 0.27883)
-shape = SubResource("RectangleShape2D_3oga0")
-
-[node name="Bloco Voador 2" type="Node2D" parent="Obstáculos"]
-position = Vector2(2948.62, 372.958)
-script = ExtResource("19_qiiri")
-
-[node name="Bloco Voador Verde" type="AnimatableBody2D" parent="Obstáculos/Bloco Voador 2"]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Obstáculos/Bloco Voador 2/Bloco Voador Verde"]
-sprite_frames = SubResource("SpriteFrames_e0igt")
-autoplay = "default"
-frame_progress = 0.939369
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Bloco Voador 2/Bloco Voador Verde"]
-position = Vector2(0.0207424, 0.326891)
-shape = SubResource("RectangleShape2D_k86lv")
-
 [node name="Núvens" type="Node" parent="."]
 
 [node name="Nuvem1" type="Node2D" parent="Núvens"]
@@ -528,11 +387,11 @@ sprite_frames = SubResource("SpriteFrames_fw375")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Núvens/Nuvem6/nuvem"]
 shape = SubResource("CircleShape2D_ceegl")
 
-[node name="Background" type="ParallaxBackground" parent="."]
+[node name="Bloco Voador 1" parent="." instance=ExtResource("18_np7pi")]
+position = Vector2(2869, 442)
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Background"]
+[node name="Bloco Voador 2" parent="." instance=ExtResource("19_fikcx")]
+position = Vector2(2988, 388)
 
-[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer"]
-position = Vector2(1784.69, 243.572)
-scale = Vector2(5.60331, 2.12174)
-texture = ExtResource("12_bwlyj")
+[node name="Lombinho" parent="." instance=ExtResource("14_jqb0o")]
+position = Vector2(213, 483)

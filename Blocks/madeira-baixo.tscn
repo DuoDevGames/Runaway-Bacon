@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dve1h6goyhx17"]
+
+[ext_resource type="Texture2D" uid="uid://dpol3t1o1c5v1" path="res://Objetos - Mundo 1/MadeiraEmPéFinal.png" id="1_y57ko"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vibun"]
+size = Vector2(32, 32)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vibun")
+
+[node name="MadeiraEmPéfinal" type="Sprite2D" parent="."]
+texture = ExtResource("1_y57ko")
