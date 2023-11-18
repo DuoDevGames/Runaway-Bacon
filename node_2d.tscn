@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=21 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Lombinho.gd" id="1_y2e1g"]
 [ext_resource type="Texture2D" uid="uid://dkufmcqpelsbh" path="res://Sprites - Lombinho/Lombinho-Correndo1.png" id="2_bi6t4"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://di3pywfrpok0b" path="res://Objetos - Mundo 1/MadeiraEmPéMeio.png" id="7_gepag"]
 [ext_resource type="Texture2D" uid="uid://bg446ap2fi1qj" path="res://Objetos - Mundo 1/MadeiraEmPéCima.png" id="8_a87cv"]
 [ext_resource type="Texture2D" uid="uid://dpol3t1o1c5v1" path="res://Objetos - Mundo 1/MadeiraEmPéFinal.png" id="9_m2hd5"]
+[ext_resource type="Script" path="res://Scripts/Nuvens.gd" id="10_phgd7"]
+[ext_resource type="Texture2D" uid="uid://cohee5gtfo55r" path="res://Objetos - Mundo 1/NuvemPequenaAlegre.png" id="11_gq7em"]
+[ext_resource type="Texture2D" uid="uid://hg26l7mw3dj3" path="res://Objetos - Mundo 1/Céu.png" id="12_bwlyj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qrejp"]
 animations = [{
@@ -47,10 +50,25 @@ size = Vector2(20, 496)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sgkuy"]
 size = Vector2(31.9541, 31.7438)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_fw375"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_gq7em")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ceegl"]
+radius = 15.7735
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Lombinho" type="CharacterBody2D" parent="."]
-position = Vector2(965.308, 221.638)
+light_mask = 9
+position = Vector2(1143.46, 193.574)
 script = ExtResource("1_y2e1g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Lombinho"]
@@ -62,6 +80,7 @@ position = Vector2(0.0927124, 4.05176)
 shape = SubResource("RectangleShape2D_1ntuk")
 
 [node name="Camera2D" type="Camera2D" parent="Lombinho"]
+position = Vector2(0, 2)
 scale = Vector2(1e-05, 1e-05)
 zoom = Vector2(2, 2)
 limit_left = 0
@@ -650,3 +669,36 @@ texture = ExtResource("8_a87cv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Madeira Pé16"]
 position = Vector2(559.981, 495.9)
 shape = SubResource("RectangleShape2D_sgkuy")
+
+[node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer"]
+position = Vector2(572.004, 254.504)
+scale = Vector2(1.8347, 1.75595)
+texture = ExtResource("12_bwlyj")
+
+[node name="Nuvem1" type="Node2D" parent="."]
+visible = false
+script = ExtResource("10_phgd7")
+
+[node name="nuvem" type="AnimatableBody2D" parent="Nuvem1"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Nuvem1/nuvem"]
+sprite_frames = SubResource("SpriteFrames_fw375")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nuvem1/nuvem"]
+shape = SubResource("CircleShape2D_ceegl")
+
+[node name="Nuvem2" type="Node2D" parent="."]
+position = Vector2(1261.01, 309.195)
+script = ExtResource("10_phgd7")
+
+[node name="nuvem" type="AnimatableBody2D" parent="Nuvem2"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Nuvem2/nuvem"]
+sprite_frames = SubResource("SpriteFrames_fw375")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nuvem2/nuvem"]
+shape = SubResource("CircleShape2D_ceegl")
