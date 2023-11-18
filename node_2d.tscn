@@ -1,0 +1,652 @@
+[gd_scene load_steps=16 format=3 uid="uid://ctp0qyrr86hdc"]
+
+[ext_resource type="Script" path="res://Lombinho.gd" id="1_y2e1g"]
+[ext_resource type="Texture2D" uid="uid://dkufmcqpelsbh" path="res://Sprites - Lombinho/Lombinho-Correndo1.png" id="2_bi6t4"]
+[ext_resource type="Texture2D" uid="uid://cfnbw2xdt0oyw" path="res://Sprites - Lombinho/Lombinho-Correndo2.png" id="3_1udp6"]
+[ext_resource type="Texture2D" uid="uid://g28ga4ptd70n" path="res://Objetos - Mundo 1/Terra 01.png" id="4_efept"]
+[ext_resource type="Texture2D" uid="uid://cgabbqiy4g4sk" path="res://Objetos - Mundo 1/Terra canto direito.png" id="5_okql4"]
+[ext_resource type="Texture2D" uid="uid://cebqedyqnqc5g" path="res://Objetos - Mundo 1/Terra canto esquerdo.png" id="6_bm3vg"]
+[ext_resource type="Texture2D" uid="uid://di3pywfrpok0b" path="res://Objetos - Mundo 1/MadeiraEmPéMeio.png" id="7_gepag"]
+[ext_resource type="Texture2D" uid="uid://bg446ap2fi1qj" path="res://Objetos - Mundo 1/MadeiraEmPéCima.png" id="8_a87cv"]
+[ext_resource type="Texture2D" uid="uid://dpol3t1o1c5v1" path="res://Objetos - Mundo 1/MadeiraEmPéFinal.png" id="9_m2hd5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qrejp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bi6t4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1udp6")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bi6t4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ntuk"]
+size = Vector2(32.3501, 56.0238)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3anwe"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_towtn"]
+size = Vector2(27.7908, 32.1941)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3b5rq"]
+size = Vector2(20, 496)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgkuy"]
+size = Vector2(31.9541, 31.7438)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Lombinho" type="CharacterBody2D" parent="."]
+position = Vector2(965.308, 221.638)
+script = ExtResource("1_y2e1g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Lombinho"]
+sprite_frames = SubResource("SpriteFrames_qrejp")
+frame_progress = 0.667749
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lombinho"]
+position = Vector2(0.0927124, 4.05176)
+shape = SubResource("RectangleShape2D_1ntuk")
+
+[node name="Camera2D" type="Camera2D" parent="Lombinho"]
+scale = Vector2(1e-05, 1e-05)
+zoom = Vector2(2, 2)
+limit_left = 0
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Chão" type="StaticBody2D" parent="Node"]
+position = Vector2(16, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão3" type="StaticBody2D" parent="Node"]
+position = Vector2(80, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão3"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão3"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão4" type="StaticBody2D" parent="Node"]
+position = Vector2(112, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão4"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão4"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão5" type="StaticBody2D" parent="Node"]
+position = Vector2(144, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão5"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão5"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão6" type="StaticBody2D" parent="Node"]
+position = Vector2(176, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão6"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão6"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão7" type="StaticBody2D" parent="Node"]
+position = Vector2(208, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão7"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão7"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão8" type="StaticBody2D" parent="Node"]
+position = Vector2(240, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão8"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão8"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão9" type="StaticBody2D" parent="Node"]
+position = Vector2(272, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão9"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão9"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão10" type="StaticBody2D" parent="Node"]
+position = Vector2(304, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão10"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão10"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão11" type="StaticBody2D" parent="Node"]
+position = Vector2(336, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão11"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão11"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão12" type="StaticBody2D" parent="Node"]
+position = Vector2(368, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão12"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão12"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão13" type="StaticBody2D" parent="Node"]
+position = Vector2(400, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão13"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão13"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão14" type="StaticBody2D" parent="Node"]
+position = Vector2(432, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão14"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão14"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão15" type="StaticBody2D" parent="Node"]
+position = Vector2(464, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão15"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão15"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão16" type="StaticBody2D" parent="Node"]
+position = Vector2(496, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão16"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão16"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão17" type="StaticBody2D" parent="Node"]
+position = Vector2(528, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão17"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão17"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão18" type="StaticBody2D" parent="Node"]
+position = Vector2(560, 480)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão18"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão18"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão19" type="StaticBody2D" parent="Node"]
+position = Vector2(592, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão19"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão19"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão20" type="StaticBody2D" parent="Node"]
+position = Vector2(624, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão20"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão20"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão21" type="StaticBody2D" parent="Node"]
+position = Vector2(656, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão21"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão21"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão24" type="StaticBody2D" parent="Node"]
+position = Vector2(880, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão24"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão24"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão25" type="StaticBody2D" parent="Node"]
+position = Vector2(911, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão25"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão25"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão26" type="StaticBody2D" parent="Node"]
+position = Vector2(942, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão26"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão26"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão27" type="StaticBody2D" parent="Node"]
+position = Vector2(974, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão27"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão27"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão28" type="StaticBody2D" parent="Node"]
+position = Vector2(1006, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão28"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão28"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão29" type="StaticBody2D" parent="Node"]
+position = Vector2(1038, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão29"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão29"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão30" type="StaticBody2D" parent="Node"]
+position = Vector2(1070, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão30"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão30"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão31" type="StaticBody2D" parent="Node"]
+position = Vector2(1102, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão31"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão31"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão32" type="StaticBody2D" parent="Node"]
+position = Vector2(1134, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão32"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão32"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="Chão22" type="StaticBody2D" parent="Node"]
+position = Vector2(688, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão22"]
+position = Vector2(-1, 53)
+texture = ExtResource("5_okql4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão22"]
+position = Vector2(-3.11169, 53.0381)
+shape = SubResource("RectangleShape2D_towtn")
+
+[node name="Chão23" type="StaticBody2D" parent="Node"]
+position = Vector2(848.079, 480.079)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão23"]
+position = Vector2(-1, 53)
+texture = ExtResource("6_bm3vg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão23"]
+position = Vector2(1.04645, 52.4667)
+shape = SubResource("RectangleShape2D_towtn")
+
+[node name="Chão2" type="StaticBody2D" parent="Node"]
+position = Vector2(48, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Chão2"]
+position = Vector2(-1, 53)
+texture = ExtResource("4_efept")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Chão2"]
+position = Vector2(-1, 53)
+shape = SubResource("RectangleShape2D_3anwe")
+
+[node name="InvisibleWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWall"]
+position = Vector2(-8, 296)
+shape = SubResource("RectangleShape2D_3b5rq")
+
+[node name="Obstáculos" type="Node" parent="."]
+
+[node name="Madeira Pé4" type="StaticBody2D" parent="Obstáculos"]
+position = Vector2(0, -26.6579)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstáculos/Madeira Pé4"]
+position = Vector2(560, 496)
+texture = ExtResource("7_gepag")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Madeira Pé4"]
+position = Vector2(559.981, 495.9)
+shape = SubResource("RectangleShape2D_sgkuy")
+
+[node name="Madeira Pé5" type="StaticBody2D" parent="Obstáculos"]
+position = Vector2(0, -58.8312)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstáculos/Madeira Pé5"]
+position = Vector2(560, 496)
+texture = ExtResource("8_a87cv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Madeira Pé5"]
+position = Vector2(559.981, 495.9)
+shape = SubResource("RectangleShape2D_sgkuy")
+
+[node name="Madeira Pé2" type="StaticBody2D" parent="Obstáculos"]
+position = Vector2(-161.138, 5.16196)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstáculos/Madeira Pé2"]
+position = Vector2(560, 496)
+texture = ExtResource("9_m2hd5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Madeira Pé2"]
+position = Vector2(559.981, 495.9)
+shape = SubResource("RectangleShape2D_sgkuy")
+
+[node name="Madeira Pé3" type="StaticBody2D" parent="Obstáculos"]
+position = Vector2(-161.138, -27.1517)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstáculos/Madeira Pé3"]
+position = Vector2(560, 496)
+texture = ExtResource("8_a87cv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Madeira Pé3"]
+position = Vector2(559.981, 495.9)
+shape = SubResource("RectangleShape2D_sgkuy")
+
+[node name="Madeira Pé" type="StaticBody2D" parent="Obstáculos"]
+position = Vector2(0, 5.16196)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstáculos/Madeira Pé"]
+position = Vector2(560, 496)
+texture = ExtResource("9_m2hd5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Madeira Pé"]
+position = Vector2(559.981, 495.9)
+shape = SubResource("RectangleShape2D_sgkuy")
+
+[node name="Madeira Pé6" type="StaticBody2D" parent="Obstáculos"]
+position = Vector2(410, 5.162)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstáculos/Madeira Pé6"]
+position = Vector2(560, 496)
+texture = ExtResource("9_m2hd5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Madeira Pé6"]
+position = Vector2(559.981, 495.9)
+shape = SubResource("RectangleShape2D_sgkuy")
+
+[node name="Madeira Pé7" type="StaticBody2D" parent="Obstáculos"]
+position = Vector2(477, 5.162)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstáculos/Madeira Pé7"]
+position = Vector2(560, 496)
+texture = ExtResource("9_m2hd5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Madeira Pé7"]
+position = Vector2(559.981, 495.9)
+shape = SubResource("RectangleShape2D_sgkuy")
+
+[node name="Madeira Pé12" type="StaticBody2D" parent="Obstáculos"]
+position = Vector2(507, 5.162)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstáculos/Madeira Pé12"]
+position = Vector2(560, 496)
+texture = ExtResource("8_a87cv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Madeira Pé12"]
+position = Vector2(559.981, 495.9)
+shape = SubResource("RectangleShape2D_sgkuy")
+
+[node name="Madeira Pé8" type="StaticBody2D" parent="Obstáculos"]
+position = Vector2(477, -26.838)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstáculos/Madeira Pé8"]
+position = Vector2(560, 496)
+texture = ExtResource("7_gepag")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Madeira Pé8"]
+position = Vector2(559.981, 495.9)
+shape = SubResource("RectangleShape2D_sgkuy")
+
+[node name="Madeira Pé9" type="StaticBody2D" parent="Obstáculos"]
+position = Vector2(477, -58.838)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstáculos/Madeira Pé9"]
+position = Vector2(560, 496)
+texture = ExtResource("8_a87cv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Madeira Pé9"]
+position = Vector2(559.981, 495.9)
+shape = SubResource("RectangleShape2D_sgkuy")
+
+[node name="Madeira Pé10" type="StaticBody2D" parent="Obstáculos"]
+position = Vector2(573, 5.162)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstáculos/Madeira Pé10"]
+position = Vector2(560, 496)
+texture = ExtResource("9_m2hd5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Madeira Pé10"]
+position = Vector2(559.981, 495.9)
+shape = SubResource("RectangleShape2D_sgkuy")
+
+[node name="Madeira Pé11" type="StaticBody2D" parent="Obstáculos"]
+position = Vector2(573, -26.838)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstáculos/Madeira Pé11"]
+position = Vector2(560, 496)
+texture = ExtResource("7_gepag")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Madeira Pé11"]
+position = Vector2(559.981, 495.9)
+shape = SubResource("RectangleShape2D_sgkuy")
+
+[node name="Madeira Pé13" type="StaticBody2D" parent="Obstáculos"]
+position = Vector2(573, -58.838)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstáculos/Madeira Pé13"]
+position = Vector2(560, 496)
+texture = ExtResource("7_gepag")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Madeira Pé13"]
+position = Vector2(559.981, 495.9)
+shape = SubResource("RectangleShape2D_sgkuy")
+
+[node name="Madeira Pé14" type="StaticBody2D" parent="Obstáculos"]
+position = Vector2(573, -90.838)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstáculos/Madeira Pé14"]
+position = Vector2(560, 496)
+texture = ExtResource("7_gepag")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Madeira Pé14"]
+position = Vector2(559.981, 495.9)
+shape = SubResource("RectangleShape2D_sgkuy")
+
+[node name="Madeira Pé15" type="StaticBody2D" parent="Obstáculos"]
+position = Vector2(573, -122.838)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstáculos/Madeira Pé15"]
+position = Vector2(560, 496)
+texture = ExtResource("8_a87cv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Madeira Pé15"]
+position = Vector2(559.981, 495.9)
+shape = SubResource("RectangleShape2D_sgkuy")
+
+[node name="Madeira Pé16" type="StaticBody2D" parent="Obstáculos"]
+position = Vector2(410, -26.838)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstáculos/Madeira Pé16"]
+position = Vector2(560, 496)
+texture = ExtResource("8_a87cv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstáculos/Madeira Pé16"]
+position = Vector2(559.981, 495.9)
+shape = SubResource("RectangleShape2D_sgkuy")
