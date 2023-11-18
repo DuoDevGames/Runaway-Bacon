@@ -3,8 +3,8 @@ extends  Node2D
 const WAIT_DURATION := 1.0
 
 @onready var cloud := $nuvem  as AnimatableBody2D
-@export var move_speed := 2.5
-@export var distance := 125
+@export var move_speed := 1.0
+@export var distance := 12
 @export var move_horizontal := true
 
 var follow := Vector2.ZERO
@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 
 
 func move_cloud():
-	var move_direction = Vector2.RIGHT* distance if move_horizontal else Vector2.LEFT * distance
+	var move_direction = Vector2.UP* distance if move_horizontal else Vector2.UP * distance
 	var duration = move_direction.length() / float(move_speed * cloud_center)
 	var cloud_tween = create_tween().set_loops()
 	cloud_tween.tween_property(self, "follow", move_direction, duration)
