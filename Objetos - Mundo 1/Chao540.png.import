@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://18ecladimmdo"
-path="res://.godot/imported/Céu.png-0ae94ea8d3714c18e156f9ae4fb1e588.ctex"
+uid="uid://bvocj4bxf73fe"
+path="res://.godot/imported/Chao540.png-3af84d3d5ce8fe4d0514388f43af38d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objetos - Mundo 1/Céu.png"
-dest_files=["res://.godot/imported/Céu.png-0ae94ea8d3714c18e156f9ae4fb1e588.ctex"]
+source_file="res://Objetos - Mundo 1/Chao540.png"
+dest_files=["res://.godot/imported/Chao540.png-3af84d3d5ce8fe4d0514388f43af38d0.ctex"]
 
 [params]
 

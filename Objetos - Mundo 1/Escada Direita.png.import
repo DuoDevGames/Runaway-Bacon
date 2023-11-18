@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://18ecladimmdo"
-path="res://.godot/imported/Céu.png-0ae94ea8d3714c18e156f9ae4fb1e588.ctex"
+uid="uid://bk6qta12r5cd2"
+path="res://.godot/imported/Escada Direita.png-0ec1c7455d9773294da9562e177a2f9a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objetos - Mundo 1/Céu.png"
-dest_files=["res://.godot/imported/Céu.png-0ae94ea8d3714c18e156f9ae4fb1e588.ctex"]
+source_file="res://Objetos - Mundo 1/Escada Direita.png"
+dest_files=["res://.godot/imported/Escada Direita.png-0ec1c7455d9773294da9562e177a2f9a.ctex"]
 
 [params]
 
