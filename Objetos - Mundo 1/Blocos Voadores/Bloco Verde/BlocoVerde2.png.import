@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://18ecladimmdo"
-path="res://.godot/imported/Céu.png-0ae94ea8d3714c18e156f9ae4fb1e588.ctex"
+uid="uid://c5qecikf5gh0f"
+path="res://.godot/imported/BlocoVerde2.png-2b2c237db87889288df8ad12c16103c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objetos - Mundo 1/Céu.png"
-dest_files=["res://.godot/imported/Céu.png-0ae94ea8d3714c18e156f9ae4fb1e588.ctex"]
+source_file="res://Objetos - Mundo 1/Blocos Voadores/Bloco Verde/BlocoVerde2.png"
+dest_files=["res://.godot/imported/BlocoVerde2.png-2b2c237db87889288df8ad12c16103c5.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://18ecladimmdo"
-path="res://.godot/imported/Céu.png-0ae94ea8d3714c18e156f9ae4fb1e588.ctex"
+uid="uid://c3lb8tcvy1m8u"
+path="res://.godot/imported/Lombinho-Pulando5.png-534c71293c36b8ff361505524b8240aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objetos - Mundo 1/Céu.png"
-dest_files=["res://.godot/imported/Céu.png-0ae94ea8d3714c18e156f9ae4fb1e588.ctex"]
+source_file="res://Sprites - Lombinho/Lombinho-Pulando5.png"
+dest_files=["res://.godot/imported/Lombinho-Pulando5.png-534c71293c36b8ff361505524b8240aa.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://18ecladimmdo"
-path="res://.godot/imported/Céu.png-0ae94ea8d3714c18e156f9ae4fb1e588.ctex"
+uid="uid://canfhir216rrm"
+path="res://.godot/imported/BlocoTijolo.png-b394c9b402033298737d35199ddeff9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objetos - Mundo 1/Céu.png"
-dest_files=["res://.godot/imported/Céu.png-0ae94ea8d3714c18e156f9ae4fb1e588.ctex"]
+source_file="res://Objetos - Mundo 1/BlocoTijolo.png"
+dest_files=["res://.godot/imported/BlocoTijolo.png-b394c9b402033298737d35199ddeff9f.ctex"]
 
 [params]
 
