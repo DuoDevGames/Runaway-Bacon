@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://470tmpn733o1"]
+
+[ext_resource type="Texture2D" uid="uid://bg446ap2fi1qj" path="res://Objetos - Mundo 1/MadeiraEmPéCima.png" id="1_w4j3y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dub0m"]
+size = Vector2(32, 32)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dub0m")
+
+[node name="MadeiraEmPécima" type="Sprite2D" parent="."]
+texture = ExtResource("1_w4j3y")
