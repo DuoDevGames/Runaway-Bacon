@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbf5612yhcrj4"]
+
+[ext_resource type="Script" path="res://Scripts/palha-coletavel.gd" id="1_5a3p0"]
+[ext_resource type="Texture2D" uid="uid://djnixh2onq2y3" path="res://Objetos - Mundo 1/Bloco Palha.png" id="1_ey6e3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ixg87"]
+size = Vector2(32, 31)
+
+[node name="palha" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_5a3p0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ey6e3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_ixg87")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

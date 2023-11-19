@@ -1,15 +1,127 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqbcebrv8pfph"]
+[gd_scene load_steps=15 format=3 uid="uid://b1cpxuxufxdf3"]
 
-[ext_resource type="Texture2D" uid="uid://cohee5gtfo55r" path="res://Objetos - Mundo 1/NuvemPequenaAlegre.png" id="1_ntu0p"]
+[ext_resource type="Script" path="res://Scripts/nuvem.gd" id="1_wulq6"]
+[ext_resource type="Texture2D" uid="uid://bc2inoy8bll6u" path="res://Objetos - Mundo 1/Nuvem/Nuvem1.png" id="1_ye0gd"]
+[ext_resource type="Texture2D" uid="uid://0b163561kfwg" path="res://Objetos - Mundo 1/Nuvem/Nuvem2.png" id="2_1md2y"]
+[ext_resource type="Texture2D" uid="uid://plb3wt0l728g" path="res://Objetos - Mundo 1/Nuvem/Nuvem3.png" id="3_jgwua"]
+[ext_resource type="Texture2D" uid="uid://ihirmdku7ch" path="res://Objetos - Mundo 1/Nuvem/Nuvem4.png" id="4_2e866"]
+[ext_resource type="Texture2D" uid="uid://difv2ntjgjt7" path="res://Objetos - Mundo 1/Nuvem/Nuvem5.png" id="5_1x275"]
+[ext_resource type="Texture2D" uid="uid://cpu6ky2x1m6p2" path="res://Objetos - Mundo 1/Nuvem/Nuvem6.png" id="6_p2j0u"]
+[ext_resource type="Texture2D" uid="uid://by8gieea8jit2" path="res://Objetos - Mundo 1/Nuvem/Nuvem7.png" id="7_xyabs"]
+[ext_resource type="Texture2D" uid="uid://dkwnpffyc0266" path="res://Objetos - Mundo 1/Nuvem/Nuvem8.png" id="8_qikjh"]
+[ext_resource type="Texture2D" uid="uid://duubbdh2xxh1e" path="res://Objetos - Mundo 1/Nuvem/Nuvem9.png" id="9_oclj8"]
+[ext_resource type="Texture2D" uid="uid://d03bt3x07d5u7" path="res://Objetos - Mundo 1/Nuvem/Nuvem10.png" id="10_khrh1"]
+[ext_resource type="Texture2D" uid="uid://duhioxe2cwyp7" path="res://Objetos - Mundo 1/Nuvem/Nuvem11.png" id="11_ycrnd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkta7"]
-size = Vector2(32, 12)
+[sub_resource type="CircleShape2D" id="CircleShape2D_sg23l"]
+radius = 16.0312
 
-[node name="StaticBody2D" type="AnimatableBody2D"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_o227m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ye0gd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1md2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jgwua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2e866")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1x275")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p2j0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xyabs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qikjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_oclj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_khrh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ycrnd")
+}],
+"loop": false,
+"name": &"angry",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ye0gd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_ycrnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_khrh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_oclj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qikjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xyabs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p2j0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1x275")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2e866")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jgwua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1md2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_ye0gd")
+}],
+"loop": false,
+"name": &"happy",
+"speed": 15.0
+}]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -10)
-shape = SubResource("RectangleShape2D_fkta7")
+[node name="nuvem" type="Node2D"]
+script = ExtResource("1_wulq6")
 
-[node name="NuvemPequenaAlegre" type="Sprite2D" parent="."]
-texture = ExtResource("1_ntu0p")
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+shape = SubResource("CircleShape2D_sg23l")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+sprite_frames = SubResource("SpriteFrames_o227m")
+animation = &"happy"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_sg23l")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

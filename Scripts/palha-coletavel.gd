@@ -1,5 +1,6 @@
 extends Area2D
 
+var valor_palha := 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,13 +12,7 @@ func _process(delta):
 	pass
 
 
+
 func _on_body_entered(body):
-	$AnimatedSprite2D.play("angry")
-	
-
-func _on_body_exited(body):
-	$AnimatedSprite2D.play("happy")
-	$AnimatedSprite2D.play()
-
-
-
+	Global.palhas += valor_palha
+	queue_free()

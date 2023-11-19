@@ -1,4 +1,4 @@
-extends Area2D
+extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,13 +11,10 @@ func _process(delta):
 	pass
 
 
-func _on_body_entered(body):
-	$AnimatedSprite2D.play("angry")
+func _on_area_2d_body_entered(body):
+	$AnimatableBody2D/AnimatedSprite2D.play("angry")
+
+
+func _on_area_2d_body_exited(body):
+	$AnimatableBody2D/AnimatedSprite2D.play("happy")
 	
-
-func _on_body_exited(body):
-	$AnimatedSprite2D.play("happy")
-	$AnimatedSprite2D.play()
-
-
-

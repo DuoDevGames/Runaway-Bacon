@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=53 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
 [ext_resource type="Texture2D" uid="uid://dbvbjpxk2y6ud" path="res://Background/Montanhas2.png" id="2_ckojg"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b44axnjqiv4o4" path="res://Blocks/terra-direita.tscn" id="4_cx6pd"]
 [ext_resource type="Texture2D" uid="uid://d0l8mtptb4out" path="res://Background/Nuvens1.png" id="5_1g3ft"]
 [ext_resource type="PackedScene" uid="uid://f10qe6bs6h5q" path="res://Blocks/terra-borda-esquerda.tscn" id="5_vyfl1"]
+[ext_resource type="PackedScene" uid="uid://cbf5612yhcrj4" path="res://Blocks/palha.tscn" id="6_6bxpb"]
 [ext_resource type="PackedScene" uid="uid://bxsn1wvmr8cjn" path="res://Blocks/terra-meio2.tscn" id="6_ajcw3"]
 [ext_resource type="PackedScene" uid="uid://bvc8iidqjlgvc" path="res://Blocks/terra-meio1.tscn" id="7_q42sb"]
 [ext_resource type="PackedScene" uid="uid://d0oo5pjdvy18m" path="res://Blocks/terra-borda-direita.tscn" id="8_aysoi"]
@@ -16,15 +17,95 @@
 [ext_resource type="PackedScene" uid="uid://dve1h6goyhx17" path="res://Blocks/madeira-baixo.tscn" id="10_61aou"]
 [ext_resource type="PackedScene" uid="uid://470tmpn733o1" path="res://Blocks/madeira-topo.tscn" id="11_dfgtr"]
 [ext_resource type="PackedScene" uid="uid://77vvmc2lbn4f" path="res://Blocks/madeira-meio.tscn" id="12_kkjsa"]
-[ext_resource type="PackedScene" uid="uid://bqbcebrv8pfph" path="res://Blocks/nuvem.tscn" id="13_kt21e"]
+[ext_resource type="PackedScene" uid="uid://b1cpxuxufxdf3" path="res://Blocks/nuvem.tscn" id="13_kt21e"]
 [ext_resource type="PackedScene" uid="uid://0xdkw760671" path="res://Blocks/bloco_voador_verde.tscn" id="14_ytbhh"]
 [ext_resource type="PackedScene" uid="uid://dwleqb8kqxlqw" path="res://Blocks/bloco_voador_vermelho.tscn" id="15_jb8vx"]
 [ext_resource type="PackedScene" uid="uid://6yc2ykgmtlg0" path="res://Blocks/tijolo.tscn" id="16_0biy6"]
 [ext_resource type="PackedScene" uid="uid://c2ol35j6yp6bx" path="res://Blocks/agua-topo.tscn" id="21_gphdm"]
 [ext_resource type="Texture2D" uid="uid://djs7m6ilt70k2" path="res://Objetos - Mundo 1/Água/AguaFundo.png" id="22_w1daw"]
+[ext_resource type="Texture2D" uid="uid://cbii7qp4bas4t" path="res://HUD/Lombinho/Lombinho1.png" id="24_b2dqh"]
+[ext_resource type="Script" path="res://Scripts/hudmanager.gd" id="24_fr364"]
+[ext_resource type="Texture2D" uid="uid://ocnshgq3axj7" path="res://HUD/Coração/Coracao1.png" id="24_rcvin"]
+[ext_resource type="Texture2D" uid="uid://b7cl0vmtbgvue" path="res://HUD/Coração/Coracao2.png" id="25_3mcri"]
+[ext_resource type="Texture2D" uid="uid://dfm7ms3huimy" path="res://HUD/Lombinho/Lombinho2.png" id="25_yhmbd"]
+[ext_resource type="Texture2D" uid="uid://humnehf3121o" path="res://HUD/Coração/Coracao11.png" id="26_psm4j"]
+[ext_resource type="Texture2D" uid="uid://dj1ptarnaxc7h" path="res://HUD/Coração/Coracao12.png" id="27_q5f7k"]
+[ext_resource type="Texture2D" uid="uid://eo0fh164o5gr" path="res://HUD/Coração/Coracao13.png" id="28_nyue6"]
+[ext_resource type="Texture2D" uid="uid://cfbubktdath4w" path="res://HUD/Coração/Coracao14.png" id="29_of0po"]
+[ext_resource type="Texture2D" uid="uid://bru1qompnknm" path="res://HUD/Coração/Coracao15.png" id="30_todnm"]
+[ext_resource type="Texture2D" uid="uid://ctdmsvlkbjax6" path="res://HUD/Coração/Coracao16.png" id="31_tumpr"]
+[ext_resource type="Texture2D" uid="uid://c8fcs5phmdhdx" path="res://HUD/Coração/Coracao17.png" id="32_py527"]
+[ext_resource type="Texture2D" uid="uid://dfl6vg1sdv8h0" path="res://HUD/Coração/Coracao3.png" id="33_8kr72"]
+[ext_resource type="Texture2D" uid="uid://saq8cqhhoevi" path="res://HUD/Coração/Coracao4.png" id="34_351s6"]
+[ext_resource type="Texture2D" uid="uid://brdha8mb774ph" path="res://HUD/Coração/Coracao5.png" id="35_c3jdy"]
+[ext_resource type="Texture2D" uid="uid://bgxvk6krqygo2" path="res://HUD/Coração/Coracao6.png" id="36_ghegp"]
+[ext_resource type="Texture2D" uid="uid://bi32coglyurdq" path="res://HUD/Coração/Coracao7.png" id="37_t5nt5"]
+[ext_resource type="Texture2D" uid="uid://cctgamvbbcxdl" path="res://HUD/Coração/Coracao8.png" id="38_eqimj"]
+[ext_resource type="Texture2D" uid="uid://lexu7xh01nmw" path="res://HUD/Coração/Coracao9.png" id="39_a2mii"]
+[ext_resource type="Texture2D" uid="uid://dqlujklf5klmj" path="res://HUD/Coração/Coracao10.png" id="40_j06o1"]
+[ext_resource type="FontFile" uid="uid://d0xjs1baebxx" path="res://HUD/Fonte/pixChicago.ttf" id="41_14ku5"]
+[ext_resource type="Texture2D" uid="uid://w1814mspjr0k" path="res://HUD/Palha/Palha1.png" id="42_55w4n"]
+[ext_resource type="Texture2D" uid="uid://cyayuniy5mfln" path="res://HUD/Palha/Palha2.png" id="43_a2r5d"]
+[ext_resource type="Texture2D" uid="uid://d2u22cnwb00oe" path="res://HUD/Palha/Palha3.png" id="44_4h43h"]
+[ext_resource type="Texture2D" uid="uid://cwk8wp1lxkyy6" path="res://HUD/Palha/Palha4.png" id="45_5ci2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3b5rq"]
 size = Vector2(20, 496)
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_sxcsx"]
+frames = 17
+speed_scale = 10.0
+frame_0/texture = ExtResource("24_rcvin")
+frame_1/texture = ExtResource("25_3mcri")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("33_8kr72")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("34_351s6")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("35_c3jdy")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("36_ghegp")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("37_t5nt5")
+frame_6/duration = 1.0
+frame_7/texture = ExtResource("38_eqimj")
+frame_7/duration = 1.0
+frame_8/texture = ExtResource("39_a2mii")
+frame_8/duration = 1.0
+frame_9/texture = ExtResource("40_j06o1")
+frame_9/duration = 1.0
+frame_10/texture = ExtResource("26_psm4j")
+frame_10/duration = 1.0
+frame_11/texture = ExtResource("27_q5f7k")
+frame_11/duration = 1.0
+frame_12/texture = ExtResource("28_nyue6")
+frame_12/duration = 1.0
+frame_13/texture = ExtResource("29_of0po")
+frame_13/duration = 1.0
+frame_14/texture = ExtResource("30_todnm")
+frame_14/duration = 1.0
+frame_15/texture = ExtResource("31_tumpr")
+frame_15/duration = 1.0
+frame_16/texture = ExtResource("32_py527")
+frame_16/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_x17cl"]
+frames = 4
+speed_scale = 5.0
+frame_0/texture = ExtResource("42_55w4n")
+frame_1/texture = ExtResource("43_a2r5d")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("44_4h43h")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("45_5ci2h")
+frame_3/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_lnapj"]
+frames = 2
+frame_0/texture = ExtResource("24_b2dqh")
+frame_0/duration = 3.0
+frame_1/texture = ExtResource("25_yhmbd")
+frame_1/duration = 0.25
 
 [node name="Fase-01" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [517.031]
@@ -70,6 +151,17 @@ motion_mirroring = Vector2(736, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/01"]
 texture = ExtResource("5_1g3ft")
 centered = false
+
+[node name="Coletáveis" type="Node" parent="."]
+
+[node name="palha" parent="Coletáveis" instance=ExtResource("6_6bxpb")]
+position = Vector2(462, 416)
+
+[node name="palha2" parent="Coletáveis" instance=ExtResource("6_6bxpb")]
+position = Vector2(1156, 488)
+
+[node name="palha3" parent="Coletáveis" instance=ExtResource("6_6bxpb")]
+position = Vector2(2014, 274)
 
 [node name="InvisibleWall" type="StaticBody2D" parent="."]
 
@@ -3388,7 +3480,7 @@ position = Vector2(3920, 624)
 [node name="Node2D" type="Node2D" parent="Terreno"]
 
 [node name="Lombinho" parent="." instance=ExtResource("9_8vmwd")]
-position = Vector2(436, 30)
+position = Vector2(118, 388)
 
 [node name="Obstaculos" type="Node2D" parent="."]
 
@@ -3421,63 +3513,6 @@ position = Vector2(1200, 464)
 
 [node name="StaticBody2D10" parent="Obstaculos" instance=ExtResource("10_61aou")]
 position = Vector2(1200, 496)
-
-[node name="StaticBody2D11" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(1328, 368)
-
-[node name="StaticBody2D12" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(1360, 368)
-
-[node name="StaticBody2D13" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(1392, 368)
-
-[node name="StaticBody2D14" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(1424, 368)
-
-[node name="StaticBody2D15" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(1456, 368)
-
-[node name="StaticBody2D16" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(1488, 368)
-
-[node name="StaticBody2D17" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(1520, 368)
-
-[node name="StaticBody2D18" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(1552, 368)
-
-[node name="StaticBody2D57" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(2240, 304)
-
-[node name="StaticBody2D58" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(2272, 304)
-
-[node name="StaticBody2D59" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(2304, 304)
-
-[node name="StaticBody2D60" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(2336, 304)
-
-[node name="StaticBody2D61" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(2368, 304)
-
-[node name="StaticBody2D62" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(2400, 304)
-
-[node name="StaticBody2D63" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(2432, 304)
-
-[node name="StaticBody2D64" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(2464, 304)
-
-[node name="StaticBody2D65" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(3168, 304)
-
-[node name="StaticBody2D66" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(3200, 304)
-
-[node name="StaticBody2D75" parent="Obstaculos" instance=ExtResource("13_kt21e")]
-position = Vector2(3232, 304)
 
 [node name="StaticBody2D22" parent="Obstaculos" instance=ExtResource("10_61aou")]
 position = Vector2(1856, 496)
@@ -3551,247 +3586,208 @@ position = Vector2(2096, 368)
 [node name="StaticBody2D55" parent="Obstaculos" instance=ExtResource("12_kkjsa")]
 position = Vector2(2096, 464)
 
-[node name="Bloco Voador 2" parent="." instance=ExtResource("14_ytbhh")]
+[node name="Bloco Voador 2" parent="Obstaculos" instance=ExtResource("14_ytbhh")]
 position = Vector2(3344, 416)
 
-[node name="Bloco Voador 1" parent="." instance=ExtResource("15_jb8vx")]
+[node name="Bloco Voador 1" parent="Obstaculos" instance=ExtResource("15_jb8vx")]
 position = Vector2(3168, 496)
 
-[node name="Bloco Voador 3" parent="." instance=ExtResource("15_jb8vx")]
+[node name="Bloco Voador 3" parent="Obstaculos" instance=ExtResource("15_jb8vx")]
 position = Vector2(3520, 496)
 
-[node name="Bloco Voador 4" parent="." instance=ExtResource("15_jb8vx")]
+[node name="Bloco Voador 4" parent="Obstaculos" instance=ExtResource("15_jb8vx")]
 position = Vector2(4080, 544)
 
-[node name="Bloco Voador 5" parent="." instance=ExtResource("14_ytbhh")]
+[node name="Bloco Voador 5" parent="Obstaculos" instance=ExtResource("14_ytbhh")]
 position = Vector2(4656, 544)
 
-[node name="Bloco Voador 6" parent="." instance=ExtResource("15_jb8vx")]
+[node name="Bloco Voador 6" parent="Obstaculos" instance=ExtResource("15_jb8vx")]
 position = Vector2(5584, 144)
 
-[node name="StaticBody2D3" parent="." instance=ExtResource("13_kt21e")]
-position = Vector2(6128, 240)
-
-[node name="StaticBody2D9" parent="." instance=ExtResource("13_kt21e")]
-position = Vector2(6016, 192)
-
-[node name="StaticBody2D4" parent="." instance=ExtResource("13_kt21e")]
-position = Vector2(5856, 192)
-
-[node name="StaticBody2D5" parent="." instance=ExtResource("13_kt21e")]
-position = Vector2(5824, 192)
-
-[node name="StaticBody2D6" parent="." instance=ExtResource("13_kt21e")]
-position = Vector2(5792, 192)
-
-[node name="StaticBody2D7" parent="." instance=ExtResource("13_kt21e")]
-position = Vector2(5760, 192)
-
-[node name="StaticBody2D8" parent="." instance=ExtResource("13_kt21e")]
-position = Vector2(5728, 192)
-
-[node name="StaticBody2D11" parent="." instance=ExtResource("13_kt21e")]
-position = Vector2(5440, 112)
-
-[node name="StaticBody2D12" parent="." instance=ExtResource("13_kt21e")]
-position = Vector2(5408, 112)
-
-[node name="StaticBody2D13" parent="." instance=ExtResource("13_kt21e")]
-position = Vector2(5376, 112)
-
-[node name="StaticBody2D14" parent="." instance=ExtResource("13_kt21e")]
-position = Vector2(5344, 112)
-
-[node name="StaticBody2D15" parent="." instance=ExtResource("13_kt21e")]
-position = Vector2(5312, 112)
-
-[node name="StaticBody2D16" parent="." instance=ExtResource("13_kt21e")]
-position = Vector2(5280, 112)
-
-[node name="Bloco Voador 7" parent="." instance=ExtResource("14_ytbhh")]
+[node name="Bloco Voador 7" parent="Obstaculos" instance=ExtResource("14_ytbhh")]
 position = Vector2(5872, 320)
 
-[node name="StaticBody2D" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D11" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6624, 464)
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D12" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6656, 464)
 
-[node name="StaticBody2D10" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D13" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6688, 464)
 
-[node name="StaticBody2D17" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D17" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6720, 464)
 
-[node name="StaticBody2D18" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D18" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6752, 464)
 
-[node name="StaticBody2D19" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D19" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6624, 432)
 
-[node name="StaticBody2D20" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D20" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6656, 432)
 
-[node name="StaticBody2D21" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D21" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6688, 432)
 
-[node name="StaticBody2D22" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D23" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6720, 432)
 
-[node name="StaticBody2D23" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D28" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6752, 432)
 
-[node name="StaticBody2D24" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D31" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6624, 464)
 
-[node name="StaticBody2D25" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D32" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6656, 464)
 
-[node name="StaticBody2D26" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D36" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6688, 464)
 
-[node name="StaticBody2D27" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D37" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6720, 464)
 
-[node name="StaticBody2D28" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D38" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6752, 464)
 
-[node name="StaticBody2D29" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D39" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6624, 432)
 
-[node name="StaticBody2D30" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D40" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6656, 432)
 
-[node name="StaticBody2D31" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D41" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6688, 432)
 
-[node name="StaticBody2D32" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D42" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6720, 432)
 
-[node name="StaticBody2D33" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D43" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6752, 432)
 
-[node name="StaticBody2D34" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D44" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6624, 400)
 
-[node name="StaticBody2D35" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D45" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6656, 400)
 
-[node name="StaticBody2D36" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D46" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6688, 400)
 
-[node name="StaticBody2D37" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D47" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6720, 400)
 
-[node name="StaticBody2D38" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D48" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6752, 400)
 
-[node name="StaticBody2D39" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D49" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6624, 368)
 
-[node name="StaticBody2D40" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D50" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6656, 368)
 
-[node name="StaticBody2D41" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D57" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6688, 368)
 
-[node name="StaticBody2D42" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D58" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6720, 368)
 
-[node name="StaticBody2D43" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D59" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6752, 368)
 
-[node name="StaticBody2D44" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D60" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6624, 400)
 
-[node name="StaticBody2D45" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D61" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6656, 400)
 
-[node name="StaticBody2D46" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D62" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6688, 400)
 
-[node name="StaticBody2D47" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D63" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6720, 400)
 
-[node name="StaticBody2D48" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D64" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6752, 400)
 
-[node name="StaticBody2D49" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D65" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6624, 368)
 
-[node name="StaticBody2D50" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D66" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6656, 368)
 
-[node name="StaticBody2D51" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D75" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6688, 368)
 
-[node name="StaticBody2D52" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D76" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6720, 368)
 
-[node name="StaticBody2D53" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D77" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6752, 368)
 
-[node name="StaticBody2D58" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D78" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6624, 336)
 
-[node name="StaticBody2D59" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D79" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6656, 336)
 
-[node name="StaticBody2D60" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D80" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6688, 336)
 
-[node name="StaticBody2D61" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D81" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6720, 336)
 
-[node name="StaticBody2D62" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D82" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6752, 336)
 
-[node name="StaticBody2D63" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D83" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6624, 336)
 
-[node name="StaticBody2D64" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D84" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6656, 336)
 
-[node name="StaticBody2D65" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D85" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6688, 336)
 
-[node name="StaticBody2D66" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D86" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6720, 336)
 
-[node name="StaticBody2D68" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D87" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6656, 304)
 
-[node name="StaticBody2D69" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D88" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6688, 304)
 
-[node name="StaticBody2D70" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D89" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6720, 304)
 
-[node name="StaticBody2D71" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D90" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6656, 304)
 
-[node name="StaticBody2D72" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D91" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6688, 304)
 
-[node name="StaticBody2D74" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D92" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6688, 272)
 
-[node name="StaticBody2D73" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D93" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6720, 304)
 
-[node name="StaticBody2D67" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D94" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6752, 336)
 
-[node name="StaticBody2D54" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D95" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6784, 368)
 
-[node name="StaticBody2D55" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D96" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6784, 368)
 
-[node name="StaticBody2D56" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D97" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6592, 368)
 
-[node name="StaticBody2D57" parent="." instance=ExtResource("16_0biy6")]
+[node name="StaticBody2D98" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6592, 368)
 
 [node name="Rio 1" type="Node2D" parent="."]
@@ -3857,3 +3853,108 @@ z_index = -1
 position = Vector2(2004, 606.5)
 scale = Vector2(5.75, 2.09375)
 texture = ExtResource("22_w1daw")
+
+[node name="nuvem" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(314, 455)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+script = ExtResource("24_fr364")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="coracao-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/coracao-container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource("AnimatedTexture_sxcsx")
+
+[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/coracao-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("41_14ku5")
+theme_override_font_sizes/font_size = 24
+text = "x"
+
+[node name="Label3" type="Label" parent="HUD/Control/MarginContainer/coracao-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("41_14ku5")
+theme_override_font_sizes/font_size = 24
+text = "00"
+
+[node name="palha-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/palha-container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource("AnimatedTexture_x17cl")
+
+[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/palha-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("41_14ku5")
+theme_override_font_sizes/font_size = 24
+text = "x"
+
+[node name="Label3" type="Label" parent="HUD/Control/MarginContainer/palha-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("41_14ku5")
+theme_override_font_sizes/font_size = 24
+text = "00"
+
+[node name="lombinho-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/lombinho-container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource("AnimatedTexture_lnapj")
+
+[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/lombinho-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("41_14ku5")
+theme_override_font_sizes/font_size = 24
+text = "Lombinho"
