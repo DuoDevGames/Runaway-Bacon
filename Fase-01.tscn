@@ -1,9 +1,13 @@
-[gd_scene load_steps=18 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=22 format=3 uid="uid://ctp0qyrr86hdc"]
 
-[ext_resource type="Texture2D" uid="uid://18ecladimmdo" path="res://Objetos - Mundo 1/Céu.png" id="1_c3ssv"]
+[ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
+[ext_resource type="Texture2D" uid="uid://dbvbjpxk2y6ud" path="res://Background/Montanhas2.png" id="2_ckojg"]
 [ext_resource type="PackedScene" uid="uid://d3lnsqb2tdxdv" path="res://Blocks/terra-topo.tscn" id="2_j7xvl"]
 [ext_resource type="PackedScene" uid="uid://72jvrvitgk4c" path="res://Blocks/terra-esquerda.tscn" id="3_5j6wf"]
+[ext_resource type="Texture2D" uid="uid://bd5y6yyb1sjfp" path="res://Background/Nuvens2.png" id="3_mapcp"]
+[ext_resource type="Texture2D" uid="uid://cx3fkstetx6r4" path="res://Background/Montanhas1.png" id="4_ci4q3"]
 [ext_resource type="PackedScene" uid="uid://b44axnjqiv4o4" path="res://Blocks/terra-direita.tscn" id="4_cx6pd"]
+[ext_resource type="Texture2D" uid="uid://d0l8mtptb4out" path="res://Background/Nuvens1.png" id="5_1g3ft"]
 [ext_resource type="PackedScene" uid="uid://f10qe6bs6h5q" path="res://Blocks/terra-borda-esquerda.tscn" id="5_vyfl1"]
 [ext_resource type="PackedScene" uid="uid://bxsn1wvmr8cjn" path="res://Blocks/terra-meio2.tscn" id="6_ajcw3"]
 [ext_resource type="PackedScene" uid="uid://bvc8iidqjlgvc" path="res://Blocks/terra-meio1.tscn" id="7_q42sb"]
@@ -23,15 +27,46 @@ size = Vector2(20, 496)
 [node name="Fase-01" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [517.031]
 
-[node name="Background" type="ParallaxBackground" parent="."]
-visible = false
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Background"]
+[node name="05" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(736, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer"]
-position = Vector2(3767.47, 256)
-scale = Vector2(11.7767, 2.12174)
-texture = ExtResource("1_c3ssv")
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/05"]
+texture = ExtResource("1_a4tlf")
+centered = false
+
+[node name="04" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/04"]
+texture = ExtResource("2_ckojg")
+centered = false
+
+[node name="03" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/03"]
+texture = ExtResource("3_mapcp")
+centered = false
+
+[node name="02" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/02"]
+texture = ExtResource("4_ci4q3")
+centered = false
+
+[node name="01" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/01"]
+texture = ExtResource("5_1g3ft")
+centered = false
 
 [node name="InvisibleWall" type="StaticBody2D" parent="."]
 
@@ -3348,7 +3383,7 @@ position = Vector2(4480, 624)
 position = Vector2(3920, 624)
 
 [node name="Lombinho" parent="." instance=ExtResource("9_8vmwd")]
-position = Vector2(98, 153)
+position = Vector2(71, 414)
 
 [node name="Obstaculos" type="Node2D" parent="."]
 
