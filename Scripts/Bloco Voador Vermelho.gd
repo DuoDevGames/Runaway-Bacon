@@ -4,7 +4,7 @@ const WAIT_DURATION := 1.0
 
 @onready var cloud := $"Bloco Voador Vermelho"  as AnimatableBody2D
 @export var move_speed := 2
-@export var distance := 50
+@export var distance := 70
 @export var move_horizontal := true
 
 var follow := Vector2.ZERO
