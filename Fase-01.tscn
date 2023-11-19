@@ -1,9 +1,10 @@
-[gd_scene load_steps=53 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=55 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
 [ext_resource type="Texture2D" uid="uid://dbvbjpxk2y6ud" path="res://Background/Montanhas2.png" id="2_ckojg"]
 [ext_resource type="PackedScene" uid="uid://d3lnsqb2tdxdv" path="res://Blocks/terra-topo.tscn" id="2_j7xvl"]
 [ext_resource type="PackedScene" uid="uid://72jvrvitgk4c" path="res://Blocks/terra-esquerda.tscn" id="3_5j6wf"]
+[ext_resource type="Shader" path="res://Shaders/movimento_nuvens.gdshader" id="3_f2kq4"]
 [ext_resource type="Texture2D" uid="uid://bd5y6yyb1sjfp" path="res://Background/Nuvens2.png" id="3_mapcp"]
 [ext_resource type="Texture2D" uid="uid://cx3fkstetx6r4" path="res://Background/Montanhas1.png" id="4_ci4q3"]
 [ext_resource type="PackedScene" uid="uid://b44axnjqiv4o4" path="res://Blocks/terra-direita.tscn" id="4_cx6pd"]
@@ -48,6 +49,10 @@
 [ext_resource type="Texture2D" uid="uid://cyayuniy5mfln" path="res://HUD/Palha/Palha2.png" id="43_a2r5d"]
 [ext_resource type="Texture2D" uid="uid://d2u22cnwb00oe" path="res://HUD/Palha/Palha3.png" id="44_4h43h"]
 [ext_resource type="Texture2D" uid="uid://cwk8wp1lxkyy6" path="res://HUD/Palha/Palha4.png" id="45_5ci2h"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k7eo7"]
+shader = ExtResource("3_f2kq4")
+shader_parameter/velocidade = 0.05
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3b5rq"]
 size = Vector2(20, 496)
@@ -131,7 +136,9 @@ centered = false
 motion_scale = Vector2(0.4, 1)
 motion_mirroring = Vector2(736, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/03"]
+[node name="nuvens_fundo" type="Sprite2D" parent="ParallaxBackground/03"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_k7eo7")
 texture = ExtResource("3_mapcp")
 centered = false
 
