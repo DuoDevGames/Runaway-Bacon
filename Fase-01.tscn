@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=24 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
 [ext_resource type="Texture2D" uid="uid://dbvbjpxk2y6ud" path="res://Background/Montanhas2.png" id="2_ckojg"]
@@ -20,6 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://0xdkw760671" path="res://Blocks/bloco_voador_verde.tscn" id="14_ytbhh"]
 [ext_resource type="PackedScene" uid="uid://dwleqb8kqxlqw" path="res://Blocks/bloco_voador_vermelho.tscn" id="15_jb8vx"]
 [ext_resource type="PackedScene" uid="uid://6yc2ykgmtlg0" path="res://Blocks/tijolo.tscn" id="16_0biy6"]
+[ext_resource type="PackedScene" uid="uid://c2ol35j6yp6bx" path="res://Blocks/agua-topo.tscn" id="21_gphdm"]
+[ext_resource type="Texture2D" uid="uid://djs7m6ilt70k2" path="res://Objetos - Mundo 1/Água/AguaFundo.png" id="22_w1daw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3b5rq"]
 size = Vector2(20, 496)
@@ -61,6 +63,7 @@ texture = ExtResource("4_ci4q3")
 centered = false
 
 [node name="01" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 motion_scale = Vector2(0.8, 1)
 motion_mirroring = Vector2(736, 0)
 
@@ -3382,8 +3385,10 @@ position = Vector2(4480, 624)
 [node name="StaticBody2D732" parent="Terreno" instance=ExtResource("8_aysoi")]
 position = Vector2(3920, 624)
 
+[node name="Node2D" type="Node2D" parent="Terreno"]
+
 [node name="Lombinho" parent="." instance=ExtResource("9_8vmwd")]
-position = Vector2(71, 414)
+position = Vector2(436, 30)
 
 [node name="Obstaculos" type="Node2D" parent="."]
 
@@ -3481,7 +3486,10 @@ position = Vector2(1856, 496)
 position = Vector2(1920, 496)
 
 [node name="StaticBody2D25" parent="Obstaculos" instance=ExtResource("11_dfgtr")]
-position = Vector2(1792, 496)
+position = Vector2(1791, 496)
+
+[node name="StaticBody2D26" parent="Obstaculos" instance=ExtResource("11_dfgtr")]
+position = Vector2(1887, 496)
 
 [node name="StaticBody2D67" parent="Obstaculos" instance=ExtResource("10_61aou")]
 position = Vector2(2608, 496)
@@ -3785,3 +3793,67 @@ position = Vector2(6592, 368)
 
 [node name="StaticBody2D57" parent="." instance=ExtResource("16_0biy6")]
 position = Vector2(6592, 368)
+
+[node name="Rio 1" type="Node2D" parent="."]
+
+[node name="agua-topo" parent="Rio 1" instance=ExtResource("21_gphdm")]
+z_index = -1
+position = Vector2(740, 541)
+
+[node name="agua-topo2" parent="Rio 1" instance=ExtResource("21_gphdm")]
+z_index = -1
+position = Vector2(772, 541)
+
+[node name="agua-topo3" parent="Rio 1" instance=ExtResource("21_gphdm")]
+z_index = -1
+position = Vector2(804, 541)
+
+[node name="agua-topo4" parent="Rio 1" instance=ExtResource("21_gphdm")]
+z_index = -1
+position = Vector2(836, 541)
+
+[node name="agua-topo5" parent="Rio 1" instance=ExtResource("21_gphdm")]
+z_index = -1
+position = Vector2(868, 541)
+
+[node name="agua-topo6" parent="Rio 1" instance=ExtResource("21_gphdm")]
+z_index = -1
+position = Vector2(900, 541)
+
+[node name="fundo" type="Sprite2D" parent="Rio 1"]
+z_index = -1
+position = Vector2(809, 596)
+scale = Vector2(5.5625, 2.75)
+texture = ExtResource("22_w1daw")
+
+[node name="Rio 2" type="Node2D" parent="."]
+
+[node name="agua-topo" parent="Rio 2" instance=ExtResource("21_gphdm")]
+z_index = -1
+position = Vector2(1934, 561)
+
+[node name="agua-topo2" parent="Rio 2" instance=ExtResource("21_gphdm")]
+z_index = -1
+position = Vector2(1966, 561)
+
+[node name="agua-topo3" parent="Rio 2" instance=ExtResource("21_gphdm")]
+z_index = -1
+position = Vector2(1998, 561)
+
+[node name="agua-topo4" parent="Rio 2" instance=ExtResource("21_gphdm")]
+z_index = -1
+position = Vector2(2030, 561)
+
+[node name="agua-topo5" parent="Rio 2" instance=ExtResource("21_gphdm")]
+z_index = -1
+position = Vector2(2062, 561)
+
+[node name="agua-topo6" parent="Rio 2" instance=ExtResource("21_gphdm")]
+z_index = -1
+position = Vector2(2094, 561)
+
+[node name="fundo" type="Sprite2D" parent="Rio 2"]
+z_index = -1
+position = Vector2(2004, 606.5)
+scale = Vector2(5.75, 2.09375)
+texture = ExtResource("22_w1daw")

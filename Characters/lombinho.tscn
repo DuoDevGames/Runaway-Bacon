@@ -78,4 +78,5 @@ position = Vector2(0, 2)
 scale = Vector2(1e-05, 1e-05)
 zoom = Vector2(2, 2)
 limit_left = 10
+limit_top = 0
 limit_bottom = 610
