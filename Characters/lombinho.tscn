@@ -1,10 +1,13 @@
 [gd_scene load_steps=8 format=3 uid="uid://c8q4vxqrdjdpd"]
 
-[ext_resource type="Script" path="res://Lombinho.gd" id="1_xq6hp"]
+[ext_resource type="Script" path="res://Scripts/Lombinho.gd" id="1_eyvt8"]
 [ext_resource type="Texture2D" uid="uid://c3lb8tcvy1m8u" path="res://Sprites - Lombinho/Lombinho-Pulando5.png" id="3_ehv18"]
 [ext_resource type="Texture2D" uid="uid://dkufmcqpelsbh" path="res://Sprites - Lombinho/Lombinho-Correndo1.png" id="4_lvsmv"]
 [ext_resource type="Texture2D" uid="uid://cfnbw2xdt0oyw" path="res://Sprites - Lombinho/Lombinho-Correndo2.png" id="5_o4ega"]
 [ext_resource type="Texture2D" uid="uid://of31my4guo7e" path="res://Sprites - Lombinho/Lombinho-Piscando1.png" id="6_nxmbo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lcqrw"]
+size = Vector2(24, 55.9601)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0xo0i"]
 animations = [{
@@ -57,21 +60,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lcqrw"]
-size = Vector2(24, 55.9601)
-
 [node name="Lombinho" type="CharacterBody2D"]
 light_mask = 9
-script = ExtResource("1_xq6hp")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_0xo0i")
-animation = &"Jump"
-autoplay = "default"
+script = ExtResource("1_eyvt8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-4.76837e-07, 4.01993)
 shape = SubResource("RectangleShape2D_lcqrw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0xo0i")
+animation = &"Run"
+autoplay = "default"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 2)
