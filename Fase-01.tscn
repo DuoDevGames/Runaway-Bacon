@@ -1,9 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=30 format=3 uid="uid://ctp0qyrr86hdc"]
 
-[ext_resource type="Texture2D" uid="uid://18ecladimmdo" path="res://Objetos - Mundo 1/Céu.png" id="1_c3ssv"]
+[ext_resource type="Texture2D" uid="uid://c27ojvtrua1eb" path="res://Objetos - Mundo 1/Background/Céu.png" id="1_wbcid"]
 [ext_resource type="PackedScene" uid="uid://d3lnsqb2tdxdv" path="res://Blocks/terra-topo.tscn" id="2_j7xvl"]
+[ext_resource type="Texture2D" uid="uid://c2ioir1w83fym" path="res://Objetos - Mundo 1/Background/Montanhas2.png" id="2_o7lk8"]
 [ext_resource type="PackedScene" uid="uid://72jvrvitgk4c" path="res://Blocks/terra-esquerda.tscn" id="3_5j6wf"]
+[ext_resource type="Texture2D" uid="uid://py7rio4tjgk8" path="res://Objetos - Mundo 1/Background/Nuvens2.png" id="3_j602i"]
 [ext_resource type="PackedScene" uid="uid://b44axnjqiv4o4" path="res://Blocks/terra-direita.tscn" id="4_cx6pd"]
+[ext_resource type="Texture2D" uid="uid://dtpce1jrumxeq" path="res://Objetos - Mundo 1/Background/Montanhas1.png" id="4_p0y6s"]
+[ext_resource type="Texture2D" uid="uid://ccedl83dvbrg3" path="res://Objetos - Mundo 1/Background/Nuvens1.png" id="5_eosmv"]
 [ext_resource type="PackedScene" uid="uid://f10qe6bs6h5q" path="res://Blocks/terra-borda-esquerda.tscn" id="5_vyfl1"]
 [ext_resource type="PackedScene" uid="uid://bxsn1wvmr8cjn" path="res://Blocks/terra-meio2.tscn" id="6_ajcw3"]
 [ext_resource type="PackedScene" uid="uid://bvc8iidqjlgvc" path="res://Blocks/terra-meio1.tscn" id="7_q42sb"]
@@ -15,22 +19,99 @@
 [ext_resource type="PackedScene" uid="uid://bqbcebrv8pfph" path="res://Blocks/nuvem.tscn" id="13_kt21e"]
 [ext_resource type="PackedScene" uid="uid://0xdkw760671" path="res://Blocks/bloco_voador_verde.tscn" id="14_ytbhh"]
 [ext_resource type="PackedScene" uid="uid://dwleqb8kqxlqw" path="res://Blocks/bloco_voador_vermelho.tscn" id="15_jb8vx"]
+[ext_resource type="Texture2D" uid="uid://c3nkaj1cfdljy" path="res://Objetos - Mundo 1/Gramas/Grama1/Grama1.png" id="16_fgmop"]
+[ext_resource type="Texture2D" uid="uid://pe1hn2g7x8nb" path="res://Objetos - Mundo 1/Gramas/Grama1/Grama2.png" id="17_873cn"]
+[ext_resource type="Texture2D" uid="uid://b1otgxkvj2hak" path="res://Objetos - Mundo 1/Gramas/Grama2/Grama2.png" id="18_1ytih"]
+[ext_resource type="Texture2D" uid="uid://blr1swsrrvhwl" path="res://Objetos - Mundo 1/Gramas/Grama2/Grama3.png" id="19_ay8ra"]
+[ext_resource type="Texture2D" uid="uid://bq5gvdvym1iiv" path="res://Objetos - Mundo 1/Gramas/Grama2/Grama4.png" id="20_erejd"]
+[ext_resource type="Texture2D" uid="uid://dfokngta2jukl" path="res://Objetos - Mundo 1/Árvores/Arvore1.png" id="21_pl3u4"]
+[ext_resource type="Texture2D" uid="uid://b3tjjordywchp" path="res://Objetos - Mundo 1/Pedra1.png" id="22_440hq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3b5rq"]
 size = Vector2(20, 496)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bi37d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_fgmop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_873cn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k7cnn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_1ytih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ay8ra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_erejd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ay8ra")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Fase-01" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [517.031]
 
 [node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="05" type="ParallaxLayer" parent="Background"]
+motion_mirroring = Vector2(882, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/05"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_wbcid")
+centered = false
+
+[node name="04" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.3, 1)
+motion_mirroring = Vector2(882, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/04"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_o7lk8")
+centered = false
+
+[node name="03" type="ParallaxLayer" parent="Background"]
 visible = false
+motion_scale = Vector2(0.4, 1)
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Background"]
+[node name="Sprite2D" type="Sprite2D" parent="Background/03"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("3_j602i")
+centered = false
 
-[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer"]
-position = Vector2(1792, 256)
-scale = Vector2(5.60331, 2.12174)
-texture = ExtResource("1_c3ssv")
+[node name="02" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(882, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/02"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_p0y6s")
+centered = false
+
+[node name="01" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(882, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/01"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("5_eosmv")
+centered = false
 
 [node name="InvisibleWall" type="StaticBody2D" parent="."]
 
@@ -2089,7 +2170,7 @@ position = Vector2(2240, 272)
 position = Vector2(1856, 496)
 
 [node name="StaticBody2D24" parent="Obstaculos" instance=ExtResource("10_61aou")]
-position = Vector2(1920, 496)
+position = Vector2(1910, 496)
 
 [node name="StaticBody2D25" parent="Obstaculos" instance=ExtResource("11_dfgtr")]
 position = Vector2(1792, 496)
@@ -2122,19 +2203,19 @@ position = Vector2(2944, 464)
 position = Vector2(1856, 432)
 
 [node name="StaticBody2D29" parent="Obstaculos" instance=ExtResource("11_dfgtr")]
-position = Vector2(1920, 368)
+position = Vector2(1910, 368)
 
 [node name="StaticBody2D30" parent="Obstaculos" instance=ExtResource("12_kkjsa")]
 position = Vector2(1856, 464)
 
 [node name="StaticBody2D33" parent="Obstaculos" instance=ExtResource("12_kkjsa")]
-position = Vector2(1920, 432)
+position = Vector2(1910, 432)
 
 [node name="StaticBody2D34" parent="Obstaculos" instance=ExtResource("12_kkjsa")]
-position = Vector2(1920, 400)
+position = Vector2(1910, 400)
 
 [node name="StaticBody2D35" parent="Obstaculos" instance=ExtResource("12_kkjsa")]
-position = Vector2(1920, 464)
+position = Vector2(1910, 464)
 
 [node name="StaticBody2D51" parent="Obstaculos" instance=ExtResource("10_61aou")]
 position = Vector2(2096, 496)
@@ -2168,3 +2249,47 @@ position = Vector2(4080, 592)
 
 [node name="Bloco Voador 5" parent="." instance=ExtResource("14_ytbhh")]
 position = Vector2(4656, 576)
+
+[node name="Enfeites" type="Node" parent="."]
+
+[node name="Grama 1" type="AnimatedSprite2D" parent="Enfeites"]
+visibility_layer = 2
+z_index = -1
+position = Vector2(219, 498)
+sprite_frames = SubResource("SpriteFrames_bi37d")
+autoplay = "default"
+frame_progress = 0.392625
+
+[node name="Grama 2" type="AnimatedSprite2D" parent="Enfeites"]
+z_index = -1
+position = Vector2(636, 498)
+sprite_frames = SubResource("SpriteFrames_k7cnn")
+autoplay = "default"
+frame_progress = 0.508717
+
+[node name="Grama 3" type="AnimatedSprite2D" parent="Enfeites"]
+visibility_layer = 2
+z_index = -1
+position = Vector2(1426, 497)
+sprite_frames = SubResource("SpriteFrames_bi37d")
+autoplay = "default"
+frame_progress = 0.962685
+
+[node name="Grama 4" type="AnimatedSprite2D" parent="Enfeites"]
+visibility_layer = 2
+z_index = -1
+position = Vector2(1453, 497)
+sprite_frames = SubResource("SpriteFrames_bi37d")
+autoplay = "default"
+frame_progress = 0.962685
+
+[node name="Árvore 1" type="Sprite2D" parent="Enfeites"]
+z_index = -1
+position = Vector2(61, 426)
+scale = Vector2(0.648437, 0.648437)
+texture = ExtResource("21_pl3u4")
+
+[node name="Pedra 1" type="Sprite2D" parent="Enfeites"]
+z_index = -1
+position = Vector2(79, 497)
+texture = ExtResource("22_440hq")

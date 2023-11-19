@@ -3,11 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://cohee5gtfo55r" path="res://Objetos - Mundo 1/NuvemPequenaAlegre.png" id="1_ntu0p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkta7"]
-size = Vector2(32, 32)
+size = Vector2(32, 12)
 
 [node name="StaticBody2D" type="AnimatableBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10)
 shape = SubResource("RectangleShape2D_fkta7")
 
 [node name="NuvemPequenaAlegre" type="Sprite2D" parent="."]
