@@ -3443,7 +3443,7 @@ position = Vector2(4480, 624)
 position = Vector2(3920, 624)
 
 [node name="Lombinho" parent="." instance=ExtResource("9_8vmwd")]
-position = Vector2(5568, 368)
+position = Vector2(90, 452)
 
 [node name="Obstaculos" type="Node2D" parent="."]
 
