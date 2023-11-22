@@ -10,7 +10,8 @@ func _ready():
 func _process(delta):
 	pass
 
-
-
 func _on_body_entered(body):
 	$AnimatedSprite2D.play('angry')
+
+func _on_body_exited(body):
+	$AnimatedSprite2D.play('happy')

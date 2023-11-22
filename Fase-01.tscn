@@ -3643,7 +3643,7 @@ position = Vector2(4080, 544)
 position = Vector2(4656, 544)
 
 [node name="Bloco Voador 6" parent="Obstaculos" instance=ExtResource("15_jb8vx")]
-position = Vector2(5584, 144)
+position = Vector2(5501, 142)
 
 [node name="Bloco Voador 7" parent="Obstaculos" instance=ExtResource("14_ytbhh")]
 position = Vector2(5872, 320)
@@ -4573,4 +4573,25 @@ position = Vector2(2146, 508)
 position = Vector2(3530, 490)
 
 [node name="nuvem" parent="." instance=ExtResource("13_kt21e")]
-position = Vector2(333, 472)
+position = Vector2(6349, 241)
+
+[node name="nuvem2" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(6217, 184)
+
+[node name="nuvem3" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(6090, 133)
+
+[node name="nuvem4" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(5943, 128)
+
+[node name="nuvem5" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(5795, 137)
+
+[node name="nuvem6" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(5652, 200)
+
+[node name="nuvem7" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(5357, 107)
+
+[node name="palha" parent="." instance=ExtResource("6_6bxpb")]
+position = Vector2(5357, 66)

@@ -17,7 +17,7 @@
 radius = 15.0333
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7p6te"]
-size = Vector2(37, 39)
+size = Vector2(37, 38)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t8q6u"]
 animations = [{
@@ -120,7 +120,7 @@ collision_layer = 2
 script = ExtResource("1_5gxil")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0.5, 0.5)
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_7p6te")
 debug_color = Color(0.160784, 0.643137, 0, 0.419608)
 
@@ -132,3 +132,4 @@ frame = 10
 frame_progress = 1.0
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
