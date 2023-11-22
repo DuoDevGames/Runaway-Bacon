@@ -13,7 +13,9 @@ config_version=5
 config/name="Runaway Bacon"
 run/main_scene="res://Fase-01.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
+boot_splash/image="res://UI/Splash Screen Beta.png"
+config/icon="res://HUD/Lombinho/Lombinho1.png"
 
 [autoload]
 
@@ -23,6 +25,8 @@ Global="*res://Scripts/global.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=768
+window/size/resizable=false
+mouse_cursor/custom_image="res://UI/BaconCursor.png"
 
 [input]
 
@@ -48,3 +52,5 @@ Jump={
 2d_physics/layer_2="chão"
 2d_physics/layer_3="inimigos"
 2d_physics/layer_4="coletáveis"
+2d_physics/layer_5="hitbox"
+2d_physics/layer_6="hurtbox"

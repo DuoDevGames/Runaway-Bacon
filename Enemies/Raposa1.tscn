@@ -1,0 +1,78 @@
+[gd_scene load_steps=15 format=3 uid="uid://bt5ygil0hku1j"]
+
+[ext_resource type="Texture2D" uid="uid://bhwvlu8buts7t" path="res://Sprites - Raposa 1/Raposa1.png" id="1_xueud"]
+[ext_resource type="Script" path="res://Scripts/Raposa1.gd" id="1_ywdcw"]
+[ext_resource type="Texture2D" uid="uid://fnp541dql6yw" path="res://Sprites - Raposa 1/Raposa2.png" id="2_3krlg"]
+[ext_resource type="Texture2D" uid="uid://c4ppx2xoef476" path="res://Sprites - Raposa 1/Raposa3.png" id="3_lure6"]
+[ext_resource type="Texture2D" uid="uid://du4fm6npuevpa" path="res://Sprites - Raposa 1/Raposa4.png" id="4_3n68u"]
+[ext_resource type="Texture2D" uid="uid://rnd3ybrrs7ul" path="res://Sprites - Raposa 1/Raposa5.png" id="5_xgv0s"]
+[ext_resource type="Texture2D" uid="uid://dq734n1egvfe3" path="res://Sprites - Raposa 1/Raposa6.png" id="6_ardtw"]
+[ext_resource type="Texture2D" uid="uid://cbcx3caibh00j" path="res://Sprites - Raposa 1/Raposa7.png" id="7_0p6xe"]
+[ext_resource type="Texture2D" uid="uid://vryn57alpef5" path="res://Sprites - Raposa 1/Raposa8.png" id="8_jbifq"]
+[ext_resource type="Texture2D" uid="uid://b6fg2qsl5dh3b" path="res://Sprites - Raposa 1/Raposa9.png" id="9_bw8nq"]
+[ext_resource type="PackedScene" uid="uid://50weinbujiex" path="res://Characters/hitbox.tscn" id="11_8ud3f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fjh01"]
+size = Vector2(56, 37)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_llyh4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xueud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3krlg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lure6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3n68u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xgv0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ardtw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0p6xe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jbifq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bw8nq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qu1pf"]
+size = Vector2(56, 2)
+
+[node name="Raposa1" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("1_ywdcw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -18.5)
+shape = SubResource("RectangleShape2D_fjh01")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -32)
+sprite_frames = SubResource("SpriteFrames_llyh4")
+autoplay = "default"
+frame_progress = 0.870239
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(-36, 0)
+
+[node name="hitbox" parent="." instance=ExtResource("11_8ud3f")]
+
+[node name="hit-collision" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, -38)
+shape = SubResource("RectangleShape2D_qu1pf")

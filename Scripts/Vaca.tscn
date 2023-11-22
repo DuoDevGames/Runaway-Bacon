@@ -46,7 +46,6 @@ autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.12197e-06, 3.23529)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_8t5qh")
 
 [connection signal="child_entered_tree" from="CollisionShape2D" to="." method="_on_collision_shape_2d_child_entered_tree"]

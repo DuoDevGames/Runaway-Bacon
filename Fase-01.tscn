@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=66 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
 [ext_resource type="Texture2D" uid="uid://dbvbjpxk2y6ud" path="res://Background/Montanhas2.png" id="2_ckojg"]
@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://dj1ptarnaxc7h" path="res://HUD/Coração/Coracao12.png" id="27_q5f7k"]
 [ext_resource type="Texture2D" uid="uid://bs5axhc3poht3" path="res://Objetos - Mundo 1/Árvores/Arvore2.png" id="28_dvb7j"]
 [ext_resource type="Texture2D" uid="uid://eo0fh164o5gr" path="res://HUD/Coração/Coracao13.png" id="28_nyue6"]
+[ext_resource type="Texture2D" uid="uid://cref3hf0diule" path="res://Objetos - Mundo 1/Árvores/Arvore3.png" id="29_ho8ej"]
 [ext_resource type="Texture2D" uid="uid://b4bwgcp460lwk" path="res://Objetos - Mundo 1/Vaquinha/Vaquinha1.png" id="29_mcd4c"]
 [ext_resource type="Texture2D" uid="uid://cfbubktdath4w" path="res://HUD/Coração/Coracao14.png" id="29_of0po"]
 [ext_resource type="Texture2D" uid="uid://cuc3ugbf3b8vy" path="res://Objetos - Mundo 1/Vaquinha/Vaquinha2.png" id="30_f46lt"]
@@ -55,6 +56,8 @@
 [ext_resource type="Texture2D" uid="uid://c3nkaj1cfdljy" path="res://Objetos - Mundo 1/Gramas/Grama1/Grama1.png" id="50_1u75v"]
 [ext_resource type="Texture2D" uid="uid://pe1hn2g7x8nb" path="res://Objetos - Mundo 1/Gramas/Grama1/Grama2.png" id="51_jlgpa"]
 [ext_resource type="Texture2D" uid="uid://dfokngta2jukl" path="res://Objetos - Mundo 1/Árvores/Arvore1.png" id="52_ep8lo"]
+[ext_resource type="PackedScene" uid="uid://bt5ygil0hku1j" path="res://Enemies/Raposa1.tscn" id="56_800oj"]
+[ext_resource type="PackedScene" uid="uid://5cia04jkurn0" path="res://Blocks/bloco_voador_azul.tscn" id="58_nj7g2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k7eo7"]
 shader = ExtResource("3_f2kq4")
@@ -3633,9 +3636,6 @@ position = Vector2(3344, 416)
 [node name="Bloco Voador 1" parent="Obstaculos" instance=ExtResource("15_jb8vx")]
 position = Vector2(3168, 496)
 
-[node name="Bloco Voador 3" parent="Obstaculos" instance=ExtResource("15_jb8vx")]
-position = Vector2(3520, 496)
-
 [node name="Bloco Voador 4" parent="Obstaculos" instance=ExtResource("15_jb8vx")]
 position = Vector2(4080, 544)
 
@@ -4401,6 +4401,54 @@ position = Vector2(131, 419)
 scale = Vector2(0.661458, 0.661458)
 texture = ExtResource("28_dvb7j")
 
+[node name="Árvore 3" type="Sprite2D" parent="Cenário"]
+z_index = -3
+position = Vector2(5032, 460)
+scale = Vector2(0.661458, 0.661458)
+texture = ExtResource("28_dvb7j")
+
+[node name="Árvore 4" type="Sprite2D" parent="Cenário"]
+z_index = -3
+position = Vector2(5625, 385)
+scale = Vector2(0.661458, 0.661458)
+texture = ExtResource("28_dvb7j")
+
+[node name="Árvore 5" type="Sprite2D" parent="Cenário"]
+z_index = -3
+position = Vector2(5585, 359)
+scale = Vector2(0.661458, 0.661458)
+texture = ExtResource("28_dvb7j")
+
+[node name="Árvore 8" type="Sprite2D" parent="Cenário"]
+z_index = -3
+position = Vector2(2323, 471)
+scale = Vector2(0.661458, 0.661458)
+texture = ExtResource("28_dvb7j")
+
+[node name="Árvore 9" type="Sprite2D" parent="Cenário"]
+z_index = -3
+position = Vector2(1595, 442)
+scale = Vector2(0.661458, 0.661458)
+texture = ExtResource("28_dvb7j")
+
+[node name="Árvore 6" type="Sprite2D" parent="Cenário"]
+z_index = -3
+position = Vector2(4310, 482)
+scale = Vector2(0.661458, 0.661458)
+texture = ExtResource("29_ho8ej")
+
+[node name="Árvore 7" type="Sprite2D" parent="Cenário"]
+z_index = -3
+position = Vector2(2273, 439)
+scale = Vector2(0.661458, 0.661458)
+texture = ExtResource("29_ho8ej")
+
+[node name="Árvore 10" type="Sprite2D" parent="Cenário"]
+z_index = -3
+position = Vector2(683, 430)
+scale = Vector2(0.661458, 0.661458)
+texture = ExtResource("29_ho8ej")
+
 [node name="Vaquinha 1" type="AnimatedSprite2D" parent="Cenário"]
 z_index = -2
 position = Vector2(2748, 491)
@@ -4517,3 +4565,12 @@ theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("41_14ku5")
 theme_override_font_sizes/font_size = 24
 text = "Lombinho"
+
+[node name="Raposa2" parent="." instance=ExtResource("56_800oj")]
+position = Vector2(1516, 499)
+
+[node name="Raposa3" parent="." instance=ExtResource("56_800oj")]
+position = Vector2(2146, 508)
+
+[node name="Bloco Voador 1" parent="." instance=ExtResource("58_nj7g2")]
+position = Vector2(3530, 490)
