@@ -1,6 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://b1cpxuxufxdf3"]
+[gd_scene load_steps=16 format=3 uid="uid://xflyv8o6yyp5"]
 
-[ext_resource type="Script" path="res://Scripts/nuvem.gd" id="1_wulq6"]
+[ext_resource type="Script" path="res://Blocks/nuvem-animcao.gd" id="1_5gxil"]
 [ext_resource type="Texture2D" uid="uid://bc2inoy8bll6u" path="res://Objetos - Mundo 1/Nuvem/Nuvem1.png" id="1_ye0gd"]
 [ext_resource type="Texture2D" uid="uid://0b163561kfwg" path="res://Objetos - Mundo 1/Nuvem/Nuvem2.png" id="2_1md2y"]
 [ext_resource type="Texture2D" uid="uid://plb3wt0l728g" path="res://Objetos - Mundo 1/Nuvem/Nuvem3.png" id="3_jgwua"]
@@ -13,10 +13,13 @@
 [ext_resource type="Texture2D" uid="uid://d03bt3x07d5u7" path="res://Objetos - Mundo 1/Nuvem/Nuvem10.png" id="10_khrh1"]
 [ext_resource type="Texture2D" uid="uid://duhioxe2cwyp7" path="res://Objetos - Mundo 1/Nuvem/Nuvem11.png" id="11_ycrnd"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_sg23l"]
-radius = 16.0312
+[sub_resource type="CircleShape2D" id="CircleShape2D_cuhqa"]
+radius = 15.0333
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_o227m"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7p6te"]
+size = Vector2(37, 39)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t8q6u"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -104,24 +107,28 @@ animations = [{
 }]
 
 [node name="nuvem" type="Node2D"]
-script = ExtResource("1_wulq6")
 
-[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
-shape = SubResource("CircleShape2D_sg23l")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_cuhqa")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
-sprite_frames = SubResource("SpriteFrames_o227m")
-animation = &"happy"
-autoplay = "default"
+script = ExtResource("1_5gxil")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_sg23l")
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_7p6te")
+debug_color = Color(0.160784, 0.643137, 0, 0.419608)
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+sprite_frames = SubResource("SpriteFrames_t8q6u")
+animation = &"happy"
+autoplay = "default"
+frame = 10
+frame_progress = 1.0
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

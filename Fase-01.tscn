@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dve1h6goyhx17" path="res://Blocks/madeira-baixo.tscn" id="10_61aou"]
 [ext_resource type="PackedScene" uid="uid://470tmpn733o1" path="res://Blocks/madeira-topo.tscn" id="11_dfgtr"]
 [ext_resource type="PackedScene" uid="uid://77vvmc2lbn4f" path="res://Blocks/madeira-meio.tscn" id="12_kkjsa"]
-[ext_resource type="PackedScene" uid="uid://b1cpxuxufxdf3" path="res://Blocks/nuvem.tscn" id="13_kt21e"]
+[ext_resource type="PackedScene" uid="uid://xflyv8o6yyp5" path="res://Blocks/nuvem.tscn" id="13_kt21e"]
 [ext_resource type="PackedScene" uid="uid://0xdkw760671" path="res://Blocks/bloco_voador_verde.tscn" id="14_ytbhh"]
 [ext_resource type="PackedScene" uid="uid://dwleqb8kqxlqw" path="res://Blocks/bloco_voador_vermelho.tscn" id="15_jb8vx"]
 [ext_resource type="PackedScene" uid="uid://6yc2ykgmtlg0" path="res://Blocks/tijolo.tscn" id="16_0biy6"]
@@ -4312,9 +4312,6 @@ position = Vector2(2272.5, 606.5)
 scale = Vector2(22.5312, 2.09375)
 texture = ExtResource("22_w1daw")
 
-[node name="nuvem" parent="." instance=ExtResource("13_kt21e")]
-position = Vector2(314, 455)
-
 [node name="Cenário" type="Node2D" parent="."]
 
 [node name="Grama 1" type="AnimatedSprite2D" parent="Cenário"]
@@ -4574,3 +4571,6 @@ position = Vector2(2146, 508)
 
 [node name="Bloco Voador 1" parent="." instance=ExtResource("58_nj7g2")]
 position = Vector2(3530, 490)
+
+[node name="nuvem" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(333, 472)
