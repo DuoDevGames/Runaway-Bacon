@@ -1,9 +1,12 @@
 extends CharacterBody2D
 
+signal killed
 
 @export var SPEED : int = 200
 @export var JUMP_FORCE : int = 360
 @export var GRAVITY : int = 900
+
+@onready var gos = $"../HUD/GameOverScreen"
 
 func _physics_process(delta):
 	
@@ -37,3 +40,8 @@ func _physics_process(delta):
 		get_tree().reload_current_scene()
 	
 	move_and_slide()
+
+func die():
+	queue_free()
+	await get_tree().create_timer(1.5).timeout
+	gos.visible = true

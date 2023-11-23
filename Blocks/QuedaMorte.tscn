@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://qf7byrmak0t6"]
+
+[ext_resource type="Script" path="res://Blocks/quedamorte.gd" id="1_tqgqq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xr45c"]
+size = Vector2(152.5, 16)
+
+[node name="QuedaMorte" type="Area2D"]
+script = ExtResource("1_tqgqq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xr45c")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=68 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
 [ext_resource type="Texture2D" uid="uid://dbvbjpxk2y6ud" path="res://Background/Montanhas2.png" id="2_ckojg"]
@@ -57,7 +57,9 @@
 [ext_resource type="Texture2D" uid="uid://pe1hn2g7x8nb" path="res://Objetos - Mundo 1/Gramas/Grama1/Grama2.png" id="51_jlgpa"]
 [ext_resource type="Texture2D" uid="uid://dfokngta2jukl" path="res://Objetos - Mundo 1/Árvores/Arvore1.png" id="52_ep8lo"]
 [ext_resource type="PackedScene" uid="uid://bt5ygil0hku1j" path="res://Enemies/Raposa1.tscn" id="56_800oj"]
+[ext_resource type="PackedScene" uid="uid://pdd43txu2ir5" path="res://game_over_screen.tscn" id="56_oqbwd"]
 [ext_resource type="PackedScene" uid="uid://5cia04jkurn0" path="res://Blocks/bloco_voador_azul.tscn" id="58_nj7g2"]
+[ext_resource type="PackedScene" uid="uid://qf7byrmak0t6" path="res://Blocks/QuedaMorte.tscn" id="60_uotjy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k7eo7"]
 shader = ExtResource("3_f2kq4")
@@ -4563,6 +4565,9 @@ theme_override_fonts/font = ExtResource("41_14ku5")
 theme_override_font_sizes/font_size = 24
 text = "Lombinho"
 
+[node name="GameOverScreen" parent="HUD" instance=ExtResource("56_oqbwd")]
+visible = false
+
 [node name="Raposa2" parent="." instance=ExtResource("56_800oj")]
 position = Vector2(1452, 496)
 
@@ -4628,3 +4633,6 @@ position = Vector2(1777, 356)
 
 [node name="nuvem14" parent="." instance=ExtResource("13_kt21e")]
 position = Vector2(1522, 324)
+
+[node name="QuedaMorte" parent="." instance=ExtResource("60_uotjy")]
+position = Vector2(412, 499)
