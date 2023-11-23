@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 100.0
 var direction := -1
+var fox_hp = 100
 
 @onready var wall_detector := $RayCast2D as RayCast2D
 @onready var texture := $AnimatedSprite2D
@@ -27,3 +28,16 @@ func _physics_process(delta):
 	velocity.x = direction * SPEED 
 
 	move_and_slide()
+	
+
+
+
+func _on_animated_sprite_2d_animation_finished():
+	if $AnimatedSprite2D.animation == "damage":
+		print(fox_hp)
+		if(fox_hp > 0):
+			fox_hp = fox_hp - 20
+			$AnimatedSprite2D.play("default")
+			print(fox_hp)
+		else:
+			queue_free()
