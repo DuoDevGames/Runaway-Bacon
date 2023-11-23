@@ -3524,7 +3524,7 @@ position = Vector2(3920, 613)
 [node name="Node2D" type="Node2D" parent="Terreno"]
 
 [node name="Lombinho" parent="." instance=ExtResource("9_8vmwd")]
-position = Vector2(166, 410)
+position = Vector2(266, 438)
 
 [node name="Obstaculos" type="Node2D" parent="."]
 
@@ -4591,7 +4591,40 @@ position = Vector2(5795, 137)
 position = Vector2(5652, 200)
 
 [node name="nuvem7" parent="." instance=ExtResource("13_kt21e")]
-position = Vector2(5357, 107)
+position = Vector2(5356, 112)
 
 [node name="palha" parent="." instance=ExtResource("6_6bxpb")]
 position = Vector2(5357, 66)
+
+[node name="nuvem8" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(1298, 356)
+
+[node name="nuvem9" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(1330, 356)
+
+[node name="nuvem10" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(1362, 356)
+
+[node name="nuvem11" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(1394, 356)
+
+[node name="nuvem12" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(1490, 324)
+
+[node name="nuvem13" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(1554, 324)
+
+[node name="nuvem15" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(1586, 324)
+
+[node name="nuvem16" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(1618, 324)
+
+[node name="nuvem17" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(1650, 324)
+
+[node name="nuvem18" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(1777, 356)
+
+[node name="nuvem14" parent="." instance=ExtResource("13_kt21e")]
+position = Vector2(1522, 324)
