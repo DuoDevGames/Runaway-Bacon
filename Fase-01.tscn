@@ -4564,10 +4564,10 @@ theme_override_font_sizes/font_size = 24
 text = "Lombinho"
 
 [node name="Raposa2" parent="." instance=ExtResource("56_800oj")]
-position = Vector2(1516, 499)
+position = Vector2(1452, 496)
 
 [node name="Raposa3" parent="." instance=ExtResource("56_800oj")]
-position = Vector2(2146, 508)
+position = Vector2(2175, 503)
 
 [node name="Bloco Voador 1" parent="." instance=ExtResource("58_nj7g2")]
 position = Vector2(3530, 490)

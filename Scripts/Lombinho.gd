@@ -33,4 +33,7 @@ func _physics_process(delta):
 		velocity.y -= JUMP_FORCE
 		$AnimatedSprite2D.play("Jump")
 	
+	if Input.is_action_just_pressed("Reset"):
+		get_tree().reload_current_scene()
+	
 	move_and_slide()
