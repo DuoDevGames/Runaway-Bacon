@@ -42,6 +42,9 @@ func _physics_process(delta):
 	move_and_slide()
 
 func die():
+	get_tree().reload_current_scene()
+	Global.palhas = 0
+	Global.coracoes = 0
 	queue_free()
 	await get_tree().create_timer(1.5).timeout
 	gos.visible = true
