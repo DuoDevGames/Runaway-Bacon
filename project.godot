@@ -59,3 +59,4 @@ Reset={
 2d_physics/layer_4="coletáveis"
 2d_physics/layer_5="hitbox"
 2d_physics/layer_6="hurtbox"
+2d_physics/layer_7="obstáculos"

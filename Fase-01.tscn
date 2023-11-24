@@ -4568,12 +4568,6 @@ text = "Lombinho"
 [node name="GameOverScreen" parent="HUD" instance=ExtResource("56_oqbwd")]
 visible = false
 
-[node name="Raposa2" parent="." instance=ExtResource("56_800oj")]
-position = Vector2(1452, 496)
-
-[node name="Raposa3" parent="." instance=ExtResource("56_800oj")]
-position = Vector2(2175, 503)
-
 [node name="Bloco Voador 1" parent="." instance=ExtResource("58_nj7g2")]
 position = Vector2(3530, 490)
 
@@ -4636,3 +4630,12 @@ position = Vector2(1522, 324)
 
 [node name="QuedaMorte" parent="." instance=ExtResource("60_uotjy")]
 position = Vector2(87, 602)
+
+[node name="Raposa1" parent="." instance=ExtResource("56_800oj")]
+position = Vector2(1422, 508)
+
+[node name="Raposa2" parent="." instance=ExtResource("56_800oj")]
+position = Vector2(1580, 490)
+
+[node name="Raposa3" parent="." instance=ExtResource("56_800oj")]
+position = Vector2(2239, 481)

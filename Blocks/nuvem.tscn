@@ -30,7 +30,7 @@ scale_max = 1.2
 color = Color(0, 0.403922, 1, 0.921569)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7p6te"]
-size = Vector2(32, 23)
+size = Vector2(28, 23)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t8q6u"]
 animations = [{

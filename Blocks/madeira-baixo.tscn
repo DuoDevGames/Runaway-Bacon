@@ -6,6 +6,7 @@
 size = Vector2(32, 32)
 
 [node name="StaticBody2D" type="StaticBody2D"]
+collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_vibun")
