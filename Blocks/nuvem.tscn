@@ -13,8 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://d03bt3x07d5u7" path="res://Objetos - Mundo 1/Nuvem/Nuvem10.png" id="10_khrh1"]
 [ext_resource type="Texture2D" uid="uid://duhioxe2cwyp7" path="res://Objetos - Mundo 1/Nuvem/Nuvem11.png" id="11_ycrnd"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_cuhqa"]
-radius = 15.0333
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8in0q"]
+size = Vector2(32, 32)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_v6nrv"]
 emission_shape = 3
@@ -30,7 +30,7 @@ scale_max = 1.2
 color = Color(0, 0.403922, 1, 0.921569)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7p6te"]
-size = Vector2(28, 23)
+size = Vector2(32, 23)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t8q6u"]
 animations = [{
@@ -123,13 +123,14 @@ animations = [{
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 2
+collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, -1)
-shape = SubResource("CircleShape2D_cuhqa")
+shape = SubResource("RectangleShape2D_8in0q")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_5gxil")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Area2D"]

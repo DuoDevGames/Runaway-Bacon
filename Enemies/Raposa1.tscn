@@ -21,6 +21,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjh01"]
 size = Vector2(56, 37)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qu1pf"]
+size = Vector2(56, 2)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_llyh4"]
 animations = [{
 "frames": [{
@@ -94,31 +97,38 @@ animations = [{
 "speed": 15.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qu1pf"]
-size = Vector2(56, 2)
-
 [node name="Raposa1" type="CharacterBody2D"]
-collision_mask = 69
+collision_layer = 4
+collision_mask = 71
 script = ExtResource("1_m4d1e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -18.5)
+position = Vector2(0, -19)
 shape = SubResource("RectangleShape2D_fjh01")
+
+[node name="Obstaculo" type="RayCast2D" parent="."]
+position = Vector2(0, -16)
+target_position = Vector2(-31, 0)
+collision_mask = 68
+
+[node name="Chao" type="RayCast2D" parent="."]
+position = Vector2(-29, -1)
+target_position = Vector2(0, 16)
+collision_mask = 2
+
+[node name="hitbox" parent="." instance=ExtResource("11_8ud3f")]
+position = Vector2(64, -16)
+collision_layer = 4
+collision_mask = 69
+
+[node name="hit-collision" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(-64, -23)
+shape = SubResource("RectangleShape2D_qu1pf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_llyh4")
 animation = &"damage"
 autoplay = "default"
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-target_position = Vector2(-36, 0)
-collision_mask = 70
-
-[node name="hitbox" parent="." instance=ExtResource("11_8ud3f")]
-
-[node name="hit-collision" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(0, -38)
-shape = SubResource("RectangleShape2D_qu1pf")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

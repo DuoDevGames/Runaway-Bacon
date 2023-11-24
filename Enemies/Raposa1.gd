@@ -1,34 +1,35 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-
-@onready var wall_detector := $RayCast2D as RayCast2D
-@onready var texture := $AnimatedSprite2D
-
-var direction := -1
+var speed = -75
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+var facing_right = false
+
+func _ready():
+	$AnimatedSprite2D.play("default")
 
 func _physics_process(delta):
 
 	if not is_on_floor():
 		velocity.y = gravity * delta
-		
-	if wall_detector.is_colliding():
-		direction *= -1
-		wall_detector.scale.x *= -1
-		
-	if direction == 1:
-		texture.flip_h = true
-	else:
-		texture.flip_h = false
-		
-		
-	velocity.x = direction * SPEED
-
-
+	
+	if $Obstaculo.is_colliding() && is_on_floor():
+		flip()
+	
+	if !$Chao.is_colliding() && is_on_floor():
+		flip()
+	
+	velocity.x = speed
 	move_and_slide()
+
+func flip():
+	facing_right = !facing_right
+	
+	scale.x = abs(scale.x) * -1
+	if facing_right:
+		speed = abs(speed)
+	else:
+		speed = abs(speed) * -1
