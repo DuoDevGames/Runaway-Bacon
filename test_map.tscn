@@ -7,10 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://bxsn1wvmr8cjn" path="res://Blocks/terra-meio2.tscn" id="5_y54p5"]
 [ext_resource type="PackedScene" uid="uid://bvc8iidqjlgvc" path="res://Blocks/terra-meio1.tscn" id="6_aqcqk"]
 [ext_resource type="PackedScene" uid="uid://d0oo5pjdvy18m" path="res://Blocks/terra-borda-direita.tscn" id="7_j347a"]
-[ext_resource type="PackedScene" uid="uid://c8q4vxqrdjdpd" path="res://Characters/lombinho.tscn" id="8_fne5m"]
 [ext_resource type="PackedScene" uid="uid://dve1h6goyhx17" path="res://Blocks/madeira-baixo.tscn" id="9_d8t1y"]
 [ext_resource type="PackedScene" uid="uid://470tmpn733o1" path="res://Blocks/madeira-topo.tscn" id="10_kfbrl"]
 [ext_resource type="PackedScene" uid="uid://bt5ygil0hku1j" path="res://Enemies/Raposa1.tscn" id="11_25oq3"]
+[ext_resource type="PackedScene" uid="uid://b4pqomln61vsg" path="res://Characters/panceta.tscn" id="12_rk4gs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3usjy"]
 size = Vector2(20, 496)
@@ -561,9 +561,6 @@ position = Vector2(712, 584)
 [node name="StaticBody2D180" parent="." instance=ExtResource("7_j347a")]
 position = Vector2(712, 616)
 
-[node name="Lombinho" parent="." instance=ExtResource("8_fne5m")]
-position = Vector2(168, 472)
-
 [node name="StaticBody2D181" parent="." instance=ExtResource("9_d8t1y")]
 position = Vector2(456, 488)
 
@@ -575,3 +572,6 @@ position = Vector2(584, 488)
 
 [node name="Raposa1" parent="." instance=ExtResource("11_25oq3")]
 position = Vector2(528, 504)
+
+[node name="panceta" parent="." instance=ExtResource("12_rk4gs")]
+position = Vector2(284, 468)

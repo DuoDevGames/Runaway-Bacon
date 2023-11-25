@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=70 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
 [ext_resource type="Texture2D" uid="uid://dbvbjpxk2y6ud" path="res://Background/Montanhas2.png" id="2_ckojg"]
@@ -24,8 +24,10 @@
 [ext_resource type="PackedScene" uid="uid://6yc2ykgmtlg0" path="res://Blocks/tijolo.tscn" id="16_0biy6"]
 [ext_resource type="PackedScene" uid="uid://c2ol35j6yp6bx" path="res://Blocks/agua-topo.tscn" id="21_gphdm"]
 [ext_resource type="Texture2D" uid="uid://djs7m6ilt70k2" path="res://Objetos - Mundo 1/Água/AguaFundo.png" id="22_w1daw"]
+[ext_resource type="Texture2D" uid="uid://di3pywfrpok0b" path="res://Objetos - Mundo 1/MadeiraEmPéMeio.png" id="23_q7r4t"]
 [ext_resource type="Texture2D" uid="uid://cbii7qp4bas4t" path="res://HUD/Lombinho/Lombinho1.png" id="24_b2dqh"]
 [ext_resource type="Script" path="res://Scripts/hudmanager.gd" id="24_fr364"]
+[ext_resource type="Texture2D" uid="uid://dpol3t1o1c5v1" path="res://Objetos - Mundo 1/MadeiraEmPéFinal.png" id="24_hkukr"]
 [ext_resource type="Texture2D" uid="uid://ocnshgq3axj7" path="res://HUD/Coração/Coracao1.png" id="24_rcvin"]
 [ext_resource type="Texture2D" uid="uid://b7cl0vmtbgvue" path="res://HUD/Coração/Coracao2.png" id="25_3mcri"]
 [ext_resource type="Texture2D" uid="uid://dfm7ms3huimy" path="res://HUD/Lombinho/Lombinho2.png" id="25_yhmbd"]
@@ -3580,7 +3582,7 @@ position = Vector2(1522, 324)
 [node name="Node2D" type="Node2D" parent="Terreno"]
 
 [node name="Lombinho" parent="." instance=ExtResource("9_8vmwd")]
-position = Vector2(224, 472)
+position = Vector2(143, 479)
 
 [node name="Obstaculos" type="Node2D" parent="."]
 
@@ -3614,9 +3616,6 @@ position = Vector2(1200, 464)
 [node name="StaticBody2D10" parent="Obstaculos" instance=ExtResource("10_61aou")]
 position = Vector2(1200, 496)
 
-[node name="StaticBody2D22" parent="Obstaculos" instance=ExtResource("10_61aou")]
-position = Vector2(1856, 496)
-
 [node name="StaticBody2D24" parent="Obstaculos" instance=ExtResource("10_61aou")]
 position = Vector2(1920, 496)
 
@@ -3624,7 +3623,7 @@ position = Vector2(1920, 496)
 position = Vector2(1791, 496)
 
 [node name="StaticBody2D26" parent="Obstaculos" instance=ExtResource("11_dfgtr")]
-position = Vector2(1887, 496)
+position = Vector2(1888, 400)
 
 [node name="StaticBody2D67" parent="Obstaculos" instance=ExtResource("10_61aou")]
 position = Vector2(2608, 496)
@@ -3655,9 +3654,6 @@ position = Vector2(1856, 432)
 
 [node name="StaticBody2D29" parent="Obstaculos" instance=ExtResource("11_dfgtr")]
 position = Vector2(1920, 368)
-
-[node name="StaticBody2D30" parent="Obstaculos" instance=ExtResource("12_kkjsa")]
-position = Vector2(1856, 464)
 
 [node name="StaticBody2D33" parent="Obstaculos" instance=ExtResource("12_kkjsa")]
 position = Vector2(1920, 432)
@@ -3886,6 +3882,14 @@ position = Vector2(6592, 368)
 
 [node name="StaticBody2D98" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6592, 368)
+
+[node name="Bloco Atravessavel 1" type="Sprite2D" parent="Obstaculos"]
+position = Vector2(1856, 464)
+texture = ExtResource("23_q7r4t")
+
+[node name="Bloco Atravessavel 2" type="Sprite2D" parent="Obstaculos"]
+position = Vector2(1856, 496)
+texture = ExtResource("24_hkukr")
 
 [node name="Bloco Voador 3" parent="Obstaculos" instance=ExtResource("58_nj7g2")]
 position = Vector2(3530, 490)
@@ -4643,5 +4647,5 @@ position = Vector2(5280, 480)
 [node name="Raposa4" parent="." instance=ExtResource("56_800oj")]
 position = Vector2(6128, 288)
 
-[node name="Raposa5" parent="." instance=ExtResource("56_800oj")]
-position = Vector2(1568, 304)
+[node name="palha2" parent="." instance=ExtResource("6_6bxpb")]
+position = Vector2(1888, 480)
