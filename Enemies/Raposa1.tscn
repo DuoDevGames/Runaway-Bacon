@@ -62,7 +62,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"damage",
-"speed": 20.0
+"speed": 34.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -94,7 +94,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 15.0
+"speed": 10.0
 }]
 
 [node name="Raposa1" type="CharacterBody2D"]
@@ -112,7 +112,7 @@ target_position = Vector2(-31, 0)
 collision_mask = 68
 
 [node name="Chao" type="RayCast2D" parent="."]
-position = Vector2(-29, -1)
+position = Vector2(-19, -1)
 target_position = Vector2(0, 16)
 collision_mask = 2
 
@@ -130,5 +130,7 @@ position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_llyh4")
 animation = &"damage"
 autoplay = "default"
+frame = 10
+frame_progress = 1.0
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

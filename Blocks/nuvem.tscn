@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://xflyv8o6yyp5"]
 
-[ext_resource type="Script" path="res://Blocks/nuvem-animcao.gd" id="1_5gxil"]
+[ext_resource type="Script" path="res://Scripts/nuvem-animcao.gd" id="1_5gxil"]
 [ext_resource type="Texture2D" uid="uid://bc2inoy8bll6u" path="res://Objetos - Mundo 1/Nuvem/Nuvem1.png" id="1_ye0gd"]
 [ext_resource type="Texture2D" uid="uid://0b163561kfwg" path="res://Objetos - Mundo 1/Nuvem/Nuvem2.png" id="2_1md2y"]
 [ext_resource type="Texture2D" uid="uid://plb3wt0l728g" path="res://Objetos - Mundo 1/Nuvem/Nuvem3.png" id="3_jgwua"]

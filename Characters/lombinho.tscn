@@ -74,16 +74,8 @@ shape = SubResource("RectangleShape2D_lcqrw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0xo0i")
-animation = &"Run"
+animation = &"Jump"
 autoplay = "default"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, 2)
-scale = Vector2(1e-05, 1e-05)
-zoom = Vector2(2, 2)
-limit_left = 10
-limit_top = 0
-limit_bottom = 610
 
 [node name="hurtbox" type="Area2D" parent="."]
 collision_layer = 0
@@ -93,3 +85,17 @@ collision_mask = 4
 position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_o4ci8")
 debug_color = Color(0.945098, 0, 0.0588235, 0.419608)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+
+[node name="ray_right" type="RayCast2D" parent="."]
+position = Vector2(0, 12)
+target_position = Vector2(18, 0)
+collision_mask = 4
+
+[node name="ray_left" type="RayCast2D" parent="."]
+position = Vector2(0, 12)
+target_position = Vector2(-18, 0)
+collision_mask = 4
+
+[connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://qf7byrmak0t6"]
 
-[ext_resource type="Script" path="res://Blocks/quedamorte.gd" id="1_tqgqq"]
+[ext_resource type="Script" path="res://Scripts/quedamorte.gd" id="1_tqgqq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xr45c"]
 size = Vector2(9846.25, 16)

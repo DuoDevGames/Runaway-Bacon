@@ -5,8 +5,10 @@ signal killed
 @export var SPEED : int = 200
 @export var JUMP_FORCE : int = 360
 @export var GRAVITY : int = 900
+var knockback_vector := Vector2.ZERO
 
-@onready var gos = $"../HUD/GameOverScreen"
+@onready var remote_transform := $RemoteTransform2D as RemoteTransform2D
+@onready var anim := $AnimatedSprite2D as AnimatedSprite2D
 
 var dead : bool = false
 
@@ -14,16 +16,15 @@ func _physics_process(delta):
 	
 	var direction = Input.get_axis("Left", "Right")
 	
-	if !dead:
-		if direction:
-			velocity.x = direction * SPEED
-			if is_on_floor():
-				$AnimatedSprite2D.play("Run")
-		else:
-			velocity.x = 0
-			if is_on_floor():
-				$AnimatedSprite2D.play("default")
-		
+	if direction:
+		velocity.x = direction * SPEED
+		if is_on_floor():
+			$AnimatedSprite2D.play("Run")
+	else:
+		velocity.x = 0
+		if is_on_floor():
+			$AnimatedSprite2D.play("default")
+	
 	#GRAVITY
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
@@ -42,12 +43,35 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Reset"):
 		get_tree().reload_current_scene()
 	
+	if knockback_vector != Vector2.ZERO:
+		velocity = knockback_vector
+	
 	move_and_slide()
 
 func die():
-	dead = true
 	Global.palhas = 0
 	Global.coracoes = 3
 	Global.score = 0
-	await get_tree().create_timer(1.0).timeout
-	gos.visible = true
+	queue_free()
+
+func dano(knockback_force := Vector2.ZERO, duration = 0.25):
+	Global.coracoes -= 1
+	if knockback_force != Vector2.ZERO:
+		knockback_vector = knockback_force
+		
+		var knockback_tween := get_tree().create_tween()
+		knockback_tween.parallel().tween_property(self, "knockback_vector", Vector2.ZERO, duration)
+		anim.modulate = Color(1,0,0,1)
+		knockback_tween.parallel().tween_property(anim, "modulate", Color(1,1,1,1), duration)
+	if Global.coracoes <= 0:
+		die()
+
+func follow_camera(camera):
+	var camera_path = camera.get_path()
+	remote_transform.remote_path = camera_path
+
+func _on_hurtbox_body_entered(body):
+	if $ray_right.is_colliding():
+		dano(Vector2(-600,-320))
+	elif $ray_left.is_colliding():
+		dano(Vector2(600,-320))
