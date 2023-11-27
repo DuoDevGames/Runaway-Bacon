@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=77 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -60,10 +60,14 @@
 [ext_resource type="Texture2D" uid="uid://c3nkaj1cfdljy" path="res://Objetos - Mundo 1/Gramas/Grama1/Grama1.png" id="50_1u75v"]
 [ext_resource type="Texture2D" uid="uid://pe1hn2g7x8nb" path="res://Objetos - Mundo 1/Gramas/Grama1/Grama2.png" id="51_jlgpa"]
 [ext_resource type="Texture2D" uid="uid://dfokngta2jukl" path="res://Objetos - Mundo 1/Árvores/Arvore1.png" id="52_ep8lo"]
+[ext_resource type="Texture2D" uid="uid://bg446ap2fi1qj" path="res://Objetos - Mundo 1/MadeiraEmPéCima.png" id="53_th53b"]
 [ext_resource type="PackedScene" uid="uid://bt5ygil0hku1j" path="res://Enemies/Raposa1.tscn" id="56_800oj"]
 [ext_resource type="PackedScene" uid="uid://pdd43txu2ir5" path="res://cenas/game_over_screen.tscn" id="56_oqbwd"]
 [ext_resource type="PackedScene" uid="uid://5cia04jkurn0" path="res://Blocks/bloco_voador_azul.tscn" id="58_nj7g2"]
 [ext_resource type="PackedScene" uid="uid://qf7byrmak0t6" path="res://Blocks/QuedaMorte.tscn" id="60_uotjy"]
+[ext_resource type="Texture2D" uid="uid://f7r7m6wodhjl" path="res://Objetos - Mundo 1/TerraMeio01.png" id="66_rvtr3"]
+[ext_resource type="Texture2D" uid="uid://b3p2s8u0jxhfi" path="res://Objetos - Mundo 1/TerraMeio02.png" id="67_tucfo"]
+[ext_resource type="Texture2D" uid="uid://bv5tis4kq420q" path="res://Objetos - Mundo 1/Chao conto esquerdo.png" id="68_etle8"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_sxcsx"]
 frames = 17
@@ -154,6 +158,9 @@ animations = [{
 "name": &"default",
 "speed": 1.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo5vv"]
+size = Vector2(56, 32)
 
 [node name="Fase-01" type="Node2D"]
 script = ExtResource("1_162om")
@@ -336,7 +343,18 @@ position = Vector2(2014, 274)
 [node name="palha4" parent="Coletáveis" instance=ExtResource("6_6bxpb")]
 position = Vector2(5357, 66)
 
+[node name="palha7" parent="Coletáveis" instance=ExtResource("6_6bxpb")]
+position = Vector2(4664, 320)
+
+[node name="palha8" parent="Coletáveis" instance=ExtResource("6_6bxpb")]
+position = Vector2(4208, 208)
+
+[node name="palha6" parent="Coletáveis" instance=ExtResource("6_6bxpb")]
+visible = false
+position = Vector2(6072, 424)
+
 [node name="palha5" parent="Coletáveis" instance=ExtResource("6_6bxpb")]
+visible = false
 position = Vector2(1888, 480)
 
 [node name="Terreno" type="Node2D" parent="."]
@@ -3074,20 +3092,11 @@ position = Vector2(6240, 336)
 [node name="StaticBody2D973" parent="Terreno" instance=ExtResource("8_aysoi")]
 position = Vector2(6240, 496)
 
-[node name="StaticBody2D974" parent="Terreno" instance=ExtResource("5_vyfl1")]
-position = Vector2(6016, 432)
-
 [node name="StaticBody2D975" parent="Terreno" instance=ExtResource("5_vyfl1")]
 position = Vector2(6016, 464)
 
-[node name="StaticBody2D976" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(6048, 432)
-
 [node name="StaticBody2D977" parent="Terreno" instance=ExtResource("7_q42sb")]
 position = Vector2(6048, 464)
-
-[node name="StaticBody2D978" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(6080, 432)
 
 [node name="StaticBody2D979" parent="Terreno" instance=ExtResource("7_q42sb")]
 position = Vector2(6080, 464)
@@ -3098,14 +3107,8 @@ position = Vector2(6112, 432)
 [node name="StaticBody2D981" parent="Terreno" instance=ExtResource("7_q42sb")]
 position = Vector2(6112, 464)
 
-[node name="StaticBody2D982" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(6048, 432)
-
 [node name="StaticBody2D983" parent="Terreno" instance=ExtResource("7_q42sb")]
 position = Vector2(6048, 464)
-
-[node name="StaticBody2D984" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(6080, 432)
 
 [node name="StaticBody2D985" parent="Terreno" instance=ExtResource("7_q42sb")]
 position = Vector2(6080, 464)
@@ -3158,23 +3161,8 @@ position = Vector2(6240, 432)
 [node name="StaticBody2D1001" parent="Terreno" instance=ExtResource("8_aysoi")]
 position = Vector2(6240, 464)
 
-[node name="StaticBody2D1002" parent="Terreno" instance=ExtResource("5_vyfl1")]
-position = Vector2(6016, 400)
-
-[node name="StaticBody2D1003" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(6048, 400)
-
-[node name="StaticBody2D1004" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(6080, 400)
-
 [node name="StaticBody2D1005" parent="Terreno" instance=ExtResource("7_q42sb")]
 position = Vector2(6112, 400)
-
-[node name="StaticBody2D1006" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(6048, 400)
-
-[node name="StaticBody2D1007" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(6080, 400)
 
 [node name="StaticBody2D1008" parent="Terreno" instance=ExtResource("7_q42sb")]
 position = Vector2(6112, 400)
@@ -3665,6 +3653,12 @@ position = Vector2(5795, 137)
 [node name="nuvem6" parent="Terreno" instance=ExtResource("13_kt21e")]
 position = Vector2(5652, 200)
 
+[node name="nuvem19" parent="Terreno" instance=ExtResource("13_kt21e")]
+position = Vector2(4208, 488)
+
+[node name="nuvem20" parent="Terreno" instance=ExtResource("13_kt21e")]
+position = Vector2(4208, 248)
+
 [node name="nuvem7" parent="Terreno" instance=ExtResource("13_kt21e")]
 position = Vector2(5356, 112)
 
@@ -3748,34 +3742,10 @@ position = Vector2(1200, 496)
 position = Vector2(1920, 496)
 
 [node name="StaticBody2D25" parent="Obstaculos" instance=ExtResource("11_dfgtr")]
-position = Vector2(1791, 496)
+position = Vector2(1792, 496)
 
 [node name="StaticBody2D26" parent="Obstaculos" instance=ExtResource("11_dfgtr")]
 position = Vector2(1888, 400)
-
-[node name="StaticBody2D67" parent="Obstaculos" instance=ExtResource("10_61aou")]
-position = Vector2(2608, 496)
-
-[node name="StaticBody2D68" parent="Obstaculos" instance=ExtResource("11_dfgtr")]
-position = Vector2(2608, 464)
-
-[node name="StaticBody2D69" parent="Obstaculos" instance=ExtResource("10_61aou")]
-position = Vector2(2608, 496)
-
-[node name="StaticBody2D70" parent="Obstaculos" instance=ExtResource("11_dfgtr")]
-position = Vector2(2608, 464)
-
-[node name="StaticBody2D71" parent="Obstaculos" instance=ExtResource("10_61aou")]
-position = Vector2(2944, 496)
-
-[node name="StaticBody2D72" parent="Obstaculos" instance=ExtResource("11_dfgtr")]
-position = Vector2(2944, 464)
-
-[node name="StaticBody2D73" parent="Obstaculos" instance=ExtResource("10_61aou")]
-position = Vector2(2944, 496)
-
-[node name="StaticBody2D74" parent="Obstaculos" instance=ExtResource("11_dfgtr")]
-position = Vector2(2944, 464)
 
 [node name="StaticBody2D27" parent="Obstaculos" instance=ExtResource("11_dfgtr")]
 position = Vector2(1856, 432)
@@ -3791,6 +3761,9 @@ position = Vector2(1920, 400)
 
 [node name="StaticBody2D35" parent="Obstaculos" instance=ExtResource("12_kkjsa")]
 position = Vector2(1920, 464)
+
+[node name="StaticBody2D99" parent="Obstaculos" instance=ExtResource("12_kkjsa")]
+position = Vector2(1888, 432)
 
 [node name="StaticBody2D51" parent="Obstaculos" instance=ExtResource("10_61aou")]
 position = Vector2(2096, 496)
@@ -3820,13 +3793,18 @@ position = Vector2(3168, 496)
 position = Vector2(4080, 512)
 
 [node name="Bloco Voador 5" parent="Obstaculos" instance=ExtResource("14_ytbhh")]
-position = Vector2(4664, 488)
+position = Vector2(4664, 480)
+
+[node name="Bloco Voador 8" parent="Obstaculos" instance=ExtResource("14_ytbhh")]
+position = Vector2(4312, 320)
 
 [node name="Bloco Voador 6" parent="Obstaculos" instance=ExtResource("15_jb8vx")]
 position = Vector2(5501, 142)
 
 [node name="Bloco Voador 7" parent="Obstaculos" instance=ExtResource("14_ytbhh")]
-position = Vector2(5872, 320)
+position = Vector2(5872, 304)
+move_speed = 4
+distance = 120
 
 [node name="StaticBody2D11" parent="Obstaculos" instance=ExtResource("16_0biy6")]
 position = Vector2(6624, 464)
@@ -4015,8 +3993,24 @@ position = Vector2(6592, 368)
 position = Vector2(1856, 464)
 texture = ExtResource("23_q7r4t")
 
+[node name="Bloco Atravessavel 6" type="Sprite2D" parent="Obstaculos"]
+position = Vector2(1824, 464)
+texture = ExtResource("53_th53b")
+
+[node name="Bloco Atravessavel 4" type="Sprite2D" parent="Obstaculos"]
+position = Vector2(1888, 464)
+texture = ExtResource("23_q7r4t")
+
 [node name="Bloco Atravessavel 2" type="Sprite2D" parent="Obstaculos"]
 position = Vector2(1856, 496)
+texture = ExtResource("24_hkukr")
+
+[node name="Bloco Atravessavel 5" type="Sprite2D" parent="Obstaculos"]
+position = Vector2(1824, 496)
+texture = ExtResource("24_hkukr")
+
+[node name="Bloco Atravessavel 3" type="Sprite2D" parent="Obstaculos"]
+position = Vector2(1888, 496)
 texture = ExtResource("24_hkukr")
 
 [node name="Bloco Voador 3" parent="Obstaculos" instance=ExtResource("58_nj7g2")]
@@ -4349,8 +4343,8 @@ position = Vector2(2254, 561)
 
 [node name="fundo" type="Sprite2D" parent="Rios/Rio 8"]
 z_index = -1
-position = Vector2(2106, 606.5)
-scale = Vector2(12.125, 2.09375)
+position = Vector2(2106, 618)
+scale = Vector2(12.125, 2.8125)
 texture = ExtResource("22_w1daw")
 
 [node name="Rio 9" type="Node2D" parent="Rios"]
@@ -4655,7 +4649,13 @@ autoplay = "default"
 [node name="Inimigos" type="Node2D" parent="."]
 
 [node name="Raposa1" parent="Inimigos" instance=ExtResource("56_800oj")]
-position = Vector2(2368, 512)
+position = Vector2(2296, 512)
+
+[node name="Raposa5" parent="Inimigos" instance=ExtResource("56_800oj")]
+position = Vector2(2536, 512)
+
+[node name="Raposa6" parent="Inimigos" instance=ExtResource("56_800oj")]
+position = Vector2(2808, 512)
 
 [node name="Raposa2" parent="Inimigos" instance=ExtResource("56_800oj")]
 position = Vector2(1472, 512)
@@ -4665,3 +4665,35 @@ position = Vector2(5280, 480)
 
 [node name="Raposa4" parent="Inimigos" instance=ExtResource("56_800oj")]
 position = Vector2(6128, 288)
+
+[node name="TerraMeio01" type="Sprite2D" parent="."]
+position = Vector2(6080, 400)
+texture = ExtResource("66_rvtr3")
+
+[node name="TerraMeio03" type="Sprite2D" parent="."]
+position = Vector2(6048, 400)
+texture = ExtResource("66_rvtr3")
+
+[node name="TerraMeio02" type="Sprite2D" parent="."]
+position = Vector2(6080, 432)
+texture = ExtResource("67_tucfo")
+
+[node name="TerraMeio04" type="Sprite2D" parent="."]
+position = Vector2(6048, 432)
+texture = ExtResource("67_tucfo")
+
+[node name="ChaoContoEsquerdo" type="Sprite2D" parent="."]
+position = Vector2(6016, 400)
+texture = ExtResource("68_etle8")
+
+[node name="ChaoContoEsquerdo2" type="Sprite2D" parent="."]
+position = Vector2(6016, 432)
+texture = ExtResource("68_etle8")
+
+[node name="PlataformaInvisivel" type="StaticBody2D" parent="."]
+position = Vector2(5942.22, 434.094)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaInvisivel"]
+position = Vector2(37.7847, 29.9063)
+shape = SubResource("RectangleShape2D_bo5vv")
