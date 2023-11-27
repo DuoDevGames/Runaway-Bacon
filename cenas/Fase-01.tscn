@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=79 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -68,6 +68,8 @@
 [ext_resource type="Texture2D" uid="uid://f7r7m6wodhjl" path="res://Objetos - Mundo 1/TerraMeio01.png" id="66_rvtr3"]
 [ext_resource type="Texture2D" uid="uid://b3p2s8u0jxhfi" path="res://Objetos - Mundo 1/TerraMeio02.png" id="67_tucfo"]
 [ext_resource type="Texture2D" uid="uid://bv5tis4kq420q" path="res://Objetos - Mundo 1/Chao conto esquerdo.png" id="68_etle8"]
+[ext_resource type="PackedScene" uid="uid://xniqb0te2gr4" path="res://Blocks/teleporter-in.tscn" id="69_jlav1"]
+[ext_resource type="PackedScene" uid="uid://bd3db4gu002ap" path="res://Blocks/teleporter-out.tscn" id="70_k1tic"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_sxcsx"]
 frames = 17
@@ -131,6 +133,9 @@ shader_parameter/velocidade = 0.05
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3b5rq"]
 size = Vector2(20, 496)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo5vv"]
+size = Vector2(56, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_fvn7j"]
 animations = [{
 "frames": [{
@@ -158,9 +163,6 @@ animations = [{
 "name": &"default",
 "speed": 1.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo5vv"]
-size = Vector2(56, 32)
 
 [node name="Fase-01" type="Node2D"]
 script = ExtResource("1_162om")
@@ -347,7 +349,7 @@ position = Vector2(5357, 66)
 position = Vector2(4664, 320)
 
 [node name="palha8" parent="Coletáveis" instance=ExtResource("6_6bxpb")]
-position = Vector2(4208, 208)
+position = Vector2(4208, 240)
 
 [node name="palha6" parent="Coletáveis" instance=ExtResource("6_6bxpb")]
 visible = false
@@ -3654,10 +3656,10 @@ position = Vector2(5795, 137)
 position = Vector2(5652, 200)
 
 [node name="nuvem19" parent="Terreno" instance=ExtResource("13_kt21e")]
-position = Vector2(4208, 488)
+position = Vector2(4192, 496)
 
 [node name="nuvem20" parent="Terreno" instance=ExtResource("13_kt21e")]
-position = Vector2(4208, 248)
+position = Vector2(4208, 280)
 
 [node name="nuvem7" parent="Terreno" instance=ExtResource("13_kt21e")]
 position = Vector2(5356, 112)
@@ -3705,6 +3707,38 @@ shape = SubResource("RectangleShape2D_3b5rq")
 
 [node name="QuedaMorte" parent="Terreno" instance=ExtResource("60_uotjy")]
 position = Vector2(96, 648)
+
+[node name="TerraMeio01" type="Sprite2D" parent="Terreno"]
+position = Vector2(6080, 400)
+texture = ExtResource("66_rvtr3")
+
+[node name="TerraMeio03" type="Sprite2D" parent="Terreno"]
+position = Vector2(6048, 400)
+texture = ExtResource("66_rvtr3")
+
+[node name="TerraMeio02" type="Sprite2D" parent="Terreno"]
+position = Vector2(6080, 432)
+texture = ExtResource("67_tucfo")
+
+[node name="TerraMeio04" type="Sprite2D" parent="Terreno"]
+position = Vector2(6048, 432)
+texture = ExtResource("67_tucfo")
+
+[node name="ChaoContoEsquerdo" type="Sprite2D" parent="Terreno"]
+position = Vector2(6016, 400)
+texture = ExtResource("68_etle8")
+
+[node name="ChaoContoEsquerdo2" type="Sprite2D" parent="Terreno"]
+position = Vector2(6016, 432)
+texture = ExtResource("68_etle8")
+
+[node name="PlataformaInvisivel" type="StaticBody2D" parent="Terreno"]
+position = Vector2(5942.22, 434.094)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terreno/PlataformaInvisivel"]
+position = Vector2(37.7847, 29.9063)
+shape = SubResource("RectangleShape2D_bo5vv")
 
 [node name="Obstaculos" type="Node2D" parent="."]
 
@@ -3796,7 +3830,7 @@ position = Vector2(4080, 512)
 position = Vector2(4664, 480)
 
 [node name="Bloco Voador 8" parent="Obstaculos" instance=ExtResource("14_ytbhh")]
-position = Vector2(4312, 320)
+position = Vector2(4312, 352)
 
 [node name="Bloco Voador 6" parent="Obstaculos" instance=ExtResource("15_jb8vx")]
 position = Vector2(5501, 142)
@@ -4666,34 +4700,10 @@ position = Vector2(5280, 480)
 [node name="Raposa4" parent="Inimigos" instance=ExtResource("56_800oj")]
 position = Vector2(6128, 288)
 
-[node name="TerraMeio01" type="Sprite2D" parent="."]
-position = Vector2(6080, 400)
-texture = ExtResource("66_rvtr3")
+[node name="Teleporter" parent="." instance=ExtResource("69_jlav1")]
+position = Vector2(64, 480)
 
-[node name="TerraMeio03" type="Sprite2D" parent="."]
-position = Vector2(6048, 400)
-texture = ExtResource("66_rvtr3")
+[node name="Teleporter-out" parent="." instance=ExtResource("70_k1tic")]
+position = Vector2(5984, 424)
 
-[node name="TerraMeio02" type="Sprite2D" parent="."]
-position = Vector2(6080, 432)
-texture = ExtResource("67_tucfo")
-
-[node name="TerraMeio04" type="Sprite2D" parent="."]
-position = Vector2(6048, 432)
-texture = ExtResource("67_tucfo")
-
-[node name="ChaoContoEsquerdo" type="Sprite2D" parent="."]
-position = Vector2(6016, 400)
-texture = ExtResource("68_etle8")
-
-[node name="ChaoContoEsquerdo2" type="Sprite2D" parent="."]
-position = Vector2(6016, 432)
-texture = ExtResource("68_etle8")
-
-[node name="PlataformaInvisivel" type="StaticBody2D" parent="."]
-position = Vector2(5942.22, 434.094)
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaInvisivel"]
-position = Vector2(37.7847, 29.9063)
-shape = SubResource("RectangleShape2D_bo5vv")
+[connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]

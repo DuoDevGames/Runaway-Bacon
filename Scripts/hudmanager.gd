@@ -13,7 +13,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	num_palha.text = str("%02d" % Global.palhas)
 	num_coracao.text = str("%02d" % Global.coracoes)
 

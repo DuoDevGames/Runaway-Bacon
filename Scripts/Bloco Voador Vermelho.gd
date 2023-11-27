@@ -15,7 +15,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta: float) -> void:
+func _physics_process( _delta):
 	cloud.position = cloud.position.lerp(follow, 0.5)
 
 
