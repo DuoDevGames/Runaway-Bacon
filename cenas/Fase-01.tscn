@@ -1,7 +1,7 @@
-[gd_scene load_steps=71 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=72 format=3 uid="uid://ctp0qyrr86hdc"]
 
+[ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
-[ext_resource type="Script" path="res://Fase-01.gd" id="1_pf5vl"]
 [ext_resource type="Texture2D" uid="uid://dbvbjpxk2y6ud" path="res://Background/Montanhas2.png" id="2_ckojg"]
 [ext_resource type="PackedScene" uid="uid://d3lnsqb2tdxdv" path="res://Blocks/terra-topo.tscn" id="2_j7xvl"]
 [ext_resource type="PackedScene" uid="uid://72jvrvitgk4c" path="res://Blocks/terra-esquerda.tscn" id="3_5j6wf"]
@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://dfm7ms3huimy" path="res://HUD/Lombinho/Lombinho2.png" id="25_yhmbd"]
 [ext_resource type="Texture2D" uid="uid://humnehf3121o" path="res://HUD/Coração/Coracao11.png" id="26_psm4j"]
 [ext_resource type="Texture2D" uid="uid://dj1ptarnaxc7h" path="res://HUD/Coração/Coracao12.png" id="27_q5f7k"]
+[ext_resource type="PackedScene" uid="uid://cnmwlr8wkf4ym" path="res://cenas/pause_menu.tscn" id="28_8jdbe"]
 [ext_resource type="Texture2D" uid="uid://bs5axhc3poht3" path="res://Objetos - Mundo 1/Árvores/Arvore2.png" id="28_dvb7j"]
 [ext_resource type="Texture2D" uid="uid://eo0fh164o5gr" path="res://HUD/Coração/Coracao13.png" id="28_nyue6"]
 [ext_resource type="Texture2D" uid="uid://cref3hf0diule" path="res://Objetos - Mundo 1/Árvores/Arvore3.png" id="29_ho8ej"]
@@ -60,7 +61,7 @@
 [ext_resource type="Texture2D" uid="uid://pe1hn2g7x8nb" path="res://Objetos - Mundo 1/Gramas/Grama1/Grama2.png" id="51_jlgpa"]
 [ext_resource type="Texture2D" uid="uid://dfokngta2jukl" path="res://Objetos - Mundo 1/Árvores/Arvore1.png" id="52_ep8lo"]
 [ext_resource type="PackedScene" uid="uid://bt5ygil0hku1j" path="res://Enemies/Raposa1.tscn" id="56_800oj"]
-[ext_resource type="PackedScene" uid="uid://pdd43txu2ir5" path="res://game_over_screen.tscn" id="56_oqbwd"]
+[ext_resource type="PackedScene" uid="uid://pdd43txu2ir5" path="res://cenas/game_over_screen.tscn" id="56_oqbwd"]
 [ext_resource type="PackedScene" uid="uid://5cia04jkurn0" path="res://Blocks/bloco_voador_azul.tscn" id="58_nj7g2"]
 [ext_resource type="PackedScene" uid="uid://qf7byrmak0t6" path="res://Blocks/QuedaMorte.tscn" id="60_uotjy"]
 
@@ -155,7 +156,7 @@ animations = [{
 }]
 
 [node name="Fase-01" type="Node2D"]
-script = ExtResource("1_pf5vl")
+script = ExtResource("1_162om")
 metadata/_edit_horizontal_guides_ = [517.031]
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -165,6 +166,9 @@ zoom = Vector2(2, 2)
 limit_left = 10
 limit_top = 0
 limit_bottom = 610
+
+[node name="Lombinho" parent="." instance=ExtResource("9_8vmwd")]
+position = Vector2(143, 479)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -267,6 +271,9 @@ theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("41_14ku5")
 theme_override_font_sizes/font_size = 24
 text = "Lombinho"
+
+[node name="pause_menu" parent="HUD" instance=ExtResource("28_8jdbe")]
+visible = false
 
 [node name="GameOverScreen" parent="HUD" instance=ExtResource("56_oqbwd")]
 visible = false
@@ -3704,9 +3711,6 @@ shape = SubResource("RectangleShape2D_3b5rq")
 
 [node name="QuedaMorte" parent="Terreno" instance=ExtResource("60_uotjy")]
 position = Vector2(96, 648)
-
-[node name="Lombinho" parent="." instance=ExtResource("9_8vmwd")]
-position = Vector2(143, 479)
 
 [node name="Obstaculos" type="Node2D" parent="."]
 

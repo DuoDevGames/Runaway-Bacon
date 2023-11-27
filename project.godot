@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Runaway Bacon"
-run/main_scene="res://Fase-01.tscn"
+run/main_scene="res://cenas/Fase-01.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 boot_splash/image="res://UI/Splash Screen Beta.png"
