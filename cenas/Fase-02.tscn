@@ -1,0 +1,164 @@
+[gd_scene load_steps=28 format=3 uid="uid://c81kq738lr4mf"]
+
+[ext_resource type="Script" path="res://Scripts/Fase-02.gd" id="1_ucuin"]
+[ext_resource type="PackedScene" uid="uid://c8q4vxqrdjdpd" path="res://Characters/lombinho.tscn" id="2_tbf1r"]
+[ext_resource type="Script" path="res://Scripts/hudmanager.gd" id="3_28uvf"]
+[ext_resource type="Texture2D" uid="uid://ocnshgq3axj7" path="res://HUD/Coração/Coracao1.png" id="4_gwi48"]
+[ext_resource type="Texture2D" uid="uid://b7cl0vmtbgvue" path="res://HUD/Coração/Coracao2.png" id="5_iclsq"]
+[ext_resource type="Texture2D" uid="uid://humnehf3121o" path="res://HUD/Coração/Coracao11.png" id="6_a5s07"]
+[ext_resource type="Texture2D" uid="uid://dj1ptarnaxc7h" path="res://HUD/Coração/Coracao12.png" id="7_bul6x"]
+[ext_resource type="Texture2D" uid="uid://eo0fh164o5gr" path="res://HUD/Coração/Coracao13.png" id="8_oceeo"]
+[ext_resource type="Texture2D" uid="uid://cfbubktdath4w" path="res://HUD/Coração/Coracao14.png" id="9_pdu7f"]
+[ext_resource type="Texture2D" uid="uid://bru1qompnknm" path="res://HUD/Coração/Coracao15.png" id="10_yink3"]
+[ext_resource type="Texture2D" uid="uid://ctdmsvlkbjax6" path="res://HUD/Coração/Coracao16.png" id="11_ud0ge"]
+[ext_resource type="Texture2D" uid="uid://c8fcs5phmdhdx" path="res://HUD/Coração/Coracao17.png" id="12_skajr"]
+[ext_resource type="Texture2D" uid="uid://dfl6vg1sdv8h0" path="res://HUD/Coração/Coracao3.png" id="13_00mii"]
+[ext_resource type="Texture2D" uid="uid://saq8cqhhoevi" path="res://HUD/Coração/Coracao4.png" id="14_mb6rq"]
+[ext_resource type="Texture2D" uid="uid://brdha8mb774ph" path="res://HUD/Coração/Coracao5.png" id="15_k8ctg"]
+[ext_resource type="Texture2D" uid="uid://bgxvk6krqygo2" path="res://HUD/Coração/Coracao6.png" id="16_2j5rp"]
+[ext_resource type="Texture2D" uid="uid://bi32coglyurdq" path="res://HUD/Coração/Coracao7.png" id="17_piad4"]
+[ext_resource type="Texture2D" uid="uid://cctgamvbbcxdl" path="res://HUD/Coração/Coracao8.png" id="18_c6tuu"]
+[ext_resource type="Texture2D" uid="uid://lexu7xh01nmw" path="res://HUD/Coração/Coracao9.png" id="19_o1ckw"]
+[ext_resource type="Texture2D" uid="uid://dqlujklf5klmj" path="res://HUD/Coração/Coracao10.png" id="20_wobs2"]
+[ext_resource type="FontFile" uid="uid://d0xjs1baebxx" path="res://HUD/Fonte/pixChicago.ttf" id="21_wd4t2"]
+[ext_resource type="Texture2D" uid="uid://cbii7qp4bas4t" path="res://HUD/Lombinho/Lombinho1.png" id="22_lkvn2"]
+[ext_resource type="Texture2D" uid="uid://dfm7ms3huimy" path="res://HUD/Lombinho/Lombinho2.png" id="23_p0p4g"]
+[ext_resource type="PackedScene" uid="uid://cnmwlr8wkf4ym" path="res://cenas/pause_menu.tscn" id="24_dewl0"]
+[ext_resource type="PackedScene" uid="uid://pdd43txu2ir5" path="res://cenas/game_over_screen.tscn" id="25_ptu63"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_o3pmy"]
+frames = 17
+speed_scale = 10.0
+frame_0/texture = ExtResource("4_gwi48")
+frame_1/texture = ExtResource("5_iclsq")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("13_00mii")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("14_mb6rq")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("15_k8ctg")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("16_2j5rp")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("17_piad4")
+frame_6/duration = 1.0
+frame_7/texture = ExtResource("18_c6tuu")
+frame_7/duration = 1.0
+frame_8/texture = ExtResource("19_o1ckw")
+frame_8/duration = 1.0
+frame_9/texture = ExtResource("20_wobs2")
+frame_9/duration = 1.0
+frame_10/texture = ExtResource("6_a5s07")
+frame_10/duration = 1.0
+frame_11/texture = ExtResource("7_bul6x")
+frame_11/duration = 1.0
+frame_12/texture = ExtResource("8_oceeo")
+frame_12/duration = 1.0
+frame_13/texture = ExtResource("9_pdu7f")
+frame_13/duration = 1.0
+frame_14/texture = ExtResource("10_yink3")
+frame_14/duration = 1.0
+frame_15/texture = ExtResource("11_ud0ge")
+frame_15/duration = 1.0
+frame_16/texture = ExtResource("12_skajr")
+frame_16/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_1o6w5"]
+frames = 2
+frame_0/texture = ExtResource("22_lkvn2")
+frame_0/duration = 3.0
+frame_1/texture = ExtResource("23_p0p4g")
+frame_1/duration = 0.25
+
+[node name="Fase-02" type="Node2D"]
+script = ExtResource("1_ucuin")
+
+[node name="Lombinho" parent="." instance=ExtResource("2_tbf1r")]
+position = Vector2(268, 267)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 2)
+scale = Vector2(1e-05, 1e-05)
+zoom = Vector2(2, 2)
+limit_left = 10
+limit_top = 0
+limit_bottom = 610
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+script = ExtResource("3_28uvf")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="coracao-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/coracao-container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource("AnimatedTexture_o3pmy")
+
+[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/coracao-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("21_wd4t2")
+theme_override_font_sizes/font_size = 24
+text = "x"
+
+[node name="Label3" type="Label" parent="HUD/Control/MarginContainer/coracao-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("21_wd4t2")
+theme_override_font_sizes/font_size = 24
+text = "00"
+
+[node name="lombinho-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/lombinho-container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource("AnimatedTexture_1o6w5")
+
+[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/lombinho-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("21_wd4t2")
+theme_override_font_sizes/font_size = 24
+text = "Lombinho"
+
+[node name="pause_menu" parent="HUD" instance=ExtResource("24_dewl0")]
+visible = false
+
+[node name="GameOverScreen" parent="HUD" instance=ExtResource("25_ptu63")]
+visible = false

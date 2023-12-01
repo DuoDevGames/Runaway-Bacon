@@ -1,0 +1,214 @@
+[gd_scene load_steps=34 format=3 uid="uid://lpwhwvwby4xr"]
+
+[ext_resource type="Script" path="res://Scripts/Fase-03.gd" id="1_ruh1p"]
+[ext_resource type="Script" path="res://Scripts/hudmanager.gd" id="2_48jdb"]
+[ext_resource type="Texture2D" uid="uid://ocnshgq3axj7" path="res://HUD/Coração/Coracao1.png" id="3_7cid1"]
+[ext_resource type="Texture2D" uid="uid://b7cl0vmtbgvue" path="res://HUD/Coração/Coracao2.png" id="4_57n0x"]
+[ext_resource type="Texture2D" uid="uid://humnehf3121o" path="res://HUD/Coração/Coracao11.png" id="5_18by6"]
+[ext_resource type="Texture2D" uid="uid://dj1ptarnaxc7h" path="res://HUD/Coração/Coracao12.png" id="6_qihr4"]
+[ext_resource type="Texture2D" uid="uid://eo0fh164o5gr" path="res://HUD/Coração/Coracao13.png" id="7_xgyyt"]
+[ext_resource type="Texture2D" uid="uid://cfbubktdath4w" path="res://HUD/Coração/Coracao14.png" id="8_oy6xn"]
+[ext_resource type="Texture2D" uid="uid://bru1qompnknm" path="res://HUD/Coração/Coracao15.png" id="9_4waco"]
+[ext_resource type="Texture2D" uid="uid://ctdmsvlkbjax6" path="res://HUD/Coração/Coracao16.png" id="10_orxll"]
+[ext_resource type="Texture2D" uid="uid://c8fcs5phmdhdx" path="res://HUD/Coração/Coracao17.png" id="11_gexb1"]
+[ext_resource type="Texture2D" uid="uid://dfl6vg1sdv8h0" path="res://HUD/Coração/Coracao3.png" id="12_aetmf"]
+[ext_resource type="Texture2D" uid="uid://saq8cqhhoevi" path="res://HUD/Coração/Coracao4.png" id="13_liga7"]
+[ext_resource type="Texture2D" uid="uid://brdha8mb774ph" path="res://HUD/Coração/Coracao5.png" id="14_p67y7"]
+[ext_resource type="Texture2D" uid="uid://bgxvk6krqygo2" path="res://HUD/Coração/Coracao6.png" id="15_lvrcp"]
+[ext_resource type="Texture2D" uid="uid://bi32coglyurdq" path="res://HUD/Coração/Coracao7.png" id="16_l3ieg"]
+[ext_resource type="Texture2D" uid="uid://cctgamvbbcxdl" path="res://HUD/Coração/Coracao8.png" id="17_b2d4v"]
+[ext_resource type="Texture2D" uid="uid://lexu7xh01nmw" path="res://HUD/Coração/Coracao9.png" id="18_wiu16"]
+[ext_resource type="Texture2D" uid="uid://dqlujklf5klmj" path="res://HUD/Coração/Coracao10.png" id="19_amcjq"]
+[ext_resource type="FontFile" uid="uid://d0xjs1baebxx" path="res://HUD/Fonte/pixChicago.ttf" id="20_bv51f"]
+[ext_resource type="Texture2D" uid="uid://cbii7qp4bas4t" path="res://HUD/Lombinho/Lombinho1.png" id="21_xx7im"]
+[ext_resource type="Texture2D" uid="uid://dfm7ms3huimy" path="res://HUD/Lombinho/Lombinho2.png" id="22_ec4c5"]
+[ext_resource type="Texture2D" uid="uid://w1814mspjr0k" path="res://HUD/Palha/Palha1.png" id="23_8kjew"]
+[ext_resource type="PackedScene" uid="uid://cnmwlr8wkf4ym" path="res://cenas/pause_menu.tscn" id="23_e4ivx"]
+[ext_resource type="PackedScene" uid="uid://pdd43txu2ir5" path="res://cenas/game_over_screen.tscn" id="24_mgv5l"]
+[ext_resource type="Texture2D" uid="uid://cyayuniy5mfln" path="res://HUD/Palha/Palha2.png" id="24_w6l1e"]
+[ext_resource type="Texture2D" uid="uid://d2u22cnwb00oe" path="res://HUD/Palha/Palha3.png" id="25_p761y"]
+[ext_resource type="Texture2D" uid="uid://cwk8wp1lxkyy6" path="res://HUD/Palha/Palha4.png" id="26_d8fht"]
+[ext_resource type="PackedScene" uid="uid://b4pqomln61vsg" path="res://Characters/panceta.tscn" id="29_8yjm0"]
+[ext_resource type="PackedScene" uid="uid://du6poyqwk8net" path="res://Objetos - Mundo 2/Tilemaps/tile_map.tscn" id="30_c1x6j"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_7nutc"]
+frames = 17
+speed_scale = 10.0
+frame_0/texture = ExtResource("3_7cid1")
+frame_1/texture = ExtResource("4_57n0x")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("12_aetmf")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("13_liga7")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("14_p67y7")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("15_lvrcp")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("16_l3ieg")
+frame_6/duration = 1.0
+frame_7/texture = ExtResource("17_b2d4v")
+frame_7/duration = 1.0
+frame_8/texture = ExtResource("18_wiu16")
+frame_8/duration = 1.0
+frame_9/texture = ExtResource("19_amcjq")
+frame_9/duration = 1.0
+frame_10/texture = ExtResource("5_18by6")
+frame_10/duration = 1.0
+frame_11/texture = ExtResource("6_qihr4")
+frame_11/duration = 1.0
+frame_12/texture = ExtResource("7_xgyyt")
+frame_12/duration = 1.0
+frame_13/texture = ExtResource("8_oy6xn")
+frame_13/duration = 1.0
+frame_14/texture = ExtResource("9_4waco")
+frame_14/duration = 1.0
+frame_15/texture = ExtResource("10_orxll")
+frame_15/duration = 1.0
+frame_16/texture = ExtResource("11_gexb1")
+frame_16/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_ld4gs"]
+frames = 2
+frame_0/texture = ExtResource("21_xx7im")
+frame_0/duration = 3.0
+frame_1/texture = ExtResource("22_ec4c5")
+frame_1/duration = 0.25
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_m58f6"]
+frames = 4
+speed_scale = 5.0
+frame_0/texture = ExtResource("23_8kjew")
+frame_1/texture = ExtResource("24_w6l1e")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("25_p761y")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("26_d8fht")
+frame_3/duration = 1.0
+
+[node name="Fase-03" type="Node2D"]
+script = ExtResource("1_ruh1p")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 2)
+scale = Vector2(1e-05, 1e-05)
+zoom = Vector2(2, 2)
+limit_left = 10
+limit_top = 0
+limit_bottom = 610
+
+[node name="panceta" parent="." instance=ExtResource("29_8yjm0")]
+position = Vector2(372, 307)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+script = ExtResource("2_48jdb")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="coracao-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/coracao-container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource("AnimatedTexture_7nutc")
+
+[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/coracao-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("20_bv51f")
+theme_override_font_sizes/font_size = 24
+text = "x"
+
+[node name="Label3" type="Label" parent="HUD/Control/MarginContainer/coracao-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("20_bv51f")
+theme_override_font_sizes/font_size = 24
+text = "00"
+
+[node name="lombinho-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/lombinho-container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource("AnimatedTexture_ld4gs")
+
+[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/lombinho-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("20_bv51f")
+theme_override_font_sizes/font_size = 24
+text = "Panceta
+"
+
+[node name="palha-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/palha-container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource("AnimatedTexture_m58f6")
+
+[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/palha-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("20_bv51f")
+theme_override_font_sizes/font_size = 24
+text = "x"
+
+[node name="Label3" type="Label" parent="HUD/Control/MarginContainer/palha-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("20_bv51f")
+theme_override_font_sizes/font_size = 24
+text = "00"
+
+[node name="pause_menu" parent="HUD" instance=ExtResource("23_e4ivx")]
+visible = false
+
+[node name="GameOverScreen" parent="HUD" instance=ExtResource("24_mgv5l")]
+visible = false
+
+[node name="TileMap" parent="." instance=ExtResource("30_c1x6j")]
+layer_0/tile_data = PackedInt32Array(1310720, 65536, 0, 1310721, 65536, 0, 1310722, 65536, 0, 1310723, 65536, 0, 1310724, 65536, 0, 1310725, 65536, 0, 1310726, 65536, 0, 1310727, 65536, 0, 1310728, 65536, 0, 1310729, 65536, 0, 1310730, 65536, 0, 1310731, 65536, 0, 1310732, 65536, 0, 1310733, 65536, 0, 1310734, 65536, 0, 1310735, 65536, 0, 1310736, 65536, 0, 1310737, 65536, 0, 1310738, 65536, 0, 1310739, 65536, 0, 1310740, 65536, 0)

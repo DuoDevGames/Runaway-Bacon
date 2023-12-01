@@ -1,10 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4pqomln61vsg"]
+[gd_scene load_steps=9 format=3 uid="uid://b4pqomln61vsg"]
 
-[ext_resource type="Script" path="res://Characters/panceta.gd" id="1_2oxay"]
 [ext_resource type="Texture2D" uid="uid://dc0egqpiaay17" path="res://Sprites - Panceta/Panceta.png" id="1_nout6"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ex8kf"]
-size = Vector2(32, 62)
+[ext_resource type="Script" path="res://Scripts/panceta.gd" id="1_qtut4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rhsko"]
 animations = [{
@@ -34,22 +31,19 @@ orbit_velocity_max = 0.0
 scale_curve = SubResource("CurveTexture_1dy0q")
 color = Color(0.835294, 0.835294, 0.835294, 0.423529)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f13c2"]
+size = Vector2(24, 55.9601)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k1t33"]
+size = Vector2(30, 52)
+
 [node name="panceta" type="CharacterBody2D"]
 collision_mask = 79
-script = ExtResource("1_2oxay")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_ex8kf")
+script = ExtResource("1_qtut4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rhsko")
 autoplay = "default"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
-limit_left = 10
-limit_top = 0
-limit_bottom = 610
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 position = Vector2(6, -8)
@@ -58,3 +52,28 @@ process_material = SubResource("ParticleProcessMaterial_sdk3d")
 lifetime = 5.0
 explosiveness = 0.78
 trail_lifetime = 0.01
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.76837e-07, 4.01993)
+shape = SubResource("RectangleShape2D_f13c2")
+
+[node name="hurtbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_k1t33")
+debug_color = Color(0.945098, 0, 0.0588235, 0.419608)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+
+[node name="ray_right" type="RayCast2D" parent="."]
+position = Vector2(0, 12)
+target_position = Vector2(18, 0)
+collision_mask = 4
+
+[node name="ray_left" type="RayCast2D" parent="."]
+position = Vector2(0, 12)
+target_position = Vector2(-18, 0)
+collision_mask = 4
