@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://du6poyqwk8net"]
+
+[ext_resource type="Texture2D" uid="uid://cahsptwvilw8a" path="res://Objetos - Mundo 2/Tilemaps/TerraMundo02_TileMap.png" id="1_pknhv"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8f16w"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1hvdm"]
+texture = ExtResource("1_pknhv")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -16, 16, -16, 16, 16, -5.75, 16, -5.75, 3.25, -11, -6.25)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_j857v"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 2
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_8f16w")
+sources/0 = SubResource("TileSetAtlasSource_1hvdm")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_j857v")
+format = 2
+layer_0/tile_data = PackedInt32Array(262154, 0, 0, 262155, 65536, 0, 262156, 65536, 0, 262157, 65536, 0, 262158, 65536, 0, 262159, 65536, 0, 262160, 65536, 0, 262161, 65536, 0, 262162, 65536, 0, 262163, 65536, 0, 262164, 65536, 0, 262165, 65536, 0, 327690, 0, 1)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://34t3bqltgx0c"]
+[gd_scene load_steps=14 format=3 uid="uid://34t3bqltgx0c"]
 
 [ext_resource type="PackedScene" uid="uid://d3lnsqb2tdxdv" path="res://Blocks/terra-topo.tscn" id="1_yroep"]
 [ext_resource type="PackedScene" uid="uid://72jvrvitgk4c" path="res://Blocks/terra-esquerda.tscn" id="2_0f8gs"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://470tmpn733o1" path="res://Blocks/madeira-topo.tscn" id="10_kfbrl"]
 [ext_resource type="PackedScene" uid="uid://bt5ygil0hku1j" path="res://Enemies/Raposa1.tscn" id="11_25oq3"]
 [ext_resource type="PackedScene" uid="uid://b4pqomln61vsg" path="res://Characters/panceta.tscn" id="12_rk4gs"]
+[ext_resource type="PackedScene" uid="uid://du6poyqwk8net" path="res://Objetos - Mundo 2/Tilemaps/tile_map.tscn" id="12_xvsnq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3usjy"]
 size = Vector2(20, 496)
@@ -575,3 +576,7 @@ position = Vector2(528, 504)
 
 [node name="panceta" parent="." instance=ExtResource("12_rk4gs")]
 position = Vector2(284, 468)
+
+[node name="TileMap" parent="." instance=ExtResource("12_xvsnq")]
+position = Vector2(111, 447)
+layer_0/tile_data = PackedInt32Array(262154, 0, 0, 262155, 65536, 0, 262156, 65536, 0, 262157, 65536, 0, 262158, 65536, 0, 262159, 65536, 0, 262160, 65536, 0, 262161, 65536, 0, 262162, 65536, 0, 262163, 65536, 0, 262164, 65536, 0, 262165, 65536, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -196605, 0, 0, -196604, 0, 0, -196603, 0, 0, -131070, 65536, 0, -131069, 65536, 0, -131068, 65536, 0, 65543, 65536, 0, 65544, 65536, 0)
