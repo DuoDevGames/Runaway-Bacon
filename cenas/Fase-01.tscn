@@ -319,6 +319,7 @@ motion_scale = Vector2(0.6, 1)
 motion_mirroring = Vector2(736, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/02"]
+texture_filter = 1
 texture = ExtResource("4_ci4q3")
 centered = false
 
@@ -4701,6 +4702,7 @@ position = Vector2(5280, 480)
 position = Vector2(6128, 288)
 
 [node name="Teleporter" parent="." instance=ExtResource("69_jlav1")]
+visible = false
 position = Vector2(64, 480)
 
 [node name="Teleporter-out" parent="." instance=ExtResource("70_k1tic")]

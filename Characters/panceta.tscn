@@ -52,6 +52,7 @@ process_material = SubResource("ParticleProcessMaterial_sdk3d")
 lifetime = 5.0
 explosiveness = 0.78
 trail_lifetime = 0.01
+trail_sections = 54
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-4.76837e-07, 4.01993)
