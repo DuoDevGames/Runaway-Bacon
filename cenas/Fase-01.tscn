@@ -205,8 +205,8 @@ theme_override_constants/margin_bottom = 30
 
 [node name="coracao-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 8
+size_flags_horizontal = 8
+size_flags_vertical = 0
 
 [node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/coracao-container"]
 layout_mode = 2
@@ -234,8 +234,8 @@ text = "00"
 
 [node name="palha-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
 
 [node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/palha-container"]
 layout_mode = 2

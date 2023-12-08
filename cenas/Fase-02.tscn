@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://c81kq738lr4mf"]
+[gd_scene load_steps=36 format=3 uid="uid://c81kq738lr4mf"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-02.gd" id="1_ucuin"]
 [ext_resource type="PackedScene" uid="uid://c8q4vxqrdjdpd" path="res://Characters/lombinho.tscn" id="2_tbf1r"]
@@ -23,8 +23,15 @@
 [ext_resource type="FontFile" uid="uid://d0xjs1baebxx" path="res://HUD/Fonte/pixChicago.ttf" id="21_wd4t2"]
 [ext_resource type="Texture2D" uid="uid://cbii7qp4bas4t" path="res://HUD/Lombinho/Lombinho1.png" id="22_lkvn2"]
 [ext_resource type="Texture2D" uid="uid://dfm7ms3huimy" path="res://HUD/Lombinho/Lombinho2.png" id="23_p0p4g"]
+[ext_resource type="Texture2D" uid="uid://dfdv1i4u83586" path="res://UI/Ampulheta/Ampulheta1.png" id="24_6yoml"]
 [ext_resource type="PackedScene" uid="uid://cnmwlr8wkf4ym" path="res://cenas/pause_menu.tscn" id="24_dewl0"]
+[ext_resource type="Texture2D" uid="uid://5rnir41aihr6" path="res://UI/Ampulheta/Ampulheta2.png" id="25_fyucg"]
 [ext_resource type="PackedScene" uid="uid://pdd43txu2ir5" path="res://cenas/game_over_screen.tscn" id="25_ptu63"]
+[ext_resource type="Texture2D" uid="uid://cigs4ekvb83ke" path="res://UI/Ampulheta/Ampulheta3.png" id="26_jbl4o"]
+[ext_resource type="PackedScene" uid="uid://5cia04jkurn0" path="res://Blocks/bloco_voador_azul.tscn" id="26_t7ms2"]
+[ext_resource type="PackedScene" uid="uid://0xdkw760671" path="res://Blocks/bloco_voador_verde.tscn" id="27_xwi6f"]
+[ext_resource type="Texture2D" uid="uid://ik66nq4pe2be" path="res://UI/Ampulheta/Ampulheta4.png" id="27_ynysc"]
+[ext_resource type="PackedScene" uid="uid://dwleqb8kqxlqw" path="res://Blocks/bloco_voador_vermelho.tscn" id="28_iednb"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_o3pmy"]
 frames = 17
@@ -70,6 +77,17 @@ frame_0/duration = 3.0
 frame_1/texture = ExtResource("23_p0p4g")
 frame_1/duration = 0.25
 
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_re12c"]
+frames = 4
+frame_0/texture = ExtResource("24_6yoml")
+frame_0/duration = 0.25
+frame_1/texture = ExtResource("25_fyucg")
+frame_1/duration = 0.25
+frame_2/texture = ExtResource("26_jbl4o")
+frame_2/duration = 0.25
+frame_3/texture = ExtResource("27_ynysc")
+frame_3/duration = 0.25
+
 [node name="Fase-02" type="Node2D"]
 script = ExtResource("1_ucuin")
 
@@ -85,7 +103,6 @@ limit_top = 0
 limit_bottom = 610
 
 [node name="HUD" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" type="Control" parent="HUD"]
 layout_mode = 3
@@ -111,8 +128,8 @@ theme_override_constants/margin_bottom = 30
 
 [node name="coracao-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 8
+size_flags_horizontal = 8
+size_flags_vertical = 0
 
 [node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/coracao-container"]
 layout_mode = 2
@@ -158,8 +175,42 @@ theme_override_fonts/font = ExtResource("21_wd4t2")
 theme_override_font_sizes/font_size = 24
 text = "Lombinho"
 
+[node name="timer" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/timer"]
+layout_mode = 2
+texture = SubResource("AnimatedTexture_re12c")
+expand_mode = 3
+
+[node name="Timer" type="Timer" parent="HUD/Control/MarginContainer/timer"]
+autostart = true
+
+[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/timer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("21_wd4t2")
+theme_override_font_sizes/font_size = 24
+text = "1:59"
+
 [node name="pause_menu" parent="HUD" instance=ExtResource("24_dewl0")]
 visible = false
 
 [node name="GameOverScreen" parent="HUD" instance=ExtResource("25_ptu63")]
 visible = false
+
+[node name="Bloco Voador 1" parent="." instance=ExtResource("26_t7ms2")]
+position = Vector2(264, 329)
+
+[node name="Bloco Voador 2" parent="." instance=ExtResource("27_xwi6f")]
+position = Vector2(366, 344)
+
+[node name="Bloco Voador 3" parent="." instance=ExtResource("28_iednb")]
+position = Vector2(472, 319)
+
+[connection signal="timeout" from="HUD/Control/MarginContainer/timer/Timer" to="HUD/Control" method="_on_timer_timeout"]

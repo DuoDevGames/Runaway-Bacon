@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl2d404mydk0v"]
+
+[sub_resource type="GDScript" id="GDScript_1c6jb"]
+script/source = "extends Timer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	start()
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+func _on_timeout():
+	owner.player.die()
+"
+
+[node name="Timer" type="Timer"]
+script = SubResource("GDScript_1c6jb")
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]

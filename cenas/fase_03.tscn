@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://lpwhwvwby4xr"]
+[gd_scene load_steps=41 format=3 uid="uid://lpwhwvwby4xr"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-03.gd" id="1_ruh1p"]
 [ext_resource type="Script" path="res://Scripts/hudmanager.gd" id="2_48jdb"]
@@ -28,8 +28,12 @@
 [ext_resource type="Texture2D" uid="uid://cyayuniy5mfln" path="res://HUD/Palha/Palha2.png" id="24_w6l1e"]
 [ext_resource type="Texture2D" uid="uid://d2u22cnwb00oe" path="res://HUD/Palha/Palha3.png" id="25_p761y"]
 [ext_resource type="Texture2D" uid="uid://cwk8wp1lxkyy6" path="res://HUD/Palha/Palha4.png" id="26_d8fht"]
+[ext_resource type="Texture2D" uid="uid://dfdv1i4u83586" path="res://UI/Ampulheta/Ampulheta1.png" id="28_gjjth"]
 [ext_resource type="PackedScene" uid="uid://b4pqomln61vsg" path="res://Characters/panceta.tscn" id="29_8yjm0"]
+[ext_resource type="Texture2D" uid="uid://5rnir41aihr6" path="res://UI/Ampulheta/Ampulheta2.png" id="29_80xow"]
 [ext_resource type="PackedScene" uid="uid://du6poyqwk8net" path="res://Objetos - Mundo 2/Tilemaps/tile_map.tscn" id="30_c1x6j"]
+[ext_resource type="Texture2D" uid="uid://cigs4ekvb83ke" path="res://UI/Ampulheta/Ampulheta3.png" id="30_tls1n"]
+[ext_resource type="Texture2D" uid="uid://ik66nq4pe2be" path="res://UI/Ampulheta/Ampulheta4.png" id="31_7pesg"]
 [ext_resource type="PackedScene" uid="uid://xflyv8o6yyp5" path="res://Blocks/nuvem.tscn" id="31_ubnic"]
 [ext_resource type="PackedScene" uid="uid://qf7byrmak0t6" path="res://Blocks/QuedaMorte.tscn" id="32_x4kyr"]
 
@@ -88,6 +92,17 @@ frame_2/duration = 1.0
 frame_3/texture = ExtResource("26_d8fht")
 frame_3/duration = 1.0
 
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_mob8v"]
+frames = 4
+speed_scale = 4.0
+frame_0/texture = ExtResource("28_gjjth")
+frame_1/texture = ExtResource("29_80xow")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("30_tls1n")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("31_7pesg")
+frame_3/duration = 1.0
+
 [node name="Fase-03" type="Node2D"]
 script = ExtResource("1_ruh1p")
 
@@ -128,8 +143,8 @@ theme_override_constants/margin_bottom = 30
 
 [node name="coracao-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 8
+size_flags_horizontal = 8
+size_flags_vertical = 0
 
 [node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/coracao-container"]
 layout_mode = 2
@@ -178,8 +193,8 @@ text = "Panceta
 
 [node name="palha-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
 
 [node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/palha-container"]
 layout_mode = 2
@@ -204,6 +219,30 @@ theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("20_bv51f")
 theme_override_font_sizes/font_size = 24
 text = "00"
+
+[node name="timer" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/timer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AnimatedTexture_mob8v")
+
+[node name="Timer" type="Timer" parent="HUD/Control/MarginContainer/timer"]
+autostart = true
+
+[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/timer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("20_bv51f")
+theme_override_font_sizes/font_size = 24
+text = "1:59"
 
 [node name="pause_menu" parent="HUD" instance=ExtResource("23_e4ivx")]
 visible = false
@@ -255,3 +294,5 @@ position = Vector2(496, -144)
 
 [node name="QuedaMorte" parent="." instance=ExtResource("32_x4kyr")]
 position = Vector2(384, 656)
+
+[connection signal="timeout" from="HUD/Control/MarginContainer/timer/Timer" to="HUD/Control" method="_on_timer_timeout"]
