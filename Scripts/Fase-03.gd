@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var gos := $HUD/GameOverScreen
-@onready var player := $panceta as CharacterBody2D
+@onready var player := $Panceta as CharacterBody2D
 @onready var camera := $Camera2D as Camera2D
 
 

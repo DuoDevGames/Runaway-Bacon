@@ -85,6 +85,7 @@ limit_top = 0
 limit_bottom = 610
 
 [node name="HUD" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Control" type="Control" parent="HUD"]
 layout_mode = 3

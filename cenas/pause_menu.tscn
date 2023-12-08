@@ -35,13 +35,19 @@ grow_vertical = 2
 layout_mode = 2
 theme = ExtResource("1_x7nmk")
 shortcut = SubResource("Shortcut_xgwfo")
-text = "RESUME
+text = "RETORNAR
 "
+
+[node name="menu_btn" type="Button" parent="menu_holder"]
+layout_mode = 2
+theme = ExtResource("1_x7nmk")
+text = "MENU PRINCIPAL"
 
 [node name="quit_btn" type="Button" parent="menu_holder"]
 layout_mode = 2
 theme = ExtResource("1_x7nmk")
-text = "QUIT GAME"
+text = "SAIR DO JOGO"
 
 [connection signal="pressed" from="menu_holder/resume_btn" to="." method="_on_resume_btn_pressed"]
+[connection signal="pressed" from="menu_holder/menu_btn" to="." method="_on_menu_btn_pressed"]
 [connection signal="pressed" from="menu_holder/quit_btn" to="." method="_on_quit_btn_pressed"]
