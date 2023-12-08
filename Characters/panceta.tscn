@@ -37,7 +37,7 @@ size = Vector2(24, 55.9601)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k1t33"]
 size = Vector2(30, 52)
 
-[node name="panceta" type="CharacterBody2D"]
+[node name="Panceta" type="CharacterBody2D"]
 collision_mask = 79
 script = ExtResource("1_qtut4")
 
@@ -78,3 +78,5 @@ collision_mask = 4
 position = Vector2(0, 12)
 target_position = Vector2(-18, 0)
 collision_mask = 4
+
+[connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]

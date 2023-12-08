@@ -69,6 +69,7 @@ func dano(knockback_force := Vector2.ZERO, duration = 0.25):
 func follow_camera(camera):
 	var camera_path = camera.get_path()
 	remote_transform.remote_path = camera_path
+	print(camera_path)
 
 func _on_hurtbox_body_entered(_body):
 	if $ray_right.is_colliding():
