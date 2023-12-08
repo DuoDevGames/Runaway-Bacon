@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Fase-02.gd" id="1_ucuin"]
 [ext_resource type="PackedScene" uid="uid://c8q4vxqrdjdpd" path="res://Characters/lombinho.tscn" id="2_tbf1r"]
-[ext_resource type="Script" path="res://Scripts/hudmanager.gd" id="3_28uvf"]
+[ext_resource type="Script" path="res://Scripts/Control-f2.gd" id="3_nwyxh"]
 [ext_resource type="Texture2D" uid="uid://ocnshgq3axj7" path="res://HUD/Coração/Coracao1.png" id="4_gwi48"]
 [ext_resource type="Texture2D" uid="uid://b7cl0vmtbgvue" path="res://HUD/Coração/Coracao2.png" id="5_iclsq"]
 [ext_resource type="Texture2D" uid="uid://humnehf3121o" path="res://HUD/Coração/Coracao11.png" id="6_a5s07"]
@@ -112,7 +112,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
-script = ExtResource("3_28uvf")
+script = ExtResource("3_nwyxh")
 
 [node name="MarginContainer" type="MarginContainer" parent="HUD/Control"]
 layout_mode = 1
