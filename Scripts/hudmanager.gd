@@ -8,7 +8,7 @@ var total_palhas = "teste " + str("%02d" % Global.palhas) + " / 10"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	num_coracao.text = str("%02d" % Global.coracoes)
-	reset_timer()
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

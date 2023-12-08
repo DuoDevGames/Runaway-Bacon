@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://lpwhwvwby4xr"]
+[gd_scene load_steps=46 format=3 uid="uid://lpwhwvwby4xr"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-03.gd" id="1_ruh1p"]
 [ext_resource type="Texture2D" uid="uid://ocnshgq3axj7" path="res://HUD/Coração/Coracao1.png" id="3_7cid1"]
@@ -20,10 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://lexu7xh01nmw" path="res://HUD/Coração/Coracao9.png" id="18_wiu16"]
 [ext_resource type="Texture2D" uid="uid://dqlujklf5klmj" path="res://HUD/Coração/Coracao10.png" id="19_amcjq"]
 [ext_resource type="FontFile" uid="uid://d0xjs1baebxx" path="res://HUD/Fonte/pixChicago.ttf" id="20_bv51f"]
-[ext_resource type="Texture2D" uid="uid://cbii7qp4bas4t" path="res://HUD/Lombinho/Lombinho1.png" id="21_xx7im"]
-[ext_resource type="Texture2D" uid="uid://dfm7ms3huimy" path="res://HUD/Lombinho/Lombinho2.png" id="22_ec4c5"]
+[ext_resource type="Texture2D" uid="uid://bwhngbhug08ab" path="res://HUD/Panceta/Panceta1.png" id="22_7hhpb"]
 [ext_resource type="Texture2D" uid="uid://w1814mspjr0k" path="res://HUD/Palha/Palha1.png" id="23_8kjew"]
 [ext_resource type="PackedScene" uid="uid://cnmwlr8wkf4ym" path="res://cenas/pause_menu.tscn" id="23_e4ivx"]
+[ext_resource type="Texture2D" uid="uid://bo7daigsrk3x4" path="res://HUD/Panceta/Panceta2.png" id="23_udsd7"]
 [ext_resource type="PackedScene" uid="uid://pdd43txu2ir5" path="res://cenas/game_over_screen.tscn" id="24_mgv5l"]
 [ext_resource type="Texture2D" uid="uid://cyayuniy5mfln" path="res://HUD/Palha/Palha2.png" id="24_w6l1e"]
 [ext_resource type="Texture2D" uid="uid://d2u22cnwb00oe" path="res://HUD/Palha/Palha3.png" id="25_p761y"]
@@ -36,6 +36,11 @@
 [ext_resource type="Texture2D" uid="uid://ik66nq4pe2be" path="res://UI/Ampulheta/Ampulheta4.png" id="31_7pesg"]
 [ext_resource type="PackedScene" uid="uid://xflyv8o6yyp5" path="res://Blocks/nuvem.tscn" id="31_ubnic"]
 [ext_resource type="PackedScene" uid="uid://qf7byrmak0t6" path="res://Blocks/QuedaMorte.tscn" id="32_x4kyr"]
+[ext_resource type="Texture2D" uid="uid://dmo830nx4qh8y" path="res://Objetos - Mundo 2/Background/Céu.png" id="37_doocy"]
+[ext_resource type="Texture2D" uid="uid://cwqhdnob0b0wu" path="res://Objetos - Mundo 2/Background/Arbusto 3.png" id="38_8xg01"]
+[ext_resource type="Texture2D" uid="uid://c4hqtvs0mdrua" path="res://Objetos - Mundo 2/Background/Arbusto 2.png" id="39_f8d5j"]
+[ext_resource type="Texture2D" uid="uid://blr7lqcts623e" path="res://Objetos - Mundo 2/Background/Arbusto 1.png" id="40_m3fag"]
+[ext_resource type="Texture2D" uid="uid://qjv27ch2rpj4" path="res://Objetos - Mundo 2/Background/Arbusto 0.png" id="41_meskw"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_7nutc"]
 frames = 17
@@ -76,9 +81,9 @@ frame_16/duration = 1.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_ld4gs"]
 frames = 2
-frame_0/texture = ExtResource("21_xx7im")
+frame_0/texture = ExtResource("22_7hhpb")
 frame_0/duration = 3.0
-frame_1/texture = ExtResource("22_ec4c5")
+frame_1/texture = ExtResource("23_udsd7")
 frame_1/duration = 0.25
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_m58f6"]
@@ -294,5 +299,46 @@ position = Vector2(496, -144)
 
 [node name="QuedaMorte" parent="." instance=ExtResource("32_x4kyr")]
 position = Vector2(384, 656)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/5"]
+texture = ExtResource("37_doocy")
+centered = false
+
+[node name="4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 1)
+motion_mirroring = Vector2(703, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/4"]
+texture = ExtResource("38_8xg01")
+centered = false
+
+[node name="3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(725, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/3"]
+texture = ExtResource("39_f8d5j")
+centered = false
+
+[node name="2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(667, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/2"]
+texture = ExtResource("40_m3fag")
+centered = false
+
+[node name="1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/1"]
+texture = ExtResource("41_meskw")
+centered = false
 
 [connection signal="timeout" from="HUD/Control/MarginContainer/timer/Timer" to="HUD/Control" method="_on_timer_timeout"]
