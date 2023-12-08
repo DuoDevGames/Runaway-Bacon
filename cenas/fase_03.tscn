@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://lpwhwvwby4xr"]
+[gd_scene load_steps=50 format=3 uid="uid://lpwhwvwby4xr"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-03.gd" id="1_ruh1p"]
 [ext_resource type="Texture2D" uid="uid://ocnshgq3axj7" path="res://HUD/Coração/Coracao1.png" id="3_7cid1"]
@@ -43,6 +43,7 @@
 [ext_resource type="Texture2D" uid="uid://qjv27ch2rpj4" path="res://Objetos - Mundo 2/Background/Arbusto 0.png" id="41_meskw"]
 [ext_resource type="PackedScene" uid="uid://d08b24fu0t55b" path="res://Objetos - Mundo 2/Tilemaps/lama.tscn" id="42_ijcn0"]
 [ext_resource type="Texture2D" uid="uid://cmi4fqvae7xgd" path="res://Objetos - Mundo 2/Lama/FundoLama.png" id="43_snvm1"]
+[ext_resource type="Texture2D" uid="uid://me7ogx8g35ht" path="res://Objetos - Mundo 2/Árvores/Árvore1.png" id="44_m1f5k"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_7nutc"]
 frames = 17
@@ -110,6 +111,9 @@ frame_2/duration = 1.0
 frame_3/texture = ExtResource("31_7pesg")
 frame_3/duration = 1.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uk6de"]
+size = Vector2(26, 476)
+
 [node name="Fase-03" type="Node2D"]
 script = ExtResource("1_ruh1p")
 
@@ -117,7 +121,7 @@ script = ExtResource("1_ruh1p")
 position = Vector2(0, 2)
 scale = Vector2(1e-05, 1e-05)
 zoom = Vector2(2, 2)
-limit_left = 10
+limit_left = 17
 limit_top = 0
 limit_bottom = 610
 
@@ -475,5 +479,25 @@ z_index = -2
 position = Vector2(1304, 634)
 scale = Vector2(14.375, 0.875)
 texture = ExtResource("43_snvm1")
+
+[node name="Árvores" type="Node2D" parent="."]
+
+[node name="Árvore1" type="Sprite2D" parent="Árvores"]
+z_index = -2
+position = Vector2(131, 312)
+scale = Vector2(0.739583, 0.739583)
+texture = ExtResource("44_m1f5k")
+
+[node name="Árvore2" type="Sprite2D" parent="Árvores"]
+z_index = -2
+position = Vector2(166, 297)
+scale = Vector2(0.869792, 0.869792)
+texture = ExtResource("44_m1f5k")
+
+[node name="invisible wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="invisible wall"]
+position = Vector2(3, 240)
+shape = SubResource("RectangleShape2D_uk6de")
 
 [connection signal="timeout" from="HUD/Control/MarginContainer/timer/Timer" to="HUD/Control" method="_on_timer_timeout"]

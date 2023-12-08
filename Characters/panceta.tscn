@@ -1,16 +1,32 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4pqomln61vsg"]
+[gd_scene load_steps=11 format=3 uid="uid://b4pqomln61vsg"]
 
 [ext_resource type="Texture2D" uid="uid://dc0egqpiaay17" path="res://Sprites - Panceta/Panceta.png" id="1_nout6"]
 [ext_resource type="Script" path="res://Scripts/panceta.gd" id="1_qtut4"]
+[ext_resource type="Texture2D" uid="uid://dbi1dh7a68y7g" path="res://Sprites - Panceta/Panceta3.png" id="3_uq2hf"]
+[ext_resource type="Texture2D" uid="uid://bprpsxe6h1qxd" path="res://Sprites - Panceta/Panceta2.png" id="4_t25m4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rhsko"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_nout6")
+}, {
+"duration": 0.03,
+"texture": ExtResource("3_uq2hf")
 }],
 "loop": true,
 "name": &"default",
+"speed": 0.2
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_t25m4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_nout6")
+}],
+"loop": true,
+"name": &"running",
 "speed": 5.0
 }]
 
@@ -43,7 +59,9 @@ script = ExtResource("1_qtut4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rhsko")
-autoplay = "default"
+animation = &"running"
+autoplay = "running"
+frame_progress = 0.986594
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 position = Vector2(6, -8)

@@ -19,10 +19,12 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction * SPEED
 		if is_on_floor():
+			$AnimatedSprite2D.play("running")
 			pass
 	else:
 		velocity.x = 0
 		if is_on_floor():
+			$AnimatedSprite2D.play("default")
 			pass
 	
 	#GRAVITY
