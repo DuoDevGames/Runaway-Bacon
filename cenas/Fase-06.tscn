@@ -172,7 +172,7 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("20_nse6n")
 theme_override_font_sizes/font_size = 24
-text = "Lombinho"
+text = "Toicinho"
 
 [node name="timer" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
 layout_mode = 2

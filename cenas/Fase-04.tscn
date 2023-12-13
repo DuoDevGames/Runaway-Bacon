@@ -21,9 +21,9 @@
 [ext_resource type="Texture2D" uid="uid://lexu7xh01nmw" path="res://HUD/Coração/Coracao9.png" id="18_q0wbx"]
 [ext_resource type="Texture2D" uid="uid://dqlujklf5klmj" path="res://HUD/Coração/Coracao10.png" id="19_tfk2o"]
 [ext_resource type="FontFile" uid="uid://d0xjs1baebxx" path="res://HUD/Fonte/pixChicago.ttf" id="20_jkg8o"]
-[ext_resource type="Texture2D" uid="uid://cbii7qp4bas4t" path="res://HUD/Lombinho/Lombinho1.png" id="21_7tkvq"]
-[ext_resource type="Texture2D" uid="uid://dfm7ms3huimy" path="res://HUD/Lombinho/Lombinho2.png" id="22_hond1"]
+[ext_resource type="Texture2D" uid="uid://bwhngbhug08ab" path="res://HUD/Panceta/Panceta1.png" id="22_cp8iy"]
 [ext_resource type="Texture2D" uid="uid://dfdv1i4u83586" path="res://UI/Ampulheta/Ampulheta1.png" id="23_oymrj"]
+[ext_resource type="Texture2D" uid="uid://bo7daigsrk3x4" path="res://HUD/Panceta/Panceta2.png" id="23_p7ike"]
 [ext_resource type="Texture2D" uid="uid://5rnir41aihr6" path="res://UI/Ampulheta/Ampulheta2.png" id="24_htdjk"]
 [ext_resource type="Texture2D" uid="uid://cigs4ekvb83ke" path="res://UI/Ampulheta/Ampulheta3.png" id="25_0dsd4"]
 [ext_resource type="Texture2D" uid="uid://ik66nq4pe2be" path="res://UI/Ampulheta/Ampulheta4.png" id="26_l87wc"]
@@ -68,12 +68,12 @@ frame_15/duration = 1.0
 frame_16/texture = ExtResource("11_eelj0")
 frame_16/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_i1715"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_sba3d"]
 frames = 2
-frame_0/texture = ExtResource("21_7tkvq")
+frame_0/texture = ExtResource("22_cp8iy")
 frame_0/duration = 3.0
-frame_1/texture = ExtResource("22_hond1")
-frame_1/duration = 0.25
+frame_1/texture = ExtResource("23_p7ike")
+frame_1/duration = 1.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_xye1w"]
 frames = 4
@@ -162,7 +162,7 @@ size_flags_vertical = 0
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture = SubResource("AnimatedTexture_i1715")
+texture = SubResource("AnimatedTexture_sba3d")
 
 [node name="Label2" type="Label" parent="HUD/Control/MarginContainer/lombinho-container"]
 layout_mode = 2
@@ -171,7 +171,7 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("20_jkg8o")
 theme_override_font_sizes/font_size = 24
-text = "Lombinho"
+text = "Panceta"
 
 [node name="timer" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
 layout_mode = 2

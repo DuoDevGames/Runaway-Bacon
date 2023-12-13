@@ -87,7 +87,7 @@ frames = 2
 frame_0/texture = ExtResource("22_7hhpb")
 frame_0/duration = 3.0
 frame_1/texture = ExtResource("23_udsd7")
-frame_1/duration = 0.25
+frame_1/duration = 1.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_m58f6"]
 frames = 4
@@ -307,6 +307,7 @@ position = Vector2(496, -144)
 position = Vector2(384, 656)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
 
 [node name="5" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(736, 0)

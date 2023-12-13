@@ -78,7 +78,7 @@ frames = 2
 frame_0/texture = ExtResource("21_u0k4o")
 frame_0/duration = 3.0
 frame_1/texture = ExtResource("22_56nhx")
-frame_1/duration = 0.25
+frame_1/duration = 1.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_1pua6"]
 frames = 4
