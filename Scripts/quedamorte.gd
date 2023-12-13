@@ -17,3 +17,6 @@ func _on_body_entered(body):
 	
 	if body.get_name() == "Panceta":
 		body.die()
+	
+	if body.get_name() == "Toicinho":
+		body.die()

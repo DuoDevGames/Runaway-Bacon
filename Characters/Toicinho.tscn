@@ -1,8 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://wgth3dch8iof"]
+[gd_scene load_steps=6 format=3 uid="uid://wgth3dch8iof"]
 
 [ext_resource type="Script" path="res://Scripts/Toicinho.gd" id="1_ga7t8"]
+[ext_resource type="Texture2D" uid="uid://bhwvlu8buts7t" path="res://Sprites - Raposa 1/Raposa1.png" id="2_pkamx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_25jnt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pkamx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xuag8"]
 size = Vector2(24, 55.9601)
