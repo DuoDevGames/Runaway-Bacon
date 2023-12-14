@@ -13,7 +13,7 @@ shader_parameter/threshold = 0.0
 shader_parameter/line_color_a = Color(0.984314, 0.635294, 0.768627, 1)
 shader_parameter/line_color_b = Color(0.188235, 0.188235, 0.188235, 1)
 
-[node name="history1-2" type="Node2D"]
+[node name="history_end" type="Node2D"]
 script = ExtResource("1_wqtd8")
 next_level = "res://cenas/Ending.tscn"
 
@@ -31,3 +31,14 @@ script = ExtResource("4_hlvly")
 metadata/_edit_use_anchors_ = true
 
 [node name="history-node" parent="." instance=ExtResource("5_a2dfg")]
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Lombinho constroi sua casinha e se esconde da chuva. 
+Quando ele menos espera, em meio uma tempestade, o Lobo Agiota Marco Antônio aparece: 
+-Lombinho, Lombinho, você aproveitou meu dinheiro, agora chegou a hora de pagar - disse Marco Antônio ansiosamente 
+-Eu não tenho dinheiro Marco, minha plantação era da erva errada e eu descobri tarde demais - disse Lombinho quase chorando 
+-POIS BEM, VOU SER OBRIGADO A TE MOSTRAR O QUE ACONTECE COM QUEM NÃO ME PAGA - grita Marco Antônio enquanto destroe a casinha de palha de lombinho. 
+Assim Lombinho começa a correr em direção a casa de seu irmão Panceta..."

@@ -13,10 +13,9 @@ shader_parameter/threshold = 0.0
 shader_parameter/line_color_a = Color(0.984314, 0.635294, 0.768627, 1)
 shader_parameter/line_color_b = Color(0.188235, 0.188235, 0.188235, 1)
 
-[node name="history1-2" type="Node2D"]
+[node name="history2_3" type="Node2D"]
 script = ExtResource("1_dtser")
 next_level = "res://cenas/Fase-03.tscn"
-history = "hamburguer"
 
 [node name="transition" type="CanvasLayer" parent="."]
 script = ExtResource("2_pljiq")
@@ -32,3 +31,10 @@ script = ExtResource("4_qh5l1")
 metadata/_edit_use_anchors_ = true
 
 [node name="history-node" parent="." instance=ExtResource("5_qcxmf")]
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "
+Lombinho corre e avista a casa de Panceta na floresta, o qual em momentos antes..."

@@ -13,7 +13,7 @@ shader_parameter/threshold = 0.0
 shader_parameter/line_color_a = Color(0.984314, 0.635294, 0.768627, 1)
 shader_parameter/line_color_b = Color(0.188235, 0.188235, 0.188235, 1)
 
-[node name="history1-2" type="Node2D"]
+[node name="history5_6" type="Node2D"]
 script = ExtResource("1_scgtg")
 next_level = "res://cenas/Fase-06.tscn"
 
@@ -31,3 +31,19 @@ script = ExtResource("4_wk8tc")
 metadata/_edit_use_anchors_ = true
 
 [node name="history-node" parent="." instance=ExtResource("5_ljt24")]
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "
+Assim que terminou de comprar sua casa, Toicinho relaxadamente entrou para descansar depois de uma longa noite de trabalho, quando escuta seus irmãos desesperados:
+-TOICINHO, MARCO ANTÔNIO ESTÁ VINDO NOS MATAR- grita lombinho quase desmaiando.
+-TOICINHO, ATÉ A MINHA NOVA CASINHA ELE DESTROIU - grita Panceta, inconformado com sua casa nova destruida.
+-Entrem aqui, trabalhei duro e acabei de comprar essa mansão feita pelo melhor arquiteto da cidade -disse Toicinho, certo de que sua casa resistiria ao lobo.
+E assim Marco Antônio chega novamente:
+-NÃO QUERO MAIS SABER, VOCÊS IRMÃOS VÃO VER O QUE ACONTECE QUANDO MEXEM COMIGO- grita Marco Antônio enquanto tenta destruir o muro da casa de Toicinho.
+-MAS QUE DROGA, ESSA CASA FOI FEITA POR QUEM?? -grita ele inconformado apos não conseguir fazer um arranhão no muro.
+-Foi o William desenhador de pitbulls que fez, e agora você vai ver o que acontece com quem mexe com minha familia -disse Toicinho pronto para perseguir o Lobo.
+Assim o Lobo, sem entender a situação, começa a correr pela cidade e Toicinho o persegue...
+"

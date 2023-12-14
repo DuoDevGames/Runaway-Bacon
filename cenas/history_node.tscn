@@ -25,5 +25,5 @@ grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_constants/line_spacing = 20
 theme_override_fonts/font = ExtResource("1_evkl0")
-vertical_alignment = 1
+theme_override_font_sizes/font_size = 14
 autowrap_mode = 2
