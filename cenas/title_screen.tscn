@@ -52,7 +52,12 @@ layout_mode = 2
 theme = ExtResource("3_boh3i")
 text = "INICIAR"
 
-[node name="start_btn2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="credits_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_boh3i")
+text = "CREDITOS"
+
+[node name="quit_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_boh3i")
 text = "FECHAR"
@@ -63,3 +68,5 @@ texture = ExtResource("4_yl8p2")
 expand_mode = 3
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/start_btn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/credits_btn" to="." method="_on_credits_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/quit_btn" to="." method="_on_quit_btn_pressed"]

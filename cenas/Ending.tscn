@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://xvrq7ncw8j4m"]
+[gd_scene load_steps=8 format=3 uid="uid://xvrq7ncw8j4m"]
 
 [ext_resource type="FontFile" uid="uid://d0xjs1baebxx" path="res://HUD/Fonte/pixChicago.ttf" id="1_70c7p"]
-[ext_resource type="Script" path="res://Scripts/transition.gd" id="1_shcyd"]
+[ext_resource type="Script" path="res://Scripts/creditos.gd" id="1_kklyp"]
 [ext_resource type="Shader" path="res://Shaders/transition.gdshader" id="2_w1y52"]
 [ext_resource type="Script" path="res://Scripts/ColorRect1.gd" id="3_jvi5n"]
+[ext_resource type="Script" path="res://Scripts/transitioncr.gd" id="4_tmkqm"]
+[ext_resource type="Theme" uid="uid://bgu3ycq7govpl" path="res://pause_menu_theme.tres" id="6_vgpb8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2b1c0"]
 shader = ExtResource("2_w1y52")
@@ -13,9 +15,47 @@ shader_parameter/line_color_a = Color(0.984314, 0.635294, 0.768627, 1)
 shader_parameter/line_color_b = Color(0.188235, 0.188235, 0.188235, 1)
 
 [node name="Ending" type="Node2D"]
+script = ExtResource("1_kklyp")
+
+[node name="TextureRect" type="ColorRect" parent="."]
+offset_right = 1277.0
+offset_bottom = 723.0
+color = Color(1, 0.486275, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1277.0
+offset_bottom = 723.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("1_70c7p")
+theme_override_font_sizes/font_size = 20
+text = "Créditos:
+
+Éric Fadul Cunha Yoshida
+Natália Xavier Pereira dos Santos
+William o Desenhador de pitbulls
+vulgo
+William de Oliveira Silva"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("6_vgpb8")
+text = "MENU"
 
 [node name="transition" type="CanvasLayer" parent="."]
-script = ExtResource("1_shcyd")
+script = ExtResource("4_tmkqm")
 
 [node name="ColorRect" type="ColorRect" parent="transition"]
 material = SubResource("ShaderMaterial_2b1c0")
@@ -27,28 +67,4 @@ grow_vertical = 2
 script = ExtResource("3_jvi5n")
 metadata/_edit_use_anchors_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-offset_right = 1277.0
-offset_bottom = 723.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 30
-
-[node name="Label" type="Label" parent="MarginContainer"]
-layout_mode = 2
-size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("1_70c7p")
-theme_override_font_sizes/font_size = 20
-text = "Fim do jogo
-
-Obrigado por chegar até aqui!
-
-
-Creditos:
-
-William o Desenhador de pitbulls"
-horizontal_alignment = 1
-vertical_alignment = 1
+[connection signal="pressed" from="MarginContainer/Button" to="." method="_on_button_pressed"]
