@@ -2,7 +2,7 @@ extends Control
 
 @onready var num_palha = $"MarginContainer/palha-container/Label3" as Label
 @onready var num_coracao = $"MarginContainer/coracao-container/Label3" as Label
-@onready var tempo = $MarginContainer/timer/Label2 as Label
+
 var alive := true
 var total_palhas = "teste " + str("%02d" % Global.palhas) + " / 10" 
 

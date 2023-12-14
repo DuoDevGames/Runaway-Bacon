@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://lpwhwvwby4xr"]
+[gd_scene load_steps=55 format=3 uid="uid://lpwhwvwby4xr"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-03.gd" id="1_ruh1p"]
 [ext_resource type="Texture2D" uid="uid://ocnshgq3axj7" path="res://HUD/Coração/Coracao1.png" id="3_7cid1"]
@@ -44,6 +44,17 @@
 [ext_resource type="PackedScene" uid="uid://d08b24fu0t55b" path="res://Objetos - Mundo 2/Tilemaps/lama.tscn" id="42_ijcn0"]
 [ext_resource type="Texture2D" uid="uid://cmi4fqvae7xgd" path="res://Objetos - Mundo 2/Lama/FundoLama.png" id="43_snvm1"]
 [ext_resource type="Texture2D" uid="uid://me7ogx8g35ht" path="res://Objetos - Mundo 2/Árvores/Árvore1.png" id="44_m1f5k"]
+[ext_resource type="Script" path="res://Scripts/transition.gd" id="45_2g08v"]
+[ext_resource type="Shader" path="res://Shaders/transition.gdshader" id="46_kir1e"]
+[ext_resource type="Script" path="res://Scripts/ColorRect1.gd" id="47_c4ckh"]
+[ext_resource type="PackedScene" uid="uid://2y1trft2bcpu" path="res://Blocks/fimdefase.tscn" id="48_uwqp4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w2ao5"]
+shader = ExtResource("46_kir1e")
+shader_parameter/lines = 10.0
+shader_parameter/threshold = 0.0
+shader_parameter/line_color_a = Color(0.984314, 0.635294, 0.768627, 1)
+shader_parameter/line_color_b = Color(0.188235, 0.188235, 0.188235, 1)
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_7nutc"]
 frames = 17
@@ -117,6 +128,13 @@ size = Vector2(26, 476)
 [node name="Fase-03" type="Node2D"]
 script = ExtResource("1_ruh1p")
 
+[node name="fimdefase" parent="." instance=ExtResource("48_uwqp4")]
+position = Vector2(77, 383)
+next_level = "res://cenas/Fase-04.tscn"
+
+[node name="Panceta" parent="." instance=ExtResource("29_8yjm0")]
+position = Vector2(166, 320)
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 2)
 scale = Vector2(1e-05, 1e-05)
@@ -125,8 +143,18 @@ limit_left = 17
 limit_top = 0
 limit_bottom = 610
 
-[node name="Panceta" parent="." instance=ExtResource("29_8yjm0")]
-position = Vector2(166, 320)
+[node name="transition" type="CanvasLayer" parent="."]
+script = ExtResource("45_2g08v")
+
+[node name="ColorRect" type="ColorRect" parent="transition"]
+material = SubResource("ShaderMaterial_w2ao5")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("47_c4ckh")
+metadata/_edit_use_anchors_ = true
 
 [node name="HUD" type="CanvasLayer" parent="."]
 

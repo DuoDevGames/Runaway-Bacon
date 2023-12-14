@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cdo6dm4swo84q"]
+[gd_scene load_steps=45 format=3 uid="uid://cdo6dm4swo84q"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-05.gd" id="1_6tktc"]
 [ext_resource type="PackedScene" uid="uid://wgth3dch8iof" path="res://Characters/Toicinho.tscn" id="1_lrrud"]
@@ -35,6 +35,17 @@
 [ext_resource type="PackedScene" uid="uid://pdd43txu2ir5" path="res://cenas/game_over_screen.tscn" id="32_gklfr"]
 [ext_resource type="PackedScene" uid="uid://5cia04jkurn0" path="res://Blocks/bloco_voador_azul.tscn" id="34_l5d4p"]
 [ext_resource type="PackedScene" uid="uid://qf7byrmak0t6" path="res://Blocks/QuedaMorte.tscn" id="35_sgmm6"]
+[ext_resource type="Script" path="res://Scripts/transition.gd" id="36_684fi"]
+[ext_resource type="Shader" path="res://Shaders/transition.gdshader" id="37_2thqx"]
+[ext_resource type="Script" path="res://Scripts/ColorRect1.gd" id="38_mc3k1"]
+[ext_resource type="PackedScene" uid="uid://2y1trft2bcpu" path="res://Blocks/fimdefase.tscn" id="39_r3kvc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8f8hm"]
+shader = ExtResource("37_2thqx")
+shader_parameter/lines = 10.0
+shader_parameter/threshold = 0.0
+shader_parameter/line_color_a = Color(0.984314, 0.635294, 0.768627, 1)
+shader_parameter/line_color_b = Color(0.188235, 0.188235, 0.188235, 1)
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_a1h82"]
 frames = 17
@@ -105,6 +116,10 @@ frame_3/duration = 1.0
 [node name="Fase-05" type="Node2D"]
 script = ExtResource("1_6tktc")
 
+[node name="fimdefase" parent="." instance=ExtResource("39_r3kvc")]
+position = Vector2(226, 336)
+next_level = "res://cenas/Fase-06.tscn"
+
 [node name="Toicinho" parent="." instance=ExtResource("1_lrrud")]
 position = Vector2(325, 283)
 
@@ -115,6 +130,19 @@ zoom = Vector2(2, 2)
 limit_left = 17
 limit_top = 0
 limit_bottom = 610
+
+[node name="transition" type="CanvasLayer" parent="."]
+script = ExtResource("36_684fi")
+
+[node name="ColorRect" type="ColorRect" parent="transition"]
+material = SubResource("ShaderMaterial_8f8hm")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("38_mc3k1")
+metadata/_edit_use_anchors_ = true
 
 [node name="HUD" type="CanvasLayer" parent="."]
 

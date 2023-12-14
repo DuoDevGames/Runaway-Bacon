@@ -61,7 +61,6 @@ script = ExtResource("1_qtut4")
 sprite_frames = SubResource("SpriteFrames_rhsko")
 animation = &"running"
 autoplay = "running"
-frame_progress = 0.986594
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 position = Vector2(6, -8)

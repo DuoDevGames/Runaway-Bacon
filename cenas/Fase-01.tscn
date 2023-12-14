@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=84 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -70,6 +70,17 @@
 [ext_resource type="Texture2D" uid="uid://bv5tis4kq420q" path="res://Objetos - Mundo 1/Chao conto esquerdo.png" id="68_etle8"]
 [ext_resource type="PackedScene" uid="uid://xniqb0te2gr4" path="res://Blocks/teleporter-in.tscn" id="69_jlav1"]
 [ext_resource type="PackedScene" uid="uid://bd3db4gu002ap" path="res://Blocks/teleporter-out.tscn" id="70_k1tic"]
+[ext_resource type="Script" path="res://Scripts/transition.gd" id="71_cpska"]
+[ext_resource type="Shader" path="res://Shaders/transition.gdshader" id="71_vqak6"]
+[ext_resource type="Script" path="res://Scripts/ColorRect1.gd" id="72_2ex1c"]
+[ext_resource type="PackedScene" uid="uid://2y1trft2bcpu" path="res://Blocks/fimdefase.tscn" id="73_autci"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_14aje"]
+shader = ExtResource("71_vqak6")
+shader_parameter/lines = 10.0
+shader_parameter/threshold = 0.0
+shader_parameter/line_color_a = Color(0.984314, 0.635294, 0.768627, 1)
+shader_parameter/line_color_b = Color(0.188235, 0.188235, 0.188235, 1)
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_sxcsx"]
 frames = 17
@@ -176,8 +187,25 @@ limit_left = 10
 limit_top = 0
 limit_bottom = 610
 
+[node name="fimdefase" parent="." instance=ExtResource("73_autci")]
+position = Vector2(6541, 460)
+next_level = "res://cenas/Fase-02.tscn"
+
 [node name="Lombinho" parent="." instance=ExtResource("9_8vmwd")]
 position = Vector2(143, 479)
+
+[node name="transition" type="CanvasLayer" parent="."]
+script = ExtResource("71_cpska")
+
+[node name="ColorRect" type="ColorRect" parent="transition"]
+material = SubResource("ShaderMaterial_14aje")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("72_2ex1c")
+metadata/_edit_use_anchors_ = true
 
 [node name="HUD" type="CanvasLayer" parent="."]
 

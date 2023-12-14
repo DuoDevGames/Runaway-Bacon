@@ -20,12 +20,10 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 		if is_on_floor():
 			$AnimatedSprite2D.play("running")
-			pass
 	else:
 		velocity.x = 0
 		if is_on_floor():
 			$AnimatedSprite2D.play("default")
-			pass
 	
 	#GRAVITY
 	if not is_on_floor():
@@ -40,7 +38,7 @@ func _physics_process(delta):
 	#JUMP
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		velocity.y -= JUMP_FORCE
-		
+		$AnimatedSprite2D.play("default")
 	
 	if Input.is_action_just_pressed("Reset"):
 		get_tree().reload_current_scene()
