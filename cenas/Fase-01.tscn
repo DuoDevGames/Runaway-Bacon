@@ -189,7 +189,7 @@ limit_bottom = 610
 
 [node name="fimdefase" parent="." instance=ExtResource("73_autci")]
 position = Vector2(6541, 460)
-next_level = "res://cenas/Fase-02.tscn"
+next_level = "res://cenas/history_1_2.tscn"
 
 [node name="Lombinho" parent="." instance=ExtResource("9_8vmwd")]
 position = Vector2(143, 479)

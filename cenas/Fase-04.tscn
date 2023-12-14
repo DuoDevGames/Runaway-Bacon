@@ -102,7 +102,7 @@ script = ExtResource("1_ihae1")
 
 [node name="fimdefase" parent="." instance=ExtResource("34_sc54c")]
 position = Vector2(84, 350)
-next_level = "res://cenas/Fase-05.tscn"
+next_level = "res://cenas/history_4_5.tscn"
 
 [node name="Panceta" parent="." instance=ExtResource("1_sb0pk")]
 position = Vector2(166, 320)

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://kkc843kytbij"]
+
+[ext_resource type="FontFile" uid="uid://d0xjs1baebxx" path="res://HUD/Fonte/pixChicago.ttf" id="1_evkl0"]
+[ext_resource type="Script" path="res://Scripts/history_node.gd" id="1_lphch"]
+
+[node name="history-node" type="CanvasLayer"]
+script = ExtResource("1_lphch")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.984314, 0.635294, 0.768627, 1)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 58.0
+offset_right = -81.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_constants/line_spacing = 20
+theme_override_fonts/font = ExtResource("1_evkl0")
+vertical_alignment = 1
+autowrap_mode = 2
