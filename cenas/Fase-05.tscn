@@ -21,13 +21,13 @@
 [ext_resource type="Texture2D" uid="uid://lexu7xh01nmw" path="res://HUD/Coração/Coracao9.png" id="18_h7kn8"]
 [ext_resource type="Texture2D" uid="uid://dqlujklf5klmj" path="res://HUD/Coração/Coracao10.png" id="19_lv2fv"]
 [ext_resource type="FontFile" uid="uid://d0xjs1baebxx" path="res://HUD/Fonte/pixChicago.ttf" id="20_psj7s"]
-[ext_resource type="Texture2D" uid="uid://bwhngbhug08ab" path="res://HUD/Panceta/Panceta1.png" id="21_u0k4o"]
-[ext_resource type="Texture2D" uid="uid://bo7daigsrk3x4" path="res://HUD/Panceta/Panceta2.png" id="22_56nhx"]
 [ext_resource type="Texture2D" uid="uid://w1814mspjr0k" path="res://HUD/Palha/Palha1.png" id="23_up5xj"]
 [ext_resource type="Texture2D" uid="uid://cyayuniy5mfln" path="res://HUD/Palha/Palha2.png" id="24_06k1b"]
 [ext_resource type="Texture2D" uid="uid://d2u22cnwb00oe" path="res://HUD/Palha/Palha3.png" id="25_j7xc4"]
 [ext_resource type="Texture2D" uid="uid://cwk8wp1lxkyy6" path="res://HUD/Palha/Palha4.png" id="26_4xo7v"]
+[ext_resource type="Texture2D" uid="uid://chgyoln4vnxol" path="res://HUD/Toicinho/Toicinho1.png" id="26_nc1ig"]
 [ext_resource type="Texture2D" uid="uid://dfdv1i4u83586" path="res://UI/Ampulheta/Ampulheta1.png" id="27_754y5"]
+[ext_resource type="Texture2D" uid="uid://cf2a2grk1dgj" path="res://HUD/Toicinho/Toicinho2.png" id="27_sh0ma"]
 [ext_resource type="Texture2D" uid="uid://5rnir41aihr6" path="res://UI/Ampulheta/Ampulheta2.png" id="28_ks6o8"]
 [ext_resource type="Texture2D" uid="uid://cigs4ekvb83ke" path="res://UI/Ampulheta/Ampulheta3.png" id="29_sk8tb"]
 [ext_resource type="Texture2D" uid="uid://ik66nq4pe2be" path="res://UI/Ampulheta/Ampulheta4.png" id="30_enqrs"]
@@ -86,9 +86,9 @@ frame_16/duration = 1.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_lqxm0"]
 frames = 2
-frame_0/texture = ExtResource("21_u0k4o")
+frame_0/texture = ExtResource("26_nc1ig")
 frame_0/duration = 3.0
-frame_1/texture = ExtResource("22_56nhx")
+frame_1/texture = ExtResource("27_sh0ma")
 frame_1/duration = 1.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_1pua6"]
