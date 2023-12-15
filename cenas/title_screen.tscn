@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddch1tmdhlspw"]
+[gd_scene load_steps=5 format=3 uid="uid://ddch1tmdhlspw"]
 
 [ext_resource type="Script" path="res://Scripts/TitleScreen.gd" id="1_wmk3u"]
 [ext_resource type="Texture2D" uid="uid://1th7iw4rr010" path="res://UI/Splash Screen Beta.png" id="2_2mmpj"]
 [ext_resource type="Theme" uid="uid://bgu3ycq7govpl" path="res://pause_menu_theme.tres" id="3_boh3i"]
-[ext_resource type="Texture2D" uid="uid://dc0egqpiaay17" path="res://Sprites - Panceta/Panceta.png" id="4_yl8p2"]
 
 [sub_resource type="CurveTexture" id="CurveTexture_n7blk"]
 
@@ -61,11 +60,6 @@ text = "CREDITOS"
 layout_mode = 2
 theme = ExtResource("3_boh3i")
 text = "FECHAR"
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("4_yl8p2")
-expand_mode = 3
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/start_btn" to="." method="_on_start_btn_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/credits_btn" to="." method="_on_credits_btn_pressed"]
