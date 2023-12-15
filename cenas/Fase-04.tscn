@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://daq6s27uh6hiv"]
+[gd_scene load_steps=44 format=3 uid="uid://daq6s27uh6hiv"]
 
 [ext_resource type="Script" path="res://Scripts/Fase_04.gd" id="1_ihae1"]
 [ext_resource type="PackedScene" uid="uid://b4pqomln61vsg" path="res://Characters/panceta.tscn" id="1_sb0pk"]
@@ -34,6 +34,11 @@
 [ext_resource type="Shader" path="res://Shaders/transition.gdshader" id="32_ipb2l"]
 [ext_resource type="Script" path="res://Scripts/ColorRect1.gd" id="33_l3a8v"]
 [ext_resource type="PackedScene" uid="uid://2y1trft2bcpu" path="res://Blocks/fimdefase.tscn" id="34_sc54c"]
+[ext_resource type="Texture2D" uid="uid://dmo830nx4qh8y" path="res://Objetos - Mundo 2/Background/Céu.png" id="35_awsf8"]
+[ext_resource type="Texture2D" uid="uid://cwqhdnob0b0wu" path="res://Objetos - Mundo 2/Background/Arbusto 3.png" id="36_ns540"]
+[ext_resource type="Texture2D" uid="uid://c4hqtvs0mdrua" path="res://Objetos - Mundo 2/Background/Arbusto 2.png" id="37_r4md2"]
+[ext_resource type="Texture2D" uid="uid://blr7lqcts623e" path="res://Objetos - Mundo 2/Background/Arbusto 1.png" id="38_0wi6p"]
+[ext_resource type="Texture2D" uid="uid://qjv27ch2rpj4" path="res://Objetos - Mundo 2/Background/Arbusto 0.png" id="39_rt6lm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lkylc"]
 shader = ExtResource("32_ipb2l")
@@ -232,5 +237,46 @@ visible = false
 
 [node name="Bloco Voador 1" parent="." instance=ExtResource("29_76gy6")]
 position = Vector2(168, 375)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(736, 0)
+
+[node name="texture" type="Sprite2D" parent="ParallaxBackground/5"]
+texture = ExtResource("35_awsf8")
+centered = false
+
+[node name="4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/4"]
+texture = ExtResource("36_ns540")
+centered = false
+
+[node name="3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/3"]
+texture = ExtResource("37_r4md2")
+centered = false
+
+[node name="2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/2"]
+texture = ExtResource("38_0wi6p")
+centered = false
+
+[node name="1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/1"]
+texture = ExtResource("39_rt6lm")
+centered = false
 
 [connection signal="timeout" from="HUD/Control/MarginContainer/timer/Timer" to="HUD/Control" method="_on_timer_timeout"]

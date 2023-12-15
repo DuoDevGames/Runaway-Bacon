@@ -335,7 +335,6 @@ position = Vector2(496, -144)
 position = Vector2(384, 656)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-visible = false
 
 [node name="5" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(736, 0)

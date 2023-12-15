@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://50vlpg7wg751"]
+[gd_scene load_steps=46 format=3 uid="uid://50vlpg7wg751"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-06.gd" id="1_04jvq"]
 [ext_resource type="PackedScene" uid="uid://wgth3dch8iof" path="res://Characters/Toicinho.tscn" id="1_bhyjn"]
@@ -35,6 +35,12 @@
 [ext_resource type="Script" path="res://Scripts/ColorRect1.gd" id="30_cpxdp"]
 [ext_resource type="PackedScene" uid="uid://2y1trft2bcpu" path="res://Blocks/fimdefase.tscn" id="31_enees"]
 [ext_resource type="PackedScene" uid="uid://qf7byrmak0t6" path="res://Blocks/QuedaMorte.tscn" id="31_im7h1"]
+[ext_resource type="Texture2D" uid="uid://bom3dow0rfqqt" path="res://Objetos - Mundo 3/Background/Céu.png" id="36_kn1pe"]
+[ext_resource type="Texture2D" uid="uid://dde387fri6cy7" path="res://Objetos - Mundo 3/Background/Sol.png" id="37_au7kw"]
+[ext_resource type="Texture2D" uid="uid://jgqmwqwu3m63" path="res://Objetos - Mundo 3/Background/Prédios Trás.png" id="38_r7cpf"]
+[ext_resource type="Texture2D" uid="uid://dkk1f3xanu78c" path="res://Objetos - Mundo 3/Background/Palmeiras Trás.png" id="39_v5u34"]
+[ext_resource type="Texture2D" uid="uid://da466t26j67ok" path="res://Objetos - Mundo 3/Background/Prédios Frente.png" id="40_axb2n"]
+[ext_resource type="Texture2D" uid="uid://d3n518n7mjpyb" path="res://Objetos - Mundo 3/Background/Palmeiras Frente.png" id="41_jx3qv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nvwdw"]
 shader = ExtResource("29_y87un")
@@ -236,5 +242,52 @@ position = Vector2(237, 265)
 
 [node name="QuedaMorte" parent="." instance=ExtResource("31_im7h1")]
 position = Vector2(384, 656)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1727, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/1"]
+texture = ExtResource("36_kn1pe")
+centered = false
+
+[node name="2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/2"]
+texture = ExtResource("37_au7kw")
+centered = false
+
+[node name="3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1727, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/3"]
+texture = ExtResource("38_r7cpf")
+centered = false
+
+[node name="4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1727, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/4"]
+texture = ExtResource("39_v5u34")
+centered = false
+
+[node name="5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1727, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/5"]
+texture = ExtResource("40_axb2n")
+centered = false
+
+[node name="6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(1727, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/6"]
+texture = ExtResource("41_jx3qv")
+centered = false
 
 [connection signal="timeout" from="HUD/Control/MarginContainer/timer/Timer" to="HUD/Control" method="_on_timer_timeout"]

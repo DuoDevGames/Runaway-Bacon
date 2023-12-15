@@ -37,7 +37,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -74,7 +74,7 @@ shape = SubResource("RectangleShape2D_lcqrw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0xo0i")
-animation = &"Jump"
+animation = &"Run"
 autoplay = "default"
 
 [node name="hurtbox" type="Area2D" parent="."]
