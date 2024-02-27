@@ -14,7 +14,8 @@ config/name="Runaway Bacon"
 run/main_scene="res://cenas/title_screen.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
-boot_splash/image="res://UI/Splash Screen Beta.png"
+boot_splash/show_image=false
+boot_splash/image="res://UI/RB-Logo.png"
 config/icon="res://HUD/Lombinho/Lombinho1.png"
 config/windows_native_icon="res://UI/Icone Windows.ico"
 
@@ -27,6 +28,7 @@ Global="*res://Scripts/global.gd"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/resizable=false
+window/size/transparent=true
 mouse_cursor/custom_image="res://UI/BaconCursor.png"
 
 [input]
