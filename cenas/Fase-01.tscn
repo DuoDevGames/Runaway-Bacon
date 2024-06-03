@@ -79,8 +79,8 @@
 shader = ExtResource("71_vqak6")
 shader_parameter/lines = 10.0
 shader_parameter/threshold = 0.0
-shader_parameter/line_color_a = Color(0.984314, 0.635294, 0.768627, 1)
-shader_parameter/line_color_b = Color(0.188235, 0.188235, 0.188235, 1)
+shader_parameter/line_color_a = Color(0.996078, 0.470588, 0.392157, 1)
+shader_parameter/line_color_b = Color(0.772549, 0.0862745, 0.254902, 1)
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_sxcsx"]
 frames = 17

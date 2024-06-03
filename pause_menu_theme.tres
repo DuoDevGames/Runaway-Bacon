@@ -14,7 +14,7 @@
 Button/colors/font_color = Color(0.773438, 0.0859375, 0.253906, 1)
 Button/colors/font_focus_color = Color(0, 0, 0, 1)
 Button/colors/font_hover_color = Color(0, 0, 0, 1)
-Button/colors/font_pressed_color = Color(1, 0.592157, 0, 1)
+Button/colors/font_pressed_color = Color(0.988235, 0.396078, 0.462745, 1)
 Button/font_sizes/font_size = 32
 Button/fonts/font = ExtResource("1_le3yx")
 Button/styles/focus = SubResource("StyleBoxEmpty_aucge")

@@ -91,17 +91,17 @@ scale = Vector2(0.676562, 0.687963)
 texture = ExtResource("8_qjcen")
 
 [node name="Button3" type="Sprite2D" parent="."]
-position = Vector2(612.645, 577)
+position = Vector2(612.645, 583)
 scale = Vector2(0.491102, 0.548165)
 texture = ExtResource("9_k3ex8")
 
 [node name="Button2" type="Sprite2D" parent="."]
-position = Vector2(612, 514)
+position = Vector2(612, 513)
 scale = Vector2(0.555046, 0.555046)
 texture = ExtResource("9_k3ex8")
 
 [node name="Button" type="Sprite2D" parent="."]
-position = Vector2(611, 450)
+position = Vector2(611, 444)
 scale = Vector2(0.473097, 0.579129)
 texture = ExtResource("9_k3ex8")
 
@@ -129,6 +129,7 @@ alignment = 2
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 4
+theme_override_constants/separation = 10
 
 [node name="start_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
