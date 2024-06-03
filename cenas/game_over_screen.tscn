@@ -1,7 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://pdd43txu2ir5"]
+[gd_scene load_steps=8 format=3 uid="uid://pdd43txu2ir5"]
 
 [ext_resource type="FontFile" uid="uid://d0xjs1baebxx" path="res://HUD/Fonte/pixChicago.ttf" id="1_swe58"]
 [ext_resource type="Script" path="res://Scripts/game_over_screen.gd" id="1_vareh"]
+[ext_resource type="Texture2D" uid="uid://bcdlgflfdeca7" path="res://HUD/Game Over Marco.png" id="2_p5ixk"]
+[ext_resource type="Texture2D" uid="uid://xmhrlbai5358" path="res://UI/Button.png" id="3_w4di5"]
+[ext_resource type="Theme" uid="uid://bgu3ycq7govpl" path="res://pause_menu_theme.tres" id="4_fo1ax"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ee7h6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_abv3v"]
 bg_color = Color(0, 0, 0, 1)
@@ -16,15 +21,45 @@ grow_vertical = 2
 script = ExtResource("1_vareh")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("CanvasItemMaterial_ee7h6")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.407843)
+color = Color(0, 0, 0, 0.8)
+
+[node name="GameOverMarco" type="Sprite2D" parent="."]
+position = Vector2(638, 286)
+texture = ExtResource("2_p5ixk")
+
+[node name="Button2" type="Sprite2D" parent="."]
+position = Vector2(654.617, 615)
+scale = Vector2(0.623996, 0.555046)
+texture = ExtResource("3_w4di5")
+
+[node name="RestartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -126.0
+offset_top = -129.0
+offset_right = 160.0
+offset_bottom = -83.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("4_fo1ax")
+theme_override_fonts/font = ExtResource("1_swe58")
+theme_override_font_sizes/font_size = 20
+text = "Tentar Novamente
+"
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -40,6 +75,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_abv3v")
 
 [node name="Label" type="Label" parent="Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -53,22 +89,19 @@ theme_override_font_sizes/font_size = 75
 text = "Game over
 "
 
-[node name="RestartButton" type="Button" parent="Panel"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -115.0
-offset_top = -58.0
-offset_right = 115.0
-offset_bottom = -20.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 554.0
+offset_top = 242.0
+offset_right = 1001.0
+offset_bottom = 402.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_swe58")
-theme_override_font_sizes/font_size = 20
-text = "Tentar Novamente
-"
+theme_override_font_sizes/font_size = 19
+text = "Hmm, talvez eu deva considerar
+abrir um restaurante.
+	Acho que tenho um talento para
+preparar carne de porco!"
+horizontal_alignment = 1
 
-[connection signal="pressed" from="Panel/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
