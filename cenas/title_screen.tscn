@@ -138,7 +138,7 @@ text = "INICIAR"
 [node name="credits_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_boh3i")
-text = "CREDITOS"
+text = "CRÉDITOS"
 
 [node name="quit_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2

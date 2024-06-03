@@ -1,11 +1,26 @@
-[gd_scene load_steps=8 format=3 uid="uid://xvrq7ncw8j4m"]
+[gd_scene load_steps=18 format=3 uid="uid://xvrq7ncw8j4m"]
 
 [ext_resource type="FontFile" uid="uid://d0xjs1baebxx" path="res://HUD/Fonte/pixChicago.ttf" id="1_70c7p"]
 [ext_resource type="Script" path="res://Scripts/creditos.gd" id="1_kklyp"]
+[ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="2_bub6h"]
 [ext_resource type="Shader" path="res://Shaders/transition.gdshader" id="2_w1y52"]
 [ext_resource type="Script" path="res://Scripts/ColorRect1.gd" id="3_jvi5n"]
+[ext_resource type="Texture2D" uid="uid://dbvbjpxk2y6ud" path="res://Background/Montanhas2.png" id="3_nhqoa"]
+[ext_resource type="Shader" path="res://Shaders/movimento_nuvens.gdshader" id="4_h3f7f"]
 [ext_resource type="Script" path="res://Scripts/transitioncr.gd" id="4_tmkqm"]
+[ext_resource type="Texture2D" uid="uid://bd5y6yyb1sjfp" path="res://Background/Nuvens2.png" id="5_qnp1r"]
+[ext_resource type="Texture2D" uid="uid://cx3fkstetx6r4" path="res://Background/Montanhas1.png" id="6_3df8b"]
 [ext_resource type="Theme" uid="uid://bgu3ycq7govpl" path="res://pause_menu_theme.tres" id="6_vgpb8"]
+[ext_resource type="Texture2D" uid="uid://d0l8mtptb4out" path="res://Background/Nuvens1.png" id="7_5322n"]
+[ext_resource type="Texture2D" uid="uid://e06riggoykb3" path="res://UI/Sunset.png" id="8_w6dor"]
+[ext_resource type="Texture2D" uid="uid://xmhrlbai5358" path="res://UI/Button.png" id="9_02s8y"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_487b7"]
+shader = ExtResource("4_h3f7f")
+shader_parameter/velocidade = 0.05
+
+[sub_resource type="CurveTexture" id="CurveTexture_u2jx4"]
+width = 248
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2b1c0"]
 shader = ExtResource("2_w1y52")
@@ -17,10 +32,71 @@ shader_parameter/line_color_b = Color(0.188235, 0.188235, 0.188235, 1)
 [node name="Ending" type="Node2D"]
 script = ExtResource("1_kklyp")
 
-[node name="TextureRect" type="ColorRect" parent="."]
-offset_right = 1277.0
-offset_bottom = 723.0
-color = Color(1, 0.486275, 1, 1)
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="05" type="ParallaxLayer" parent="ParallaxBackground"]
+scale = Vector2(1.5, 1.5)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/05"]
+texture = ExtResource("2_bub6h")
+centered = false
+
+[node name="04" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-53, 176)
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/04"]
+texture = ExtResource("3_nhqoa")
+centered = false
+
+[node name="03" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(9, 55)
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="nuvens_fundo" type="Sprite2D" parent="ParallaxBackground/03"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_487b7")
+texture = ExtResource("5_qnp1r")
+centered = false
+
+[node name="02" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-15, 179)
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/02"]
+texture_filter = 1
+texture = ExtResource("6_3df8b")
+centered = false
+
+[node name="01" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/01"]
+texture = ExtResource("7_5322n")
+centered = false
+
+[node name="bg" type="TextureRect" parent="."]
+visible = false
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = SubResource("CurveTexture_u2jx4")
+expand_mode = 2
+
+[node name="Filtro" type="Sprite2D" parent="."]
+position = Vector2(634.5, 352.5)
+scale = Vector2(0.676562, 0.687963)
+texture = ExtResource("8_w6dor")
+
+[node name="Button3" type="Sprite2D" parent="."]
+position = Vector2(632, 668)
+scale = Vector2(1.10862, 0.723624)
+texture = ExtResource("9_02s8y")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 offset_right = 1277.0
@@ -35,14 +111,13 @@ theme_override_constants/margin_bottom = 30
 [node name="Label" type="Label" parent="MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_70c7p")
-theme_override_font_sizes/font_size = 20
-text = "Créditos:
+theme_override_font_sizes/font_size = 23
+text = "Desenvolvido por:
 
 Éric Fadul Cunha Yoshida
 Natália Xavier Pereira dos Santos
-William o Desenhador de pitbulls
-vulgo
 William de Oliveira Silva"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -52,7 +127,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme = ExtResource("6_vgpb8")
-text = "MENU"
+text = "VOLTAR PARA O MENU"
 
 [node name="transition" type="CanvasLayer" parent="."]
 script = ExtResource("4_tmkqm")
