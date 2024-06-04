@@ -1,13 +1,51 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnmwlr8wkf4ym"]
+[gd_scene load_steps=9 format=3 uid="uid://cnmwlr8wkf4ym"]
 
 [ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_ep1er"]
 [ext_resource type="Theme" uid="uid://bgu3ycq7govpl" path="res://pause_menu_theme.tres" id="1_x7nmk"]
+[ext_resource type="Texture2D" uid="uid://dxnonvynvdirf" path="res://HUD/Pause.png" id="2_tb814"]
+[ext_resource type="Texture2D" uid="uid://j1hn6tii8t8e" path="res://HUD/Lombinho/LombinhoPARADO.png" id="4_b5k84"]
+[ext_resource type="Texture2D" uid="uid://cd6fllsorulxh" path="res://HUD/Lombinho/LombinhoPARADO2.png" id="5_hvx7m"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_hmxc6"]
 action = &"ui_cancel"
 
 [sub_resource type="Shortcut" id="Shortcut_xgwfo"]
 events = [SubResource("InputEventAction_hmxc6")]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6hd8y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_b5k84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b5k84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b5k84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b5k84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b5k84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b5k84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b5k84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b5k84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hvx7m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
 
 [node name="pause_menu" type="CanvasLayer"]
 process_mode = 3
@@ -19,17 +57,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.254902)
+color = Color(0, 0, 0, 0.8)
+
+[node name="Pause" type="Sprite2D" parent="."]
+position = Vector2(631, 341)
+texture = ExtResource("2_tb814")
 
 [node name="menu_holder" type="VBoxContainer" parent="."]
 anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = -33.0
-offset_bottom = 33.0
+offset_left = 172.0
+offset_top = -54.0
+offset_right = 172.0
+offset_bottom = 144.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 9
 
 [node name="resume_btn" type="Button" parent="menu_holder"]
 layout_mode = 2
@@ -47,6 +92,13 @@ text = "MENU PRINCIPAL"
 layout_mode = 2
 theme = ExtResource("1_x7nmk")
 text = "SAIR DO JOGO"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(320, 404)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_6hd8y")
+autoplay = "default"
+frame_progress = 0.364575
 
 [connection signal="pressed" from="menu_holder/resume_btn" to="." method="_on_resume_btn_pressed"]
 [connection signal="pressed" from="menu_holder/menu_btn" to="." method="_on_menu_btn_pressed"]
