@@ -21,6 +21,7 @@ config/windows_native_icon="res://UI/Icone Windows.ico"
 [autoload]
 
 Global="*res://Scripts/global.gd"
+MusicController="*res://Musicas/music_controller.tscn"
 
 [display]
 

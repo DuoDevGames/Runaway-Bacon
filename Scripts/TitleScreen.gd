@@ -1,9 +1,10 @@
 extends Control
 
+var isMusicPlaying : bool = false
 
-
-
-
+func _ready():
+	MusicController.play_menu_music()
+	
 func _on_start_btn_pressed():
 	get_tree().change_scene_to_file("res://cenas/Fase-01.tscn")
 

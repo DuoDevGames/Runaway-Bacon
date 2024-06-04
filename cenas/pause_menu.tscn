@@ -98,7 +98,7 @@ position = Vector2(320, 404)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_6hd8y")
 autoplay = "default"
-frame_progress = 0.566857
+frame_progress = 0.116328
 
 [connection signal="pressed" from="menu_holder/resume_btn" to="." method="_on_resume_btn_pressed"]
 [connection signal="pressed" from="menu_holder/menu_btn" to="." method="_on_menu_btn_pressed"]
