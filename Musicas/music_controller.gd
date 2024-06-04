@@ -16,3 +16,12 @@ func stop_menu_music():
 	
 func play_fase1_music():
 	$fase1_bg_music.play()
+	
+func stop_fase1_music():
+	$fase1_bg_music.stop()
+
+func play_gameover_music():
+	$game_over.play()
+
+func stop_gameover_music():
+	$game_over.stop()

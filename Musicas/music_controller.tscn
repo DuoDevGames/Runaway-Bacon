@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7urnu25xsxxl"]
+[gd_scene load_steps=5 format=3 uid="uid://c7urnu25xsxxl"]
 
 [ext_resource type="Script" path="res://Musicas/music_controller.gd" id="1_bxwbu"]
 [ext_resource type="AudioStream" uid="uid://baup0af5r2tdh" path="res://Musicas/musica_menu.mp3" id="1_ihfbf"]
 [ext_resource type="AudioStream" uid="uid://bhvnbn71tes75" path="res://Musicas/mundo1_fase1.mp3" id="3_iit2g"]
+[ext_resource type="AudioStream" uid="uid://dwtu1r3vf5e25" path="res://Musicas/music_game_over.mp3" id="4_1use3"]
 
 [node name="music_controller" type="Node"]
 script = ExtResource("1_bxwbu")
@@ -13,5 +14,8 @@ volume_db = 10.0
 
 [node name="fase1_bg_music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_iit2g")
-volume_db = 10.0
 max_distance = 2e+09
+
+[node name="game_over" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_1use3")
+volume_db = 8.0

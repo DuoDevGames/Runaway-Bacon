@@ -15,4 +15,5 @@ func _process(_delta):
 
 func _on_body_entered(_body):
 	Global.palhas += valor_palha
+	SoundsController.play_palha_sound()
 	queue_free()
