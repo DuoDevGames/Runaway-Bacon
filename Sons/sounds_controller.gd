@@ -15,3 +15,5 @@ func play_buttonpressed_sound():
 	$"button pressed".play()
 	
 	
+func play_hitraposa_sound():
+	$"hit raposa".play()

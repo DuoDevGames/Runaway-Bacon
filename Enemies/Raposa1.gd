@@ -16,6 +16,7 @@ func _ready():
 func _physics_process(delta):
 	if tomoudano:
 		$AnimatedSprite2D.play("damage")
+		SoundsController.play_hitraposa_sound()
 		await get_tree().create_timer(0.3).timeout
 		tomoudano = false
 	else:
