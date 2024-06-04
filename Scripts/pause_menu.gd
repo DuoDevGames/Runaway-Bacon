@@ -18,11 +18,14 @@ func _unhandled_input(event):
 		resume_btn.grab_focus()
 
 func _on_resume_btn_pressed():
+	SoundsController.play_buttonpressed_sound()
 	get_tree().paused = false
 	visible = false 
 
 func _on_quit_btn_pressed():
+	SoundsController.play_buttonpressed_sound()
 	get_tree().quit()
 
 func _on_menu_btn_pressed():
+	SoundsController.play_buttonpressed_sound()
 	get_tree().change_scene_to_file("res://cenas/title_screen.tscn")

@@ -10,3 +10,8 @@ func play_palha_sound():
 
 func play_hover_sound():
 	$hover.play()
+
+func play_buttonpressed_sound():
+	$"button pressed".play()
+	
+	
