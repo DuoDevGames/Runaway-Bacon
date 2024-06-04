@@ -13,9 +13,8 @@ config_version=5
 config/name="Runaway Bacon"
 run/main_scene="res://cenas/title_screen.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
-boot_splash/show_image=false
-boot_splash/image="res://UI/RB-Logo.png"
+boot_splash/bg_color=Color(0.0862745, 0.14902, 0.192157, 1)
+boot_splash/image="res://UI/Splash.png"
 config/icon="res://HUD/Lombinho/Lombinho1.png"
 config/windows_native_icon="res://UI/Icone Windows.ico"
 

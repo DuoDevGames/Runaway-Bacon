@@ -388,6 +388,18 @@ position = Vector2(6072, 424)
 visible = false
 position = Vector2(1888, 480)
 
+[node name="MadeiraEmPéfinal" type="Sprite2D" parent="."]
+position = Vector2(6001.17, 464.168)
+rotation = -1.57608
+texture = ExtResource("24_hkukr")
+metadata/_edit_group_ = true
+
+[node name="MadeiraEmPécima" type="Sprite2D" parent="."]
+position = Vector2(5970.08, 464.084)
+rotation = -1.57608
+texture = ExtResource("53_th53b")
+metadata/_edit_group_ = true
+
 [node name="Terreno" type="Node2D" parent="."]
 
 [node name="StaticBody2D" parent="Terreno" instance=ExtResource("2_j7xvl")]
