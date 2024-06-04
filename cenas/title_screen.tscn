@@ -1,0 +1,156 @@
+[gd_scene load_steps=14 format=3 uid="uid://ddch1tmdhlspw"]
+
+[ext_resource type="Script" path="res://Scripts/TitleScreen.gd" id="1_wmk3u"]
+[ext_resource type="Texture2D" uid="uid://d157kkgr7wkum" path="res://UI/RB-Logo.png" id="2_28ida"]
+[ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="2_oytmw"]
+[ext_resource type="Theme" uid="uid://bgu3ycq7govpl" path="res://pause_menu_theme.tres" id="3_boh3i"]
+[ext_resource type="Texture2D" uid="uid://dbvbjpxk2y6ud" path="res://Background/Montanhas2.png" id="3_c2ygg"]
+[ext_resource type="Shader" path="res://Shaders/movimento_nuvens.gdshader" id="4_x06eo"]
+[ext_resource type="Texture2D" uid="uid://bd5y6yyb1sjfp" path="res://Background/Nuvens2.png" id="5_7epcf"]
+[ext_resource type="Texture2D" uid="uid://cx3fkstetx6r4" path="res://Background/Montanhas1.png" id="6_xm45b"]
+[ext_resource type="Texture2D" uid="uid://d0l8mtptb4out" path="res://Background/Nuvens1.png" id="7_b4u51"]
+[ext_resource type="Texture2D" uid="uid://e06riggoykb3" path="res://UI/Sunset.png" id="8_qjcen"]
+[ext_resource type="Texture2D" uid="uid://xmhrlbai5358" path="res://UI/Button.png" id="9_k3ex8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oe6fe"]
+shader = ExtResource("4_x06eo")
+shader_parameter/velocidade = 0.05
+
+[sub_resource type="CurveTexture" id="CurveTexture_055sw"]
+width = 248
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wmk3u")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="05" type="ParallaxLayer" parent="ParallaxBackground"]
+scale = Vector2(1.5, 1.5)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/05"]
+texture = ExtResource("2_oytmw")
+centered = false
+
+[node name="04" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-53, 176)
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/04"]
+texture = ExtResource("3_c2ygg")
+centered = false
+
+[node name="03" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(9, 55)
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="nuvens_fundo" type="Sprite2D" parent="ParallaxBackground/03"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_oe6fe")
+texture = ExtResource("5_7epcf")
+centered = false
+
+[node name="02" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-15, 179)
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/02"]
+texture_filter = 1
+texture = ExtResource("6_xm45b")
+centered = false
+
+[node name="01" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/01"]
+texture = ExtResource("7_b4u51")
+centered = false
+
+[node name="bg" type="TextureRect" parent="."]
+visible = false
+layout_mode = 2
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = SubResource("CurveTexture_055sw")
+expand_mode = 2
+
+[node name="Filtro" type="Sprite2D" parent="."]
+position = Vector2(634.5, 352.5)
+scale = Vector2(0.676562, 0.687963)
+texture = ExtResource("8_qjcen")
+
+[node name="Button3" type="Sprite2D" parent="."]
+position = Vector2(612.645, 583)
+scale = Vector2(0.491102, 0.548165)
+texture = ExtResource("9_k3ex8")
+
+[node name="Button2" type="Sprite2D" parent="."]
+position = Vector2(612, 513)
+scale = Vector2(0.555046, 0.555046)
+texture = ExtResource("9_k3ex8")
+
+[node name="Button" type="Sprite2D" parent="."]
+position = Vector2(611, 444)
+scale = Vector2(0.473097, 0.579129)
+texture = ExtResource("9_k3ex8")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -554.0
+offset_top = -114.0
+offset_right = 502.0
+offset_bottom = 415.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="start_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_boh3i")
+text = "INICIAR"
+
+[node name="credits_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_boh3i")
+text = "CRÉDITOS"
+
+[node name="quit_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_boh3i")
+text = "FECHAR"
+
+[node name="Título" type="Sprite2D" parent="."]
+position = Vector2(607, 223)
+scale = Vector2(0.317293, 0.317293)
+texture = ExtResource("2_28ida")
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/start_btn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/credits_btn" to="." method="_on_credits_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/quit_btn" to="." method="_on_quit_btn_pressed"]

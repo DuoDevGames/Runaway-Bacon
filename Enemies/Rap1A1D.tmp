@@ -1,0 +1,125 @@
+[gd_scene load_steps=21 format=3 uid="uid://bt5ygil0hku1j"]
+
+[ext_resource type="Texture2D" uid="uid://bhwvlu8buts7t" path="res://Sprites - Raposa 1/Raposa1.png" id="1_xueud"]
+[ext_resource type="Script" path="res://Scripts/Raposa1.gd" id="1_ywdcw"]
+[ext_resource type="Texture2D" uid="uid://fnp541dql6yw" path="res://Sprites - Raposa 1/Raposa2.png" id="2_3krlg"]
+[ext_resource type="Texture2D" uid="uid://bsnrvnxtfpcjf" path="res://Sprites - Raposa 1/RaposaDano1.png" id="2_i2rmu"]
+[ext_resource type="Texture2D" uid="uid://yhur2cxtbpeg" path="res://Sprites - Raposa 1/RaposaDano2.png" id="3_bpltf"]
+[ext_resource type="Texture2D" uid="uid://c4ppx2xoef476" path="res://Sprites - Raposa 1/Raposa3.png" id="3_lure6"]
+[ext_resource type="Texture2D" uid="uid://du4fm6npuevpa" path="res://Sprites - Raposa 1/Raposa4.png" id="4_3n68u"]
+[ext_resource type="Texture2D" uid="uid://b7g0nfmwyccur" path="res://Sprites - Raposa 1/RaposaDano3.png" id="4_lhf2c"]
+[ext_resource type="Texture2D" uid="uid://denheh5fi0f4p" path="res://Sprites - Raposa 1/RaposaDano4.png" id="5_mir5l"]
+[ext_resource type="Texture2D" uid="uid://rnd3ybrrs7ul" path="res://Sprites - Raposa 1/Raposa5.png" id="5_xgv0s"]
+[ext_resource type="Texture2D" uid="uid://dq734n1egvfe3" path="res://Sprites - Raposa 1/Raposa6.png" id="6_ardtw"]
+[ext_resource type="Texture2D" uid="uid://bsjl3pracepf7" path="res://Sprites - Raposa 1/RaposaDano5.png" id="6_b5m0u"]
+[ext_resource type="Texture2D" uid="uid://cbcx3caibh00j" path="res://Sprites - Raposa 1/Raposa7.png" id="7_0p6xe"]
+[ext_resource type="Texture2D" uid="uid://dfyuqn0gu6ve7" path="res://Sprites - Raposa 1/RaposaDano6.png" id="7_rmcv6"]
+[ext_resource type="Texture2D" uid="uid://vryn57alpef5" path="res://Sprites - Raposa 1/Raposa8.png" id="8_jbifq"]
+[ext_resource type="Texture2D" uid="uid://b6fg2qsl5dh3b" path="res://Sprites - Raposa 1/Raposa9.png" id="9_bw8nq"]
+[ext_resource type="PackedScene" uid="uid://50weinbujiex" path="res://Characters/hitbox.tscn" id="11_8ud3f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fjh01"]
+size = Vector2(56, 37)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_llyh4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_i2rmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bpltf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lhf2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mir5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_b5m0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rmcv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_b5m0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mir5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lhf2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bpltf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_i2rmu")
+}],
+"loop": false,
+"name": &"damage",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xueud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3krlg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lure6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3n68u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xgv0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ardtw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0p6xe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jbifq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bw8nq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qu1pf"]
+size = Vector2(56, 2)
+
+[node name="Raposa1" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_ywdcw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -18.5)
+shape = SubResource("RectangleShape2D_fjh01")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -32)
+sprite_frames = SubResource("SpriteFrames_llyh4")
+animation = &"damage"
+autoplay = "default"
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(-36, 0)
+collision_mask = 70
+
+[node name="hitbox" parent="." instance=ExtResource("11_8ud3f")]
+
+[node name="hit-collision" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, -38)
+shape = SubResource("RectangleShape2D_qu1pf")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

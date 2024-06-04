@@ -1,0 +1,99 @@
+[gd_scene load_steps=11 format=3 uid="uid://b4pqomln61vsg"]
+
+[ext_resource type="Texture2D" uid="uid://dc0egqpiaay17" path="res://Sprites - Panceta/Panceta.png" id="1_nout6"]
+[ext_resource type="Script" path="res://Scripts/panceta.gd" id="1_qtut4"]
+[ext_resource type="Texture2D" uid="uid://dbi1dh7a68y7g" path="res://Sprites - Panceta/Panceta3.png" id="3_uq2hf"]
+[ext_resource type="Texture2D" uid="uid://bprpsxe6h1qxd" path="res://Sprites - Panceta/Panceta2.png" id="4_t25m4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rhsko"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nout6")
+}, {
+"duration": 0.03,
+"texture": ExtResource("3_uq2hf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.2
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_t25m4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_nout6")
+}],
+"loop": true,
+"name": &"running",
+"speed": 5.0
+}]
+
+[sub_resource type="Curve" id="Curve_hxakh"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.967949, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_1dy0q"]
+curve = SubResource("Curve_hxakh")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sdk3d"]
+particle_flag_disable_z = true
+spread = 0.0
+gravity = Vector3(0, -217, 0)
+initial_velocity_max = 22.21
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_curve = SubResource("CurveTexture_1dy0q")
+color = Color(0.835294, 0.835294, 0.835294, 0.423529)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f13c2"]
+size = Vector2(24, 55.9601)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k1t33"]
+size = Vector2(30, 52)
+
+[node name="Panceta" type="CharacterBody2D"]
+collision_mask = 79
+script = ExtResource("1_qtut4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rhsko")
+animation = &"running"
+autoplay = "running"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(6, -8)
+amount = 300
+process_material = SubResource("ParticleProcessMaterial_sdk3d")
+lifetime = 5.0
+explosiveness = 0.78
+trail_lifetime = 0.01
+trail_sections = 54
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.76837e-07, 4.01993)
+shape = SubResource("RectangleShape2D_f13c2")
+
+[node name="hurtbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_k1t33")
+debug_color = Color(0.945098, 0, 0.0588235, 0.419608)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+
+[node name="ray_right" type="RayCast2D" parent="."]
+position = Vector2(0, 12)
+target_position = Vector2(18, 0)
+collision_mask = 4
+
+[node name="ray_left" type="RayCast2D" parent="."]
+position = Vector2(0, 12)
+target_position = Vector2(-18, 0)
+collision_mask = 4
+
+[connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]

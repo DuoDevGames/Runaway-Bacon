@@ -1,0 +1,81 @@
+[gd_scene load_steps=18 format=3 uid="uid://c2ol35j6yp6bx"]
+
+[ext_resource type="Texture2D" uid="uid://i2jwfsvwmj25" path="res://Objetos - Mundo 1/Água/Agua1.png" id="1_8iygs"]
+[ext_resource type="Texture2D" uid="uid://dsqdgic7okco6" path="res://Objetos - Mundo 1/Água/Agua2.png" id="2_2rp2r"]
+[ext_resource type="Texture2D" uid="uid://c8e8w1m1udqcp" path="res://Objetos - Mundo 1/Água/Agua3.png" id="3_ngm4h"]
+[ext_resource type="Texture2D" uid="uid://d2thnulkmrgit" path="res://Objetos - Mundo 1/Água/Agua4.png" id="4_ytqtl"]
+[ext_resource type="Texture2D" uid="uid://65nm3myxn0vd" path="res://Objetos - Mundo 1/Água/Agua5.png" id="5_pawwp"]
+[ext_resource type="Texture2D" uid="uid://cvxufa3epvgtu" path="res://Objetos - Mundo 1/Água/Agua6.png" id="6_5lcvm"]
+[ext_resource type="Texture2D" uid="uid://co8j0w7cm4n53" path="res://Objetos - Mundo 1/Água/Agua7.png" id="7_xhjyq"]
+[ext_resource type="Texture2D" uid="uid://dg8n88bc0if0e" path="res://Objetos - Mundo 1/Água/Agua8.png" id="8_88kvv"]
+[ext_resource type="Texture2D" uid="uid://oke1yc4mh1sr" path="res://Objetos - Mundo 1/Água/Agua9.png" id="9_w3bh2"]
+[ext_resource type="Texture2D" uid="uid://dpqb2rgtpnww2" path="res://Objetos - Mundo 1/Água/Agua10.png" id="10_4swiu"]
+[ext_resource type="Texture2D" uid="uid://d1psamcu0pdyh" path="res://Objetos - Mundo 1/Água/Agua11.png" id="11_mtmlc"]
+[ext_resource type="Texture2D" uid="uid://dj70ghq6dgdqb" path="res://Objetos - Mundo 1/Água/Agua12.png" id="12_6k1yq"]
+[ext_resource type="Texture2D" uid="uid://dqccabm1k4n8m" path="res://Objetos - Mundo 1/Água/Agua13.png" id="13_eo072"]
+[ext_resource type="Texture2D" uid="uid://j6bgbfkvyoda" path="res://Objetos - Mundo 1/Água/Agua14.png" id="14_1333r"]
+[ext_resource type="Texture2D" uid="uid://et0wrnqieuiy" path="res://Objetos - Mundo 1/Água/Agua15.png" id="15_l8q50"]
+[ext_resource type="Texture2D" uid="uid://blksqp13pklkc" path="res://Objetos - Mundo 1/Água/Agua16.png" id="16_tjwrs"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yfygk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8iygs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2rp2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ngm4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ytqtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pawwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5lcvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xhjyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_88kvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_w3bh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4swiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mtmlc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6k1yq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_eo072")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1333r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_l8q50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_tjwrs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="agua-topo" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yfygk")
+autoplay = "default"
+frame_progress = 0.945078

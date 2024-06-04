@@ -1,0 +1,101 @@
+[gd_scene load_steps=12 format=3 uid="uid://wgth3dch8iof"]
+
+[ext_resource type="Script" path="res://Scripts/Toicinho.gd" id="1_ga7t8"]
+[ext_resource type="Texture2D" uid="uid://1p4cths12vbt" path="res://Objetos - Mundo 3/Tilemaps/Tilemap Toicinho.png" id="2_6g66d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ej1o"]
+atlas = ExtResource("2_6g66d")
+region = Rect2(64, 0, 31, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mis2"]
+atlas = ExtResource("2_6g66d")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_or1e5"]
+atlas = ExtResource("2_6g66d")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0b08t"]
+atlas = ExtResource("2_6g66d")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqdp0"]
+atlas = ExtResource("2_6g66d")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7aco"]
+atlas = ExtResource("2_6g66d")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_25jnt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ej1o")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mis2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_or1e5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0b08t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqdp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7aco")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xuag8"]
+size = Vector2(24, 55.9601)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h165m"]
+size = Vector2(30, 52)
+
+[node name="Toicinho" type="CharacterBody2D"]
+script = ExtResource("1_ga7t8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_25jnt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.76837e-07, 4.01993)
+shape = SubResource("RectangleShape2D_xuag8")
+
+[node name="hurtbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_h165m")
+debug_color = Color(0.945098, 0, 0.0588235, 0.419608)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+
+[node name="ray_right" type="RayCast2D" parent="."]
+position = Vector2(0, 12)
+target_position = Vector2(18, 0)
+collision_mask = 4
+
+[node name="ray_left" type="RayCast2D" parent="."]
+position = Vector2(0, 12)
+target_position = Vector2(-18, 0)
+collision_mask = 4

@@ -1,0 +1,293 @@
+[gd_scene load_steps=46 format=3 uid="uid://50vlpg7wg751"]
+
+[ext_resource type="Script" path="res://Scripts/Fase-06.gd" id="1_04jvq"]
+[ext_resource type="PackedScene" uid="uid://wgth3dch8iof" path="res://Characters/Toicinho.tscn" id="1_bhyjn"]
+[ext_resource type="Script" path="res://Scripts/Control-f6.gd" id="2_hnmyv"]
+[ext_resource type="Texture2D" uid="uid://ocnshgq3axj7" path="res://HUD/Coração/Coracao1.png" id="3_u4t1x"]
+[ext_resource type="Texture2D" uid="uid://b7cl0vmtbgvue" path="res://HUD/Coração/Coracao2.png" id="4_vjbcl"]
+[ext_resource type="Texture2D" uid="uid://humnehf3121o" path="res://HUD/Coração/Coracao11.png" id="5_fyvry"]
+[ext_resource type="Texture2D" uid="uid://dj1ptarnaxc7h" path="res://HUD/Coração/Coracao12.png" id="6_4ov67"]
+[ext_resource type="Texture2D" uid="uid://eo0fh164o5gr" path="res://HUD/Coração/Coracao13.png" id="7_0purj"]
+[ext_resource type="Texture2D" uid="uid://cfbubktdath4w" path="res://HUD/Coração/Coracao14.png" id="8_wwo0b"]
+[ext_resource type="Texture2D" uid="uid://bru1qompnknm" path="res://HUD/Coração/Coracao15.png" id="9_7enuk"]
+[ext_resource type="Texture2D" uid="uid://ctdmsvlkbjax6" path="res://HUD/Coração/Coracao16.png" id="10_wsp2e"]
+[ext_resource type="Texture2D" uid="uid://c8fcs5phmdhdx" path="res://HUD/Coração/Coracao17.png" id="11_cemh3"]
+[ext_resource type="Texture2D" uid="uid://dfl6vg1sdv8h0" path="res://HUD/Coração/Coracao3.png" id="12_1e8ks"]
+[ext_resource type="Texture2D" uid="uid://saq8cqhhoevi" path="res://HUD/Coração/Coracao4.png" id="13_duwnu"]
+[ext_resource type="Texture2D" uid="uid://brdha8mb774ph" path="res://HUD/Coração/Coracao5.png" id="14_incp8"]
+[ext_resource type="Texture2D" uid="uid://bgxvk6krqygo2" path="res://HUD/Coração/Coracao6.png" id="15_vyglb"]
+[ext_resource type="Texture2D" uid="uid://bi32coglyurdq" path="res://HUD/Coração/Coracao7.png" id="16_e6hlk"]
+[ext_resource type="Texture2D" uid="uid://cctgamvbbcxdl" path="res://HUD/Coração/Coracao8.png" id="17_up1x4"]
+[ext_resource type="Texture2D" uid="uid://lexu7xh01nmw" path="res://HUD/Coração/Coracao9.png" id="18_m5nqw"]
+[ext_resource type="Texture2D" uid="uid://dqlujklf5klmj" path="res://HUD/Coração/Coracao10.png" id="19_feqb0"]
+[ext_resource type="FontFile" uid="uid://d0xjs1baebxx" path="res://HUD/Fonte/pixChicago.ttf" id="20_nse6n"]
+[ext_resource type="Texture2D" uid="uid://cbii7qp4bas4t" path="res://HUD/Lombinho/Lombinho1.png" id="21_5nkef"]
+[ext_resource type="Texture2D" uid="uid://dfm7ms3huimy" path="res://HUD/Lombinho/Lombinho2.png" id="22_06par"]
+[ext_resource type="Texture2D" uid="uid://dfdv1i4u83586" path="res://UI/Ampulheta/Ampulheta1.png" id="23_cfumx"]
+[ext_resource type="Texture2D" uid="uid://5rnir41aihr6" path="res://UI/Ampulheta/Ampulheta2.png" id="24_llke4"]
+[ext_resource type="Texture2D" uid="uid://cigs4ekvb83ke" path="res://UI/Ampulheta/Ampulheta3.png" id="25_u0b5j"]
+[ext_resource type="Texture2D" uid="uid://ik66nq4pe2be" path="res://UI/Ampulheta/Ampulheta4.png" id="26_0gn20"]
+[ext_resource type="PackedScene" uid="uid://cnmwlr8wkf4ym" path="res://cenas/pause_menu.tscn" id="27_char1"]
+[ext_resource type="PackedScene" uid="uid://pdd43txu2ir5" path="res://cenas/game_over_screen.tscn" id="28_hgj58"]
+[ext_resource type="Script" path="res://Scripts/transition.gd" id="28_xt3qu"]
+[ext_resource type="PackedScene" uid="uid://5cia04jkurn0" path="res://Blocks/bloco_voador_azul.tscn" id="29_u75gp"]
+[ext_resource type="Shader" path="res://Shaders/transition.gdshader" id="29_y87un"]
+[ext_resource type="Script" path="res://Scripts/ColorRect1.gd" id="30_cpxdp"]
+[ext_resource type="PackedScene" uid="uid://2y1trft2bcpu" path="res://Blocks/fimdefase.tscn" id="31_enees"]
+[ext_resource type="PackedScene" uid="uid://qf7byrmak0t6" path="res://Blocks/QuedaMorte.tscn" id="31_im7h1"]
+[ext_resource type="Texture2D" uid="uid://bom3dow0rfqqt" path="res://Objetos - Mundo 3/Background/Céu.png" id="36_kn1pe"]
+[ext_resource type="Texture2D" uid="uid://dde387fri6cy7" path="res://Objetos - Mundo 3/Background/Sol.png" id="37_au7kw"]
+[ext_resource type="Texture2D" uid="uid://jgqmwqwu3m63" path="res://Objetos - Mundo 3/Background/Prédios Trás.png" id="38_r7cpf"]
+[ext_resource type="Texture2D" uid="uid://dkk1f3xanu78c" path="res://Objetos - Mundo 3/Background/Palmeiras Trás.png" id="39_v5u34"]
+[ext_resource type="Texture2D" uid="uid://da466t26j67ok" path="res://Objetos - Mundo 3/Background/Prédios Frente.png" id="40_axb2n"]
+[ext_resource type="Texture2D" uid="uid://d3n518n7mjpyb" path="res://Objetos - Mundo 3/Background/Palmeiras Frente.png" id="41_jx3qv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nvwdw"]
+shader = ExtResource("29_y87un")
+shader_parameter/lines = 10.0
+shader_parameter/threshold = 0.0
+shader_parameter/line_color_a = Color(0.984314, 0.635294, 0.768627, 1)
+shader_parameter/line_color_b = Color(0.188235, 0.188235, 0.188235, 1)
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_5c7ql"]
+frames = 17
+speed_scale = 10.0
+frame_0/texture = ExtResource("3_u4t1x")
+frame_1/texture = ExtResource("4_vjbcl")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("12_1e8ks")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("13_duwnu")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("14_incp8")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("15_vyglb")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("16_e6hlk")
+frame_6/duration = 1.0
+frame_7/texture = ExtResource("17_up1x4")
+frame_7/duration = 1.0
+frame_8/texture = ExtResource("18_m5nqw")
+frame_8/duration = 1.0
+frame_9/texture = ExtResource("19_feqb0")
+frame_9/duration = 1.0
+frame_10/texture = ExtResource("5_fyvry")
+frame_10/duration = 1.0
+frame_11/texture = ExtResource("6_4ov67")
+frame_11/duration = 1.0
+frame_12/texture = ExtResource("7_0purj")
+frame_12/duration = 1.0
+frame_13/texture = ExtResource("8_wwo0b")
+frame_13/duration = 1.0
+frame_14/texture = ExtResource("9_7enuk")
+frame_14/duration = 1.0
+frame_15/texture = ExtResource("10_wsp2e")
+frame_15/duration = 1.0
+frame_16/texture = ExtResource("11_cemh3")
+frame_16/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_lyk36"]
+frames = 2
+frame_0/texture = ExtResource("21_5nkef")
+frame_0/duration = 3.0
+frame_1/texture = ExtResource("22_06par")
+frame_1/duration = 0.25
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_4upla"]
+frames = 4
+frame_0/texture = ExtResource("23_cfumx")
+frame_0/duration = 0.25
+frame_1/texture = ExtResource("24_llke4")
+frame_1/duration = 0.25
+frame_2/texture = ExtResource("25_u0b5j")
+frame_2/duration = 0.25
+frame_3/texture = ExtResource("26_0gn20")
+frame_3/duration = 0.25
+
+[node name="Fase-06" type="Node2D"]
+script = ExtResource("1_04jvq")
+
+[node name="fimdefase" parent="." instance=ExtResource("31_enees")]
+position = Vector2(118, 244)
+next_level = "res://cenas/history_end.tscn"
+
+[node name="Toicinho" parent="." instance=ExtResource("1_bhyjn")]
+position = Vector2(239, 212)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 2)
+scale = Vector2(1e-05, 1e-05)
+zoom = Vector2(2, 2)
+limit_left = 10
+limit_top = 0
+limit_bottom = 610
+
+[node name="transition" type="CanvasLayer" parent="."]
+script = ExtResource("28_xt3qu")
+
+[node name="ColorRect" type="ColorRect" parent="transition"]
+material = SubResource("ShaderMaterial_nvwdw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("30_cpxdp")
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+script = ExtResource("2_hnmyv")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="coracao-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/coracao-container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource("AnimatedTexture_5c7ql")
+
+[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/coracao-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("20_nse6n")
+theme_override_font_sizes/font_size = 24
+text = "x"
+
+[node name="Label3" type="Label" parent="HUD/Control/MarginContainer/coracao-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("20_nse6n")
+theme_override_font_sizes/font_size = 24
+text = "00"
+
+[node name="lombinho-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/lombinho-container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource("AnimatedTexture_lyk36")
+
+[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/lombinho-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("20_nse6n")
+theme_override_font_sizes/font_size = 24
+text = "Toicinho"
+
+[node name="timer" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/timer"]
+layout_mode = 2
+texture = SubResource("AnimatedTexture_4upla")
+expand_mode = 3
+
+[node name="Timer" type="Timer" parent="HUD/Control/MarginContainer/timer"]
+autostart = true
+
+[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/timer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("20_nse6n")
+theme_override_font_sizes/font_size = 24
+text = "1:59"
+
+[node name="pause_menu" parent="HUD" instance=ExtResource("27_char1")]
+visible = false
+
+[node name="GameOverScreen" parent="HUD" instance=ExtResource("28_hgj58")]
+visible = false
+
+[node name="Bloco Voador 1" parent="." instance=ExtResource("29_u75gp")]
+position = Vector2(237, 265)
+
+[node name="QuedaMorte" parent="." instance=ExtResource("31_im7h1")]
+position = Vector2(384, 656)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1727, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/1"]
+texture = ExtResource("36_kn1pe")
+centered = false
+
+[node name="2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/2"]
+texture = ExtResource("37_au7kw")
+centered = false
+
+[node name="3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1727, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/3"]
+texture = ExtResource("38_r7cpf")
+centered = false
+
+[node name="4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1727, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/4"]
+texture = ExtResource("39_v5u34")
+centered = false
+
+[node name="5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1727, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/5"]
+texture = ExtResource("40_axb2n")
+centered = false
+
+[node name="6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(1727, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/6"]
+texture = ExtResource("41_jx3qv")
+centered = false
+
+[connection signal="timeout" from="HUD/Control/MarginContainer/timer/Timer" to="HUD/Control" method="_on_timer_timeout"]

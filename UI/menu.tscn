@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://8dmwoighdw46"]
+
+[ext_resource type="Texture2D" uid="uid://der1lyckciawh" path="res://UI/MenuHD.png" id="1_mnul3"]
+
+[node name="menu" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mnul3")
+centered = false

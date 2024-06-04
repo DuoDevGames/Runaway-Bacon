@@ -1,0 +1,82 @@
+[gd_scene load_steps=18 format=3 uid="uid://d08b24fu0t55b"]
+
+[ext_resource type="Texture2D" uid="uid://c47qqiljhfbms" path="res://Objetos - Mundo 2/Lama/Lama1.png" id="1_5f32v"]
+[ext_resource type="Texture2D" uid="uid://n1qa3garxrn6" path="res://Objetos - Mundo 2/Lama/Lama2.png" id="2_gk4gb"]
+[ext_resource type="Texture2D" uid="uid://c3oqv4rjovfd" path="res://Objetos - Mundo 2/Lama/Lama3.png" id="3_3vg7p"]
+[ext_resource type="Texture2D" uid="uid://ctvsqfp4cqtik" path="res://Objetos - Mundo 2/Lama/Lama4.png" id="4_30223"]
+[ext_resource type="Texture2D" uid="uid://dstd03b68ppbd" path="res://Objetos - Mundo 2/Lama/Lama5.png" id="5_dhrmu"]
+[ext_resource type="Texture2D" uid="uid://833osgk5g4yq" path="res://Objetos - Mundo 2/Lama/Lama6.png" id="6_p7yvh"]
+[ext_resource type="Texture2D" uid="uid://blkaw745fk2h8" path="res://Objetos - Mundo 2/Lama/Lama7.png" id="7_txspr"]
+[ext_resource type="Texture2D" uid="uid://vym66ijbyxkv" path="res://Objetos - Mundo 2/Lama/Lama8.png" id="8_refd6"]
+[ext_resource type="Texture2D" uid="uid://cn54pftx6fjnm" path="res://Objetos - Mundo 2/Lama/Lama9.png" id="9_7dsn0"]
+[ext_resource type="Texture2D" uid="uid://cwm7m24e8te5x" path="res://Objetos - Mundo 2/Lama/Lama10.png" id="10_aobvx"]
+[ext_resource type="Texture2D" uid="uid://sdwm62w4sf3h" path="res://Objetos - Mundo 2/Lama/Lama11.png" id="11_u6jmq"]
+[ext_resource type="Texture2D" uid="uid://dsfa5kwd36330" path="res://Objetos - Mundo 2/Lama/Lama12.png" id="12_6iomk"]
+[ext_resource type="Texture2D" uid="uid://cim1etpyytfpn" path="res://Objetos - Mundo 2/Lama/Lama13.png" id="13_dabm6"]
+[ext_resource type="Texture2D" uid="uid://ch56rtl8af2xf" path="res://Objetos - Mundo 2/Lama/Lama14.png" id="14_ky5co"]
+[ext_resource type="Texture2D" uid="uid://brop8bnic5bho" path="res://Objetos - Mundo 2/Lama/Lama15.png" id="15_1lrej"]
+[ext_resource type="Texture2D" uid="uid://c46ikph55np1" path="res://Objetos - Mundo 2/Lama/Lama16.png" id="16_7l1an"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_36ktb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5f32v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gk4gb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3vg7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_30223")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dhrmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p7yvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_txspr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_refd6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7dsn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_aobvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_u6jmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6iomk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_dabm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ky5co")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1lrej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7l1an")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="lama" type="Node2D"]
+z_index = -2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_36ktb")
+autoplay = "default"
+frame_progress = 0.035102

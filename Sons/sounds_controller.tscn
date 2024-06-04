@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://dnm4f6bvgw5wy"]
+
+[ext_resource type="Script" path="res://Sons/sounds_controller.gd" id="1_st550"]
+[ext_resource type="AudioStream" uid="uid://b5p2pschcy1pm" path="res://Sons/som_pulo.mp3" id="2_6xyq8"]
+[ext_resource type="AudioStream" uid="uid://bbs5qp0a0ic0r" path="res://Sons/button pressed.mp3" id="2_c80bv"]
+[ext_resource type="AudioStream" uid="uid://1gsgn06gq51p" path="res://Sons/hover.mp3" id="2_lqlqg"]
+[ext_resource type="AudioStream" uid="uid://ch0mwytfgn6bo" path="res://Sons/palha.mp3" id="2_ur05r"]
+[ext_resource type="AudioStream" uid="uid://cm86oym3oklb3" path="res://Sons/hit raposa.wav" id="5_mov47"]
+
+[node name="sounds_controller" type="Node"]
+script = ExtResource("1_st550")
+
+[node name="button pressed" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_c80bv")
+volume_db = 10.0
+max_distance = 2e+12
+
+[node name="hover" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_lqlqg")
+volume_db = 10.0
+max_distance = 2e+12
+
+[node name="palha" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_ur05r")
+volume_db = 10.0
+max_distance = 2e+12
+
+[node name="hit raposa" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_mov47")
+volume_db = 10.0
+max_distance = 2e+12
+
+[node name="jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_6xyq8")
+volume_db = 10.0
+max_distance = 2e+12

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxsn1wvmr8cjn"]
+
+[ext_resource type="Texture2D" uid="uid://b3p2s8u0jxhfi" path="res://Objetos - Mundo 1/TerraMeio02.png" id="1_bghcd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xqhqi"]
+size = Vector2(32, 32)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xqhqi")
+
+[node name="TerraMeio02" type="Sprite2D" parent="."]
+texture = ExtResource("1_bghcd")

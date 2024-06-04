@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://5cia04jkurn0"]
+
+[ext_resource type="Script" path="res://Scripts/Bloco Voador Vermelho.gd" id="1_a5pxd"]
+[ext_resource type="Texture2D" uid="uid://cpl0atn4c8lxa" path="res://Objetos - Mundo 1/Blocos Voadores/Bloco Azul/BlocoAzul1.png" id="2_xe63f"]
+[ext_resource type="Texture2D" uid="uid://c3a4gbu012pe3" path="res://Objetos - Mundo 1/Blocos Voadores/Bloco Azul/BlocoAzul2.png" id="3_xya06"]
+[ext_resource type="Texture2D" uid="uid://colpdpyqr4ywp" path="res://Objetos - Mundo 1/Blocos Voadores/Bloco Azul/BlocoAzul3.png" id="4_ddfyh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fk2c5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xe63f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xya06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ddfyh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_du8w3"]
+size = Vector2(32.4796, 32.3745)
+
+[node name="Bloco Voador 1" type="Node2D"]
+script = ExtResource("1_a5pxd")
+
+[node name="Bloco Voador Vermelho" type="AnimatableBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bloco Voador Vermelho"]
+sprite_frames = SubResource("SpriteFrames_fk2c5")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloco Voador Vermelho"]
+position = Vector2(0.176014, 0.27883)
+shape = SubResource("RectangleShape2D_du8w3")

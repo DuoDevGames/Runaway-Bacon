@@ -1,0 +1,155 @@
+[gd_scene load_steps=17 format=3 uid="uid://xflyv8o6yyp5"]
+
+[ext_resource type="Script" path="res://Scripts/nuvem-animcao.gd" id="1_5gxil"]
+[ext_resource type="Texture2D" uid="uid://bc2inoy8bll6u" path="res://Objetos - Mundo 1/Nuvem/Nuvem1.png" id="1_ye0gd"]
+[ext_resource type="Texture2D" uid="uid://0b163561kfwg" path="res://Objetos - Mundo 1/Nuvem/Nuvem2.png" id="2_1md2y"]
+[ext_resource type="Texture2D" uid="uid://plb3wt0l728g" path="res://Objetos - Mundo 1/Nuvem/Nuvem3.png" id="3_jgwua"]
+[ext_resource type="Texture2D" uid="uid://ihirmdku7ch" path="res://Objetos - Mundo 1/Nuvem/Nuvem4.png" id="4_2e866"]
+[ext_resource type="Texture2D" uid="uid://difv2ntjgjt7" path="res://Objetos - Mundo 1/Nuvem/Nuvem5.png" id="5_1x275"]
+[ext_resource type="Texture2D" uid="uid://cpu6ky2x1m6p2" path="res://Objetos - Mundo 1/Nuvem/Nuvem6.png" id="6_p2j0u"]
+[ext_resource type="Texture2D" uid="uid://by8gieea8jit2" path="res://Objetos - Mundo 1/Nuvem/Nuvem7.png" id="7_xyabs"]
+[ext_resource type="Texture2D" uid="uid://dkwnpffyc0266" path="res://Objetos - Mundo 1/Nuvem/Nuvem8.png" id="8_qikjh"]
+[ext_resource type="Texture2D" uid="uid://duubbdh2xxh1e" path="res://Objetos - Mundo 1/Nuvem/Nuvem9.png" id="9_oclj8"]
+[ext_resource type="Texture2D" uid="uid://d03bt3x07d5u7" path="res://Objetos - Mundo 1/Nuvem/Nuvem10.png" id="10_khrh1"]
+[ext_resource type="Texture2D" uid="uid://duhioxe2cwyp7" path="res://Objetos - Mundo 1/Nuvem/Nuvem11.png" id="11_ycrnd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8in0q"]
+size = Vector2(32, 32)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_v6nrv"]
+emission_shape = 3
+emission_box_extents = Vector3(15, 0, 1)
+particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
+spread = 0.0
+gravity = Vector3(0, 75, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 1.2
+scale_max = 1.2
+color = Color(0, 0.403922, 1, 0.921569)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7p6te"]
+size = Vector2(32, 23)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t8q6u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ye0gd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1md2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jgwua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2e866")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1x275")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p2j0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xyabs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qikjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_oclj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_khrh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ycrnd")
+}],
+"loop": false,
+"name": &"angry",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ye0gd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_ycrnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_khrh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_oclj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qikjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xyabs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p2j0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1x275")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2e866")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jgwua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1md2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_ye0gd")
+}],
+"loop": false,
+"name": &"happy",
+"speed": 15.0
+}]
+
+[node name="nuvem" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_8in0q")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_5gxil")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Area2D"]
+amount = 500
+process_material = SubResource("ParticleProcessMaterial_v6nrv")
+lifetime = 7.01
+trail_lifetime = 7.3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -7.5)
+shape = SubResource("RectangleShape2D_7p6te")
+debug_color = Color(0.160784, 0.643137, 0, 0.419608)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+sprite_frames = SubResource("SpriteFrames_t8q6u")
+animation = &"happy"
+autoplay = "default"
+frame = 10
+frame_progress = 1.0
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

@@ -1,0 +1,122 @@
+[gd_scene load_steps=21 format=3 uid="uid://du6poyqwk8net"]
+
+[ext_resource type="Texture2D" uid="uid://cahsptwvilw8a" path="res://Objetos - Mundo 2/Tilemaps/TerraMundo02_TileMap.png" id="1_pknhv"]
+[ext_resource type="Texture2D" uid="uid://bg446ap2fi1qj" path="res://Objetos - Mundo 1/MadeiraEmPéCima.png" id="2_w8k4i"]
+[ext_resource type="Texture2D" uid="uid://di3pywfrpok0b" path="res://Objetos - Mundo 1/MadeiraEmPéMeio.png" id="3_bkh0r"]
+[ext_resource type="Texture2D" uid="uid://dpol3t1o1c5v1" path="res://Objetos - Mundo 1/MadeiraEmPéFinal.png" id="4_175qs"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_xk7a1"]
+tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 1, 131072, 0, 1, 1, 65536, 0, 65537, 65536, 1, 131073, 65536, 1, 2, 65536, 0, 65538, 65536, 1, 131074, 65536, 1, 3, 131072, 0, 65539, 131072, 1, 131075, 131072, 1)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_ysodn"]
+tile_data = PackedInt32Array(0, 0, 1, 65536, 0, 1, 1, 65536, 1, 65537, 65536, 1, 2, 65536, 1, 65538, 65536, 1)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_3gjon"]
+tile_data = PackedInt32Array(0, 1, 0, 65536, 5, 0)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_b23dd"]
+tile_data = PackedInt32Array(0, 65536, 1, 65536, 65536, 1, 1, 65536, 1, 65537, 65536, 1, 2, 131072, 1, 65538, 131072, 1)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_tr458"]
+tile_data = PackedInt32Array(0, 65536, 0, 65536, 65536, 1, 131072, 65536, 1, 1, 65536, 0, 65537, 65536, 1, 131073, 65536, 1, 2, 131072, 0, 65538, 131072, 1, 131074, 131072, 1)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_hvjjj"]
+tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 1, 131072, 0, 1, 1, 65536, 0, 65537, 65536, 1, 131073, 65536, 1, 2, 65536, 0, 65538, 65536, 1, 131074, 65536, 1)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_mfoku"]
+tile_data = PackedInt32Array(0, 65536, 0, 65536, 65536, 1, 131072, 65536, 1, 1, 65536, 0, 65537, 65536, 1, 131073, 65536, 1, 2, 65536, 0, 65538, 65536, 1, 131074, 65536, 1)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_lasg7"]
+tile_data = PackedInt32Array(0, 1, 0, 65536, 4, 0, 131072, 5, 0)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_o4ohx"]
+tile_data = PackedInt32Array(0, 1, 0, 65536, 4, 0)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_j76yn"]
+tile_data = PackedInt32Array(0, 4, 0, 65536, 5, 0)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_id85l"]
+tile_data = PackedInt32Array(0, 4, 0, 65536, 4, 0)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1hvdm"]
+texture = ExtResource("1_pknhv")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.6667, -16, -10.6667, 0, -5.33333, 0, 5.33333, 0, 16, 0, 16, -16)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 0, -16, 0)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 10.6667, -16, 10.6667, 0, 0, 0, -5.33333, 0, -16, 0)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kx3rk"]
+texture = ExtResource("2_w8k4i")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -10.6667, 16, -10.6667, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qthev"]
+texture = ExtResource("3_bkh0r")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -10.6667, 16, -5.33333, 16, 0, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e2pe6"]
+texture = ExtResource("4_175qs")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_j857v"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 5
+sources/0 = SubResource("TileSetAtlasSource_1hvdm")
+sources/1 = SubResource("TileSetAtlasSource_kx3rk")
+sources/4 = SubResource("TileSetAtlasSource_qthev")
+sources/5 = SubResource("TileSetAtlasSource_e2pe6")
+pattern_0 = SubResource("TileMapPattern_xk7a1")
+pattern_1 = SubResource("TileMapPattern_ysodn")
+pattern_2 = SubResource("TileMapPattern_b23dd")
+pattern_3 = SubResource("TileMapPattern_tr458")
+pattern_4 = SubResource("TileMapPattern_hvjjj")
+pattern_5 = SubResource("TileMapPattern_mfoku")
+pattern_6 = SubResource("TileMapPattern_lasg7")
+pattern_7 = SubResource("TileMapPattern_o4ohx")
+pattern_8 = SubResource("TileMapPattern_j76yn")
+pattern_9 = SubResource("TileMapPattern_id85l")
+pattern_10 = SubResource("TileMapPattern_3gjon")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_j857v")
+format = 2
+layer_0/name = "-1"
+layer_0/z_index = -1
+layer_0/tile_data = PackedInt32Array(3, 65536, 0, 65539, 65536, 1, 131075, 65536, 1, 4, 65536, 0, 65540, 65536, 1, 131076, 65536, 1, 5, 65536, 0, 65541, 65536, 1, 131077, 65536, 1, -196604, 1, 0, -131068, 4, 0, -65532, 5, 0, -65530, 4, 0, -196602, 4, 0, -131066, 4, 0, -131071, 1, 0, -65535, 5, 0)
+layer_1/name = "-2"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = -2
+layer_1/tile_data = PackedInt32Array()

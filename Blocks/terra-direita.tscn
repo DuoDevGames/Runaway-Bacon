@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b44axnjqiv4o4"]
+
+[ext_resource type="Texture2D" uid="uid://cgabbqiy4g4sk" path="res://Objetos - Mundo 1/Terra canto direito.png" id="1_my0sg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2crpe"]
+size = Vector2(32, 31)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_2crpe")
+
+[node name="TerraCantoDireito" type="Sprite2D" parent="."]
+texture = ExtResource("1_my0sg")
