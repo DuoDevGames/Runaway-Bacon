@@ -4763,6 +4763,7 @@ scale = Vector2(3, 3)
 texture_normal = ExtResource("75_xfrbl")
 texture_pressed = ExtResource("76_lg51x")
 action = "Left"
+visibility_mode = 1
 
 [node name="ui_pause" type="TouchScreenButton" parent="controles"]
 position = Vector2(33, 105)
@@ -4770,6 +4771,7 @@ scale = Vector2(1.5, 1.5)
 texture_normal = ExtResource("77_4bq6v")
 texture_pressed = ExtResource("77_4bq6v")
 action = "Pause"
+visibility_mode = 1
 
 [node name="ui_right" type="TouchScreenButton" parent="controles"]
 position = Vector2(171, 588)
@@ -4777,6 +4779,7 @@ scale = Vector2(3, 3)
 texture_normal = ExtResource("77_yhiof")
 texture_pressed = ExtResource("78_kf1bj")
 action = "Right"
+visibility_mode = 1
 
 [node name="ui_up" type="TouchScreenButton" parent="controles"]
 position = Vector2(1151, 588)
@@ -4784,5 +4787,6 @@ scale = Vector2(3, 3)
 texture_normal = ExtResource("79_veu6b")
 texture_pressed = ExtResource("80_j7aqw")
 action = "Jump"
+visibility_mode = 1
 
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]
