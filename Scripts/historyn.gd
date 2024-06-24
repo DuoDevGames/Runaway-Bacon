@@ -7,10 +7,14 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	history_node.text(label.text)
+	Dialogic.start("His1_2")
+	Dialogic.timeline_ended.connect(dialogic_end)
 
 
+func dialogic_end():
+	transition.change_scene(next_level)
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if Input.is_action_just_pressed("Text"):
+	if Input.is_action_just_pressed("Skip"):
 		transition.change_scene(next_level)

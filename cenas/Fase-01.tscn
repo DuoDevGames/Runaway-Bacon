@@ -189,7 +189,7 @@ metadata/_edit_horizontal_guides_ = [517.031]
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 2)
 scale = Vector2(1e-05, 1e-05)
-zoom = Vector2(3, 3)
+zoom = Vector2(2, 2)
 limit_left = 17
 limit_top = 0
 limit_bottom = 610
@@ -269,8 +269,8 @@ text = "00"
 
 [node name="palha-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
 
 [node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/palha-container"]
 layout_mode = 2
@@ -4756,6 +4756,7 @@ position = Vector2(64, 480)
 position = Vector2(5984, 424)
 
 [node name="controles" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="ui_left" type="TouchScreenButton" parent="controles"]
 position = Vector2(33, 588)
