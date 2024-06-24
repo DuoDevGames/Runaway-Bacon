@@ -9,7 +9,6 @@ func _ready():
 	MusicController.stop_fase1_music()
 	MusicController.stop_gameover_music()
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass

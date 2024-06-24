@@ -15,13 +15,22 @@
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
+"Assustado": {
+"export_overrides": {
+"image": "\"res://Dialogues/Portraits/Lombinho/LombinhoAssustado.png\""
+},
+"mirror": false,
+"offset": Vector2(-60, 0),
+"scale": 0.4,
+"scene": ""
+},
 "Chorando": {
 "export_overrides": {
 "image": "\"res://Dialogues/Portraits/Lombinho/LombinhoChorando.png\""
 },
 "mirror": false,
 "offset": Vector2(-60, 0),
-"scale": 0.6,
+"scale": 0.4,
 "scene": ""
 },
 "Padrão": {
