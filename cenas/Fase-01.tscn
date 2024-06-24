@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=91 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -74,6 +74,13 @@
 [ext_resource type="Shader" path="res://Shaders/transition.gdshader" id="71_vqak6"]
 [ext_resource type="Script" path="res://Scripts/ColorRect1.gd" id="72_2ex1c"]
 [ext_resource type="PackedScene" uid="uid://2y1trft2bcpu" path="res://Blocks/fimdefase.tscn" id="73_autci"]
+[ext_resource type="Texture2D" uid="uid://ckc0whppqug0r" path="res://UI/Touch Buttons/ui_buttons_arrow_left_NORMAL.png" id="75_xfrbl"]
+[ext_resource type="Texture2D" uid="uid://cwif67o1qah55" path="res://UI/Touch Buttons/ui_buttons_arrow_left_PRESSED.png" id="76_lg51x"]
+[ext_resource type="Texture2D" uid="uid://rds150ujo5fv" path="res://UI/Touch Buttons/ui_buttons_pause.png" id="77_4bq6v"]
+[ext_resource type="Texture2D" uid="uid://dpfbm15rpw3u7" path="res://UI/Touch Buttons/ui_buttons_arrow_right_NORMAL.png" id="77_yhiof"]
+[ext_resource type="Texture2D" uid="uid://cdlb5gsobtc4e" path="res://UI/Touch Buttons/ui_buttons_arrow_right_PRESSED.png" id="78_kf1bj"]
+[ext_resource type="Texture2D" uid="uid://pvlw5obpf65d" path="res://UI/Touch Buttons/ui_buttons_arrow_up_NORMAL.png" id="79_veu6b"]
+[ext_resource type="Texture2D" uid="uid://de5yj7mtm6be0" path="res://UI/Touch Buttons/ui_buttons_arrow_up_PRESSED.png" id="80_j7aqw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_14aje"]
 shader = ExtResource("71_vqak6")
@@ -182,8 +189,8 @@ metadata/_edit_horizontal_guides_ = [517.031]
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 2)
 scale = Vector2(1e-05, 1e-05)
-zoom = Vector2(2, 2)
-limit_left = 10
+zoom = Vector2(3, 3)
+limit_left = 17
 limit_top = 0
 limit_bottom = 610
 
@@ -262,8 +269,8 @@ text = "00"
 
 [node name="palha-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 8
+size_flags_horizontal = 4
+size_flags_vertical = 0
 
 [node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/palha-container"]
 layout_mode = 2
@@ -4747,5 +4754,35 @@ position = Vector2(64, 480)
 
 [node name="Teleporter-out" parent="." instance=ExtResource("70_k1tic")]
 position = Vector2(5984, 424)
+
+[node name="controles" type="CanvasLayer" parent="."]
+
+[node name="ui_left" type="TouchScreenButton" parent="controles"]
+position = Vector2(33, 588)
+scale = Vector2(3, 3)
+texture_normal = ExtResource("75_xfrbl")
+texture_pressed = ExtResource("76_lg51x")
+action = "Left"
+
+[node name="ui_pause" type="TouchScreenButton" parent="controles"]
+position = Vector2(33, 105)
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("77_4bq6v")
+texture_pressed = ExtResource("77_4bq6v")
+action = "Pause"
+
+[node name="ui_right" type="TouchScreenButton" parent="controles"]
+position = Vector2(171, 588)
+scale = Vector2(3, 3)
+texture_normal = ExtResource("77_yhiof")
+texture_pressed = ExtResource("78_kf1bj")
+action = "Right"
+
+[node name="ui_up" type="TouchScreenButton" parent="controles"]
+position = Vector2(1151, 588)
+scale = Vector2(3, 3)
+texture_normal = ExtResource("79_veu6b")
+texture_pressed = ExtResource("80_j7aqw")
+action = "Jump"
 
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]

@@ -6,6 +6,7 @@ func _ready():
 	MusicController.play_menu_music()
 	
 func _on_start_btn_pressed():
+	MusicController.stop_menu_music()
 	SoundsController.play_buttonpressed_sound()
 	get_tree().change_scene_to_file("res://cenas/Fase-01.tscn")
 

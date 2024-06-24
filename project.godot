@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Runaway Bacon"
+config/name="Runaway Bacon Android Edition"
 run/main_scene="res://cenas/title_screen.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 boot_splash/bg_color=Color(0.0862745, 0.14902, 0.192157, 1)
@@ -28,8 +28,9 @@ SoundsController="*res://Sons/sounds_controller.tscn"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/resizable=false
+window/size/mode=3
 window/size/transparent=true
+window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="res://UI/BaconCursor.png"
 
 [input]
@@ -41,7 +42,7 @@ Right={
 }
 Left={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":65,"physical_keycode":65,"key_label":65,"unicode":97,"echo":false,"script":null)
 ]
 }
 Jump={
@@ -51,14 +52,23 @@ Jump={
 }
 Reset={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":82,"key_label":0,"unicode":114,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":82,"physical_keycode":82,"key_label":82,"unicode":114,"echo":false,"script":null)
 ]
 }
 Text={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":32,"key_label":32,"unicode":32,"echo":false,"script":null)
 ]
 }
+Pause={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [layer_names]
 
@@ -70,3 +80,7 @@ Text={
 2d_physics/layer_6="hurtbox"
 2d_physics/layer_7="obstáculos"
 2d_physics/layer_9="mundo"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
