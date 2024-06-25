@@ -16,6 +16,15 @@ func _ready():
 	if Global.historyn == 3:
 		Dialogic.start("His2_1")
 		Dialogic.timeline_ended.connect(dialogic_end)
+	if Global.historyn == 4:
+		Dialogic.start("His2_2")
+		Dialogic.timeline_ended.connect(dialogic_end)
+	if Global.historyn == 5:
+		Dialogic.start("His3_1")
+		Dialogic.timeline_ended.connect(dialogic_end)
+	if Global.historyn == 6:
+		Dialogic.start("END")
+		Dialogic.timeline_ended.connect(dialogic_end)
 
 
 func dialogic_end():
@@ -25,6 +34,10 @@ func dialogic_end():
 		Global.historyn = 3
 	elif Global.historyn == 3:
 		Global.historyn = 4
+	elif Global.historyn == 4:
+		Global.historyn = 5
+	elif Global.historyn == 5:
+		Global.historyn = 6
 	transition.change_scene(next_level)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

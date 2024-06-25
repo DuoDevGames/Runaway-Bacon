@@ -1,0 +1,35 @@
+join Narrador 1
+Assim que terminou de comprar sua casa, Toicinho entrou para descansar, depois de uma longa noite de trabalho,
+quando escuta seus irmãos desesperados.
+leave Narrador
+join Lombinho (Assustado) 1
+Lombinho: Toicinho! Toicinho!
+Lombinho (Chorando): Marco Antônio está vindo nos matar!
+leave Lombinho
+join Panceta (Cansado) 1
+Panceta: É verdade irmão!
+Panceta: Até minha casa aquele sarnento destruiu.
+leave Panceta
+join Toicinho (Mãos Para Cima) 1
+Toicinho: Entrem aqui!
+Toicinho (Padrão): Trabalhei DURO e acabei de comprar essa mansão feita pelo melhor arquiteto da cidade.
+leave Toicinho
+join "Marco Aurélio" 1
+"Marco Aurélio": Chega! Aqui é a linha final para vocês!
+"Marco Aurélio": Agora vão ver o que acontece quando mexem comigo!
+leave "Marco Aurélio"
+join Narrador 1
+Marco Aurélio tenta destruir a casa de Toicinho.
+Mas acaba falhando.
+leave 
+join "Marco Aurélio" 1
+"Marco Aurélio": Mas que droga, essa casa foi feita por quem?
+leave "Marco Aurélio"
+join Toicinho (Olho Fechado) 1
+Foi o William desenhador de pitbulls que fez,
+Toicinho (Mãos Para Cima): e agora você vai ver o que acontece com quem mexe com minha familia
+leave Toicinho
+join Narrador 1
+Parece que agora, o caçador, vai virar a caça...
+leave 
+[end_timeline]

@@ -32,12 +32,16 @@ directories/dch_directory={
 "Marco Aurélio": "res://Dialogues/Characters/Marco Aurélio.dch",
 "Maritaca": "res://Dialogues/Characters/Maritaca.dch",
 "Narrador": "res://Dialogues/Characters/Narrador.dch",
-"Panceta": "res://Dialogues/Characters/Panceta.dch"
+"Panceta": "res://Dialogues/Characters/Panceta.dch",
+"Toicinho": "res://Dialogues/Characters/Toicinho.dch"
 }
 directories/dtl_directory={
+"END": "res://Dialogues/Dialogues/END.dtl",
 "His1_2": "res://Dialogues/Dialogues/His1_2.dtl",
 "His1_3": "res://Dialogues/Dialogues/His1_3.dtl",
 "His2_1": "res://Dialogues/Dialogues/His2_1.dtl",
+"His2_2": "res://Dialogues/Dialogues/His2_2.dtl",
+"His3_1": "res://Dialogues/Dialogues/His3_1.dtl",
 "Intro": "res://Dialogues/Dialogues/Intro.dtl"
 }
 layout/style_list=["res://Dialogues/Dialogues/Style.tres"]

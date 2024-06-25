@@ -1,6 +1,6 @@
 join Narrador 1
-Narrador: Panceta constroi sua casinha de madeira a tempo de se proteger da noite chuvosa que estava por vir.
-Narrador: Quando ele pensa que vai relaxar, escuta seu irmão Lombinho gritando.
+Panceta constroi sua casinha de madeira a tempo de se proteger da noite chuvosa que estava por vir.
+Quando ele pensa que vai relaxar, escuta seu irmão Lombinho gritando.
 leave 
 join Lombinho (Chorando) 1
 Lombinho (Assustado): Panceta, o Marco Antônio está vindo me pegar!
@@ -19,8 +19,8 @@ join "Marco Aurélio" 1
 "Marco Aurélio": Pois então, sofra as CONSEQUÊNCIAS!
 leave "Marco Aurélio"
 join Narrador 1
-Narrador: Marco Antônio destroi a casa de Panceta
-Narrador: Assim, vendo sua casa sendo despedaçada, Panceta e Lombinho correm
+Marco Antônio destroi a casa de Panceta
+Assim, vendo sua casa sendo despedaçada, Panceta e Lombinho correm
 para a casa de seu outro irmão Toicinho.
 leave Narrador
 [end_timeline]

@@ -10,14 +10,23 @@
 },
 "default_portrait": "Padrão",
 "description": "",
-"display_name": "Panceta",
+"display_name": "Toicinho",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"Cansado": {
+"Mãos Para Cima": {
 "export_overrides": {
-"image": "\"res://Dialogues/Portraits/Panceta/Panceta Cansado1.png\""
+"image": "\"res://Dialogues/Portraits/Toicinho/Toicinho2.png\""
+},
+"mirror": false,
+"offset": Vector2(-90, 0),
+"scale": 0.5,
+"scene": ""
+},
+"Olho Fechado": {
+"export_overrides": {
+"image": "\"res://Dialogues/Portraits/Toicinho/Toicinho3.png\""
 },
 "mirror": false,
 "offset": Vector2(-90, 0),
@@ -26,7 +35,7 @@
 },
 "Padrão": {
 "export_overrides": {
-"image": "\"res://Dialogues/Portraits/Panceta/Panceta Normal1.png\""
+"image": "\"res://Dialogues/Portraits/Toicinho/Toicinho1.png\""
 },
 "mirror": false,
 "offset": Vector2(-90, 0),

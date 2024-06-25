@@ -30,9 +30,11 @@ overrides = {}
 script = ExtResource("2_oby5k")
 scene = ExtResource("5_eee5q")
 overrides = {
+"box_size": "Vector2(600, 200)",
 "name_label_alignment": "2",
 "name_label_font": "\"res://HUD/Fonte/pixChicago.ttf\"",
-"normal_font": "\"res://HUD/Fonte/pixChicago.ttf\""
+"normal_font": "\"res://HUD/Fonte/pixChicago.ttf\"",
+"text_size": "19.0"
 }
 
 [sub_resource type="Resource" id="Resource_tpj0y"]

@@ -1,5 +1,5 @@
 join Narrador 1
-Narrador: Lombinho constroi sua casinha e se esconde da chuva. \
+Lombinho constroi sua casinha e se esconde da chuva.
 Quando ele menos espera, em meio uma tempestade, o Lobo Agiota Marco Antônio aparece!
 leave Narrador
 join "Marco Aurélio" 1
@@ -9,6 +9,6 @@ join Lombinho (Chorando) 1
 Lombinho: Eu não tenho dinheiro Marco, minha plantação era da erva errada e eu descobri tarde demais!
 leave Lombinho
 join "Marco Aurélio" 1
-"Marco Aurélio": POIS BEM, VOU SER OBRIGADO A TE MOSTRAR O QUE ACONTECE COM QUEM NÃO ME PAGA!!!
+"Marco Aurélio": Pois bem, Vou ser obrigado a te mostrar o que acontece com quem não me paga!!!
 leave "Marco Aurélio"
 [end_timeline]
