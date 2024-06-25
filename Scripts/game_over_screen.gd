@@ -4,9 +4,9 @@ extends Control
 
 func _ready():
 	MusicController.stop_fase1_music()
-	MusicController.play_gameover_music()
+	#MusicController.play_gameover_music()
 	
 func _on_restart_button_pressed():
 	SoundsController.play_buttonpressed_sound()
-	MusicController.stop_gameover_music()
+	#MusicController.stop_gameover_music()
 	get_tree().reload_current_scene()

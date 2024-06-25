@@ -1,0 +1,22 @@
+join Maritaca 1
+Maritaca: Era uma vez, três porcos irmãos,\
+Lombinho, Panceta e Toicinho, grandes campeões.
+Maritaca: Lombinho era um porco que adorava fumar,\
+Mas seus irmãos nunca deixavam de ajudar
+Maritaca: Panceta, o caçador, sempre alerta e ligeiro,\
+Com sua espingarda, enfrentava qualquer perigueiro.
+Maritaca: Toicinho, o stripper, com charme e elegância,\
+Dançava na cidade, trazendo alegria e esperança.
+Maritaca: Juntos, os três porcos enfrentaram um mal,\
+O Lobo Agiota Marco Aurélio, um vilão sem igual.
+Maritaca: Com união e coragem, fizeram ele correr.\
+Mesmo Lombinho, às vezes, não soubesse o que fazer.
+Maritaca: No final, venceram, a fazenda ficou em paz,\
+Mesmo Lombinho, estando errado, não foi incapaz.
+Maritaca: A amizade e o amor dos três irmãos prevaleceu,\
+E o Lobo Agiota finalmente se rendeu.
+leave Maritaca
+join Narrador 1
+FIM
+leave Narrador
+[end_timeline]
