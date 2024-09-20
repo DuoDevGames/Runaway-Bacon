@@ -17,14 +17,12 @@
 size = Vector2(32, 32)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_v6nrv"]
+particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(15, 0, 1)
-particle_flag_disable_z = true
 direction = Vector3(0, 0, 0)
 spread = 0.0
 gravity = Vector3(0, 75, 0)
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
 scale_min = 1.2
 scale_max = 1.2
 color = Color(0, 0.403922, 1, 0.921569)
@@ -151,5 +149,9 @@ autoplay = "default"
 frame = 10
 frame_progress = 1.0
 
+[node name="Timer" type="Timer" parent="Area2D"]
+wait_time = 3.0
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="timeout" from="Area2D/Timer" to="Area2D" method="_on_timer_timeout"]

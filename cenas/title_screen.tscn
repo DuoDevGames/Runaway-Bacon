@@ -88,71 +88,72 @@ texture = SubResource("CurveTexture_055sw")
 expand_mode = 2
 
 [node name="Filtro" type="Sprite2D" parent="."]
-position = Vector2(634.5, 352.5)
+position = Vector2(650, 360)
 scale = Vector2(0.676562, 0.687963)
 texture = ExtResource("8_qjcen")
 
-[node name="Button3" type="Sprite2D" parent="."]
-position = Vector2(612.645, 583)
+[node name="Título" type="Sprite2D" parent="."]
+position = Vector2(654, 229)
+scale = Vector2(0.317293, 0.317293)
+texture = ExtResource("2_28ida")
+
+[node name="Botoes" type="Node2D" parent="."]
+
+[node name="Button3" type="Sprite2D" parent="Botoes"]
+position = Vector2(673.766, 579)
 scale = Vector2(0.491102, 0.548165)
 texture = ExtResource("9_k3ex8")
 
-[node name="Button2" type="Sprite2D" parent="."]
-position = Vector2(612, 513)
-scale = Vector2(0.555046, 0.555046)
+[node name="Button2" type="Sprite2D" parent="Botoes"]
+position = Vector2(670.766, 507)
+scale = Vector2(0.555046, 0.58945)
 texture = ExtResource("9_k3ex8")
 
-[node name="Button" type="Sprite2D" parent="."]
-position = Vector2(611, 444)
+[node name="Button" type="Sprite2D" parent="Botoes"]
+position = Vector2(671.766, 438)
 scale = Vector2(0.473097, 0.579129)
 texture = ExtResource("9_k3ex8")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
+[node name="MarginContainer" type="MarginContainer" parent="Botoes"]
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -554.0
-offset_top = -114.0
-offset_right = 502.0
-offset_bottom = 415.0
+offset_left = 572.766
+offset_top = 388.0
+offset_right = 780.766
+offset_bottom = 628.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Botoes/MarginContainer"]
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 4
 alignment = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Botoes/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 10
 
-[node name="start_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="start_btn" type="Button" parent="Botoes/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_boh3i")
 text = "INICIAR"
 
-[node name="credits_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="credits_btn" type="Button" parent="Botoes/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_boh3i")
 text = "CRÉDITOS"
 
-[node name="quit_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="quit_btn" type="Button" parent="Botoes/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_boh3i")
 text = "FECHAR"
 
-[node name="Título" type="Sprite2D" parent="."]
-position = Vector2(607, 223)
-scale = Vector2(0.317293, 0.317293)
-texture = ExtResource("2_28ida")
-
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/start_btn" to="." method="_on_start_btn_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/credits_btn" to="." method="_on_credits_btn_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/quit_btn" to="." method="_on_quit_btn_pressed"]
+[connection signal="pressed" from="Botoes/MarginContainer/HBoxContainer/VBoxContainer/start_btn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="Botoes/MarginContainer/HBoxContainer/VBoxContainer/credits_btn" to="." method="_on_credits_btn_pressed"]
+[connection signal="pressed" from="Botoes/MarginContainer/HBoxContainer/VBoxContainer/quit_btn" to="." method="_on_quit_btn_pressed"]
