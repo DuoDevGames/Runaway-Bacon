@@ -27,23 +27,8 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={
-"Lombinho": "res://Dialogues/Characters/Lombinho.dch",
-"Marco Aurélio": "res://Dialogues/Characters/Marco Aurélio.dch",
-"Maritaca": "res://Dialogues/Characters/Maritaca.dch",
-"Narrador": "res://Dialogues/Characters/Narrador.dch",
-"Panceta": "res://Dialogues/Characters/Panceta.dch",
-"Toicinho": "res://Dialogues/Characters/Toicinho.dch"
-}
-directories/dtl_directory={
-"END": "res://Dialogues/Dialogues/END.dtl",
-"His1_2": "res://Dialogues/Dialogues/His1_2.dtl",
-"His1_3": "res://Dialogues/Dialogues/His1_3.dtl",
-"His2_1": "res://Dialogues/Dialogues/His2_1.dtl",
-"His2_2": "res://Dialogues/Dialogues/His2_2.dtl",
-"His3_1": "res://Dialogues/Dialogues/His3_1.dtl",
-"Intro": "res://Dialogues/Dialogues/Intro.dtl"
-}
+directories/dch_directory={}
+directories/dtl_directory={}
 layout/style_list=["res://Dialogues/Dialogues/Style.tres"]
 layout/default_style="res://Dialogues/Dialogues/Style.tres"
 variables={}
@@ -70,6 +55,7 @@ glossary/default_case_sensitive=true
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/size/mode=3
 window/size/resizable=false
 window/size/transparent=true
 window/stretch/mode="canvas_items"
