@@ -4791,6 +4791,6 @@ position = Vector2(40, 496)
 position = Vector2(64, 496)
 
 [node name="Coitadinho" parent="Flores" instance=ExtResource("86_ujhhp")]
-position = Vector2(5994, 427)
+position = Vector2(6000, 432)
 
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]

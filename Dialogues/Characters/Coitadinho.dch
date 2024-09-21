@@ -1,0 +1,29 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "Normal",
+"description": "",
+"display_name": "Thomes, o coitadinho",
+"mirror": false,
+"nicknames": ["Thomes"],
+"offset": Vector2(0, 0),
+"portraits": {
+"Normal": {
+"export_overrides": {
+"image": "\"res://Dialogues/Portraits/Coitadinho/Sprite-0011.png\""
+},
+"mirror": false,
+"offset": Vector2(-60, 0),
+"scale": 0.3,
+"scene": ""
+}
+},
+"scale": 1.0
+}
