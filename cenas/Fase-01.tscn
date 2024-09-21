@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=94 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -83,6 +83,8 @@
 [ext_resource type="Texture2D" uid="uid://cdlb5gsobtc4e" path="res://UI/Touch Buttons/ui_buttons_arrow_right_PRESSED.png" id="78_kf1bj"]
 [ext_resource type="Texture2D" uid="uid://pvlw5obpf65d" path="res://UI/Touch Buttons/ui_buttons_arrow_up_NORMAL.png" id="79_veu6b"]
 [ext_resource type="Texture2D" uid="uid://de5yj7mtm6be0" path="res://UI/Touch Buttons/ui_buttons_arrow_up_PRESSED.png" id="80_j7aqw"]
+[ext_resource type="PackedScene" uid="uid://cir6vc8eknq02" path="res://Objetos - Mundo 1/Gramas/Grama 1.tscn" id="84_aqegp"]
+[ext_resource type="PackedScene" uid="uid://c5ao0y3h5abue" path="res://Objetos - Mundo 1/Gramas/Flores/Flor 1.tscn" id="85_bkngr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_14aje"]
 shader = ExtResource("71_vqak6")
@@ -4760,5 +4762,31 @@ texture_normal = ExtResource("79_veu6b")
 texture_pressed = ExtResource("80_j7aqw")
 action = "Jump"
 visibility_mode = 1
+
+[node name="Gramas" type="Node" parent="."]
+
+[node name="Grama1" parent="Gramas" instance=ExtResource("84_aqegp")]
+position = Vector2(184, 496)
+metadata/_edit_group_ = true
+
+[node name="Grama2" parent="Gramas" instance=ExtResource("84_aqegp")]
+position = Vector2(368, 496)
+metadata/_edit_group_ = true
+
+[node name="Grama3" parent="Gramas" instance=ExtResource("84_aqegp")]
+position = Vector2(576, 496)
+metadata/_edit_group_ = true
+
+[node name="Grama4" parent="Gramas" instance=ExtResource("84_aqegp")]
+position = Vector2(920, 496)
+metadata/_edit_group_ = true
+
+[node name="Flores" type="Node" parent="."]
+
+[node name="Flor1" parent="Flores" instance=ExtResource("85_bkngr")]
+position = Vector2(40, 496)
+
+[node name="Flor2" parent="Flores" instance=ExtResource("85_bkngr")]
+position = Vector2(64, 496)
 
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]

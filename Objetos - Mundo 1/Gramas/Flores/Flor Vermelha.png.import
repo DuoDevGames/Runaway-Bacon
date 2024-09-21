@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbn182x8a487a"
-path="res://.godot/imported/Grama2.png-44cc68c0ebfaf16cd42d492e3b4cb9fe.ctex"
+uid="uid://0fbly5lv6l3d"
+path="res://.godot/imported/Flor Vermelha.png-de5cf60e8b6f779dd040344e5392a2b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objetos - Mundo 1/Gramas/Grama1/Grama2.png"
-dest_files=["res://.godot/imported/Grama2.png-44cc68c0ebfaf16cd42d492e3b4cb9fe.ctex"]
+source_file="res://Objetos - Mundo 1/Gramas/Flores/Flor Vermelha.png"
+dest_files=["res://.godot/imported/Flor Vermelha.png-de5cf60e8b6f779dd040344e5392a2b3.ctex"]
 
 [params]
 
