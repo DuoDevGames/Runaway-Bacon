@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddfgd8cvpb7qj"]
+
+[ext_resource type="Texture2D" uid="uid://o1irwi22tbgc" path="res://Objetos - Mundo 1/Background/Montanha1.png" id="1_1xbga"]
+
+[node name="Montanha1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_1xbga")

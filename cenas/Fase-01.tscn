@@ -47,19 +47,20 @@
 [ext_resource type="Texture2D" uid="uid://dfl6vg1sdv8h0" path="res://HUD/Coração/Coracao3.png" id="33_8kr72"]
 [ext_resource type="Texture2D" uid="uid://saq8cqhhoevi" path="res://HUD/Coração/Coracao4.png" id="34_351s6"]
 [ext_resource type="Texture2D" uid="uid://brdha8mb774ph" path="res://HUD/Coração/Coracao5.png" id="35_c3jdy"]
+[ext_resource type="PackedScene" uid="uid://ddfgd8cvpb7qj" path="res://Objetos - Mundo 1/Background/Montanha 1.tscn" id="35_xsqhg"]
 [ext_resource type="Texture2D" uid="uid://bgxvk6krqygo2" path="res://HUD/Coração/Coracao6.png" id="36_ghegp"]
 [ext_resource type="Texture2D" uid="uid://bi32coglyurdq" path="res://HUD/Coração/Coracao7.png" id="37_t5nt5"]
 [ext_resource type="Texture2D" uid="uid://cctgamvbbcxdl" path="res://HUD/Coração/Coracao8.png" id="38_eqimj"]
-[ext_resource type="Texture2D" uid="uid://7l5lh0iuc4xc" path="res://Objetos - Mundo 1/Background/Arbusto 1.png" id="39_65cc1"]
 [ext_resource type="Texture2D" uid="uid://lexu7xh01nmw" path="res://HUD/Coração/Coracao9.png" id="39_a2mii"]
+[ext_resource type="PackedScene" uid="uid://22b6tpjxudby" path="res://Objetos - Mundo 1/arbusto1.tscn" id="39_jaui4"]
 [ext_resource type="Texture2D" uid="uid://dqlujklf5klmj" path="res://HUD/Coração/Coracao10.png" id="40_j06o1"]
+[ext_resource type="PackedScene" uid="uid://d2i68ucnoyogs" path="res://Objetos - Mundo 1/Background/Montanha 2.tscn" id="40_n1vcw"]
 [ext_resource type="FontFile" uid="uid://d0xjs1baebxx" path="res://HUD/Fonte/pixChicago.ttf" id="41_14ku5"]
+[ext_resource type="PackedScene" uid="uid://ciw4l8lpon3i2" path="res://Objetos - Mundo 1/Background/Montanha 3.tscn" id="41_uf3io"]
 [ext_resource type="Texture2D" uid="uid://w1814mspjr0k" path="res://HUD/Palha/Palha1.png" id="42_55w4n"]
 [ext_resource type="Texture2D" uid="uid://cyayuniy5mfln" path="res://HUD/Palha/Palha2.png" id="43_a2r5d"]
 [ext_resource type="Texture2D" uid="uid://d2u22cnwb00oe" path="res://HUD/Palha/Palha3.png" id="44_4h43h"]
 [ext_resource type="Texture2D" uid="uid://cwk8wp1lxkyy6" path="res://HUD/Palha/Palha4.png" id="45_5ci2h"]
-[ext_resource type="Texture2D" uid="uid://c3nkaj1cfdljy" path="res://Objetos - Mundo 1/Gramas/Grama1/Grama1.png" id="50_1u75v"]
-[ext_resource type="Texture2D" uid="uid://pe1hn2g7x8nb" path="res://Objetos - Mundo 1/Gramas/Grama1/Grama2.png" id="51_jlgpa"]
 [ext_resource type="Texture2D" uid="uid://dfokngta2jukl" path="res://Objetos - Mundo 1/Árvores/Arvore1.png" id="52_ep8lo"]
 [ext_resource type="Texture2D" uid="uid://bg446ap2fi1qj" path="res://Objetos - Mundo 1/MadeiraEmPéCima.png" id="53_th53b"]
 [ext_resource type="PackedScene" uid="uid://bt5ygil0hku1j" path="res://Enemies/Raposa1.tscn" id="56_800oj"]
@@ -154,20 +155,6 @@ size = Vector2(20, 496)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bo5vv"]
 size = Vector2(56, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_fvn7j"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("50_1u75v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("51_jlgpa")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ns5le"]
 animations = [{
@@ -325,41 +312,85 @@ visible = false
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="05" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Céu" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(736, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/05"]
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Céu"]
 texture = ExtResource("1_a4tlf")
 centered = false
 
-[node name="04" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.2, 1)
+[node name="Montanhas 1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 1)
 motion_mirroring = Vector2(736, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/04"]
+[node name="Montanha1" parent="ParallaxBackground/Montanhas 1" instance=ExtResource("35_xsqhg")]
+position = Vector2(40, 456)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Montanhas 1"]
+visible = false
 texture = ExtResource("2_ckojg")
 centered = false
 
-[node name="03" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Núvens 1" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.4, 1)
 motion_mirroring = Vector2(736, 0)
 
-[node name="nuvens_fundo" type="Sprite2D" parent="ParallaxBackground/03"]
+[node name="nuvens_fundo" type="Sprite2D" parent="ParallaxBackground/Núvens 1"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_k7eo7")
 texture = ExtResource("3_mapcp")
 centered = false
 
-[node name="02" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Montanhas 4" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(1, 0)
+motion_scale = Vector2(0.5, 1)
+motion_offset = Vector2(1, 0)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Montanhas 4"]
+visible = false
+texture_filter = 1
+texture = ExtResource("4_ci4q3")
+centered = false
+
+[node name="Montanha2" parent="ParallaxBackground/Montanhas 4" instance=ExtResource("40_n1vcw")]
+position = Vector2(-105, 496)
+rotation = 0.122173
+
+[node name="Montanhas 3" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(1, 0)
 motion_scale = Vector2(0.6, 1)
 motion_offset = Vector2(1, 0)
 motion_mirroring = Vector2(736, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/02"]
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Montanhas 3"]
+visible = false
 texture_filter = 1
 texture = ExtResource("4_ci4q3")
 centered = false
+
+[node name="Montanha2" parent="ParallaxBackground/Montanhas 3" instance=ExtResource("40_n1vcw")]
+visible = false
+position = Vector2(-57, 432)
+rotation = 0.122173
+
+[node name="Montanha3" parent="ParallaxBackground/Montanhas 3" instance=ExtResource("41_uf3io")]
+position = Vector2(647, 456)
+
+[node name="Montanhas 2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(1, 0)
+motion_scale = Vector2(0.7, 1)
+motion_offset = Vector2(1, 0)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Montanhas 2"]
+visible = false
+texture_filter = 1
+texture = ExtResource("4_ci4q3")
+centered = false
+
+[node name="Montanha2" parent="ParallaxBackground/Montanhas 2" instance=ExtResource("40_n1vcw")]
+position = Vector2(247, 488)
 
 [node name="06" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(-3, 0)
@@ -367,11 +398,8 @@ motion_scale = Vector2(0.8, 1)
 motion_offset = Vector2(2, 0)
 motion_mirroring = Vector2(751, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/06"]
-texture_filter = 1
-position = Vector2(-24, 84)
-texture = ExtResource("39_65cc1")
-centered = false
+[node name="Arbusto1" parent="ParallaxBackground/06" instance=ExtResource("39_jaui4")]
+position = Vector2(355, 488)
 
 [node name="01" type="ParallaxLayer" parent="ParallaxBackground"]
 visible = false
@@ -4595,78 +4623,6 @@ scale = Vector2(22.5312, 2.09375)
 texture = ExtResource("22_w1daw")
 
 [node name="Cenário" type="Node2D" parent="."]
-
-[node name="Grama 1" type="AnimatedSprite2D" parent="Cenário"]
-visibility_layer = 16
-z_index = -1
-position = Vector2(290, 497)
-sprite_frames = SubResource("SpriteFrames_fvn7j")
-autoplay = "default"
-frame_progress = 0.11835
-
-[node name="Grama 3" type="AnimatedSprite2D" parent="Cenário"]
-visibility_layer = 16
-z_index = -1
-position = Vector2(1353, 497)
-sprite_frames = SubResource("SpriteFrames_fvn7j")
-autoplay = "default"
-frame_progress = 0.11835
-
-[node name="Grama 4" type="AnimatedSprite2D" parent="Cenário"]
-visibility_layer = 16
-z_index = -1
-position = Vector2(1382, 497)
-sprite_frames = SubResource("SpriteFrames_fvn7j")
-autoplay = "default"
-frame_progress = 0.11835
-
-[node name="Grama 5" type="AnimatedSprite2D" parent="Cenário"]
-visibility_layer = 16
-z_index = -1
-position = Vector2(2209, 497)
-sprite_frames = SubResource("SpriteFrames_fvn7j")
-autoplay = "default"
-frame_progress = 0.11835
-
-[node name="Grama 6" type="AnimatedSprite2D" parent="Cenário"]
-visibility_layer = 16
-z_index = -1
-position = Vector2(3864, 528)
-sprite_frames = SubResource("SpriteFrames_fvn7j")
-autoplay = "default"
-frame_progress = 0.11835
-
-[node name="Grama 7" type="AnimatedSprite2D" parent="Cenário"]
-visibility_layer = 16
-z_index = -1
-position = Vector2(4852, 530)
-sprite_frames = SubResource("SpriteFrames_fvn7j")
-autoplay = "default"
-frame_progress = 0.11835
-
-[node name="Grama 8" type="AnimatedSprite2D" parent="Cenário"]
-visibility_layer = 16
-z_index = -1
-position = Vector2(4882, 529)
-sprite_frames = SubResource("SpriteFrames_fvn7j")
-autoplay = "default"
-frame_progress = 0.11835
-
-[node name="Grama 9" type="AnimatedSprite2D" parent="Cenário"]
-visibility_layer = 16
-z_index = -1
-position = Vector2(6050, 273)
-sprite_frames = SubResource("SpriteFrames_fvn7j")
-autoplay = "default"
-frame_progress = 0.11835
-
-[node name="Grama 2" type="AnimatedSprite2D" parent="Cenário"]
-visibility_layer = 16
-z_index = -1
-position = Vector2(78, 498)
-sprite_frames = SubResource("SpriteFrames_fvn7j")
-autoplay = "default"
-frame_progress = 0.805811
 
 [node name="Árvore 1" type="Sprite2D" parent="Cenário"]
 z_index = -2
