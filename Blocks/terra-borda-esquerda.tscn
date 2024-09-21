@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://f10qe6bs6h5q"]
 
-[ext_resource type="Texture2D" uid="uid://bv5tis4kq420q" path="res://Objetos - Mundo 1/Chao conto esquerdo.png" id="1_ke8lq"]
+[ext_resource type="Texture2D" uid="uid://s4g7buhjwqyg" path="res://Objetos - Mundo 1/Chão/Terra CE.png" id="1_5a06a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mi0lr"]
 size = Vector2(26, 32)
@@ -12,4 +12,5 @@ position = Vector2(3, 0)
 shape = SubResource("RectangleShape2D_mi0lr")
 
 [node name="ChaoContoEsquerdo" type="Sprite2D" parent="."]
-texture = ExtResource("1_ke8lq")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_5a06a")

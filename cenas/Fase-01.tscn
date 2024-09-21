@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=92 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -50,6 +50,7 @@
 [ext_resource type="Texture2D" uid="uid://bgxvk6krqygo2" path="res://HUD/Coração/Coracao6.png" id="36_ghegp"]
 [ext_resource type="Texture2D" uid="uid://bi32coglyurdq" path="res://HUD/Coração/Coracao7.png" id="37_t5nt5"]
 [ext_resource type="Texture2D" uid="uid://cctgamvbbcxdl" path="res://HUD/Coração/Coracao8.png" id="38_eqimj"]
+[ext_resource type="Texture2D" uid="uid://7l5lh0iuc4xc" path="res://Objetos - Mundo 1/Background/Arbusto 1.png" id="39_65cc1"]
 [ext_resource type="Texture2D" uid="uid://lexu7xh01nmw" path="res://HUD/Coração/Coracao9.png" id="39_a2mii"]
 [ext_resource type="Texture2D" uid="uid://dqlujklf5klmj" path="res://HUD/Coração/Coracao10.png" id="40_j06o1"]
 [ext_resource type="FontFile" uid="uid://d0xjs1baebxx" path="res://HUD/Fonte/pixChicago.ttf" id="41_14ku5"]
@@ -350,12 +351,26 @@ texture = ExtResource("3_mapcp")
 centered = false
 
 [node name="02" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(1, 0)
 motion_scale = Vector2(0.6, 1)
+motion_offset = Vector2(1, 0)
 motion_mirroring = Vector2(736, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/02"]
 texture_filter = 1
 texture = ExtResource("4_ci4q3")
+centered = false
+
+[node name="06" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-3, 0)
+motion_scale = Vector2(0.8, 1)
+motion_offset = Vector2(2, 0)
+motion_mirroring = Vector2(751, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/06"]
+texture_filter = 1
+position = Vector2(-24, 84)
+texture = ExtResource("39_65cc1")
 centered = false
 
 [node name="01" type="ParallaxLayer" parent="ParallaxBackground"]
