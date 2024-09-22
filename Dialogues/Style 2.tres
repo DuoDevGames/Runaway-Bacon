@@ -24,12 +24,12 @@ overrides = {
 "box_size": "Vector2(700, 150)",
 "custom_normal_font": "\"res://HUD/Fonte/pixChicago.ttf\"",
 "name_label_color_mode": "2",
-"name_label_custom_color": "Color(0.776471, 0.0862745, 0.254902, 1)",
+"name_label_custom_color": "Color(1, 0.470588, 0.392157, 1)",
+"name_label_custom_size": "12.0",
 "name_label_customfont": "\"res://HUD/Fonte/pixChicago.ttf\"",
 "name_label_use_global_size": "false",
 "portrait_bg_modulate": "Color(1, 0.470588, 0.392157, 1)",
 "text_custom_color": "Color(0.776471, 0.0862745, 0.254902, 1)",
-"text_custom_size": "12.0",
 "text_use_global_color": "false",
 "text_use_global_size": "false"
 }

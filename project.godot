@@ -46,7 +46,7 @@ directories/dtl_directory={
 "His3_1": "res://Dialogues/Dialogues/His3_1.dtl",
 "Intro": "res://Dialogues/Dialogues/Intro.dtl"
 }
-layout/style_list=["res://Dialogues/Dialogues/Style.tres", "res://Dialogues/Style 2.tres"]
+layout/style_list=["res://Dialogues/Style 2.tres"]
 layout/default_style="res://Dialogues/Style 2.tres"
 variables={}
 text/letter_speed=0.01
