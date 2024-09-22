@@ -48,7 +48,8 @@ overrides = {}
 script = ExtResource("1_1qula")
 scene = ExtResource("6_1660f")
 overrides = {
-"boxes_stylebox_normal": "\"choice_panel_normal.tres\"",
+"boxes_stylebox_focused": "\"choice_panel_focus.tres\"",
+"boxes_stylebox_hovered": "\"choice_panel_hover.tres\"",
 "font_custom": "\"res://HUD/Fonte/pixChicago.ttf\"",
 "font_size_use_global": "false",
 "font_use_global": "false",
