@@ -48,7 +48,11 @@ directories/dtl_directory={
 }
 layout/style_list=["res://Dialogues/Style 2.tres"]
 layout/default_style="res://Dialogues/Style 2.tres"
-variables={}
+variables={
+"História Fase 1": {
+"escolha1": 0
+}
+}
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
