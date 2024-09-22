@@ -10,18 +10,27 @@
 },
 "default_portrait": "Normal",
 "description": "",
-"display_name": "Thomes, o coitadinho",
+"display_name": "Thomas, o coitadinho",
 "mirror": false,
 "nicknames": ["Thomes"],
 "offset": Vector2(0, 0),
 "portraits": {
 "Normal": {
 "export_overrides": {
-"image": "\"res://Dialogues/Portraits/Coitadinho/Sprite-0011.png\""
+"image": "\"res://Sprites - Coitadinho/Coitadinho1.png\""
 },
 "mirror": false,
-"offset": Vector2(-60, 0),
-"scale": 0.3,
+"offset": Vector2(0, 0),
+"scale": 1.0,
+"scene": ""
+},
+"Olho fechado": {
+"export_overrides": {
+"image": "\"res://Sprites - Coitadinho/Coitadinho3.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1.0,
 "scene": ""
 }
 },

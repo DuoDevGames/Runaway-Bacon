@@ -4831,7 +4831,7 @@ position = Vector2(40, 496)
 position = Vector2(64, 496)
 
 [node name="Coitadinho" parent="Flores" instance=ExtResource("86_ujhhp")]
-position = Vector2(5994, 427)
+position = Vector2(5993, 422)
 
 [node name="Arbustos da Frente" type="Node" parent="."]
 
