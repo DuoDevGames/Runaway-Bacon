@@ -8,10 +8,10 @@ join "Marco Aurélio" 1
 "Marco Aurélio": Lombinho, Lombinho, você aproveitou meu dinheiro, agora chegou a hora de pagar!
 leave "Marco Aurélio"
 join Lombinho (Chorando) 1
-Lombinho: Eu não tenho dinheiro Marco, minha plantação era da erva errada e eu descobri tarde demais!
+Lombinho (Assustado): Eu não tenho dinheiro Marco, minha plantação era da erva errada e eu descobri tarde demais!
 leave Lombinho
 join "Marco Aurélio" 1
-"Marco Aurélio": Pois bem, Vou ser obrigado a te mostrar o que acontece com quem não me paga!!!
+"Marco Aurélio": Isso não é problema meu. Vou ser obrigado a te mostrar o que acontece com quem não me paga!!!
 leave "Marco Aurélio"
 join Lombinho (Assustado) 1
 Lombinho (Assustado): O que eu faço agora!?

@@ -48,10 +48,13 @@ overrides = {}
 script = ExtResource("1_1qula")
 scene = ExtResource("6_1660f")
 overrides = {
+"boxes_stylebox_normal": "\"choice_panel_normal.tres\"",
 "font_custom": "\"res://HUD/Fonte/pixChicago.ttf\"",
 "font_size_use_global": "false",
 "font_use_global": "false",
-"text_color_custom": "Color(1, 0, 0, 1)",
+"text_color_custom": "Color(0.776471, 0.0862745, 0.254902, 1)",
+"text_color_focused": "Color(0.776471, 0.0862745, 0.254902, 1)",
+"text_color_pressed": "Color(0.776471, 0.0862745, 0.254902, 1)",
 "text_color_use_global": "false"
 }
 
@@ -72,4 +75,4 @@ base_overrides = {
 "global_bg_color": "Color(0.298039, 0.2, 0.113725, 0.901961)"
 }
 layers = Array[ExtResource("1_1qula")]([SubResource("Resource_wsa3q"), SubResource("Resource_fr3u0"), SubResource("Resource_7e0lo"), SubResource("Resource_alm7r"), SubResource("Resource_mva27"), SubResource("Resource_xswve"), SubResource("Resource_eap6c")])
-metadata/_latest_layer = 4
+metadata/_latest_layer = 1
