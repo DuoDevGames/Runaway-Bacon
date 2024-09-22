@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=97 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -47,6 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://dfl6vg1sdv8h0" path="res://HUD/Coração/Coracao3.png" id="33_8kr72"]
 [ext_resource type="Texture2D" uid="uid://saq8cqhhoevi" path="res://HUD/Coração/Coracao4.png" id="34_351s6"]
 [ext_resource type="Texture2D" uid="uid://brdha8mb774ph" path="res://HUD/Coração/Coracao5.png" id="35_c3jdy"]
+[ext_resource type="Texture2D" uid="uid://mikp1kog3usi" path="res://Background/Sol2.png" id="35_i6ga6"]
 [ext_resource type="PackedScene" uid="uid://ddfgd8cvpb7qj" path="res://Objetos - Mundo 1/Background/Montanha 1.tscn" id="35_xsqhg"]
 [ext_resource type="Texture2D" uid="uid://bgxvk6krqygo2" path="res://HUD/Coração/Coracao6.png" id="36_ghegp"]
 [ext_resource type="Texture2D" uid="uid://bi32coglyurdq" path="res://HUD/Coração/Coracao7.png" id="37_t5nt5"]
@@ -86,6 +87,7 @@
 [ext_resource type="PackedScene" uid="uid://cir6vc8eknq02" path="res://Objetos - Mundo 1/Gramas/Grama 1.tscn" id="84_aqegp"]
 [ext_resource type="PackedScene" uid="uid://c5ao0y3h5abue" path="res://Objetos - Mundo 1/Gramas/Flores/Flor 1.tscn" id="85_bkngr"]
 [ext_resource type="PackedScene" uid="uid://ytyxpyayfdjc" path="res://Characters/coitadinho.tscn" id="86_ujhhp"]
+[ext_resource type="Texture2D" uid="uid://53knog3p1ddm" path="res://Background/Arbusto 1 Frente.png" id="88_c1qiy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_14aje"]
 shader = ExtResource("71_vqak6")
@@ -322,6 +324,17 @@ motion_mirroring = Vector2(736, 0)
 texture = ExtResource("1_a4tlf")
 centered = false
 
+[node name="Sol" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sol"]
+position = Vector2(336, 160)
+scale = Vector2(1.57576, 1.57576)
+texture = ExtResource("35_i6ga6")
+centered = false
+
 [node name="Montanhas 1" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.3, 1)
 motion_mirroring = Vector2(736, 0)
@@ -395,14 +408,41 @@ centered = false
 [node name="Montanha2" parent="ParallaxBackground/Montanhas 2" instance=ExtResource("40_n1vcw")]
 position = Vector2(247, 488)
 
-[node name="06" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Arbusto 1" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(-3, 0)
-motion_scale = Vector2(0.8, 1)
+motion_scale = Vector2(1, 1.2)
 motion_offset = Vector2(2, 0)
-motion_mirroring = Vector2(751, 0)
 
-[node name="Arbusto1" parent="ParallaxBackground/06" instance=ExtResource("39_jaui4")]
-position = Vector2(355, 488)
+[node name="Arbusto1" parent="ParallaxBackground/Arbusto 1" instance=ExtResource("39_jaui4")]
+position = Vector2(283, 584)
+
+[node name="Arbusto 2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-3, 0)
+motion_offset = Vector2(2, 0)
+
+[node name="Arbusto1" parent="ParallaxBackground/Arbusto 2" instance=ExtResource("39_jaui4")]
+position = Vector2(1507, 536)
+
+[node name="Arbusto 3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-3, 0)
+motion_offset = Vector2(2, 0)
+
+[node name="Arbusto1" parent="ParallaxBackground/Arbusto 3" instance=ExtResource("39_jaui4")]
+position = Vector2(2531, 544)
+
+[node name="Arbusto 4" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-3, 0)
+motion_offset = Vector2(2, 0)
+
+[node name="Arbusto1" parent="ParallaxBackground/Arbusto 4" instance=ExtResource("39_jaui4")]
+position = Vector2(3811, 600)
+
+[node name="Arbusto 5" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-3, 0)
+motion_offset = Vector2(2, 0)
+
+[node name="Arbusto1" parent="ParallaxBackground/Arbusto 5" instance=ExtResource("39_jaui4")]
+position = Vector2(5283, 496)
 
 [node name="01" type="ParallaxLayer" parent="ParallaxBackground"]
 visible = false
@@ -1428,7 +1468,7 @@ position = Vector2(1216, 592)
 position = Vector2(1216, 624)
 
 [node name="StaticBody2D325" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(1248, 560)
+position = Vector2(1624, 600)
 
 [node name="StaticBody2D326" parent="Terreno" instance=ExtResource("7_q42sb")]
 position = Vector2(1248, 592)
@@ -4182,32 +4222,32 @@ texture = ExtResource("22_w1daw")
 
 [node name="agua-topo" parent="Rios/Rio 2" instance=ExtResource("21_gphdm")]
 z_index = -1
-position = Vector2(1934, 561)
+position = Vector2(1936, 536)
 
 [node name="agua-topo2" parent="Rios/Rio 2" instance=ExtResource("21_gphdm")]
 z_index = -1
-position = Vector2(1966, 561)
+position = Vector2(1968, 536)
 
 [node name="agua-topo3" parent="Rios/Rio 2" instance=ExtResource("21_gphdm")]
 z_index = -1
-position = Vector2(1998, 561)
+position = Vector2(2000, 536)
 
 [node name="agua-topo4" parent="Rios/Rio 2" instance=ExtResource("21_gphdm")]
 z_index = -1
-position = Vector2(2030, 561)
+position = Vector2(2032, 536)
 
 [node name="agua-topo5" parent="Rios/Rio 2" instance=ExtResource("21_gphdm")]
 z_index = -1
-position = Vector2(2062, 561)
+position = Vector2(2064, 536)
 
 [node name="agua-topo6" parent="Rios/Rio 2" instance=ExtResource("21_gphdm")]
 z_index = -1
-position = Vector2(2094, 561)
+position = Vector2(2096, 536)
 
 [node name="fundo" type="Sprite2D" parent="Rios/Rio 2"]
 z_index = -1
-position = Vector2(2004, 606.5)
-scale = Vector2(5.75, 2.09375)
+position = Vector2(2004, 596)
+scale = Vector2(5.75, 2.75)
 texture = ExtResource("22_w1daw")
 
 [node name="Rio 4" type="Node2D" parent="Rios"]
@@ -4792,5 +4832,24 @@ position = Vector2(64, 496)
 
 [node name="Coitadinho" parent="Flores" instance=ExtResource("86_ujhhp")]
 position = Vector2(5994, 427)
+
+[node name="Arbustos da Frente" type="Node" parent="."]
+
+[node name="Parallax2D" type="Parallax2D" parent="Arbustos da Frente"]
+scroll_scale = Vector2(1.2, 1.2)
+
+[node name="Arbusto1Frente" type="Sprite2D" parent="Arbustos da Frente/Parallax2D"]
+position = Vector2(1144, 512)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("88_c1qiy")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Arbustos da Frente"]
+scroll_scale = Vector2(1.2, 1.2)
+scroll_offset = Vector2(1264, 16)
+
+[node name="Arbusto1Frente" type="Sprite2D" parent="Arbustos da Frente/Parallax2D2"]
+position = Vector2(4184, 560)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("88_c1qiy")
 
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]
