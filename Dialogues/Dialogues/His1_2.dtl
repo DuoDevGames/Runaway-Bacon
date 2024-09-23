@@ -1,4 +1,4 @@
-join Maritaca 1
+join Maritaca 1 [animation="Slide In Up" length="2"]
 Maritaca: Lombinho constrói sua casinha\
 Fugindo da chuva sorrateira
 Maritaca: Mal se acalma e relaxa\
@@ -37,5 +37,5 @@ Mas o Lobo Agiota não vai deixar, é um mestre da perseguição
 	join "Marco Aurélio" 1
 	"Marco Aurélio": Shahahaha!\
 Acha mesmo que pode fugir de mim? Vamos ver quem corre mais!
-	leave --All--
-[end_timeline]
+	leave --All-- [animation="Slide Out Down" length="3"]
+	[end_timeline]

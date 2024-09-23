@@ -196,7 +196,7 @@ limit_top = 0
 limit_bottom = 610
 
 [node name="fimdefase" parent="." instance=ExtResource("73_autci")]
-position = Vector2(7781, 290)
+position = Vector2(7312, 384)
 next_level = "res://cenas/history_1_2.tscn"
 
 [node name="Lombinho" parent="." instance=ExtResource("9_8vmwd")]
@@ -216,6 +216,7 @@ script = ExtResource("72_2ex1c")
 metadata/_edit_use_anchors_ = true
 
 [node name="HUD" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Control" type="Control" parent="HUD"]
 layout_mode = 3
@@ -327,6 +328,7 @@ visible = false
 visible = false
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
 
 [node name="Céu" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(736, 0)
@@ -491,6 +493,8 @@ position = Vector2(6072, 424)
 [node name="palha5" parent="Coletáveis" instance=ExtResource("6_6bxpb")]
 visible = false
 position = Vector2(1888, 480)
+
+[node name="Caverna" type="Node" parent="."]
 
 [node name="TerraDentroCaverna4" type="Sprite2D" parent="."]
 position = Vector2(6056, 384)
@@ -5159,7 +5163,7 @@ position = Vector2(6128, 288)
 position = Vector2(64, 480)
 
 [node name="Teleporter-out" parent="." instance=ExtResource("70_k1tic")]
-position = Vector2(3344, 368)
+position = Vector2(7072, 24)
 
 [node name="controles" type="CanvasLayer" parent="."]
 visible = false
