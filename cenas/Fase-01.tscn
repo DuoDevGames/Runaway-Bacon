@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=102 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -90,6 +90,7 @@
 [ext_resource type="PackedScene" uid="uid://qthn0ocdtqqt" path="res://Blocks/terra_topo_caverna3.tscn" id="87_v1wb4"]
 [ext_resource type="Texture2D" uid="uid://53knog3p1ddm" path="res://Background/Arbusto 1 Frente.png" id="88_c1qiy"]
 [ext_resource type="Texture2D" uid="uid://drp8gbr0bf0pg" path="res://Objetos - Mundo 1/Chão/Terra CAVERNA 3.png" id="88_qmdlm"]
+[ext_resource type="PackedScene" uid="uid://bn8tga1rwx11h" path="res://Blocks/meia_coitadinho.tscn" id="91_i1ptr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_14aje"]
 shader = ExtResource("71_vqak6")
@@ -97,6 +98,36 @@ shader_parameter/lines = 10.0
 shader_parameter/threshold = 0.0
 shader_parameter/line_color_a = Color(0.996078, 0.470588, 0.392157, 1)
 shader_parameter/line_color_b = Color(0.772549, 0.0862745, 0.254902, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k7eo7"]
+shader = ExtResource("3_f2kq4")
+shader_parameter/velocidade = 0.05
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3b5rq"]
+size = Vector2(20, 496)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo5vv"]
+size = Vector2(144, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ns5le"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_mcd4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_f46lt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h367l"]
+size = Vector2(21, 71)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8q5k"]
+size = Vector2(9, 73.5)
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_sxcsx"]
 frames = 17
@@ -153,36 +184,6 @@ frame_0/duration = 3.0
 frame_1/texture = ExtResource("25_yhmbd")
 frame_1/duration = 0.25
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_k7eo7"]
-shader = ExtResource("3_f2kq4")
-shader_parameter/velocidade = 0.05
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3b5rq"]
-size = Vector2(20, 496)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo5vv"]
-size = Vector2(144, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ns5le"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("29_mcd4c")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_f46lt")
-}],
-"loop": true,
-"name": &"default",
-"speed": 1.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h367l"]
-size = Vector2(21, 71)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8q5k"]
-size = Vector2(9, 73.5)
-
 [node name="Fase-01" type="Node2D"]
 script = ExtResource("1_162om")
 metadata/_edit_horizontal_guides_ = [517.031]
@@ -198,6 +199,66 @@ limit_bottom = 610
 [node name="fimdefase" parent="." instance=ExtResource("73_autci")]
 position = Vector2(7312, 384)
 next_level = "res://cenas/history_1_2.tscn"
+
+[node name="TerraDentroCaverna4" type="Sprite2D" parent="."]
+position = Vector2(6056, 384)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("46_uvj70")
+
+[node name="TerraDentroCaverna5" type="Sprite2D" parent="."]
+position = Vector2(6056, 416)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("46_uvj70")
+
+[node name="TerraDentroCaverna6" type="Sprite2D" parent="."]
+position = Vector2(6056, 448)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("46_uvj70")
+
+[node name="TerraDentroCaverna7" type="Sprite2D" parent="."]
+position = Vector2(6088, 448)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("46_uvj70")
+
+[node name="TerraDentroCaverna8" type="Sprite2D" parent="."]
+position = Vector2(6088, 416)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("46_uvj70")
+
+[node name="TerraDentroCaverna9" type="Sprite2D" parent="."]
+position = Vector2(6088, 384)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("46_uvj70")
+
+[node name="TerraDentroCaverna1" type="Sprite2D" parent="."]
+position = Vector2(6024, 384)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("47_j0x6g")
+metadata/_edit_group_ = true
+
+[node name="TerraDentroCaverna2" type="Sprite2D" parent="."]
+position = Vector2(6024, 416)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("47_j0x6g")
+metadata/_edit_group_ = true
+
+[node name="TerraDentroCaverna3" type="Sprite2D" parent="."]
+position = Vector2(6024, 448)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("47_j0x6g")
+metadata/_edit_group_ = true
+
+[node name="MadeiraEmPéfinal" type="Sprite2D" parent="."]
+position = Vector2(5999.26, 464.084)
+rotation = -1.57608
+texture = ExtResource("24_hkukr")
+metadata/_edit_group_ = true
+
+[node name="MadeiraEmPécima" type="Sprite2D" parent="."]
+position = Vector2(5968.08, 464.084)
+rotation = -1.57608
+texture = ExtResource("53_th53b")
+metadata/_edit_group_ = true
 
 [node name="Lombinho" parent="." instance=ExtResource("9_8vmwd")]
 position = Vector2(143, 479)
@@ -215,120 +276,7 @@ grow_vertical = 2
 script = ExtResource("72_2ex1c")
 metadata/_edit_use_anchors_ = true
 
-[node name="HUD" type="CanvasLayer" parent="."]
-visible = false
-
-[node name="Control" type="Control" parent="HUD"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 0
-script = ExtResource("3_s03t2")
-
-[node name="MarginContainer" type="MarginContainer" parent="HUD/Control"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -8.0
-offset_bottom = -8.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 30
-
-[node name="coracao-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-
-[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/coracao-container"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-texture = SubResource("AnimatedTexture_sxcsx")
-
-[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/coracao-container"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("41_14ku5")
-theme_override_font_sizes/font_size = 24
-text = "x"
-
-[node name="Label3" type="Label" parent="HUD/Control/MarginContainer/coracao-container"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("41_14ku5")
-theme_override_font_sizes/font_size = 24
-text = "00"
-
-[node name="palha-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 8
-
-[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/palha-container"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-texture = SubResource("AnimatedTexture_x17cl")
-
-[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/palha-container"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("41_14ku5")
-theme_override_font_sizes/font_size = 24
-text = "x"
-
-[node name="Label3" type="Label" parent="HUD/Control/MarginContainer/palha-container"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("41_14ku5")
-theme_override_font_sizes/font_size = 24
-text = "00"
-
-[node name="lombinho-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-
-[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/lombinho-container"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-texture = SubResource("AnimatedTexture_lnapj")
-
-[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/lombinho-container"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("41_14ku5")
-theme_override_font_sizes/font_size = 24
-text = "Lombinho"
-
-[node name="pause_menu" parent="HUD" instance=ExtResource("28_8jdbe")]
-visible = false
-
-[node name="GameOverScreen" parent="HUD" instance=ExtResource("56_oqbwd")]
-visible = false
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-visible = false
 
 [node name="Céu" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(736, 0)
@@ -495,66 +443,6 @@ visible = false
 position = Vector2(1888, 480)
 
 [node name="Caverna" type="Node" parent="."]
-
-[node name="TerraDentroCaverna4" type="Sprite2D" parent="."]
-position = Vector2(6056, 384)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("46_uvj70")
-
-[node name="TerraDentroCaverna5" type="Sprite2D" parent="."]
-position = Vector2(6056, 416)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("46_uvj70")
-
-[node name="TerraDentroCaverna6" type="Sprite2D" parent="."]
-position = Vector2(6056, 448)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("46_uvj70")
-
-[node name="TerraDentroCaverna7" type="Sprite2D" parent="."]
-position = Vector2(6088, 448)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("46_uvj70")
-
-[node name="TerraDentroCaverna8" type="Sprite2D" parent="."]
-position = Vector2(6088, 416)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("46_uvj70")
-
-[node name="TerraDentroCaverna9" type="Sprite2D" parent="."]
-position = Vector2(6088, 384)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("46_uvj70")
-
-[node name="TerraDentroCaverna1" type="Sprite2D" parent="."]
-position = Vector2(6024, 384)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("47_j0x6g")
-metadata/_edit_group_ = true
-
-[node name="TerraDentroCaverna2" type="Sprite2D" parent="."]
-position = Vector2(6024, 416)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("47_j0x6g")
-metadata/_edit_group_ = true
-
-[node name="TerraDentroCaverna3" type="Sprite2D" parent="."]
-position = Vector2(6024, 448)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("47_j0x6g")
-metadata/_edit_group_ = true
-
-[node name="MadeiraEmPéfinal" type="Sprite2D" parent="."]
-position = Vector2(5999.26, 464.084)
-rotation = -1.57608
-texture = ExtResource("24_hkukr")
-metadata/_edit_group_ = true
-
-[node name="MadeiraEmPécima" type="Sprite2D" parent="."]
-position = Vector2(5968.08, 464.084)
-rotation = -1.57608
-texture = ExtResource("53_th53b")
-metadata/_edit_group_ = true
 
 [node name="Terreno" type="Node2D" parent="."]
 
@@ -5163,7 +5051,7 @@ position = Vector2(6128, 288)
 position = Vector2(64, 480)
 
 [node name="Teleporter-out" parent="." instance=ExtResource("70_k1tic")]
-position = Vector2(7072, 24)
+position = Vector2(5656, 392)
 
 [node name="controles" type="CanvasLayer" parent="."]
 visible = false
@@ -5300,6 +5188,119 @@ position = Vector2(6102, 432)
 
 [node name="palha" parent="." instance=ExtResource("6_6bxpb")]
 position = Vector2(6056, 408)
+
+[node name="MeiaCoitadinho" parent="." instance=ExtResource("91_i1ptr")]
+position = Vector2(6208, 264)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+script = ExtResource("3_s03t2")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="coracao-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/coracao-container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource("AnimatedTexture_sxcsx")
+
+[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/coracao-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("41_14ku5")
+theme_override_font_sizes/font_size = 24
+text = "x"
+
+[node name="Label3" type="Label" parent="HUD/Control/MarginContainer/coracao-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("41_14ku5")
+theme_override_font_sizes/font_size = 24
+text = "00"
+
+[node name="palha-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/palha-container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource("AnimatedTexture_x17cl")
+
+[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/palha-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("41_14ku5")
+theme_override_font_sizes/font_size = 24
+text = "x"
+
+[node name="Label3" type="Label" parent="HUD/Control/MarginContainer/palha-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("41_14ku5")
+theme_override_font_sizes/font_size = 24
+text = "00"
+
+[node name="lombinho-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Control/MarginContainer/lombinho-container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource("AnimatedTexture_lnapj")
+
+[node name="Label2" type="Label" parent="HUD/Control/MarginContainer/lombinho-container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("41_14ku5")
+theme_override_font_sizes/font_size = 24
+text = "Lombinho"
+
+[node name="pause_menu" parent="HUD" instance=ExtResource("28_8jdbe")]
+visible = false
+
+[node name="GameOverScreen" parent="HUD" instance=ExtResource("56_oqbwd")]
+visible = false
 
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]
 [connection signal="body_entered" from="Missao/UpdateArea" to="." method="_on_update_area_body_entered"]
