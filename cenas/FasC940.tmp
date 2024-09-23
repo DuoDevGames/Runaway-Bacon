@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=99 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://xflyv8o6yyp5" path="res://Blocks/nuvem.tscn" id="13_kt21e"]
 [ext_resource type="PackedScene" uid="uid://0xdkw760671" path="res://Blocks/bloco_voador_verde.tscn" id="14_ytbhh"]
 [ext_resource type="PackedScene" uid="uid://dwleqb8kqxlqw" path="res://Blocks/bloco_voador_vermelho.tscn" id="15_jb8vx"]
+[ext_resource type="PackedScene" uid="uid://6yc2ykgmtlg0" path="res://Blocks/tijolo.tscn" id="16_0biy6"]
 [ext_resource type="PackedScene" uid="uid://c2ol35j6yp6bx" path="res://Blocks/agua-topo.tscn" id="21_gphdm"]
 [ext_resource type="Texture2D" uid="uid://djs7m6ilt70k2" path="res://Objetos - Mundo 1/Água/AguaFundo.png" id="22_w1daw"]
 [ext_resource type="Texture2D" uid="uid://di3pywfrpok0b" path="res://Objetos - Mundo 1/MadeiraEmPéMeio.png" id="23_q7r4t"]
@@ -193,7 +194,7 @@ limit_top = 0
 limit_bottom = 610
 
 [node name="fimdefase" parent="." instance=ExtResource("73_autci")]
-position = Vector2(7781, 290)
+position = Vector2(6541, 460)
 next_level = "res://cenas/history_1_2.tscn"
 
 [node name="Lombinho" parent="." instance=ExtResource("9_8vmwd")]
@@ -3781,568 +3782,6 @@ position = Vector2(4488, 600)
 [node name="StaticBody2D732" parent="Terreno" instance=ExtResource("8_aysoi")]
 position = Vector2(3920, 624)
 
-[node name="StaticBody2D1159" parent="Terreno" instance=ExtResource("3_5j6wf")]
-position = Vector2(6984, 432)
-
-[node name="StaticBody2D573" parent="Terreno" instance=ExtResource("4_cx6pd")]
-position = Vector2(7400, 432)
-
-[node name="StaticBody2D1160" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7016, 432)
-
-[node name="StaticBody2D1161" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7048, 432)
-
-[node name="StaticBody2D1162" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7080, 432)
-
-[node name="StaticBody2D1163" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7016, 432)
-
-[node name="StaticBody2D1164" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7048, 432)
-
-[node name="StaticBody2D1165" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7080, 432)
-
-[node name="StaticBody2D1166" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7112, 432)
-
-[node name="StaticBody2D1167" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7144, 432)
-
-[node name="StaticBody2D1168" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7176, 432)
-
-[node name="StaticBody2D1169" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7112, 432)
-
-[node name="StaticBody2D1170" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7144, 432)
-
-[node name="StaticBody2D1171" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7176, 432)
-
-[node name="StaticBody2D1172" parent="Terreno" instance=ExtResource("5_vyfl1")]
-position = Vector2(6984, 464)
-
-[node name="StaticBody2D1173" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7016, 464)
-
-[node name="StaticBody2D1174" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7048, 464)
-
-[node name="StaticBody2D1175" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7080, 464)
-
-[node name="StaticBody2D1176" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7016, 464)
-
-[node name="StaticBody2D1177" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7048, 464)
-
-[node name="StaticBody2D1178" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7080, 464)
-
-[node name="StaticBody2D1179" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7112, 464)
-
-[node name="StaticBody2D1180" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7144, 464)
-
-[node name="StaticBody2D1181" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7176, 464)
-
-[node name="StaticBody2D1182" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7112, 464)
-
-[node name="StaticBody2D1183" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7144, 464)
-
-[node name="StaticBody2D1184" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7176, 464)
-
-[node name="StaticBody2D1185" parent="Terreno" instance=ExtResource("8_aysoi")]
-position = Vector2(7400, 464)
-
-[node name="StaticBody2D1186" parent="Terreno" instance=ExtResource("5_vyfl1")]
-position = Vector2(6984, 560)
-
-[node name="StaticBody2D1187" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7016, 560)
-
-[node name="StaticBody2D1188" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7048, 560)
-
-[node name="StaticBody2D1189" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7080, 560)
-
-[node name="StaticBody2D1190" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7016, 560)
-
-[node name="StaticBody2D1191" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7048, 560)
-
-[node name="StaticBody2D1192" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7080, 560)
-
-[node name="StaticBody2D1193" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7112, 560)
-
-[node name="StaticBody2D1194" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7144, 560)
-
-[node name="StaticBody2D1195" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7176, 560)
-
-[node name="StaticBody2D1196" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7112, 560)
-
-[node name="StaticBody2D1197" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7144, 560)
-
-[node name="StaticBody2D1198" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7176, 560)
-
-[node name="StaticBody2D1199" parent="Terreno" instance=ExtResource("8_aysoi")]
-position = Vector2(7400, 560)
-
-[node name="StaticBody2D1200" parent="Terreno" instance=ExtResource("5_vyfl1")]
-position = Vector2(6984, 528)
-
-[node name="StaticBody2D1201" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7016, 528)
-
-[node name="StaticBody2D1202" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7048, 528)
-
-[node name="StaticBody2D1203" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7080, 528)
-
-[node name="StaticBody2D1204" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7016, 528)
-
-[node name="StaticBody2D1205" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7048, 528)
-
-[node name="StaticBody2D1206" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7080, 528)
-
-[node name="StaticBody2D1207" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7112, 528)
-
-[node name="StaticBody2D1208" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7144, 528)
-
-[node name="StaticBody2D1209" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7176, 528)
-
-[node name="StaticBody2D1210" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7112, 528)
-
-[node name="StaticBody2D1211" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7144, 528)
-
-[node name="StaticBody2D1212" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7176, 528)
-
-[node name="StaticBody2D1213" parent="Terreno" instance=ExtResource("8_aysoi")]
-position = Vector2(7400, 528)
-
-[node name="StaticBody2D1214" parent="Terreno" instance=ExtResource("5_vyfl1")]
-position = Vector2(6984, 496)
-
-[node name="StaticBody2D1215" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7016, 496)
-
-[node name="StaticBody2D1216" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7048, 496)
-
-[node name="StaticBody2D1217" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7080, 496)
-
-[node name="StaticBody2D1218" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7016, 496)
-
-[node name="StaticBody2D1219" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7048, 496)
-
-[node name="StaticBody2D1220" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7080, 496)
-
-[node name="StaticBody2D1221" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7112, 496)
-
-[node name="StaticBody2D1222" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7144, 496)
-
-[node name="StaticBody2D1223" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7176, 496)
-
-[node name="StaticBody2D1224" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7112, 496)
-
-[node name="StaticBody2D1225" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7144, 496)
-
-[node name="StaticBody2D1226" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7176, 496)
-
-[node name="StaticBody2D1227" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7208, 432)
-
-[node name="StaticBody2D1228" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7240, 432)
-
-[node name="StaticBody2D1229" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7272, 432)
-
-[node name="StaticBody2D1230" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7208, 432)
-
-[node name="StaticBody2D1231" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7240, 432)
-
-[node name="StaticBody2D1232" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7272, 432)
-
-[node name="StaticBody2D1233" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7304, 432)
-
-[node name="StaticBody2D1234" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7336, 432)
-
-[node name="StaticBody2D1235" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7368, 432)
-
-[node name="StaticBody2D1236" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7304, 432)
-
-[node name="StaticBody2D1237" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7336, 432)
-
-[node name="StaticBody2D1238" parent="Terreno" instance=ExtResource("2_j7xvl")]
-position = Vector2(7368, 432)
-
-[node name="StaticBody2D1239" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7208, 464)
-
-[node name="StaticBody2D1240" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7240, 464)
-
-[node name="StaticBody2D1241" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7272, 464)
-
-[node name="StaticBody2D1242" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7208, 464)
-
-[node name="StaticBody2D1243" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7240, 464)
-
-[node name="StaticBody2D1244" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7272, 464)
-
-[node name="StaticBody2D1245" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7304, 464)
-
-[node name="StaticBody2D1246" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7336, 464)
-
-[node name="StaticBody2D1247" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7368, 464)
-
-[node name="StaticBody2D1248" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7304, 464)
-
-[node name="StaticBody2D1249" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7336, 464)
-
-[node name="StaticBody2D1250" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7368, 464)
-
-[node name="StaticBody2D1251" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7208, 560)
-
-[node name="StaticBody2D1252" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7240, 560)
-
-[node name="StaticBody2D1253" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7272, 560)
-
-[node name="StaticBody2D1254" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7208, 560)
-
-[node name="StaticBody2D1255" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7240, 560)
-
-[node name="StaticBody2D1256" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7272, 560)
-
-[node name="StaticBody2D1257" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7304, 560)
-
-[node name="StaticBody2D1258" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7336, 560)
-
-[node name="StaticBody2D1259" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7368, 560)
-
-[node name="StaticBody2D1260" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7304, 560)
-
-[node name="StaticBody2D1261" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7336, 560)
-
-[node name="StaticBody2D1262" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7368, 560)
-
-[node name="StaticBody2D1263" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7208, 528)
-
-[node name="StaticBody2D1264" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7240, 528)
-
-[node name="StaticBody2D1265" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7272, 528)
-
-[node name="StaticBody2D1266" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7208, 528)
-
-[node name="StaticBody2D1267" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7240, 528)
-
-[node name="StaticBody2D1268" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7272, 528)
-
-[node name="StaticBody2D1269" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7304, 528)
-
-[node name="StaticBody2D1270" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7336, 528)
-
-[node name="StaticBody2D1271" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7368, 528)
-
-[node name="StaticBody2D1272" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7304, 528)
-
-[node name="StaticBody2D1273" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7336, 528)
-
-[node name="StaticBody2D1274" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7368, 528)
-
-[node name="StaticBody2D1275" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7208, 496)
-
-[node name="StaticBody2D1276" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7240, 496)
-
-[node name="StaticBody2D1277" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7272, 496)
-
-[node name="StaticBody2D1278" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7208, 496)
-
-[node name="StaticBody2D1279" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7240, 496)
-
-[node name="StaticBody2D1280" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7272, 496)
-
-[node name="StaticBody2D1281" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7304, 496)
-
-[node name="StaticBody2D1282" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7336, 496)
-
-[node name="StaticBody2D1283" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7368, 496)
-
-[node name="StaticBody2D1284" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7304, 496)
-
-[node name="StaticBody2D1285" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7336, 496)
-
-[node name="StaticBody2D1286" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7368, 496)
-
-[node name="StaticBody2D1287" parent="Terreno" instance=ExtResource("8_aysoi")]
-position = Vector2(7400, 496)
-
-[node name="agua-topo8" parent="Terreno" instance=ExtResource("21_gphdm")]
-z_index = -1
-position = Vector2(2728, 521)
-
-[node name="agua-topo9" parent="Terreno" instance=ExtResource("21_gphdm")]
-z_index = -1
-position = Vector2(2760, 521)
-
-[node name="agua-topo10" parent="Terreno" instance=ExtResource("21_gphdm")]
-z_index = -1
-position = Vector2(2792, 521)
-
-[node name="agua-topo11" parent="Terreno" instance=ExtResource("21_gphdm")]
-z_index = -1
-position = Vector2(2824, 521)
-
-[node name="StaticBody2D1288" parent="Terreno" instance=ExtResource("5_vyfl1")]
-position = Vector2(6984, 624)
-
-[node name="StaticBody2D1289" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7016, 624)
-
-[node name="StaticBody2D1290" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7048, 624)
-
-[node name="StaticBody2D1291" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7080, 624)
-
-[node name="StaticBody2D1292" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7016, 624)
-
-[node name="StaticBody2D1293" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7048, 624)
-
-[node name="StaticBody2D1294" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7080, 624)
-
-[node name="StaticBody2D1295" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7112, 624)
-
-[node name="StaticBody2D1296" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7144, 624)
-
-[node name="StaticBody2D1297" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7176, 624)
-
-[node name="StaticBody2D1298" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7112, 624)
-
-[node name="StaticBody2D1299" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7144, 624)
-
-[node name="StaticBody2D1300" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7176, 624)
-
-[node name="StaticBody2D1301" parent="Terreno" instance=ExtResource("8_aysoi")]
-position = Vector2(7400, 624)
-
-[node name="StaticBody2D1302" parent="Terreno" instance=ExtResource("5_vyfl1")]
-position = Vector2(6984, 592)
-
-[node name="StaticBody2D1303" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7016, 592)
-
-[node name="StaticBody2D1304" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7048, 592)
-
-[node name="StaticBody2D1305" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7080, 592)
-
-[node name="StaticBody2D1306" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7016, 592)
-
-[node name="StaticBody2D1307" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7048, 592)
-
-[node name="StaticBody2D1308" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7080, 592)
-
-[node name="StaticBody2D1309" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7112, 592)
-
-[node name="StaticBody2D1310" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7144, 592)
-
-[node name="StaticBody2D1311" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7176, 592)
-
-[node name="StaticBody2D1312" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7112, 592)
-
-[node name="StaticBody2D1313" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7144, 592)
-
-[node name="StaticBody2D1314" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7176, 592)
-
-[node name="StaticBody2D1315" parent="Terreno" instance=ExtResource("8_aysoi")]
-position = Vector2(7400, 592)
-
-[node name="StaticBody2D1316" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7208, 624)
-
-[node name="StaticBody2D1317" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7240, 624)
-
-[node name="StaticBody2D1318" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7272, 624)
-
-[node name="StaticBody2D1319" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7208, 624)
-
-[node name="StaticBody2D1320" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7240, 624)
-
-[node name="StaticBody2D1321" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7272, 624)
-
-[node name="StaticBody2D1322" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7304, 624)
-
-[node name="StaticBody2D1323" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7336, 624)
-
-[node name="StaticBody2D1324" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7368, 624)
-
-[node name="StaticBody2D1325" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7304, 624)
-
-[node name="StaticBody2D1326" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7336, 624)
-
-[node name="StaticBody2D1327" parent="Terreno" instance=ExtResource("6_ajcw3")]
-position = Vector2(7368, 624)
-
-[node name="StaticBody2D1328" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7208, 592)
-
-[node name="StaticBody2D1329" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7240, 592)
-
-[node name="StaticBody2D1330" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7272, 592)
-
-[node name="StaticBody2D1331" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7208, 592)
-
-[node name="StaticBody2D1332" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7240, 592)
-
-[node name="StaticBody2D1333" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7272, 592)
-
-[node name="StaticBody2D1334" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7304, 592)
-
-[node name="StaticBody2D1335" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7336, 592)
-
-[node name="StaticBody2D1336" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7368, 592)
-
-[node name="StaticBody2D1337" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7304, 592)
-
-[node name="StaticBody2D1338" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7336, 592)
-
-[node name="StaticBody2D1339" parent="Terreno" instance=ExtResource("7_q42sb")]
-position = Vector2(7368, 592)
-
 [node name="nuvem" parent="Terreno" instance=ExtResource("13_kt21e")]
 position = Vector2(6349, 241)
 
@@ -4402,30 +3841,6 @@ position = Vector2(1777, 356)
 
 [node name="nuvem14" parent="Terreno" instance=ExtResource("13_kt21e")]
 position = Vector2(1522, 324)
-
-[node name="nuvem21" parent="Terreno" instance=ExtResource("13_kt21e")]
-position = Vector2(3064, 328)
-
-[node name="nuvem22" parent="Terreno" instance=ExtResource("13_kt21e")]
-position = Vector2(2272, 176)
-
-[node name="nuvem23" parent="Terreno" instance=ExtResource("13_kt21e")]
-position = Vector2(2416, 232)
-
-[node name="nuvem24" parent="Terreno" instance=ExtResource("13_kt21e")]
-position = Vector2(2552, 200)
-
-[node name="nuvem25" parent="Terreno" instance=ExtResource("13_kt21e")]
-position = Vector2(2696, 184)
-
-[node name="nuvem26" parent="Terreno" instance=ExtResource("13_kt21e")]
-position = Vector2(2816, 248)
-
-[node name="nuvem27" parent="Terreno" instance=ExtResource("13_kt21e")]
-position = Vector2(2944, 264)
-
-[node name="nuvem28" parent="Terreno" instance=ExtResource("13_kt21e")]
-position = Vector2(3216, 352)
 
 [node name="Node2D" type="Node2D" parent="Terreno"]
 
@@ -4569,6 +3984,189 @@ position = Vector2(5501, 142)
 position = Vector2(5872, 304)
 move_speed = 4
 distance = 120
+
+[node name="StaticBody2D11" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6624, 464)
+
+[node name="StaticBody2D12" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6656, 464)
+
+[node name="StaticBody2D13" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6688, 464)
+
+[node name="StaticBody2D17" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6720, 464)
+
+[node name="StaticBody2D18" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6752, 464)
+
+[node name="StaticBody2D19" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6624, 432)
+
+[node name="StaticBody2D20" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6656, 432)
+
+[node name="StaticBody2D21" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6688, 432)
+
+[node name="StaticBody2D23" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6720, 432)
+
+[node name="StaticBody2D28" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6752, 432)
+
+[node name="StaticBody2D31" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6624, 464)
+
+[node name="StaticBody2D32" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6656, 464)
+
+[node name="StaticBody2D36" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6688, 464)
+
+[node name="StaticBody2D37" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6720, 464)
+
+[node name="StaticBody2D38" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6752, 464)
+
+[node name="StaticBody2D39" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6624, 432)
+
+[node name="StaticBody2D40" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6656, 432)
+
+[node name="StaticBody2D41" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6688, 432)
+
+[node name="StaticBody2D42" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6720, 432)
+
+[node name="StaticBody2D43" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6752, 432)
+
+[node name="StaticBody2D44" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6624, 400)
+
+[node name="StaticBody2D45" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6656, 400)
+
+[node name="StaticBody2D46" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6688, 400)
+
+[node name="StaticBody2D47" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6720, 400)
+
+[node name="StaticBody2D48" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6752, 400)
+
+[node name="StaticBody2D49" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6624, 368)
+
+[node name="StaticBody2D50" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6656, 368)
+
+[node name="StaticBody2D57" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6688, 368)
+
+[node name="StaticBody2D58" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6720, 368)
+
+[node name="StaticBody2D59" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6752, 368)
+
+[node name="StaticBody2D60" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6624, 400)
+
+[node name="StaticBody2D61" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6656, 400)
+
+[node name="StaticBody2D62" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6688, 400)
+
+[node name="StaticBody2D63" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6720, 400)
+
+[node name="StaticBody2D64" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6752, 400)
+
+[node name="StaticBody2D65" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6624, 368)
+
+[node name="StaticBody2D66" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6656, 368)
+
+[node name="StaticBody2D75" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6688, 368)
+
+[node name="StaticBody2D76" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6720, 368)
+
+[node name="StaticBody2D77" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6752, 368)
+
+[node name="StaticBody2D78" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6624, 336)
+
+[node name="StaticBody2D79" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6656, 336)
+
+[node name="StaticBody2D80" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6688, 336)
+
+[node name="StaticBody2D81" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6720, 336)
+
+[node name="StaticBody2D82" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6752, 336)
+
+[node name="StaticBody2D83" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6624, 336)
+
+[node name="StaticBody2D84" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6656, 336)
+
+[node name="StaticBody2D85" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6688, 336)
+
+[node name="StaticBody2D86" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6720, 336)
+
+[node name="StaticBody2D87" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6656, 304)
+
+[node name="StaticBody2D88" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6688, 304)
+
+[node name="StaticBody2D89" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6720, 304)
+
+[node name="StaticBody2D90" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6656, 304)
+
+[node name="StaticBody2D91" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6688, 304)
+
+[node name="StaticBody2D92" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6688, 272)
+
+[node name="StaticBody2D93" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6720, 304)
+
+[node name="StaticBody2D94" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6752, 336)
+
+[node name="StaticBody2D95" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6784, 368)
+
+[node name="StaticBody2D96" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6784, 368)
+
+[node name="StaticBody2D97" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6592, 368)
+
+[node name="StaticBody2D98" parent="Obstaculos" instance=ExtResource("16_0biy6")]
+position = Vector2(6592, 368)
 
 [node name="Bloco Atravessavel 1" type="Sprite2D" parent="Obstaculos"]
 position = Vector2(1856, 464)
@@ -5176,10 +4774,11 @@ position = Vector2(5280, 480)
 position = Vector2(6128, 288)
 
 [node name="Teleporter" parent="." instance=ExtResource("69_jlav1")]
+visible = false
 position = Vector2(64, 480)
 
 [node name="Teleporter-out" parent="." instance=ExtResource("70_k1tic")]
-position = Vector2(3344, 368)
+position = Vector2(5984, 424)
 
 [node name="controles" type="CanvasLayer" parent="."]
 visible = false
@@ -5238,11 +4837,11 @@ metadata/_edit_group_ = true
 position = Vector2(5993, 422)
 
 [node name="Coitadinho" parent="Missao" instance=ExtResource("86_ujhhp")]
-visible = false
 z_index = -2
 position = Vector2(-3, 0)
 
 [node name="parede" type="StaticBody2D" parent="Missao"]
+visible = false
 collision_layer = 64
 collision_mask = 5
 

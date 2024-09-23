@@ -4,6 +4,7 @@ extends Node2D
 @onready var player := $Lombinho as CharacterBody2D
 @onready var camera := $Camera2D as Camera2D
 @onready var teleporter_out = $"Teleporter-out"
+@onready var parede: StaticBody2D = $Missao/parede
 
 
 
@@ -24,3 +25,8 @@ func _process(_delta):
 
 func _on_teleporter_body_entered(body):
 	body.position = teleporter_out.position
+
+
+func _on_update_area_body_entered(body: Node2D) -> void:
+	if Global.parede == false:
+		parede.get_node("CollisionShape2D").set_deferred("disabled", true)
