@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=103 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -91,6 +91,7 @@
 [ext_resource type="Texture2D" uid="uid://53knog3p1ddm" path="res://Background/Arbusto 1 Frente.png" id="88_c1qiy"]
 [ext_resource type="Texture2D" uid="uid://drp8gbr0bf0pg" path="res://Objetos - Mundo 1/Chão/Terra CAVERNA 3.png" id="88_qmdlm"]
 [ext_resource type="PackedScene" uid="uid://bn8tga1rwx11h" path="res://Blocks/meia_coitadinho.tscn" id="91_i1ptr"]
+[ext_resource type="PackedScene" uid="uid://ck5jwobna1oq3" path="res://Objetos - Mundo 1/nuvem_movel.tscn" id="92_baim7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_14aje"]
 shader = ExtResource("71_vqak6")
@@ -193,7 +194,7 @@ position = Vector2(0, 2)
 scale = Vector2(1e-05, 1e-05)
 zoom = Vector2(2, 2)
 limit_left = 17
-limit_top = 0
+limit_top = -600
 limit_bottom = 610
 
 [node name="fimdefase" parent="." instance=ExtResource("73_autci")]
@@ -5051,7 +5052,7 @@ position = Vector2(6128, 288)
 position = Vector2(64, 480)
 
 [node name="Teleporter-out" parent="." instance=ExtResource("70_k1tic")]
-position = Vector2(5656, 392)
+position = Vector2(4208, 168)
 
 [node name="controles" type="CanvasLayer" parent="."]
 visible = false
@@ -5301,6 +5302,12 @@ visible = false
 
 [node name="GameOverScreen" parent="HUD" instance=ExtResource("56_oqbwd")]
 visible = false
+
+[node name="nuvem_movel" parent="." instance=ExtResource("92_baim7")]
+position = Vector2(4072, 240)
+
+[node name="nuvem_movel2" parent="." instance=ExtResource("92_baim7")]
+position = Vector2(4080, -130)
 
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]
 [connection signal="body_entered" from="Missao/UpdateArea" to="." method="_on_update_area_body_entered"]
