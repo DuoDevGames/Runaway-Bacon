@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 signal killed
 
-@export var SPEED : int = 200
+@export var SPEED : int = 200 * Global.vel_corrida
 @export var JUMP_FORCE : int = 360
 @export var GRAVITY : int = 900
 var knockback_vector := Vector2.ZERO
@@ -17,7 +17,7 @@ func _physics_process(delta):
 	var direction = Input.get_axis("Left", "Right")
 	
 	if direction:
-		velocity.x = direction * SPEED
+		velocity.x = direction * SPEED * Global.vel_corrida
 		if is_on_floor():
 			$AnimatedSprite2D.play("Run")
 	else:

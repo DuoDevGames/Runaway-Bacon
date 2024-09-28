@@ -8,3 +8,4 @@ var historyn := 1
 var meia := 0
 var primeiro_dialogo_coitadinho := 0
 var parede = true
+var vel_corrida := 1

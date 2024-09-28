@@ -10,6 +10,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.vel_corrida = 2
 	lobo.follow_camera(camera)
 	fundofloresta.visible = false
 
