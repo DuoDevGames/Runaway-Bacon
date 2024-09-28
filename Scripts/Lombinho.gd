@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 signal killed
 
-@export var SPEED : int = 200 * Global.vel_corrida
+@export var SPEED : float = 200 
 @export var JUMP_FORCE : int = 360
 @export var GRAVITY : int = 900
 var knockback_vector := Vector2.ZERO
