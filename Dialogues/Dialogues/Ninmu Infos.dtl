@@ -10,6 +10,10 @@ Lombinho (Padrão): Me fale sobre...
 	set {Infos de Ninmu.escolha} = 1
 - O lobo, Marco Antônio
 	set {Infos de Ninmu.escolha} = 2
+- [Sair da conversa]
+	set {Infos de Ninmu.escolha} = 10
+if {Infos de Ninmu.escolha} == 10:
+	[end_timeline]
 if {Infos de Ninmu.escolha} == 2:
 	join Maritaca 0
 	Maritaca: Vou contar o que eu sei, preste muita atenção.\
