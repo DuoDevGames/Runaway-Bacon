@@ -27,8 +27,26 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"Coitadinho": "res://Dialogues/Characters/Coitadinho.dch",
+"Lombinho": "res://Dialogues/Characters/Lombinho.dch",
+"Marco Aurélio": "res://Dialogues/Characters/Marco Aurélio.dch",
+"Maritaca": "res://Dialogues/Characters/Maritaca.dch",
+"Narrador": "res://Dialogues/Characters/Narrador.dch",
+"Panceta": "res://Dialogues/Characters/Panceta.dch",
+"Toicinho": "res://Dialogues/Characters/Toicinho.dch"
+}
+directories/dtl_directory={
+"Coitadinho 1": "res://Dialogues/Dialogues/Coitadinho 1.dtl",
+"Coitadinho 2": "res://Dialogues/Dialogues/Coitadinho 2.dtl",
+"END": "res://Dialogues/Dialogues/END.dtl",
+"His1_2": "res://Dialogues/Dialogues/His1_2.dtl",
+"His1_3": "res://Dialogues/Dialogues/His1_3.dtl",
+"His2_1": "res://Dialogues/Dialogues/His2_1.dtl",
+"His2_2": "res://Dialogues/Dialogues/His2_2.dtl",
+"His3_1": "res://Dialogues/Dialogues/His3_1.dtl",
+"Intro": "res://Dialogues/Dialogues/Intro.dtl"
+}
 layout/style_list=["res://Dialogues/Style 2.tres"]
 layout/default_style="res://Dialogues/Style 2.tres"
 variables={
