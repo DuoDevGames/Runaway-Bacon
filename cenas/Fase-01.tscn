@@ -3802,9 +3802,6 @@ position = Vector2(2816, 248)
 [node name="nuvem27" parent="Terreno" instance=ExtResource("13_kt21e")]
 position = Vector2(2944, 264)
 
-[node name="nuvem28" parent="Terreno" instance=ExtResource("13_kt21e")]
-position = Vector2(3216, 352)
-
 [node name="Node2D" type="Node2D" parent="Terreno"]
 
 [node name="InvisibleWall" type="StaticBody2D" parent="Terreno"]
