@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://yauem68q02u3"]
+
+[ext_resource type="Script" path="res://Scripts/ninmu.gd" id="1_inx8l"]
+[ext_resource type="Texture2D" uid="uid://bmlaejdtr1q42" path="res://Dialogues/Portraits/Maritaca1.png" id="1_p6df1"]
+[ext_resource type="Texture2D" uid="uid://bb4vcuj0kbyav" path="res://Dialogues/Portraits/Maritaca2.png" id="2_a1sju"]
+[ext_resource type="Texture2D" uid="uid://dm6snrufn4tra" path="res://UI/Balao Clique1.png" id="3_g50q7"]
+[ext_resource type="Texture2D" uid="uid://dwvlbjll2xwb8" path="res://UI/Balao Clique2.png" id="4_i1dge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpb1u"]
+size = Vector2(176, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4pkhq"]
+animations = [{
+"frames": [{
+"duration": 7.0,
+"texture": ExtResource("1_p6df1")
+}, {
+"duration": 7.0,
+"texture": ExtResource("2_a1sju")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mx15p"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": ExtResource("3_g50q7")
+}, {
+"duration": 5.0,
+"texture": ExtResource("4_i1dge")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Ninmu" type="Area2D"]
+collision_layer = 4096
+collision_mask = 2147483648
+script = ExtResource("1_inx8l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_fpb1u")
+
+[node name="Ninmu Sprite" type="AnimatedSprite2D" parent="."]
+z_index = -1
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_4pkhq")
+autoplay = "default"
+frame_progress = 0.842949
+
+[node name="Balao Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -56)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_mx15p")
+autoplay = "default"
+frame_progress = 0.694664
+
+[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

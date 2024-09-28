@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=108 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -93,6 +93,7 @@
 [ext_resource type="PackedScene" uid="uid://bn8tga1rwx11h" path="res://Blocks/meia_coitadinho.tscn" id="91_i1ptr"]
 [ext_resource type="PackedScene" uid="uid://ck5jwobna1oq3" path="res://Objetos - Mundo 1/nuvem_movel.tscn" id="92_baim7"]
 [ext_resource type="Texture2D" uid="uid://ougyxiptac3h" path="res://Objetos - Mundo 1/TileMap.png" id="93_1adqm"]
+[ext_resource type="PackedScene" uid="uid://yauem68q02u3" path="res://Characters/ninmu.tscn" id="94_2ps1j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_14aje"]
 shader = ExtResource("71_vqak6")
@@ -4784,6 +4785,9 @@ tile_set = SubResource("TileSet_j4vih")
 position = Vector2(1000, 5)
 scale = Vector2(0.25, 0.25)
 tile_set = SubResource("TileSet_j4vih")
+
+[node name="Ninmu" parent="." instance=ExtResource("94_2ps1j")]
+position = Vector2(336, 464)
 
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]
 [connection signal="body_entered" from="Missao/UpdateArea" to="." method="_on_update_area_body_entered"]
