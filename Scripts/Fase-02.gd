@@ -12,15 +12,15 @@ extends Node2D
 func _ready():
 	Global.vel_corrida = 2
 	lobo.follow_camera(camera)
-	fundofloresta.visible = false
-
+	#fundofloresta.visible = false
+	$Parallax2D/ParallaxLayer/Chuva.emitting = true 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if !player:
 		await get_tree().create_timer(1).timeout
 		gos.visible = true
 
-func _on_area_2d_body_entered(body):
-	if body.name == player.name:
-		fundofloresta.visible = true
-		fundofazenda.visible = false
+#func _on_area_2d_body_entered(body):
+#	if body.name == player.name:
+#		fundofloresta.visible = true
+#d		fundofazenda.visible = false
