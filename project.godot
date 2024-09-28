@@ -53,6 +53,9 @@ layout/default_style="res://Dialogues/Style 2.tres"
 variables={
 "História Fase 1": {
 "escolha1": 0
+},
+"Infos de Ninmu": {
+"escolha": 0
 }
 }
 text/letter_speed=0.01

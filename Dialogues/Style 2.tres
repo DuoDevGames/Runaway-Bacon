@@ -21,7 +21,7 @@ scene = ExtResource("3_1tjbq")
 overrides = {
 "box_modulate_custom_color": "Color(1, 0.823529, 0.733333, 1)",
 "box_modulate_global_color": "false",
-"box_size": "Vector2(700, 150)",
+"box_size": "Vector2(700, 200)",
 "custom_normal_font": "\"res://HUD/Fonte/pixChicago.ttf\"",
 "name_label_color_mode": "2",
 "name_label_custom_color": "Color(1, 0.470588, 0.392157, 1)",

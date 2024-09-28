@@ -1,3 +1,42 @@
-join Maritaca 1
-Maritaca: Teste
-[end_timeline]
+join Maritaca 1 [animation="Fade In Up"]
+Maritaca (Padrão): Sou a Ninmu, vou logo avisando.\
+Não perco meu tempo, tô sempre espiando.
+Maritaca: Se quer minha ajuda, não enrole, rapaz.\
+Senão vou embora e você fica pra trás!
+leave Maritaca [animation="Fade Out Down"]
+join Lombinho (Padrão) 1
+Lombinho (Padrão): Me fale sobre...
+- Onde encontrar palhas
+	set {Infos de Ninmu.escolha} = 1
+- O lobo, Marco Antônio
+	set {Infos de Ninmu.escolha} = 2
+if {Infos de Ninmu.escolha} == 2:
+	join Maritaca 0
+	Maritaca: Vou contar o que eu sei, preste muita atenção.\
+Sobre Marco Antônio, o lobo patrão.
+	Maritaca: Três cantos ele domina, com olhar severo.\
+Do campo à cidade, ninguém passa incerto.
+	Maritaca: Começou emprestando, fazendo até rei dever.\
+Agora é o chefe, ninguém vai se meter.
+	Maritaca: Raposas, coiotes e ratos à disposição.\
+Todos na máfia, é melhor ter precaução!
+	Maritaca (Padrão): Se dever a ele e um desses te ver.\
+Se prepare que logo ele vai aparecer.
+	leave Maritaca
+	join Lombinho (Assustado) 1
+	Lombinho (Assustado): ...
+	leave --All--
+	[end_timeline]
+if {Infos de Ninmu.escolha} == 1:
+	join Maritaca (Normal) 1 [animation="Bounce In" length="1.6"]
+	Maritaca (Padrão): Palhas espalhadas, por todo o lugar.\
+Visíveis e fáceis de encontrar.
+	Maritaca (Padrão): Mas tem uma escondida, em uma gruta apertada.\
+Pra pegá-la, vai ter choro de cachorro na parada.
+	Maritaca (Padrão): Voando pelos céus, um amigo vou indicar.\
+A nuvem sempre sorridente que sobe sem parar.
+	Maritaca (Padrão): Monte nela e suba, até o céu alcançar.\
+Quem sabe mais palhas você vai encontrar!
+	set {Infos de Ninmu.escolha} = 0
+	leave Maritaca
+	[end_timeline]
