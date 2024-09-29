@@ -13,7 +13,8 @@ func _process(_delta):
 					$"Balao Sprite".hide()
 					Dialogic.start("Gato 1")
 					player_is_on_area = false
-				if Global.missao_gato_comecou == true:
+					Global.missao_gato_comecou = true
+				else:
 					$"Balao Sprite".hide()
 					if(Global.flores_arco_iris < 3 && Global.flores_arco_iris > 1):
 						Dialogic.start("Gato 2")
