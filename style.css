@@ -1,23 +1,25 @@
-@font-face {
-    font-family: 'Chicago';
-    src: url('fonts/pixChicago.ttf') format('truetype');
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+.pixelify-sans-<uniquifier> {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+
 body {
-    font-family: 'Chicago', sans-serif;
+    font-family: 'Pixelify Sans', sans-serif;
     background-color: #ffd3bb;
     color: #333;
     line-height: 1.6;
 }
 
 h1, h2, p {
-    font-family: 'Chicago', sans-serif;
+    font-family: 'Pixelify Sans', sans-serif;
 }
 
 .container {
@@ -26,12 +28,25 @@ h1, h2, p {
 }
 
 header {
-    background-color: #008080;
+    background-color: #ff7963;
     padding: 20px 0;
+    display: flex;
+    justify-content: space-between; /* Logo e navegação nas extremidades */
+    align-items: center; /* Alinha verticalmente */
+}
+
+header .logo {
+    width: 50px; /* Ajuste conforme necessário */
+    height: auto;
 }
 
 .logo {
-    width: 150px;
+    width: 50px;
+    float: left;
+}
+
+logobig {
+    width: 100px;
     float: left;
 }
 
@@ -41,11 +56,8 @@ nav {
 
 nav ul {
     list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-left: 20px;
+    display: flex;
+    gap: 20px; /* Espaçamento entre os links */
 }
 
 nav ul li a {
@@ -54,17 +66,23 @@ nav ul li a {
     font-size: 18px;
 }
 
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+
 #hero {
     background-image: url('images/hero-background.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
     padding: 100px 0;
-    color: white;
+    color: #e70e40;
 }
 
 #hero h1 {
-    font-size: 50px;
+    font-size: 60px;
 }
 
 #hero p {
