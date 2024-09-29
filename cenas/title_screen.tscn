@@ -94,7 +94,7 @@ scale = Vector2(0.676562, 0.687963)
 texture = ExtResource("8_qjcen")
 
 [node name="Título" type="Sprite2D" parent="."]
-position = Vector2(654, 229)
+position = Vector2(650, 229)
 scale = Vector2(0.345257, 0.345257)
 texture = ExtResource("9_185on")
 
@@ -105,6 +105,7 @@ scale = Vector2(0.317293, 0.317293)
 texture = ExtResource("2_28ida")
 
 [node name="Botoes" type="Node2D" parent="."]
+position = Vector2(-18, 11)
 
 [node name="Button3" type="Sprite2D" parent="Botoes"]
 position = Vector2(673.766, 579)

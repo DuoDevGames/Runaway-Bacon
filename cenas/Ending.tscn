@@ -94,8 +94,8 @@ scale = Vector2(0.676562, 0.687963)
 texture = ExtResource("8_w6dor")
 
 [node name="Button3" type="Sprite2D" parent="."]
-position = Vector2(632, 668)
-scale = Vector2(1.10862, 0.723624)
+position = Vector2(636, 663)
+scale = Vector2(1.22897, 0.802179)
 texture = ExtResource("9_02s8y")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
