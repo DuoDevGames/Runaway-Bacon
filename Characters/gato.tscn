@@ -44,7 +44,7 @@ script = ExtResource("1_eoofy")
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_xlwms")
 autoplay = "default"
-frame_progress = 0.547008
+frame_progress = 0.41075
 
 [node name="Balao Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(9.53674e-07, -40)

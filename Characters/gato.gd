@@ -20,10 +20,10 @@ func _process(_delta):
 						Dialogic.start("Gato 2")
 						player_is_on_area = false
 					if(Global.flores_arco_iris == 0):
-						Dialogic.start("Coitadinho 3")
+						Dialogic.start("Gato 3")
 						player_is_on_area = false
 					if(Global.flores_arco_iris == 3):
-						Dialogic.start("Coitadinho 4")
+						Dialogic.start("Gato 4")
 						player_is_on_area = false
 						#ADICIONAR MAIS CÓDIGO AQUI!!!!!!!!!!!!!!!1
 						Global.missao_gato_completa = true

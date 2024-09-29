@@ -4820,7 +4820,10 @@ position = Vector2(3672, -368)
 position = Vector2(3880, -400)
 
 [node name="FlorArcoIris" parent="." instance=ExtResource("98_d4l5j")]
-position = Vector2(3736, -392)
+position = Vector2(3696, -384)
+
+[node name="FlorArcoIris2" parent="." instance=ExtResource("98_d4l5j")]
+position = Vector2(3760, -384)
 
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]
 [connection signal="body_entered" from="Missao/UpdateArea" to="." method="_on_update_area_body_entered"]

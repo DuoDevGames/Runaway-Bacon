@@ -1,4 +1,34 @@
 join Gato 1
-Gato (Bigode Cima): TESTE
-Gato (Bigode Baixo): TEST 2
+Gato (Bigode Cima): Xapapapa!\
+As cartas me falaram que você estava vindo!
+Gato (Bigode Baixo): Prazer, eu sou o ***!\
+Trabalho com mágia, previsão e simpatias.
+Gato: Inclusive, sei porque você está aqui.
+leave --All--
+join Lombinho 1
+Lombinho: ...
+leave --All--
+join Gato 1
+Gato (Bigode Cima): Ah, eu sei exatamente o que você quer... Você veio buscar... a poção da invisibilidade! Certo?
+Lombinho: Não...
+Gato (Bigode Baixo): Ah, claro, como fui tolo! É o elixir de vôo! Aposto que está sonhando em voar por aí, hein?
+Lombinho: Também não.
+Gato (Bigode Cima): Hmm... Então deve ser a minha bola de cristal falante! Adoro quando ela faz piadinhas ruins.
+Lombinho: Não, eu só preciso de algumas palhas.
+Gato (Bigode Baixo): Palhas?
+Gato (Bigode Cima): Ah! Eu estava tão perto! Quase acertei!
+Lombinho: ...
+Gato: Bom, eu tenho algumas aqui, e não vou usar para nada.\
+Pode levá-las.
+Gato (Bigode Baixo): Mas preciso de um favor antes.\
+Xapapapa!
+Gato (Bigode Cima): Você precisa me trazer três flores arco-íris!\
+Estão espalhadas por aí, fácil, fácil!
+Gato (Bigode Baixo): Preciso delas para um novo elixir que estou fazendo para um cliente da cidade.\
+Ele quer atrair mais clientes para o seu...
+Gato (Bigode Cima): ... negócio. Digamos assim.
+Gato (Bigode Baixo): Você provavelmente passou por uma ou mais dessas flores.\
+Elas só aparecem para quem pensa nelas.
+Gato: Então, eu visitaria os lugares que você já passou.
+leave --All--
 [end_timeline]
