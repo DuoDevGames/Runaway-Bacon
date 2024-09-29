@@ -8,7 +8,7 @@ join Lombinho (Padrão) 1
 Lombinho (Padrão): Me fale sobre...
 - Onde encontrar palhas
 	set {Infos de Ninmu.escolha} = 1
-- O lobo, Marco Antônio
+- O lobo, Marco Aurélio
 	set {Infos de Ninmu.escolha} = 2
 - [Sair da conversa]
 	set {Infos de Ninmu.escolha} = 10
@@ -17,7 +17,7 @@ if {Infos de Ninmu.escolha} == 10:
 if {Infos de Ninmu.escolha} == 2:
 	join Maritaca 0
 	Maritaca: Vou contar o que eu sei, preste muita atenção.\
-Sobre Marco Antônio, o lobo patrão.
+Sobre Marco Aurélio, o lobo patrão.
 	Maritaca: Três cantos ele domina, com olhar severo.\
 Do campo à cidade, ninguém passa incerto.
 	Maritaca: Começou emprestando, fazendo até rei dever.\
