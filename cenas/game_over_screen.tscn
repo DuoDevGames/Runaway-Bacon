@@ -31,8 +31,8 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.8)
 
 [node name="Button2" type="Sprite2D" parent="."]
-position = Vector2(654.617, 618.25)
-scale = Vector2(0.623996, 0.555046)
+position = Vector2(661, 615)
+scale = Vector2(0.691037, 0.614679)
 texture = ExtResource("3_w4di5")
 
 [node name="RestartButton" type="Button" parent="."]
