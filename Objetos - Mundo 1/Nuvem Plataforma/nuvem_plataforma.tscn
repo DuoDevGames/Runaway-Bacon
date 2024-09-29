@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0fnajtwkb5pq"]
+
+[ext_resource type="Texture2D" uid="uid://cjnixspa3bvb1" path="res://Objetos - Mundo 1/Nuvem Plataforma/Nuvem Plataforma.png" id="1_dw34v"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wd0n7"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(32, 1, 1)
+gravity = Vector3(0, 98, 0)
+scale_max = 6.18
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adss4"]
+size = Vector2(128, 20)
+
+[node name="NuvemPlataforma" type="StaticBody2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(64, 24)
+process_material = SubResource("ParticleProcessMaterial_wd0n7")
+lifetime = 4.6
+speed_scale = 0.96
+explosiveness = 0.05
+randomness = 0.09
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_dw34v")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(64, 10)
+shape = SubResource("RectangleShape2D_adss4")

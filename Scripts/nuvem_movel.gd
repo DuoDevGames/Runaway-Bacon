@@ -6,7 +6,7 @@ var physics_proc := true
 
 @onready var plataform := $nuvem as AnimatableBody2D
 @export var move_speed := 3.0
-@export var  distance := 240
+@export var  distance := 608
 
 var follow := Vector2.ZERO
 var plataform_center := 16

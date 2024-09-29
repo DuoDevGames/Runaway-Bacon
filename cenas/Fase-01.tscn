@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=111 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d3lnsqb2tdxdv" path="res://Blocks/terra-topo.tscn" id="2_j7xvl"]
 [ext_resource type="PackedScene" uid="uid://72jvrvitgk4c" path="res://Blocks/terra-esquerda.tscn" id="3_5j6wf"]
 [ext_resource type="Shader" path="res://Shaders/movimento_nuvens.gdshader" id="3_f2kq4"]
+[ext_resource type="Texture2D" uid="uid://bpxu4rydrk7jw" path="res://Objetos - Mundo 1/Nuvem Plataforma/NuvemMarcacao.png" id="3_guamj"]
 [ext_resource type="Texture2D" uid="uid://bd5y6yyb1sjfp" path="res://Background/Nuvens2.png" id="3_mapcp"]
 [ext_resource type="Script" path="res://Scripts/control-f1.gd" id="3_s03t2"]
 [ext_resource type="Texture2D" uid="uid://cx3fkstetx6r4" path="res://Background/Montanhas1.png" id="4_ci4q3"]
@@ -94,7 +95,7 @@
 [ext_resource type="PackedScene" uid="uid://ck5jwobna1oq3" path="res://Objetos - Mundo 1/nuvem_movel.tscn" id="92_baim7"]
 [ext_resource type="Texture2D" uid="uid://ougyxiptac3h" path="res://Objetos - Mundo 1/TileMap.png" id="93_1adqm"]
 [ext_resource type="PackedScene" uid="uid://yauem68q02u3" path="res://Characters/ninmu.tscn" id="94_2ps1j"]
-[ext_resource type="Texture2D" uid="uid://canfhir216rrm" path="res://Objetos - Mundo 1/BlocoTijolo.png" id="95_tt63f"]
+[ext_resource type="PackedScene" uid="uid://d0fnajtwkb5pq" path="res://Objetos - Mundo 1/Nuvem Plataforma/nuvem_plataforma.tscn" id="95_gqhc2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_14aje"]
 shader = ExtResource("71_vqak6")
@@ -622,6 +623,11 @@ limit_bottom = 610
 [node name="fimdefase" parent="." instance=ExtResource("73_autci")]
 position = Vector2(7312, 384)
 next_level = "res://cenas/history_1_2.tscn"
+
+[node name="NuvemMarcacao" type="Sprite2D" parent="."]
+position = Vector2(4072, 240)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_guamj")
 
 [node name="TerraDentroCaverna4" type="Sprite2D" parent="."]
 position = Vector2(6056, 384)
@@ -4799,9 +4805,14 @@ color = Color(0.144348, 0.391163, 0.124282, 1)
 energy = 0.2
 blend_mode = 1
 
-[node name="BlocoTijolo" type="Sprite2D" parent="."]
-position = Vector2(4023, 0)
-texture = ExtResource("95_tt63f")
+[node name="NuvemPlataforma" parent="." instance=ExtResource("95_gqhc2")]
+position = Vector2(3928, -368)
+
+[node name="NuvemPlataforma2" parent="." instance=ExtResource("95_gqhc2")]
+position = Vector2(3800, -368)
+
+[node name="NuvemPlataforma3" parent="." instance=ExtResource("95_gqhc2")]
+position = Vector2(3672, -368)
 
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]
 [connection signal="body_entered" from="Missao/UpdateArea" to="." method="_on_update_area_body_entered"]
