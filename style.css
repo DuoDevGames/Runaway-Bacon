@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Chicago';
+    src: url('fonts/pixChicago.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +10,14 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f8ff;
+    font-family: 'Chicago', sans-serif;
+    background-color: #ffd3bb;
     color: #333;
     line-height: 1.6;
+}
+
+h1, h2, p {
+    font-family: 'Chicago', sans-serif;
 }
 
 .container {
