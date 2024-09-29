@@ -10,6 +10,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if(player_is_on_area == true):
 		if(Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
+			$"Balao Sprite".hide()
 			Dialogic.start("Ninmu Infos")
 			player_is_on_area = false
 

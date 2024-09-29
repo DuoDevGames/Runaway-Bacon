@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cbf5612yhcrj4"]
+[gd_scene load_steps=10 format=3 uid="uid://cbf5612yhcrj4"]
 
 [ext_resource type="Script" path="res://Scripts/palha-coletavel.gd" id="1_5a3p0"]
 [ext_resource type="Texture2D" uid="uid://bikj3v662k84d" path="res://Objetos - Mundo 1/Palha/Palha1.png" id="2_v4eil"]
@@ -29,6 +29,15 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ixg87"]
 size = Vector2(32, 31)
 
+[sub_resource type="Gradient" id="Gradient_1fi7u"]
+offsets = PackedFloat32Array(0.115819, 0.661017)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gusvh"]
+gradient = SubResource("Gradient_1fi7u")
+fill = 1
+fill_from = Vector2(0.504274, 0.491453)
+
 [node name="palha" type="Area2D"]
 collision_layer = 8
 script = ExtResource("1_5a3p0")
@@ -41,6 +50,11 @@ frame_progress = 0.167785
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_ixg87")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.996078, 0.796078, 0.243137, 1)
+texture = SubResource("GradientTexture2D_gusvh")
+texture_scale = 0.9
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

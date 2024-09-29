@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://ytyxpyayfdjc"]
+[gd_scene load_steps=9 format=3 uid="uid://ytyxpyayfdjc"]
 
 [ext_resource type="Texture2D" uid="uid://crhjwybgl1rui" path="res://Sprites - Coitadinho/Coitadinho1.png" id="1_681dv"]
 [ext_resource type="Script" path="res://Characters/area_2d.gd" id="2_comoa"]
 [ext_resource type="Texture2D" uid="uid://brh4vd6i50pdg" path="res://Sprites - Coitadinho/Coitadinho3.png" id="2_gdqb2"]
+[ext_resource type="Texture2D" uid="uid://dm6snrufn4tra" path="res://UI/Balao Clique1.png" id="4_77h7x"]
+[ext_resource type="Texture2D" uid="uid://dwvlbjll2xwb8" path="res://UI/Balao Clique2.png" id="5_owr4c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hioh6"]
 animations = [{
@@ -19,7 +21,21 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cb20i"]
-size = Vector2(92, 140)
+size = Vector2(124, 124)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bblmq"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": ExtResource("4_77h7x")
+}, {
+"duration": 5.0,
+"texture": ExtResource("5_owr4c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Coitadinho" type="Node2D"]
 
@@ -35,7 +51,22 @@ collision_mask = 2147483648
 script = ExtResource("2_comoa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-18, -42)
+position = Vector2(-34, -34)
 shape = SubResource("RectangleShape2D_cb20i")
 
+[node name="Balao Sprite" type="AnimatedSprite2D" parent="Area2D"]
+z_index = 10
+position = Vector2(0, -56)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_bblmq")
+autoplay = "default"
+
+[node name="Balao Sprite" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, -56)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_bblmq")
+autoplay = "default"
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

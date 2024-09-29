@@ -39,6 +39,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "Coitadinho 1": "res://Dialogues/Dialogues/Coitadinho 1.dtl",
 "Coitadinho 2": "res://Dialogues/Dialogues/Coitadinho 2.dtl",
+"Coitadinho 3": "res://Dialogues/Dialogues/Coitadinho 3.dtl",
 "END": "res://Dialogues/Dialogues/END.dtl",
 "His1_2": "res://Dialogues/Dialogues/His1_2.dtl",
 "His1_3": "res://Dialogues/Dialogues/His1_3.dtl",

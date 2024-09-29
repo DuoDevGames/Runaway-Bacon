@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdbvw66kqee3m"]
+
+[ext_resource type="Texture2D" uid="uid://mikp1kog3usi" path="res://Background/Sol2.png" id="1_kspyr"]
+
+[sub_resource type="Environment" id="Environment_3ccje"]
+background_mode = 3
+background_energy_multiplier = 0.5
+glow_levels/5 = 0.0
+glow_intensity = 1.0
+glow_strength = 1.65
+glow_hdr_scale = 0.0
+fog_mode = 1
+fog_density = 1.0
+
+[sub_resource type="Gradient" id="Gradient_puhk0"]
+offsets = PackedFloat32Array(0, 0.728814)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ofonx"]
+gradient = SubResource("Gradient_puhk0")
+fill = 1
+fill_from = Vector2(0.482906, 0.495726)
+
+[node name="Sol" type="Node2D"]
+light_mask = 524288
+visibility_layer = 524288
+scale = Vector2(2, 2)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3ccje")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kspyr")
+
+[node name="DirectionalLight2D" type="PointLight2D" parent="."]
+visible = false
+scale = Vector2(4.875, 4.875)
+energy = 0.85
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.776471)
+texture = SubResource("GradientTexture2D_ofonx")

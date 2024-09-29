@@ -12,6 +12,7 @@ func _process(delta: float) -> void:
 	
 
 func _on_body_entered(_body):
+	Global.primeiro_dialogo_coitadinho = 1
 	Global.meia = 1
 	print("Meia coletada")
 	queue_free()
