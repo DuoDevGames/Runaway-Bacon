@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=110 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -94,6 +94,7 @@
 [ext_resource type="PackedScene" uid="uid://ck5jwobna1oq3" path="res://Objetos - Mundo 1/nuvem_movel.tscn" id="92_baim7"]
 [ext_resource type="Texture2D" uid="uid://ougyxiptac3h" path="res://Objetos - Mundo 1/TileMap.png" id="93_1adqm"]
 [ext_resource type="PackedScene" uid="uid://yauem68q02u3" path="res://Characters/ninmu.tscn" id="94_2ps1j"]
+[ext_resource type="Texture2D" uid="uid://canfhir216rrm" path="res://Objetos - Mundo 1/BlocoTijolo.png" id="95_tt63f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_14aje"]
 shader = ExtResource("71_vqak6")
@@ -701,6 +702,8 @@ metadata/_edit_use_anchors_ = true
 motion_mirroring = Vector2(736, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Céu"]
+position = Vector2(0, -648)
+scale = Vector2(1, 2.92308)
 texture = ExtResource("1_a4tlf")
 centered = false
 
@@ -4523,7 +4526,7 @@ position = Vector2(6128, 288)
 position = Vector2(64, 480)
 
 [node name="Teleporter-out" parent="." instance=ExtResource("70_k1tic")]
-position = Vector2(5872, 184)
+position = Vector2(4208, 216)
 
 [node name="controles" type="CanvasLayer" parent="."]
 visible = false
@@ -4665,7 +4668,6 @@ position = Vector2(6056, 408)
 position = Vector2(6208, 264)
 
 [node name="HUD" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" type="Control" parent="HUD"]
 layout_mode = 3
@@ -4778,9 +4780,6 @@ visible = false
 [node name="nuvem_movel" parent="." instance=ExtResource("92_baim7")]
 position = Vector2(4072, 240)
 
-[node name="nuvem_movel2" parent="." instance=ExtResource("92_baim7")]
-position = Vector2(4080, -130)
-
 [node name="Terrain-l2" type="TileMapLayer" parent="."]
 position = Vector2(1000, 5)
 scale = Vector2(0.25, 0.25)
@@ -4799,6 +4798,10 @@ visible = false
 color = Color(0.144348, 0.391163, 0.124282, 1)
 energy = 0.2
 blend_mode = 1
+
+[node name="BlocoTijolo" type="Sprite2D" parent="."]
+position = Vector2(4023, 0)
+texture = ExtResource("95_tt63f")
 
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]
 [connection signal="body_entered" from="Missao/UpdateArea" to="." method="_on_update_area_body_entered"]
