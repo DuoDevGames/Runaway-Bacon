@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://bd3db4gu002ap"]
-
-[node name="Teleporter-out" type="Node2D"]
-
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
-remote_path = NodePath("..")
