@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://cg2xocqsjimy0"]
+
+[ext_resource type="Script" path="res://Characters/gato.gd" id="1_eoofy"]
+[ext_resource type="Texture2D" uid="uid://bg117gqi8vxm3" path="res://Sprites - Gato/Gato1.png" id="1_vab6b"]
+[ext_resource type="Texture2D" uid="uid://cdlwfpqian6bh" path="res://Sprites - Gato/Gato2.png" id="2_75jln"]
+[ext_resource type="Texture2D" uid="uid://dm6snrufn4tra" path="res://UI/Balao Clique1.png" id="3_uabjy"]
+[ext_resource type="Texture2D" uid="uid://dwvlbjll2xwb8" path="res://UI/Balao Clique2.png" id="4_kknkn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xlwms"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("1_vab6b")
+}, {
+"duration": 5.0,
+"texture": ExtResource("2_75jln")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bs6c8"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": ExtResource("3_uabjy")
+}, {
+"duration": 5.0,
+"texture": ExtResource("4_kknkn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nce63"]
+size = Vector2(120, 96)
+
+[node name="Gato" type="Area2D"]
+script = ExtResource("1_eoofy")
+
+[node name="Sprites" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_xlwms")
+autoplay = "default"
+frame_progress = 0.876689
+
+[node name="Balao Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(9.53674e-07, -40)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_bs6c8")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, -16)
+shape = SubResource("RectangleShape2D_nce63")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

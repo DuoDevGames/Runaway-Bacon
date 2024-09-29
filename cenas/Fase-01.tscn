@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=3 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=112 format=3 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -96,6 +96,7 @@
 [ext_resource type="Texture2D" uid="uid://ougyxiptac3h" path="res://Objetos - Mundo 1/TileMap.png" id="93_1adqm"]
 [ext_resource type="PackedScene" uid="uid://yauem68q02u3" path="res://Characters/ninmu.tscn" id="94_2ps1j"]
 [ext_resource type="PackedScene" uid="uid://d0fnajtwkb5pq" path="res://Objetos - Mundo 1/Nuvem Plataforma/nuvem_plataforma.tscn" id="95_gqhc2"]
+[ext_resource type="PackedScene" uid="uid://cg2xocqsjimy0" path="res://Characters/gato.tscn" id="97_xom81"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_14aje"]
 shader = ExtResource("71_vqak6")
@@ -4532,7 +4533,7 @@ position = Vector2(6128, 288)
 position = Vector2(64, 480)
 
 [node name="Teleporter-out" parent="." instance=ExtResource("70_k1tic")]
-position = Vector2(4208, 216)
+position = Vector2(4208, 112)
 
 [node name="controles" type="CanvasLayer" parent="."]
 visible = false
@@ -4813,6 +4814,9 @@ position = Vector2(3800, -368)
 
 [node name="NuvemPlataforma3" parent="." instance=ExtResource("95_gqhc2")]
 position = Vector2(3672, -368)
+
+[node name="Gato" parent="." instance=ExtResource("97_xom81")]
+position = Vector2(3880, -400)
 
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]
 [connection signal="body_entered" from="Missao/UpdateArea" to="." method="_on_update_area_body_entered"]

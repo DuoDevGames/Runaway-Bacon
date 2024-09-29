@@ -29,6 +29,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "Coitadinho": "res://Dialogues/Characters/Coitadinho.dch",
+"Gato": "res://Dialogues/Characters/Gato.dch",
 "Lombinho": "res://Dialogues/Characters/Lombinho.dch",
 "Marco Aurélio": "res://Dialogues/Characters/Marco Aurélio.dch",
 "Maritaca": "res://Dialogues/Characters/Maritaca.dch",
@@ -41,6 +42,7 @@ directories/dtl_directory={
 "Coitadinho 2": "res://Dialogues/Dialogues/Coitadinho 2.dtl",
 "Coitadinho 3": "res://Dialogues/Dialogues/Coitadinho 3.dtl",
 "END": "res://Dialogues/Dialogues/END.dtl",
+"Gato 1": "res://Dialogues/Dialogues/Gato 1.dtl",
 "His1_2": "res://Dialogues/Dialogues/His1_2.dtl",
 "His1_3": "res://Dialogues/Dialogues/His1_3.dtl",
 "His2_1": "res://Dialogues/Dialogues/His2_1.dtl",
