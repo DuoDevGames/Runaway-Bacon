@@ -2,6 +2,8 @@ extends Control
 
 @onready var num_palha = $"MarginContainer/palha-container/Label3" as Label
 @onready var num_coracao = $"MarginContainer/coracao-container/Label3" as Label
+@onready var num_meia = $"MarginContainer/missoes/meia-container/Label3" as Label
+@onready var num_flores = $"MarginContainer/missoes/flor-container2/Label3" as Label
 
 var alive := true
 var total_palhas = "teste " + str("%02d" % Global.palhas) + " / 10" 
@@ -10,6 +12,8 @@ var total_palhas = "teste " + str("%02d" % Global.palhas) + " / 10"
 func _ready():
 	num_palha.text = total_palhas
 	num_coracao.text = str("%02d" % Global.coracoes)
+	num_meia.text = str("%02d" % Global.meia)
+	num_flores.text = str("%02d" % Global.flores_arco_iris)
 	
 
 
@@ -17,3 +21,5 @@ func _ready():
 func _process(_delta):
 	num_palha.text = str("%02d" % Global.palhas)
 	num_coracao.text = str("%02d" % Global.coracoes)
+	num_meia.text = str("%02d" % Global.meia)
+	num_flores.text = str("%02d" % Global.flores_arco_iris)

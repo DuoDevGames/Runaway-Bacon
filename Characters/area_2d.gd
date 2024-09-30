@@ -16,6 +16,7 @@ func _process(delta: float) -> void:
 				$"Balao Sprite".hide()
 				start_dialog("Coitadinho 1")
 				player_is_on_area = false
+				Global.missao_coitadinho_comecou = true
 			if Global.meia == 1:
 				$"Balao Sprite".hide()
 				if Global.primeiro_dialogo_coitadinho == 1:
