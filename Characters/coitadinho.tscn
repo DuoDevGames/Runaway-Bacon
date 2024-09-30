@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://ytyxpyayfdjc"]
+[gd_scene load_steps=11 format=3 uid="uid://ytyxpyayfdjc"]
 
 [ext_resource type="Texture2D" uid="uid://crhjwybgl1rui" path="res://Sprites - Coitadinho/Coitadinho1.png" id="1_681dv"]
+[ext_resource type="Script" path="res://Characters/coitadinhob.gd" id="1_fatp4"]
 [ext_resource type="Script" path="res://Characters/area_2d.gd" id="2_comoa"]
 [ext_resource type="Texture2D" uid="uid://brh4vd6i50pdg" path="res://Sprites - Coitadinho/Coitadinho3.png" id="2_gdqb2"]
 [ext_resource type="Texture2D" uid="uid://dm6snrufn4tra" path="res://UI/Balao Clique1.png" id="4_77h7x"]
+[ext_resource type="Texture2D" uid="uid://cpo6kmioyllnf" path="res://Sprites - Coitadinho/Coitadinho2.png" id="5_ccdl4"]
 [ext_resource type="Texture2D" uid="uid://dwvlbjll2xwb8" path="res://UI/Balao Clique2.png" id="5_owr4c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hioh6"]
@@ -17,6 +19,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ccdl4")
+}],
+"loop": true,
+"name": &"dormindo",
 "speed": 5.0
 }]
 
@@ -38,17 +48,18 @@ animations = [{
 }]
 
 [node name="Coitadinho" type="Node2D"]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
-sprite_frames = SubResource("SpriteFrames_hioh6")
-autoplay = "default"
-frame_progress = 0.233992
+script = ExtResource("1_fatp4")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 4096
 collision_mask = 2147483648
 script = ExtResource("2_comoa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_hioh6")
+animation = &"dormindo"
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-34, -34)

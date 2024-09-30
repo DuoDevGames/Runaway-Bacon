@@ -8,6 +8,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if(Global.missao_coitadinho_completa == true):
+		$AnimatedSprite2D.play("dormindo")
 	if(player_is_on_area == true):
 		if(Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
 			if Global.meia == 0:
@@ -21,6 +23,7 @@ func _process(delta: float) -> void:
 					Global.parede = false
 					Global.primeiro_dialogo_coitadinho = 2
 					player_is_on_area = false
+					Global.missao_coitadinho_completa = true
 				if Global.primeiro_dialogo_coitadinho == 2:
 					$"Balao Sprite".hide()
 					start_dialog("Coitadinho 3")

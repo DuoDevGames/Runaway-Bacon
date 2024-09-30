@@ -12,6 +12,7 @@ var player_lock = false
 var meia := 0
 var primeiro_dialogo_coitadinho := 0
 var parede = true
+var missao_coitadinho_completa = false
 
 #Missão do Gato
 var flores_arco_iris := 0

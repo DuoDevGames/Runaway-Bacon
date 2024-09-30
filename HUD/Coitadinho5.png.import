@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsy5ljqnu8kns"
-path="res://.godot/imported/Sprite-0012.png-ade409d41c2d66d46f7fd6968bea5ab2.ctex"
+uid="uid://ckmfrn7vmnumc"
+path="res://.godot/imported/Coitadinho5.png-d94bb1fd25c97eeb9f5b20557d002efb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites - Coitadinho/Sprite-0012.png"
-dest_files=["res://.godot/imported/Sprite-0012.png-ade409d41c2d66d46f7fd6968bea5ab2.ctex"]
+source_file="res://HUD/Coitadinho5.png"
+dest_files=["res://.godot/imported/Coitadinho5.png-d94bb1fd25c97eeb9f5b20557d002efb.ctex"]
 
 [params]
 

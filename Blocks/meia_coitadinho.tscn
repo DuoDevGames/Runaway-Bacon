@@ -1,18 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bn8tga1rwx11h"]
+[gd_scene load_steps=4 format=3 uid="uid://bn8tga1rwx11h"]
 
 [ext_resource type="Script" path="res://Blocks/scpt_meia_coitadinho.gd" id="1_7pho3"]
-[ext_resource type="Texture2D" uid="uid://h8vjk813y0ti" path="res://Sprites - Coitadinho/Coitadinho2.png" id="1_ncpx5"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_750lj"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_ncpx5")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[ext_resource type="Texture2D" uid="uid://cqvr52yujqd25" path="res://Objetos - Mundo 1/Coitadinho4.png" id="2_28p34"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yub7i"]
 
@@ -21,14 +10,13 @@ collision_layer = 4096
 collision_mask = 2147483648
 script = ExtResource("1_7pho3")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1.69407e-21, -8)
-scale = Vector2(0.1, 0.1)
-sprite_frames = SubResource("SpriteFrames_750lj")
-centered = false
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(10, 10)
 shape = SubResource("RectangleShape2D_yub7i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(10, 10)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_28p34")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
