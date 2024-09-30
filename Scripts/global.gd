@@ -4,7 +4,7 @@ var palhas := 0
 var palhas_total := 15
 var coracoes := 3
 var score := 0
-var historyn := 1
+var historyn := 0
 var vel_corrida := 1
 
 #Missão do Coitadinho

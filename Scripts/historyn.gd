@@ -7,6 +7,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if Global.historyn == 0:
+		Dialogic.start("His0")
+		Dialogic.timeline_ended.connect(dialogic_end)
 	if Global.historyn == 1:
 		Dialogic.start("His1_2")
 		Dialogic.timeline_ended.connect(dialogic_end)
@@ -28,7 +31,9 @@ func _ready():
 
 
 func dialogic_end():
-	if Global.historyn == 1:
+	if Global.historyn == 0:
+		Global.historyn = 1
+	elif Global.historyn == 1:
 		Global.historyn = 2
 	elif Global.historyn == 2:
 		Global.historyn = 3
