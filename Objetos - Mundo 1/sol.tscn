@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bdbvw66kqee3m"]
 
-[ext_resource type="Texture2D" uid="uid://mikp1kog3usi" path="res://Background/Sol2.png" id="1_kspyr"]
+[ext_resource type="Texture2D" uid="uid://ce202071omj8q" path="res://Background/Sol BASE .png" id="1_85jek"]
 
 [sub_resource type="Environment" id="Environment_3ccje"]
 background_mode = 3
@@ -24,13 +24,12 @@ fill_from = Vector2(0.482906, 0.495726)
 [node name="Sol" type="Node2D"]
 light_mask = 524288
 visibility_layer = 524288
-scale = Vector2(2, 2)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_3ccje")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_kspyr")
+texture = ExtResource("1_85jek")
 
 [node name="DirectionalLight2D" type="PointLight2D" parent="."]
 visible = false

@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcde7h64uiw8m"]
+
+[ext_resource type="Texture2D" uid="uid://cna6xup4sw32j" path="res://Objetos - Mundo 1/Background/Tenda/Tenda 1.png" id="1_aq7rw"]
+[ext_resource type="Texture2D" uid="uid://bgtcrjfwi064j" path="res://Objetos - Mundo 1/Background/Tenda/Tenda 2.png" id="2_svdfn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lik4t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_aq7rw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_svdfn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Tenda" type="Node2D"]
+z_index = -2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_lik4t")
+autoplay = "default"
+frame_progress = 0.191951

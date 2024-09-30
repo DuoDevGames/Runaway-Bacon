@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://c8wdg8h6uqsyy"]
+
+[ext_resource type="Texture2D" uid="uid://jeggjte8yo6l" path="res://Objetos - Mundo 1/Bola de cristal/Bola de Cristal1.png" id="1_pti6q"]
+[ext_resource type="Texture2D" uid="uid://dbu1wh16jjnoo" path="res://Objetos - Mundo 1/Bola de cristal/Bola de Cristal2.png" id="2_hygl0"]
+[ext_resource type="Texture2D" uid="uid://cmf4oocmfrbso" path="res://Objetos - Mundo 1/Bola de cristal/Bola de Cristal3.png" id="3_m172u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kv2mb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pti6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hygl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m172u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_kc2oy"]
+offsets = PackedFloat32Array(0, 0.70339)
+colors = PackedColorArray(0.694118, 0.623529, 0.984314, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_aolcy"]
+gradient = SubResource("Gradient_kc2oy")
+fill = 1
+fill_from = Vector2(0.508547, 0.491453)
+
+[node name="BolaCristal" type="Node2D"]
+z_index = -2
+scale = Vector2(0.15, 0.15)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kv2mb")
+autoplay = "default"
+frame_progress = 0.342741
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -8)
+color = Color(0.717647, 0.65098, 0.984314, 1)
+texture = SubResource("GradientTexture2D_aolcy")
+texture_scale = 1.73

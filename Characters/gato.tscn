@@ -38,6 +38,7 @@ animations = [{
 size = Vector2(120, 96)
 
 [node name="Gato" type="Area2D"]
+z_index = -1
 script = ExtResource("1_eoofy")
 
 [node name="Sprites" type="AnimatedSprite2D" parent="."]

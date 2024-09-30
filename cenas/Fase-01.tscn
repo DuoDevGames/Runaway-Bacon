@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=4 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=117 format=4 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -99,6 +99,8 @@
 [ext_resource type="Texture2D" uid="uid://d4khxur25i7ck" path="res://Objetos - Mundo 1/TM_Madeiras_Lajes.png" id="95_lb0nv"]
 [ext_resource type="PackedScene" uid="uid://cg2xocqsjimy0" path="res://Characters/gato.tscn" id="97_xom81"]
 [ext_resource type="PackedScene" uid="uid://b1v45v40xa5i7" path="res://Objetos - Mundo 1/Gramas/flor_arco_iris.tscn" id="98_d4l5j"]
+[ext_resource type="PackedScene" uid="uid://dcde7h64uiw8m" path="res://Objetos - Mundo 1/Background/Tenda/tenda.tscn" id="100_ol0s1"]
+[ext_resource type="PackedScene" uid="uid://c8wdg8h6uqsyy" path="res://Objetos - Mundo 1/Bola de cristal/bola_cristal.tscn" id="101_yx8sn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_14aje"]
 shader = ExtResource("71_vqak6")
@@ -751,7 +753,7 @@ scale = Vector2(0.5, 0.5)
 motion_scale = Vector2(0, 0)
 
 [node name="Sol" parent="ParallaxBackground/Sol" instance=ExtResource("12_ta635")]
-position = Vector2(544, 272)
+position = Vector2(482, 108)
 
 [node name="Montanhas 1" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.3, 1)
@@ -4592,7 +4594,7 @@ position = Vector2(6186, 288)
 position = Vector2(64, 480)
 
 [node name="Teleporter-out" parent="." instance=ExtResource("70_k1tic")]
-position = Vector2(5960, 304)
+position = Vector2(4008, -464)
 
 [node name="controles" type="CanvasLayer" parent="."]
 visible = false
@@ -4939,6 +4941,12 @@ position = Vector2(9552, -72)
 
 [node name="nuvem14" parent="." instance=ExtResource("13_kt21e")]
 position = Vector2(9520, -72)
+
+[node name="Tenda" parent="." instance=ExtResource("100_ol0s1")]
+position = Vector2(3800, -423)
+
+[node name="BolaCristal" parent="." instance=ExtResource("101_yx8sn")]
+position = Vector2(3854, -377)
 
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]
 [connection signal="body_entered" from="Missao/UpdateArea" to="." method="_on_update_area_body_entered"]
