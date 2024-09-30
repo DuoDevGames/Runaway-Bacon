@@ -22,15 +22,15 @@ Lombinho (Assustado): O que eu faço agora!?
 leave --All--
 if {História Fase 1.escolha1} == 1:
 	join "Marco Aurélio" 1
-	"Marco Aurélio": Acha mesmo que essa porta de palha pode me parar?\
-Shahahaha!
+	"Marco Aurélio" (Rindo): Shahahaha!\
+Acha mesmo que essa porta de palha pode me parar?
 	leave --All--
 	join Maritaca 1
 	Maritaca: Marco Aruélio, com força, derruba a casa do Lombinho\
 Agora ele corre na mata, fugindo do destino de baconzinho
 	leave --All--
 if {História Fase 1.escolha1} == 2:
-	join "Marco Aurélio" 1
+	join "Marco Aurélio" (Padrão) 1
 	Maritaca: Lombinho corre pra floresta, procurando o irmão com aflição\
 Mas o Lobo Agiota não vai deixar, é um mestre da perseguição
 	leave --All--

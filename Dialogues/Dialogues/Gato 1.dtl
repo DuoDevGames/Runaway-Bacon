@@ -6,18 +6,18 @@ Trabalho com mágia, previsão e simpatias.
 Gato: Inclusive, sei porque você está aqui.
 leave --All--
 join Lombinho 1
-Lombinho: ...
+Lombinho (Padrão): ...
 leave --All--
 join Gato 1
 Gato (Bigode Cima): Ah, eu sei exatamente o que você quer... Você veio buscar... a poção da invisibilidade! Certo?
-Lombinho: Não...
+Lombinho (Padrão): Não...
 Gato (Bigode Baixo): Ah, claro, como fui tolo! É o elixir de vôo! Aposto que está sonhando em voar por aí, hein?
 Lombinho: Também não.
 Gato (Bigode Cima): Hmm... Então deve ser a minha bola de cristal falante! Adoro quando ela faz piadinhas ruins.
 Lombinho: Não, eu só preciso de algumas palhas.
 Gato (Bigode Baixo): Palhas?
 Gato (Bigode Cima): Ah! Eu estava tão perto! Quase acertei!
-Lombinho: ...
+Lombinho (Com Sobrancelha): ...
 Gato: Bom, eu tenho algumas aqui, e não vou usar para nada.\
 Pode levá-las.
 Gato (Bigode Baixo): Mas preciso de um favor antes.\
