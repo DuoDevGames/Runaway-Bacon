@@ -13,9 +13,10 @@ func _process(_delta):
 
 func _unhandled_input(event):
 	if event.is_action_pressed("Pause"):
-		visible = true
-		get_tree().paused = true
-		resume_btn.grab_focus()
+		if !Global.player_lock:
+			visible = true
+			get_tree().paused = true
+			resume_btn.grab_focus()
 
 func _on_resume_btn_pressed():
 	SoundsController.play_buttonpressed_sound()

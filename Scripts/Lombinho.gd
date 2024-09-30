@@ -6,6 +6,7 @@ signal killed
 @export var JUMP_FORCE : int = 360
 @export var GRAVITY : int = 900
 var knockback_vector := Vector2.ZERO
+var player_lock = Global.player_lock
 
 @onready var remote_transform := $RemoteTransform2D as RemoteTransform2D
 @onready var anim := $AnimatedSprite2D as AnimatedSprite2D
@@ -14,41 +15,42 @@ var dead : bool = false
 
 func _physics_process(delta):
 	
-	var direction = Input.get_axis("Left", "Right")
-	
-	if direction:
-		velocity.x = direction * SPEED * Global.vel_corrida
-		if is_on_floor():
-			$AnimatedSprite2D.play("Run")
-	else:
-		velocity.x = 0
-		if is_on_floor():
-			$AnimatedSprite2D.play("default")
-	
-	#GRAVITY
-	if not is_on_floor():
-		velocity.y += GRAVITY * delta
-	
-	#ROTATE
-	if direction == 1:
-		$AnimatedSprite2D.flip_h = false
-	elif direction == -1:
-		$AnimatedSprite2D.flip_h = true
-	
-	#JUMP
-	#if Input.is_action_just_pressed("Jump") and is_on_floor():
-	if Input.is_action_pressed("Jump") and is_on_floor():
-		velocity.y -= JUMP_FORCE
-		$AnimatedSprite2D.play("Jump")
-		SoundsController.play_jump_sound()
-	
-	if Input.is_action_just_pressed("Reset"):
-		get_tree().reload_current_scene()
-	
-	if knockback_vector != Vector2.ZERO:
-		velocity = knockback_vector
-	
-	move_and_slide()
+	if !Global.player_lock:
+		var direction = Input.get_axis("Left", "Right")
+		
+		if direction:
+			velocity.x = direction * SPEED * Global.vel_corrida
+			if is_on_floor():
+				$AnimatedSprite2D.play("Run")
+		else:
+			velocity.x = 0
+			if is_on_floor():
+				$AnimatedSprite2D.play("default")
+		
+		#GRAVITY
+		if not is_on_floor():
+			velocity.y += GRAVITY * delta
+		
+		#ROTATE
+		if direction == 1:
+			$AnimatedSprite2D.flip_h = false
+		elif direction == -1:
+			$AnimatedSprite2D.flip_h = true
+		
+		#JUMP
+		#if Input.is_action_just_pressed("Jump") and is_on_floor():
+		if Input.is_action_pressed("Jump") and is_on_floor():
+			velocity.y -= JUMP_FORCE
+			$AnimatedSprite2D.play("Jump")
+			SoundsController.play_jump_sound()
+		
+		if Input.is_action_just_pressed("Reset"):
+			get_tree().reload_current_scene()
+		
+		if knockback_vector != Vector2.ZERO:
+			velocity = knockback_vector
+		
+		move_and_slide()
 
 func die():
 	Global.palhas = 0

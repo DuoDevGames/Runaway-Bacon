@@ -19,6 +19,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if !player:
+		Global.player_lock = true
 		await get_tree().create_timer(1).timeout
 		gos.visible = true
 

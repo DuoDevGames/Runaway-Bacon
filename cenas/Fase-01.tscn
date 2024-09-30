@@ -4592,7 +4592,7 @@ position = Vector2(6186, 288)
 position = Vector2(64, 480)
 
 [node name="Teleporter-out" parent="." instance=ExtResource("70_k1tic")]
-position = Vector2(6584, 280)
+position = Vector2(5960, 304)
 
 [node name="controles" type="CanvasLayer" parent="."]
 visible = false

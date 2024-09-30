@@ -11,19 +11,19 @@ func _process(_delta):
 			if(Global.missao_gato_completa == false):
 				if Global.missao_gato_comecou == false:
 					$"Balao Sprite".hide()
-					Dialogic.start("Gato 1")
+					start_dialog("Gato 1")
 					player_is_on_area = false
 					Global.missao_gato_comecou = true
 				else:
 					$"Balao Sprite".hide()
 					if(Global.flores_arco_iris < 3 && Global.flores_arco_iris > 1):
-						Dialogic.start("Gato 2")
+						start_dialog("Gato 2")
 						player_is_on_area = false
 					if(Global.flores_arco_iris == 0):
-						Dialogic.start("Gato 3")
+						start_dialog("Gato 3")
 						player_is_on_area = false
 					if(Global.flores_arco_iris == 3):
-						Dialogic.start("Gato 4")
+						start_dialog("Gato 4")
 						player_is_on_area = false
 						#ADICIONAR MAIS CÓDIGO AQUI!!!!!!!!!!!!!!!1
 						Global.missao_gato_completa = true
@@ -37,3 +37,18 @@ func _on_body_entered(_body):
 func _on_body_exited(body: Node2D) -> void:
 	$"Balao Sprite".hide()
 	player_is_on_area = false
+
+func start_dialog(dialogname):
+	pause_move()
+	Dialogic.timeline_ended.connect(_on_timeline_ended)
+	Dialogic.start(dialogname)
+
+func _on_timeline_ended():
+	Dialogic.timeline_ended.disconnect(_on_timeline_ended)
+	pause_move()
+
+func pause_move():
+	if Global.player_lock:
+		Global.player_lock = false
+	else:
+		Global.player_lock = true

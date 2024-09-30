@@ -7,6 +7,7 @@ func _ready():
 	#MusicController.play_gameover_music()
 	
 func _on_restart_button_pressed():
+	Global.player_lock = false
 	SoundsController.play_buttonpressed_sound()
 	#MusicController.stop_gameover_music()
 	get_tree().reload_current_scene()
