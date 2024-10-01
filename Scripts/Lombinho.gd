@@ -17,7 +17,8 @@ func _physics_process(delta):
 	
 	if !Global.player_lock:
 		var direction = Input.get_axis("Left", "Right")
-		
+		if Global.fase2:
+			direction = 1
 		if direction:
 			velocity.x = direction * SPEED * Global.vel_corrida
 			if is_on_floor():

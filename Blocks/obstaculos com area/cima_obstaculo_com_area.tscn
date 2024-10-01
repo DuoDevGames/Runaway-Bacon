@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnmcp8137tn8k"]
+
+[ext_resource type="PackedScene" uid="uid://djspu74auelwm" path="res://Blocks/obstaculos com area/baixo_obstaculo_com_area.tscn" id="1_wy8a3"]
+
+[node name="ObstaculoComArea" instance=ExtResource("1_wy8a3")]
+
+[node name="Sprite2D" parent="." index="0"]
+region_rect = Rect2(128, 0, 128, 128)

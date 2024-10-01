@@ -10,7 +10,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.vel_corrida = 2
+	Global.vel_corrida = 1.5 
+	Global.fase2 = true
 	lobo.follow_camera(camera)
 	#fundofloresta.visible = false
 	$Parallax2D/ParallaxLayer/Chuva.emitting = true 
@@ -18,6 +19,7 @@ func _ready():
 func _process(_delta):
 	if !player:
 		await get_tree().create_timer(1).timeout
+		Global.player_lock = true
 		gos.visible = true
 
 #func _on_area_2d_body_entered(body):

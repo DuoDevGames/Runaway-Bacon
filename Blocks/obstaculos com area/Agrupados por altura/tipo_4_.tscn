@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyskix0g5y1hw"]
+
+[ext_resource type="PackedScene" uid="uid://djspu74auelwm" path="res://Blocks/obstaculos com area/baixo_obstaculo_com_area.tscn" id="1_80w1n"]
+[ext_resource type="PackedScene" uid="uid://c3yh0n8tp7olt" path="res://Blocks/obstaculos com area/meio_obstaculo_com_area.tscn" id="2_2eqdv"]
+[ext_resource type="PackedScene" uid="uid://cnmcp8137tn8k" path="res://Blocks/obstaculos com area/cima_obstaculo_com_area.tscn" id="3_j4br3"]
+
+[node name="Tipo4_" type="Node2D"]
+
+[node name="ObstaculoComArea" parent="." instance=ExtResource("1_80w1n")]
+
+[node name="ObstaculoComArea2" parent="." instance=ExtResource("2_2eqdv")]
+position = Vector2(0, -32)
+
+[node name="ObstaculoComArea3" parent="." instance=ExtResource("2_2eqdv")]
+position = Vector2(0, -64)
+
+[node name="ObstaculoComArea4" parent="." instance=ExtResource("3_j4br3")]
+position = Vector2(0, -96)

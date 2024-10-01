@@ -677,7 +677,7 @@ limit_right = 11500
 limit_bottom = 610
 
 [node name="fimdefase" parent="." instance=ExtResource("73_autci")]
-position = Vector2(11320, 536)
+position = Vector2(11376, 520)
 next_level = "res://cenas/history_1_2.tscn"
 
 [node name="NuvemMarcacao" type="Sprite2D" parent="."]
