@@ -4854,7 +4854,7 @@ position = Vector2(7312, 384)
 position = Vector2(64, 480)
 
 [node name="Teleporter-out" parent="." instance=ExtResource("70_k1tic")]
-position = Vector2(11120, 440)
+position = Vector2(3976, -872)
 
 [node name="controles" type="CanvasLayer" parent="."]
 visible = false
@@ -5108,6 +5108,9 @@ texture = ExtResource("104_mpgfq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-8, 312)
 shape = SubResource("RectangleShape2D_3b5rq")
+
+[node name="FlorArcoIris3" parent="." instance=ExtResource("98_d4l5j")]
+position = Vector2(4432, 504)
 
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]
 [connection signal="body_entered" from="Missao/UpdateArea" to="." method="_on_update_area_body_entered"]
