@@ -758,7 +758,7 @@ position = Vector2(10295, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Céu Chuvoso"]
 position = Vector2(0, -648)
-scale = Vector2(1, 2.92308)
+scale = Vector2(2.39266, 2.92308)
 texture = ExtResource("10_r15e7")
 centered = false
 
