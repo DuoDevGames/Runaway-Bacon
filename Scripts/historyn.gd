@@ -77,17 +77,21 @@ func hist_count():
 	elif(Global.his0_time == 5):
 		Dialogic.start("His0_5")
 		$AnimationPlayer.play("camera 5")
-		Global.his0_time = 0
-		Dialogic.timeline_ended.connect(hist_fim)
+		Global.his0_time = 6
+		Dialogic.timeline_ended.connect(dialogic_end)
 		
 		
 	
-func hist_fim():
-	Global.his0_time = 6
-	#Dialogic.end()
-	dialogic_end()
+#func hist_fim():
+#	Global.his0_time = 6
+#	Dialogic.end_timeline("His0_5")
+#	dialogic_end()
 	
 
-	
+func _on_timeline_ended():
+	Global.his0_time = 6
+	Dialogic.timeline_ended.disconnect(_on_timeline_ended)
+	dialogic_end()
+
 	#Dialogic.timeline_ended.connect(dialogic_end)
 	
