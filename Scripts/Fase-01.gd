@@ -7,8 +7,6 @@ extends Node2D
 @onready var parede: StaticBody2D = $Missao/parede
 
 
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player.follow_camera(camera)
