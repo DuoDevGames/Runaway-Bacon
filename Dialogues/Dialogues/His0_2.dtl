@@ -1,3 +1,4 @@
+join Maritaca 1
 [style name="Style Inicio"]
 Maritaca: Lombinho, o caçula, queria plantar,\
 Na sua fazenda, ele iria morar.
@@ -9,3 +10,5 @@ Maritaca: Juntos, eram fortes, unidos como irmãos,\
 Enfrentavam as tempestades, firmes de mãos.
 Maritaca: Mas o tempo passou, e o destino chamou,\
 Cada um seguiu o sonho que o coração guiou.
+leave --All--
+[end_timeline]

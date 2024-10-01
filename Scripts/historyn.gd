@@ -4,11 +4,12 @@ extends Node2D
 @export var next_level : String = ""
 @onready var history_node = $"history-node"
 @onready var label = $Label
+var his0_time = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if Global.historyn == 0:
-		hist_1()
+		hist_count()
 	if Global.historyn == 1:
 		Dialogic.start("His1_2")
 		Dialogic.timeline_ended.connect(dialogic_end)
@@ -49,18 +50,26 @@ func _process(_delta):
 	if Input.is_action_just_pressed("Skip"):
 		transition.change_scene(next_level)
 
-func hist_1():
-	Dialogic.start("His0")
-	Dialogic.timeline_ended.connect(hist_2)
-	#Dialogic.timeline_ended.connect(dialogic_end)
-
-func hist_2():
-	$AnimationPlayer.play("camera 1")
-	Dialogic.start("His0_1")
-	Dialogic.timeline_ended.connect(hist_3)
+func hist_count():
+	if(his0_time == 0):
+		Dialogic.start("His0")
+		his0_time = 1
+		Dialogic.timeline_ended.connect(hist_count)
+	elif(his0_time == 1):
+		$AnimationPlayer.play("camera 1")
+		Dialogic.start("His0_1")
+		Dialogic.timeline_ended.connect(hist_count)
+		his0_time = 2
+	elif(his0_time == 2):
+		Dialogic.start("His0_2")
+		$AnimationPlayer.play("camera 2")
+		Dialogic.timeline_ended.connect(hist_count)
+		his0_time = 3
+		
+		
 	
-func hist_3():
-	$AnimationPlayer.play("camera 2")
-	Dialogic.start("His0_1")
-	Dialogic.timeline_ended.connect(dialogic_end)
+
+
+	
+	#Dialogic.timeline_ended.connect(dialogic_end)
 	
