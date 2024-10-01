@@ -1,10 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://bc0skorn1yav"]
+[gd_scene load_steps=23 format=3 uid="uid://bc0skorn1yav"]
 
 [ext_resource type="Script" path="res://Scripts/historyn.gd" id="1_y35qq"]
 [ext_resource type="Script" path="res://Scripts/transition.gd" id="2_ili2j"]
 [ext_resource type="Shader" path="res://Shaders/transition.gdshader" id="3_1do4p"]
 [ext_resource type="Script" path="res://Scripts/ColorRect1.gd" id="4_gwm2u"]
 [ext_resource type="PackedScene" uid="uid://kkc843kytbij" path="res://cenas/history_node.tscn" id="5_1553v"]
+[ext_resource type="Texture2D" uid="uid://1p4cths12vbt" path="res://Objetos - Mundo 3/Tilemaps/Tilemap Toicinho.png" id="6_3owah"]
+[ext_resource type="Texture2D" uid="uid://c3lb8tcvy1m8u" path="res://Sprites - Lombinho/Lombinho-Pulando5.png" id="6_jpbbe"]
+[ext_resource type="Texture2D" uid="uid://of31my4guo7e" path="res://Sprites - Lombinho/Lombinho-Piscando1.png" id="6_v34kd"]
+[ext_resource type="Texture2D" uid="uid://dkufmcqpelsbh" path="res://Sprites - Lombinho/Lombinho-Correndo1.png" id="7_6fng3"]
+[ext_resource type="Texture2D" uid="uid://dc0egqpiaay17" path="res://Sprites - Panceta/Panceta.png" id="7_dpq8t"]
+[ext_resource type="Texture2D" uid="uid://c33wh22yyi5q3" path="res://Sprites - Toicinho/Toicinho_Infeliz1.png" id="7_ij4vu"]
+[ext_resource type="Texture2D" uid="uid://cgnv0ccga3sn5" path="res://Sprites - Toicinho/Toicinho_Infeliz2.png" id="8_6ev7v"]
+[ext_resource type="Texture2D" uid="uid://dbi1dh7a68y7g" path="res://Sprites - Panceta/Panceta3.png" id="8_blut5"]
+[ext_resource type="Texture2D" uid="uid://cfnbw2xdt0oyw" path="res://Sprites - Lombinho/Lombinho-Correndo2.png" id="8_nhr56"]
+[ext_resource type="Texture2D" uid="uid://bprpsxe6h1qxd" path="res://Sprites - Panceta/Panceta2.png" id="9_wc0tf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jw4qw"]
 shader = ExtResource("3_1do4p")
@@ -13,7 +23,128 @@ shader_parameter/threshold = 0.0
 shader_parameter/line_color_a = Color(0.984314, 0.635294, 0.768627, 1)
 shader_parameter/line_color_b = Color(0.188235, 0.188235, 0.188235, 1)
 
-[node name="history1_2" type="Node2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ej1o"]
+atlas = ExtResource("6_3owah")
+region = Rect2(64, 0, 31, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqdp0"]
+atlas = ExtResource("6_3owah")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7aco"]
+atlas = ExtResource("6_3owah")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ash2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ej1o")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ij4vu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6ev7v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqdp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7aco")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_olj77"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_dpq8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_blut5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.2
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_dpq8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wc0tf")
+}],
+"loop": true,
+"name": &"running",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hiqo1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_jpbbe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jpbbe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jpbbe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jpbbe")
+}],
+"loop": false,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_6fng3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nhr56")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_6fng3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6fng3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6fng3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6fng3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_v34kd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="history0" type="Node2D"]
 script = ExtResource("1_y35qq")
 next_level = "res://cenas/Fase-01.tscn"
 
@@ -43,3 +174,21 @@ Quando ele menos espera, em meio uma tempestade, o Lobo Agiota Marco Antônio ap
 -Eu não tenho dinheiro Marco, minha plantação era da erva errada e eu descobri tarde demais - disse Lombinho quase chorando 
 -POIS BEM, VOU SER OBRIGADO A TE MOSTRAR O QUE ACONTECE COM QUEM NÃO ME PAGA - grita Marco Antônio enquanto destroe a casinha de palha de lombinho. 
 Assim Lombinho começa a correr em direção a casa de seu irmão Panceta..."
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(780.707, 337.414)
+scale = Vector2(3.29418, 3.29418)
+sprite_frames = SubResource("SpriteFrames_8ash2")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(556.707, 337.414)
+scale = Vector2(3.29418, 3.29418)
+sprite_frames = SubResource("SpriteFrames_olj77")
+autoplay = "default"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(316.707, 337.414)
+scale = Vector2(3.29418, 3.29418)
+sprite_frames = SubResource("SpriteFrames_hiqo1")
+autoplay = "default"

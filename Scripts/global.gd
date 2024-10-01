@@ -7,6 +7,7 @@ var score := 0
 var historyn := 0
 var vel_corrida := 1
 var player_lock = false
+var reloadtitle = false
 
 #Missão do Coitadinho
 var meia := 0

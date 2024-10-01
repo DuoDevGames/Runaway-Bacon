@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 					Global.primeiro_dialogo_coitadinho = 2
 					player_is_on_area = false
 					Global.missao_coitadinho_completa = true
-				if Global.primeiro_dialogo_coitadinho == 2:
+				elif Global.primeiro_dialogo_coitadinho == 2:
 					$"Balao Sprite".hide()
 					start_dialog("Coitadinho 3")
 					player_is_on_area = false
