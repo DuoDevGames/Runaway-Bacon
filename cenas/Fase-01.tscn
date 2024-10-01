@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=4 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=126 format=4 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -69,11 +69,13 @@
 [ext_resource type="Texture2D" uid="uid://c3q8u4wolae82" path="res://Objetos - Mundo 1/Chão/Terra DENTRO CAVERNA 2.png" id="46_uvj70"]
 [ext_resource type="Texture2D" uid="uid://dxydexj8poe2g" path="res://Objetos - Mundo 1/Chão/Terra DENTRO CAVERNA 1.png" id="47_j0x6g"]
 [ext_resource type="Texture2D" uid="uid://dfokngta2jukl" path="res://Objetos - Mundo 1/Árvores/Arvore1.png" id="52_ep8lo"]
+[ext_resource type="Texture2D" uid="uid://cdu5uoy4hteew" path="res://Objetos - Mundo 1/Cerca.png" id="53_7i67l"]
 [ext_resource type="Texture2D" uid="uid://bg446ap2fi1qj" path="res://Objetos - Mundo 1/MadeiraEmPéCima.png" id="53_th53b"]
 [ext_resource type="PackedScene" uid="uid://bt5ygil0hku1j" path="res://Enemies/Raposa1.tscn" id="56_800oj"]
 [ext_resource type="PackedScene" uid="uid://pdd43txu2ir5" path="res://cenas/game_over_screen.tscn" id="56_oqbwd"]
 [ext_resource type="PackedScene" uid="uid://5cia04jkurn0" path="res://Blocks/bloco_voador_azul.tscn" id="58_nj7g2"]
 [ext_resource type="PackedScene" uid="uid://qf7byrmak0t6" path="res://Blocks/QuedaMorte.tscn" id="60_uotjy"]
+[ext_resource type="Texture2D" uid="uid://i26w3l1g8esx" path="res://Objetos - Mundo 1/Casinha de Palha.png" id="62_5ci70"]
 [ext_resource type="PackedScene" uid="uid://xniqb0te2gr4" path="res://Blocks/teleporter-in.tscn" id="69_jlav1"]
 [ext_resource type="PackedScene" uid="uid://bd3db4gu002ap" path="res://Blocks/teleporter-out.tscn" id="70_k1tic"]
 [ext_resource type="Script" path="res://Scripts/transition.gd" id="71_cpska"]
@@ -106,6 +108,8 @@
 [ext_resource type="PackedScene" uid="uid://dcde7h64uiw8m" path="res://Objetos - Mundo 1/Background/Tenda/tenda.tscn" id="100_ol0s1"]
 [ext_resource type="PackedScene" uid="uid://c8wdg8h6uqsyy" path="res://Objetos - Mundo 1/Bola de cristal/bola_cristal.tscn" id="101_yx8sn"]
 [ext_resource type="Texture2D" uid="uid://bc6frfwvrx6iy" path="res://Background/Arco Iris.png" id="104_mpgfq"]
+[ext_resource type="Texture2D" uid="uid://b3tjjordywchp" path="res://Objetos - Mundo 1/Pedra1.png" id="107_c45qd"]
+[ext_resource type="Texture2D" uid="uid://dl0xv4mvnseyb" path="res://Objetos - Mundo 1/Vaca Pulável/VacaPulavel3.png" id="110_naoco"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_14aje"]
 shader = ExtResource("71_vqak6")
@@ -757,7 +761,7 @@ centered = false
 position = Vector2(10295, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Céu Chuvoso"]
-position = Vector2(0, -648)
+position = Vector2(-15, -648)
 scale = Vector2(2.39266, 2.92308)
 texture = ExtResource("10_r15e7")
 centered = false
@@ -1103,6 +1107,26 @@ position = Vector2(9336.96, 417.606)
 
 [node name="palha10" parent="Coletáveis" instance=ExtResource("6_6bxpb")]
 position = Vector2(10216, 296)
+
+[node name="Cerca" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(11151, 533)
+texture = ExtResource("53_7i67l")
+
+[node name="Cerca2" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(11186, 533)
+texture = ExtResource("53_7i67l")
+
+[node name="Cerca3" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(11472, 533)
+texture = ExtResource("53_7i67l")
+
+[node name="Cerca4" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(11507, 533)
+texture = ExtResource("53_7i67l")
 
 [node name="Caverna" type="Node" parent="."]
 
@@ -3946,22 +3970,6 @@ position = Vector2(4488, 600)
 [node name="StaticBody2D732" parent="Terreno" instance=ExtResource("8_aysoi")]
 position = Vector2(3920, 624)
 
-[node name="agua-topo8" parent="Terreno" instance=ExtResource("21_gphdm")]
-z_index = -1
-position = Vector2(2728, 521)
-
-[node name="agua-topo9" parent="Terreno" instance=ExtResource("21_gphdm")]
-z_index = -1
-position = Vector2(2760, 521)
-
-[node name="agua-topo10" parent="Terreno" instance=ExtResource("21_gphdm")]
-z_index = -1
-position = Vector2(2792, 521)
-
-[node name="agua-topo11" parent="Terreno" instance=ExtResource("21_gphdm")]
-z_index = -1
-position = Vector2(2824, 521)
-
 [node name="nuvem" parent="Terreno" instance=ExtResource("13_kt21e")]
 position = Vector2(6349, 241)
 
@@ -4061,6 +4069,12 @@ position = Vector2(96, 688)
 [node name="PlataformaInvisivel" type="StaticBody2D" parent="Terreno"]
 position = Vector2(6000.22, 434.094)
 collision_layer = 2
+
+[node name="CasinhaDePalha" type="Sprite2D" parent="Terreno"]
+z_index = -2
+position = Vector2(11333, 400)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("62_5ci70")
 
 [node name="Obstaculos" type="Node2D" parent="."]
 
@@ -4779,6 +4793,12 @@ position = Vector2(5585, 359)
 scale = Vector2(0.661458, 0.661458)
 texture = ExtResource("28_dvb7j")
 
+[node name="Árvore 12" type="Sprite2D" parent="Cenário"]
+z_index = -3
+position = Vector2(6672, 256)
+scale = Vector2(0.661458, 0.661458)
+texture = ExtResource("28_dvb7j")
+
 [node name="Árvore 8" type="Sprite2D" parent="Cenário"]
 z_index = -3
 position = Vector2(2323, 471)
@@ -4806,6 +4826,18 @@ texture = ExtResource("29_ho8ej")
 [node name="Árvore 10" type="Sprite2D" parent="Cenário"]
 z_index = -3
 position = Vector2(683, 430)
+scale = Vector2(0.661458, 0.661458)
+texture = ExtResource("29_ho8ej")
+
+[node name="Árvore 11" type="Sprite2D" parent="Cenário"]
+z_index = -3
+position = Vector2(6616, 228)
+scale = Vector2(0.661458, 0.661458)
+texture = ExtResource("29_ho8ej")
+
+[node name="Árvore 13" type="Sprite2D" parent="Cenário"]
+z_index = -3
+position = Vector2(8120, 504)
 scale = Vector2(0.661458, 0.661458)
 texture = ExtResource("29_ho8ej")
 
@@ -4954,6 +4986,15 @@ scroll_scale = Vector2(1.2, 1.2)
 scroll_offset = Vector2(1264, 16)
 
 [node name="Arbusto1Frente" type="Sprite2D" parent="Arbustos da Frente/Parallax2D2"]
+position = Vector2(4184, 560)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("88_c1qiy")
+
+[node name="Parallax2D3" type="Parallax2D" parent="Arbustos da Frente"]
+scroll_scale = Vector2(1.2, 1.2)
+scroll_offset = Vector2(3288, 16)
+
+[node name="Arbusto1Frente" type="Sprite2D" parent="Arbustos da Frente/Parallax2D3"]
 position = Vector2(4184, 560)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("88_c1qiy")
@@ -5111,6 +5152,39 @@ shape = SubResource("RectangleShape2D_3b5rq")
 
 [node name="FlorArcoIris3" parent="." instance=ExtResource("98_d4l5j")]
 position = Vector2(11096, 533)
+
+[node name="Flor1" parent="." instance=ExtResource("85_bkngr")]
+position = Vector2(2400, 496)
+
+[node name="Flor2" parent="." instance=ExtResource("85_bkngr")]
+position = Vector2(2376, 496)
+
+[node name="Flor3" parent="." instance=ExtResource("85_bkngr")]
+position = Vector2(4328, 536)
+
+[node name="Pedra1" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(6792, 567)
+texture = ExtResource("107_c45qd")
+
+[node name="Pedra2" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(7848, 497)
+texture = ExtResource("107_c45qd")
+
+[node name="Grama1" parent="." instance=ExtResource("84_aqegp")]
+position = Vector2(10976, 535)
+
+[node name="Grama2" parent="." instance=ExtResource("84_aqegp")]
+position = Vector2(11008, 534)
+
+[node name="VacaPulavel3" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(11448, 536)
+texture = ExtResource("110_naoco")
+
+[node name="Flor4" parent="." instance=ExtResource("85_bkngr")]
+position = Vector2(11536, 534)
 
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]
 [connection signal="body_entered" from="Missao/UpdateArea" to="." method="_on_update_area_body_entered"]
