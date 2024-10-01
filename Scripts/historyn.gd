@@ -4,7 +4,6 @@ extends Node2D
 @export var next_level : String = ""
 @onready var history_node = $"history-node"
 @onready var label = $Label
-var his0_time = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -51,24 +50,43 @@ func _process(_delta):
 		transition.change_scene(next_level)
 
 func hist_count():
-	if(his0_time == 0):
+	if(Global.his0_time == 0):
 		Dialogic.start("His0")
-		his0_time = 1
+		Global.his0_time = 1
 		Dialogic.timeline_ended.connect(hist_count)
-	elif(his0_time == 1):
+	elif(Global.his0_time == 1):
 		$AnimationPlayer.play("camera 1")
 		Dialogic.start("His0_1")
 		Dialogic.timeline_ended.connect(hist_count)
-		his0_time = 2
-	elif(his0_time == 2):
+		Global.his0_time = 2
+	elif(Global.his0_time == 2):
 		Dialogic.start("His0_2")
 		$AnimationPlayer.play("camera 2")
 		Dialogic.timeline_ended.connect(hist_count)
-		his0_time = 3
+		Global.his0_time = 3
+	elif(Global.his0_time == 3):
+		Dialogic.start("His0_3")
+		$AnimationPlayer.play("camera 3")
+		Dialogic.timeline_ended.connect(hist_count)
+		Global.his0_time = 4
+	elif(Global.his0_time == 4):
+		Dialogic.start("His0_4")
+		$AnimationPlayer.play("camera 4")
+		Dialogic.timeline_ended.connect(hist_count)
+		Global.his0_time = 5
+	elif(Global.his0_time == 5):
+		Dialogic.start("His0_5")
+		$AnimationPlayer.play("camera 5")
+		Global.his0_time = 0
+		Dialogic.timeline_ended.connect(hist_fim)
 		
 		
 	
-
+func hist_fim():
+	Global.his0_time = 6
+	#Dialogic.end()
+	dialogic_end()
+	
 
 	
 	#Dialogic.timeline_ended.connect(dialogic_end)

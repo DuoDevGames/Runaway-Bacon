@@ -316,7 +316,7 @@ Quando ele menos espera, em meio uma tempestade, o Lobo Agiota Marco Antônio ap
 Assim Lombinho começa a correr em direção a casa de seu irmão Panceta..."
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 7448.0
+offset_right = 4960.0
 offset_bottom = 776.0
 color = Color(0, 0, 0, 1)
 
