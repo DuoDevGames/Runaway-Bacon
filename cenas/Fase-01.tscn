@@ -1,4 +1,4 @@
-[gd_scene load_steps=119 format=4 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=122 format=4 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://d0oo5pjdvy18m" path="res://Blocks/terra-borda-direita.tscn" id="8_aysoi"]
 [ext_resource type="PackedScene" uid="uid://c8q4vxqrdjdpd" path="res://Characters/lombinho.tscn" id="9_8vmwd"]
 [ext_resource type="PackedScene" uid="uid://dve1h6goyhx17" path="res://Blocks/madeira-baixo.tscn" id="10_61aou"]
+[ext_resource type="Texture2D" uid="uid://r27fl4av5g8y" path="res://Background/Céu Chuvoso.png" id="10_r15e7"]
+[ext_resource type="Texture2D" uid="uid://ceebufbahgf22" path="res://Background/Céu Meio Chuvoso.png" id="10_sk0yg"]
 [ext_resource type="PackedScene" uid="uid://470tmpn733o1" path="res://Blocks/madeira-topo.tscn" id="11_dfgtr"]
 [ext_resource type="PackedScene" uid="uid://77vvmc2lbn4f" path="res://Blocks/madeira-meio.tscn" id="12_kkjsa"]
 [ext_resource type="PackedScene" uid="uid://bdbvw66kqee3m" path="res://Objetos - Mundo 1/sol.tscn" id="12_ta635"]
@@ -103,6 +105,7 @@
 [ext_resource type="PackedScene" uid="uid://b1v45v40xa5i7" path="res://Objetos - Mundo 1/Gramas/flor_arco_iris.tscn" id="98_d4l5j"]
 [ext_resource type="PackedScene" uid="uid://dcde7h64uiw8m" path="res://Objetos - Mundo 1/Background/Tenda/tenda.tscn" id="100_ol0s1"]
 [ext_resource type="PackedScene" uid="uid://c8wdg8h6uqsyy" path="res://Objetos - Mundo 1/Bola de cristal/bola_cristal.tscn" id="101_yx8sn"]
+[ext_resource type="Texture2D" uid="uid://bc6frfwvrx6iy" path="res://Background/Arco Iris.png" id="104_mpgfq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_14aje"]
 shader = ExtResource("71_vqak6")
@@ -747,6 +750,23 @@ motion_mirroring = Vector2(736, 0)
 position = Vector2(0, -648)
 scale = Vector2(1, 2.92308)
 texture = ExtResource("1_a4tlf")
+centered = false
+
+[node name="Céu Chuvoso" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(10295, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Céu Chuvoso"]
+position = Vector2(0, -648)
+scale = Vector2(1, 2.92308)
+texture = ExtResource("10_r15e7")
+centered = false
+
+[node name="Céu Meio Chuvoso" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Céu Meio Chuvoso"]
+position = Vector2(9561, -648)
+scale = Vector2(1, 2.92308)
+texture = ExtResource("10_sk0yg")
 centered = false
 
 [node name="Sol" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -4769,7 +4789,7 @@ position = Vector2(6186, 288)
 position = Vector2(64, 480)
 
 [node name="Teleporter-out" parent="." instance=ExtResource("70_k1tic")]
-position = Vector2(4008, -464)
+position = Vector2(8864, 104)
 
 [node name="controles" type="CanvasLayer" parent="."]
 visible = false
@@ -5012,6 +5032,13 @@ position = Vector2(3800, -423)
 
 [node name="BolaCristal" parent="." instance=ExtResource("101_yx8sn")]
 position = Vector2(3854, -377)
+
+[node name="ArcoIris" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.282353)
+z_index = -4
+position = Vector2(3863, -548)
+scale = Vector2(0.56875, 0.56875)
+texture = ExtResource("104_mpgfq")
 
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]
 [connection signal="body_entered" from="Missao/UpdateArea" to="." method="_on_update_area_body_entered"]
