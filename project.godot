@@ -45,6 +45,8 @@ directories/dtl_directory={
 "Gato 1": "res://Dialogues/Dialogues/Gato 1.dtl",
 "Gato 2": "res://Dialogues/Dialogues/Gato 2.dtl",
 "His0": "res://Dialogues/Dialogues/His0.dtl",
+"His0_1": "res://Dialogues/Dialogues/His0_1.dtl",
+"His0_2": "res://Dialogues/Dialogues/His0_2.dtl",
 "His1_2": "res://Dialogues/Dialogues/His1_2.dtl",
 "His1_3": "res://Dialogues/Dialogues/His1_3.dtl",
 "His2_1": "res://Dialogues/Dialogues/His2_1.dtl",
@@ -54,7 +56,7 @@ directories/dtl_directory={
 "Ninmu Infos": "res://Dialogues/Dialogues/Ninmu Infos.dtl",
 "faltapalha": "res://Dialogues/Dialogues/faltapalha.dtl"
 }
-layout/style_list=["res://Dialogues/Style 2.tres"]
+layout/style_list=["res://Dialogues/Style 2.tres", "res://Dialogues/Style Inicio.tres"]
 layout/default_style="res://Dialogues/Style 2.tres"
 variables={
 "História Fase 1": {

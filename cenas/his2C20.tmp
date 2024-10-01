@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bc0skorn1yav"]
+[gd_scene load_steps=33 format=3 uid="uid://bc0skorn1yav"]
 
 [ext_resource type="Script" path="res://Scripts/historyn.gd" id="1_y35qq"]
 [ext_resource type="Script" path="res://Scripts/transition.gd" id="2_ili2j"]
@@ -22,8 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://b4gre5d5jx1vf" path="res://Objetos - Cena 0/Pergaminho/Pergaminho 1.png" id="20_rvr8o"]
 [ext_resource type="Texture2D" uid="uid://dfx8udf5guyjw" path="res://Objetos - Cena 0/Pergaminho/Pergaminho 2.png" id="21_boujt"]
 [ext_resource type="Texture2D" uid="uid://bnimqksk4f82u" path="res://Objetos - Cena 0/Pergaminho/Pergaminho 3.png" id="22_2xc4o"]
-[ext_resource type="Texture2D" uid="uid://cap01v8j22ll2" path="res://Objetos - Cena 0/Ilha RB2.png" id="23_if5g5"]
-[ext_resource type="LabelSettings" uid="uid://bvsjqy6cqtwv5" path="res://Objetos - Cena 0/settings cena 0.tres" id="24_aam5k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jw4qw"]
 shader = ExtResource("3_1do4p")
@@ -182,13 +180,13 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Camera2D:position")
-tracks/0/interp = 2
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.23333),
+"times": PackedFloat32Array(0, 4.96667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(640, 361), Vector2(1552, 361)]
+"values": [Vector2(640, 361), Vector2(1928, 361)]
 }
 
 [sub_resource type="Animation" id="Animation_s6faj"]
@@ -206,27 +204,10 @@ tracks/0/keys = {
 "values": [Vector2(640, 361)]
 }
 
-[sub_resource type="Animation" id="Animation_ckalv"]
-resource_name = "camera 2"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.96667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1552, 361), Vector2(2448, 361)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cguf6"]
 _data = {
 "RESET": SubResource("Animation_s6faj"),
-"camera 1": SubResource("Animation_q0mtv"),
-"camera 2": SubResource("Animation_ckalv")
+"camera 1": SubResource("Animation_q0mtv")
 }
 
 [node name="history0" type="Node2D"]
@@ -261,9 +242,32 @@ Quando ele menos espera, em meio uma tempestade, o Lobo Agiota Marco Antônio ap
 Assim Lombinho começa a correr em direção a casa de seu irmão Panceta..."
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 4960.0
+offset_right = 2144.0
 offset_bottom = 776.0
 color = Color(0, 0, 0, 1)
+
+[node name="Toucinho" type="AnimatedSprite2D" parent="."]
+position = Vector2(780.707, 337.414)
+scale = Vector2(0.824, 0.824)
+sprite_frames = SubResource("SpriteFrames_8ash2")
+autoplay = "default"
+frame_progress = 0.60653
+
+[node name="Panceta" type="AnimatedSprite2D" parent="."]
+position = Vector2(556.707, 337.414)
+scale = Vector2(0.824, 0.824)
+sprite_frames = SubResource("SpriteFrames_olj77")
+animation = &"antigo"
+autoplay = "antigo"
+frame_progress = 0.312627
+
+[node name="Lombinho" type="AnimatedSprite2D" parent="."]
+position = Vector2(316.707, 337.414)
+scale = Vector2(0.824, 0.824)
+sprite_frames = SubResource("SpriteFrames_hiqo1")
+animation = &"antigo"
+autoplay = "antigo"
+frame_progress = 0.818983
 
 [node name="Pergaminhos" type="Node2D" parent="."]
 position = Vector2(1256, 0)
@@ -279,83 +283,16 @@ position = Vector2(1048, 364)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("21_boujt")
 
-[node name="Pergaminho4" type="Sprite2D" parent="Pergaminhos"]
-position = Vector2(1680, 364)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("21_boujt")
-
 [node name="Pergaminho3" type="Sprite2D" parent="Pergaminhos"]
-position = Vector2(2300, 376)
+position = Vector2(1816, 376)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("22_2xc4o")
-
-[node name="Toucinho" type="AnimatedSprite2D" parent="."]
-position = Vector2(2744, 241.472)
-scale = Vector2(0.824, 0.824)
-sprite_frames = SubResource("SpriteFrames_8ash2")
-autoplay = "default"
-frame_progress = 0.60653
-
-[node name="Panceta" type="AnimatedSprite2D" parent="."]
-position = Vector2(2479, 248)
-scale = Vector2(0.824, 0.824)
-sprite_frames = SubResource("SpriteFrames_olj77")
-animation = &"antigo"
-autoplay = "antigo"
-frame_progress = 0.312627
-
-[node name="Lombinho" type="AnimatedSprite2D" parent="."]
-position = Vector2(2216, 241.472)
-scale = Vector2(0.824, 0.824)
-sprite_frames = SubResource("SpriteFrames_hiqo1")
-animation = &"antigo"
-autoplay = "antigo"
-frame_progress = 0.818983
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_cguf6")
 }
+autoplay = "camera 1"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(640, 361)
-
-[node name="IlhaRb2" type="Sprite2D" parent="."]
-position = Vector2(1654, 288)
-scale = Vector2(0.57619, 0.57619)
-texture = ExtResource("23_if5g5")
-
-[node name="Ilha 1" type="Label" parent="."]
-offset_left = 1750.0
-offset_top = 352.0
-offset_right = 2000.0
-offset_bottom = 414.0
-text = "Ilha Riacho"
-label_settings = ExtResource("24_aam5k")
-
-[node name="Lombinho2" type="Label" parent="."]
-offset_left = 2096.0
-offset_top = 337.472
-offset_right = 2346.0
-offset_bottom = 399.472
-text = "Lombinho"
-label_settings = ExtResource("24_aam5k")
-horizontal_alignment = 1
-
-[node name="Lombinho3" type="Label" parent="."]
-offset_left = 2346.0
-offset_top = 337.472
-offset_right = 2596.0
-offset_bottom = 399.472
-text = "Panceta"
-label_settings = ExtResource("24_aam5k")
-horizontal_alignment = 1
-
-[node name="Lombinho4" type="Label" parent="."]
-offset_left = 2608.0
-offset_top = 330.944
-offset_right = 2858.0
-offset_bottom = 392.944
-text = "Toicinho"
-label_settings = ExtResource("24_aam5k")
-horizontal_alignment = 1
