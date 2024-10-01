@@ -4993,7 +4993,7 @@ position = Vector2(6160, 432)
 position = Vector2(6114, 408)
 
 [node name="MeiaCoitadinho" parent="." instance=ExtResource("91_i1ptr")]
-position = Vector2(6266, 264)
+position = Vector2(10016, -48)
 
 [node name="nuvem_movel" parent="." instance=ExtResource("92_baim7")]
 position = Vector2(4072, 240)
