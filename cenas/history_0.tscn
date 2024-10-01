@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bc0skorn1yav"]
+[gd_scene load_steps=27 format=3 uid="uid://bc0skorn1yav"]
 
 [ext_resource type="Script" path="res://Scripts/historyn.gd" id="1_y35qq"]
 [ext_resource type="Script" path="res://Scripts/transition.gd" id="2_ili2j"]
@@ -10,11 +10,15 @@
 [ext_resource type="Texture2D" uid="uid://of31my4guo7e" path="res://Sprites - Lombinho/Lombinho-Piscando1.png" id="6_v34kd"]
 [ext_resource type="Texture2D" uid="uid://dkufmcqpelsbh" path="res://Sprites - Lombinho/Lombinho-Correndo1.png" id="7_6fng3"]
 [ext_resource type="Texture2D" uid="uid://dc0egqpiaay17" path="res://Sprites - Panceta/Panceta.png" id="7_dpq8t"]
-[ext_resource type="Texture2D" uid="uid://c33wh22yyi5q3" path="res://Sprites - Toicinho/Toicinho_Infeliz1.png" id="7_ij4vu"]
-[ext_resource type="Texture2D" uid="uid://cgnv0ccga3sn5" path="res://Sprites - Toicinho/Toicinho_Infeliz2.png" id="8_6ev7v"]
+[ext_resource type="Texture2D" uid="uid://bkkanlymann77" path="res://Sprites - Toicinho/Toicinho Infeliz1.png" id="7_jw14g"]
+[ext_resource type="Texture2D" uid="uid://cjvk5fipt6to6" path="res://Sprites - Toicinho/Toicinho Infeliz2.png" id="8_8m8pf"]
 [ext_resource type="Texture2D" uid="uid://dbi1dh7a68y7g" path="res://Sprites - Panceta/Panceta3.png" id="8_blut5"]
 [ext_resource type="Texture2D" uid="uid://cfnbw2xdt0oyw" path="res://Sprites - Lombinho/Lombinho-Correndo2.png" id="8_nhr56"]
+[ext_resource type="Texture2D" uid="uid://3ib7ve08qo84" path="res://Sprites - Panceta/Versão Antiga/Panceta Antigo 1.png" id="9_suvh2"]
 [ext_resource type="Texture2D" uid="uid://bprpsxe6h1qxd" path="res://Sprites - Panceta/Panceta2.png" id="9_wc0tf"]
+[ext_resource type="Texture2D" uid="uid://bfbw0bayhw0tv" path="res://Sprites - Panceta/Versão Antiga/Panceta Antigo 2.png" id="10_1oydu"]
+[ext_resource type="Texture2D" uid="uid://bn038umvxttyj" path="res://Sprites - Lombinho/Versão Antiga/Lombinho Antigo1.png" id="17_upcq2"]
+[ext_resource type="Texture2D" uid="uid://bm7ibsyxhhty" path="res://Sprites - Lombinho/Versão Antiga/Lombinho Antigo2.png" id="18_sgbyf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jw4qw"]
 shader = ExtResource("3_1do4p")
@@ -46,11 +50,11 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_ij4vu")
+"duration": 5.0,
+"texture": ExtResource("7_jw14g")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_6ev7v")
+"texture": ExtResource("8_8m8pf")
 }],
 "loop": true,
 "name": &"default",
@@ -70,6 +74,17 @@ animations = [{
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_olj77"]
 animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("9_suvh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1oydu")
+}],
+"loop": true,
+"name": &"antigo",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("7_dpq8t")
@@ -124,6 +139,17 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
+"duration": 5.0,
+"texture": ExtResource("17_upcq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_sgbyf")
+}],
+"loop": true,
+"name": &"antigo",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("7_6fng3")
 }, {
@@ -175,20 +201,25 @@ Quando ele menos espera, em meio uma tempestade, o Lobo Agiota Marco Antônio ap
 -POIS BEM, VOU SER OBRIGADO A TE MOSTRAR O QUE ACONTECE COM QUEM NÃO ME PAGA - grita Marco Antônio enquanto destroe a casinha de palha de lombinho. 
 Assim Lombinho começa a correr em direção a casa de seu irmão Panceta..."
 
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+[node name="Toucinho" type="AnimatedSprite2D" parent="."]
 position = Vector2(780.707, 337.414)
-scale = Vector2(3.29418, 3.29418)
+scale = Vector2(0.824, 0.824)
 sprite_frames = SubResource("SpriteFrames_8ash2")
 autoplay = "default"
+frame_progress = 0.60653
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+[node name="Panceta" type="AnimatedSprite2D" parent="."]
 position = Vector2(556.707, 337.414)
-scale = Vector2(3.29418, 3.29418)
+scale = Vector2(0.824, 0.824)
 sprite_frames = SubResource("SpriteFrames_olj77")
-autoplay = "default"
+animation = &"antigo"
+autoplay = "antigo"
+frame_progress = 0.312627
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Lombinho" type="AnimatedSprite2D" parent="."]
 position = Vector2(316.707, 337.414)
-scale = Vector2(3.29418, 3.29418)
+scale = Vector2(0.824, 0.824)
 sprite_frames = SubResource("SpriteFrames_hiqo1")
-autoplay = "default"
+animation = &"antigo"
+autoplay = "antigo"
+frame_progress = 0.818983
