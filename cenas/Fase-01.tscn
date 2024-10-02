@@ -1111,7 +1111,7 @@ position = Vector2(4664, 320)
 position = Vector2(4208, 240)
 
 [node name="palha5" parent="Coletáveis" instance=ExtResource("6_6bxpb")]
-position = Vector2(1888, 480)
+position = Vector2(1672, 488)
 
 [node name="palha9" parent="Coletáveis" instance=ExtResource("6_6bxpb")]
 position = Vector2(6944, 560)
@@ -4133,7 +4133,7 @@ position = Vector2(1920, 496)
 position = Vector2(1792, 496)
 
 [node name="StaticBody2D26" parent="Obstaculos" instance=ExtResource("11_dfgtr")]
-position = Vector2(1888, 400)
+position = Vector2(1888, 408)
 
 [node name="StaticBody2D27" parent="Obstaculos" instance=ExtResource("11_dfgtr")]
 position = Vector2(1856, 432)
@@ -4151,7 +4151,7 @@ position = Vector2(1920, 400)
 position = Vector2(1920, 464)
 
 [node name="StaticBody2D99" parent="Obstaculos" instance=ExtResource("12_kkjsa")]
-position = Vector2(1888, 432)
+position = Vector2(1888, 440)
 
 [node name="StaticBody2D51" parent="Obstaculos" instance=ExtResource("10_61aou")]
 position = Vector2(2096, 496)
@@ -4203,7 +4203,7 @@ position = Vector2(1824, 464)
 texture = ExtResource("53_th53b")
 
 [node name="Bloco Atravessavel 4" type="Sprite2D" parent="Obstaculos"]
-position = Vector2(1888, 464)
+position = Vector2(1888, 472)
 texture = ExtResource("23_q7r4t")
 
 [node name="Bloco Atravessavel 2" type="Sprite2D" parent="Obstaculos"]
@@ -4215,7 +4215,8 @@ position = Vector2(1824, 496)
 texture = ExtResource("24_hkukr")
 
 [node name="Bloco Atravessavel 3" type="Sprite2D" parent="Obstaculos"]
-position = Vector2(1888, 496)
+position = Vector2(1888, 500)
+scale = Vector2(1, 0.75)
 texture = ExtResource("24_hkukr")
 
 [node name="Bloco Voador 3" parent="Obstaculos" instance=ExtResource("58_nj7g2")]
@@ -5036,12 +5037,6 @@ position = Vector2(7080, 560)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("88_c1qiy")
 
-[node name="Grama1" parent="Arbustos da Frente/Parallax2D3" instance=ExtResource("84_aqegp")]
-position = Vector2(5152, 451)
-
-[node name="Flor1" parent="Arbustos da Frente/Parallax2D3" instance=ExtResource("85_bkngr")]
-position = Vector2(5376, 322)
-
 [node name="Caverna - Coitadinho" type="Node" parent="."]
 
 [node name="TerraTopoCaverna2" parent="Caverna - Coitadinho" instance=ExtResource("86_b5wei")]
@@ -5060,6 +5055,12 @@ position = Vector2(6154, 352)
 position = Vector2(6170, 400)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("88_qmdlm")
+
+[node name="Grama3" parent="." instance=ExtResource("84_aqegp")]
+position = Vector2(8440, 467)
+
+[node name="Flor5" parent="." instance=ExtResource("85_bkngr")]
+position = Vector2(8664, 338)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("3_5j6wf")]
 position = Vector2(6074, 464)
