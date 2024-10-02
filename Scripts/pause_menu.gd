@@ -30,3 +30,6 @@ func _on_quit_btn_pressed():
 func _on_menu_btn_pressed():
 	SoundsController.play_buttonpressed_sound()
 	get_tree().change_scene_to_file("res://cenas/title_screen.tscn")
+	Global.his0_time = 0
+	Global.hist1_time = 0
+	Global.historyn = 0

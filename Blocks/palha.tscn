@@ -52,6 +52,7 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_ixg87")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
 color = Color(0.996078, 0.796078, 0.243137, 1)
 texture = SubResource("GradientTexture2D_gusvh")
 texture_scale = 0.9
