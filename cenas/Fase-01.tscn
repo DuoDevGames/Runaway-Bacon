@@ -206,7 +206,7 @@ size = Vector2(16, 73.5)
 [sub_resource type="TileMapPattern" id="TileMapPattern_hy6gx"]
 tile_data = PackedInt32Array(0, 65538, 1610612736, 1, 2, 1610612736, 2, 2, 1610612737)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xpm2o"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jsnq5"]
 resource_name = "Terreno"
 texture = ExtResource("93_1adqm")
 texture_region_size = Vector2i(128, 128)
@@ -625,7 +625,7 @@ texture_region_size = Vector2i(128, 128)
 0:1/0/terrains_peering_bit/bottom_right_corner = 0
 0:1/0/terrains_peering_bit/top_right_corner = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_huls3"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mbi1i"]
 resource_name = "Terreno_sem_colisao"
 texture = ExtResource("93_1adqm")
 texture_region_size = Vector2i(128, 128)
@@ -637,7 +637,7 @@ texture_region_size = Vector2i(128, 128)
 2:1/0 = 0
 1:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2xu51"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5wyn"]
 texture = ExtResource("95_lb0nv")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
@@ -658,9 +658,9 @@ terrain_set_0/terrain_0/name = "Piso"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 terrain_set_0/terrain_1/name = "Obstaculos"
 terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
-sources/0 = SubResource("TileSetAtlasSource_xpm2o")
-sources/1 = SubResource("TileSetAtlasSource_huls3")
-sources/2 = SubResource("TileSetAtlasSource_2xu51")
+sources/0 = SubResource("TileSetAtlasSource_jsnq5")
+sources/1 = SubResource("TileSetAtlasSource_mbi1i")
+sources/2 = SubResource("TileSetAtlasSource_j5wyn")
 pattern_0 = SubResource("TileMapPattern_hy6gx")
 
 [node name="Fase-01" type="Node2D"]

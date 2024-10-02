@@ -8,6 +8,7 @@ var historyn := 0
 var vel_corrida := 1
 var player_lock = false
 var his0_time = 0
+var hist1_time = 0
 var fase2 = false
 
 #Missão do Coitadinho

@@ -10,8 +10,7 @@ func _ready():
 	if Global.historyn == 0:
 		hist_count()
 	if Global.historyn == 1:
-		Dialogic.start("His1_2")
-		Dialogic.timeline_ended.connect(dialogic_end)
+		hist_count2()
 	if Global.historyn == 2:
 		Dialogic.start("His1_3")
 		Dialogic.timeline_ended.connect(dialogic_end)
@@ -81,7 +80,17 @@ func hist_count():
 		Dialogic.timeline_ended.connect(dialogic_end)
 		
 		
-	
+
+func hist_count2():
+	if(Global.hist1_time == 0):
+		$AnimationPlayer.play("corrida_marco")
+		Global.hist1_time = 1
+		hist_count2()
+	elif(Global.hist1_time == 1):
+		Dialogic.start("His1_2")
+		Dialogic.timeline_ended.connect(dialogic_end)
+		
+		
 #func hist_fim():
 #	Global.his0_time = 6
 #	Dialogic.end_timeline("His0_5")
