@@ -403,9 +403,6 @@ script = ExtResource("1_ucuin")
 position = Vector2(11688, 424)
 next_level = "res://cenas/history_2_3.tscn"
 
-[node name="Lombinho" parent="." instance=ExtResource("2_tbf1r")]
-position = Vector2(400, 416)
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 2)
 scale = Vector2(1e-05, 1e-05)
@@ -657,7 +654,6 @@ position = Vector2(-44.0002, 2)
 shape = SubResource("CircleShape2D_ogrfk")
 
 [node name="Parallax2D" type="ParallaxBackground" parent="."]
-visible = false
 scale = Vector2(2, 2)
 transform = Transform2D(2, 0, 0, 2, 0, 0)
 
@@ -749,6 +745,9 @@ position = Vector2(10984, 432)
 
 [node name="Tipo4_" parent="." instance=ExtResource("50_w6x3w")]
 position = Vector2(11184, 432)
+
+[node name="Lombinho" parent="." instance=ExtResource("2_tbf1r")]
+position = Vector2(304, 416)
 
 [connection signal="timeout" from="HUD/Control/MarginContainer/timer/Timer" to="HUD/Control" method="_on_timer_timeout"]
 [connection signal="body_entered" from="trocadefundo" to="." method="_on_area_2d_body_entered"]

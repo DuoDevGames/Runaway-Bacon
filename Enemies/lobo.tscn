@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dmlwkumot81e4" path="res://Sprites - MA/Correndo/Marco Antonio Correndo4.png" id="5_wb6jq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_41ipy"]
-size = Vector2(70, 163)
+size = Vector2(81, 163)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ki3um"]
 animations = [{
@@ -35,7 +35,7 @@ collision_mask = 3
 script = ExtResource("1_cyqf0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(6, -20)
+position = Vector2(11.5, -20)
 shape = SubResource("RectangleShape2D_41ipy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

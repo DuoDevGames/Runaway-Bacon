@@ -4048,7 +4048,7 @@ position = Vector2(1522, 324)
 position = Vector2(3064, 328)
 
 [node name="nuvem22" parent="Terreno" instance=ExtResource("13_kt21e")]
-position = Vector2(2272, 176)
+position = Vector2(2306, 175)
 
 [node name="nuvem23" parent="Terreno" instance=ExtResource("13_kt21e")]
 position = Vector2(2416, 232)
@@ -4089,6 +4089,9 @@ z_index = -2
 position = Vector2(11333, 400)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("62_5ci70")
+
+[node name="nuvem28" parent="Terreno" instance=ExtResource("13_kt21e")]
+position = Vector2(2213, 232)
 
 [node name="Obstaculos" type="Node2D" parent="."]
 
@@ -4173,9 +4176,12 @@ position = Vector2(2096, 464)
 
 [node name="Bloco Voador 2" parent="Obstaculos" instance=ExtResource("14_ytbhh")]
 position = Vector2(3344, 416)
+move_speed = 4
 
 [node name="Bloco Voador 1" parent="Obstaculos" instance=ExtResource("15_jb8vx")]
-position = Vector2(3168, 496)
+position = Vector2(3166, 304)
+move_speed = 3
+distance = 190
 
 [node name="Bloco Voador 4" parent="Obstaculos" instance=ExtResource("15_jb8vx")]
 position = Vector2(4080, 512)
@@ -4220,7 +4226,8 @@ scale = Vector2(1, 0.75)
 texture = ExtResource("24_hkukr")
 
 [node name="Bloco Voador 3" parent="Obstaculos" instance=ExtResource("58_nj7g2")]
-position = Vector2(3530, 490)
+position = Vector2(3530, 460)
+distance = 100
 
 [node name="Rios" type="Node2D" parent="."]
 
@@ -4915,12 +4922,6 @@ position = Vector2(7784, 480)
 [node name="Raposa7" parent="Inimigos" instance=ExtResource("56_800oj")]
 position = Vector2(7312, 384)
 
-[node name="Teleporter" parent="." instance=ExtResource("69_jlav1")]
-position = Vector2(-280, -360)
-
-[node name="Teleporter-out" parent="." instance=ExtResource("70_k1tic")]
-position = Vector2(7184, -480)
-
 [node name="controles" type="CanvasLayer" parent="."]
 visible = false
 
@@ -5240,5 +5241,11 @@ texture = ExtResource("110_naoco")
 [node name="Flor4" parent="." instance=ExtResource("85_bkngr")]
 position = Vector2(11536, 534)
 
-[connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]
+[node name="Teleporter" parent="." instance=ExtResource("69_jlav1")]
+position = Vector2(52, 287)
+
+[node name="Teleporter-out" parent="." instance=ExtResource("70_k1tic")]
+position = Vector2(3715, 467)
+
 [connection signal="body_entered" from="Missao/UpdateArea" to="." method="_on_update_area_body_entered"]
+[connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]

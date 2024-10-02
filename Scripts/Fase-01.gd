@@ -9,6 +9,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	player.SPEED = 200
 	player.follow_camera(camera)
 	MusicController.stop_menu_music()
 	MusicController.play_fase1_music()
