@@ -4916,10 +4916,10 @@ position = Vector2(7784, 480)
 position = Vector2(7312, 384)
 
 [node name="Teleporter" parent="." instance=ExtResource("69_jlav1")]
-position = Vector2(64, 480)
+position = Vector2(-280, -360)
 
 [node name="Teleporter-out" parent="." instance=ExtResource("70_k1tic")]
-position = Vector2(7120, 328)
+position = Vector2(7184, -480)
 
 [node name="controles" type="CanvasLayer" parent="."]
 visible = false
