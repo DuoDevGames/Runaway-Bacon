@@ -1,0 +1,298 @@
+[gd_scene load_steps=33 format=3 uid="uid://bc0skorn1yav"]
+
+[ext_resource type="Script" path="res://Scripts/historyn.gd" id="1_y35qq"]
+[ext_resource type="Script" path="res://Scripts/transition.gd" id="2_ili2j"]
+[ext_resource type="Shader" path="res://Shaders/transition.gdshader" id="3_1do4p"]
+[ext_resource type="Script" path="res://Scripts/ColorRect1.gd" id="4_gwm2u"]
+[ext_resource type="PackedScene" uid="uid://kkc843kytbij" path="res://cenas/history_node.tscn" id="5_1553v"]
+[ext_resource type="Texture2D" uid="uid://1p4cths12vbt" path="res://Objetos - Mundo 3/Tilemaps/Tilemap Toicinho.png" id="6_3owah"]
+[ext_resource type="Texture2D" uid="uid://c3lb8tcvy1m8u" path="res://Sprites - Lombinho/Lombinho-Pulando5.png" id="6_jpbbe"]
+[ext_resource type="Texture2D" uid="uid://of31my4guo7e" path="res://Sprites - Lombinho/Lombinho-Piscando1.png" id="6_v34kd"]
+[ext_resource type="Texture2D" uid="uid://dkufmcqpelsbh" path="res://Sprites - Lombinho/Lombinho-Correndo1.png" id="7_6fng3"]
+[ext_resource type="Texture2D" uid="uid://dc0egqpiaay17" path="res://Sprites - Panceta/Panceta.png" id="7_dpq8t"]
+[ext_resource type="Texture2D" uid="uid://bkkanlymann77" path="res://Sprites - Toicinho/Toicinho Infeliz1.png" id="7_jw14g"]
+[ext_resource type="Texture2D" uid="uid://cjvk5fipt6to6" path="res://Sprites - Toicinho/Toicinho Infeliz2.png" id="8_8m8pf"]
+[ext_resource type="Texture2D" uid="uid://dbi1dh7a68y7g" path="res://Sprites - Panceta/Panceta3.png" id="8_blut5"]
+[ext_resource type="Texture2D" uid="uid://cfnbw2xdt0oyw" path="res://Sprites - Lombinho/Lombinho-Correndo2.png" id="8_nhr56"]
+[ext_resource type="Texture2D" uid="uid://3ib7ve08qo84" path="res://Sprites - Panceta/Versão Antiga/Panceta Antigo 1.png" id="9_suvh2"]
+[ext_resource type="Texture2D" uid="uid://bprpsxe6h1qxd" path="res://Sprites - Panceta/Panceta2.png" id="9_wc0tf"]
+[ext_resource type="Texture2D" uid="uid://bfbw0bayhw0tv" path="res://Sprites - Panceta/Versão Antiga/Panceta Antigo 2.png" id="10_1oydu"]
+[ext_resource type="Texture2D" uid="uid://bn038umvxttyj" path="res://Sprites - Lombinho/Versão Antiga/Lombinho Antigo1.png" id="17_upcq2"]
+[ext_resource type="Texture2D" uid="uid://bm7ibsyxhhty" path="res://Sprites - Lombinho/Versão Antiga/Lombinho Antigo2.png" id="18_sgbyf"]
+[ext_resource type="Texture2D" uid="uid://b4gre5d5jx1vf" path="res://Objetos - Cena 0/Pergaminho/Pergaminho 1.png" id="20_rvr8o"]
+[ext_resource type="Texture2D" uid="uid://dfx8udf5guyjw" path="res://Objetos - Cena 0/Pergaminho/Pergaminho 2.png" id="21_boujt"]
+[ext_resource type="Texture2D" uid="uid://bnimqksk4f82u" path="res://Objetos - Cena 0/Pergaminho/Pergaminho 3.png" id="22_2xc4o"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jw4qw"]
+shader = ExtResource("3_1do4p")
+shader_parameter/lines = 10.0
+shader_parameter/threshold = 0.0
+shader_parameter/line_color_a = Color(0.984314, 0.635294, 0.768627, 1)
+shader_parameter/line_color_b = Color(0.188235, 0.188235, 0.188235, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ej1o"]
+atlas = ExtResource("6_3owah")
+region = Rect2(64, 0, 31, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqdp0"]
+atlas = ExtResource("6_3owah")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7aco"]
+atlas = ExtResource("6_3owah")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ash2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ej1o")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("7_jw14g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8m8pf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqdp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7aco")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_olj77"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("9_suvh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1oydu")
+}],
+"loop": true,
+"name": &"antigo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_dpq8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_blut5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.2
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_dpq8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wc0tf")
+}],
+"loop": true,
+"name": &"running",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hiqo1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_jpbbe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jpbbe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jpbbe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jpbbe")
+}],
+"loop": false,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_6fng3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nhr56")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("17_upcq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_sgbyf")
+}],
+"loop": true,
+"name": &"antigo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_6fng3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6fng3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6fng3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6fng3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_v34kd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_q0mtv"]
+resource_name = "camera 1"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(640, 361), Vector2(1928, 361)]
+}
+
+[sub_resource type="Animation" id="Animation_s6faj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(640, 361)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cguf6"]
+_data = {
+"RESET": SubResource("Animation_s6faj"),
+"camera 1": SubResource("Animation_q0mtv")
+}
+
+[node name="history0" type="Node2D"]
+script = ExtResource("1_y35qq")
+next_level = "res://cenas/Fase-01.tscn"
+
+[node name="transition" type="CanvasLayer" parent="."]
+script = ExtResource("2_ili2j")
+
+[node name="ColorRect" type="ColorRect" parent="transition"]
+material = SubResource("ShaderMaterial_jw4qw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_gwm2u")
+metadata/_edit_use_anchors_ = true
+
+[node name="history-node" parent="." instance=ExtResource("5_1553v")]
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "
+Lombinho constroi sua casinha e se esconde da chuva. 
+Quando ele menos espera, em meio uma tempestade, o Lobo Agiota Marco Antônio aparece: 
+-Lombinho, Lombinho, você aproveitou meu dinheiro, agora chegou a hora de pagar - disse Marco Antônio ansiosamente 
+-Eu não tenho dinheiro Marco, minha plantação era da erva errada e eu descobri tarde demais - disse Lombinho quase chorando 
+-POIS BEM, VOU SER OBRIGADO A TE MOSTRAR O QUE ACONTECE COM QUEM NÃO ME PAGA - grita Marco Antônio enquanto destroe a casinha de palha de lombinho. 
+Assim Lombinho começa a correr em direção a casa de seu irmão Panceta..."
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 2144.0
+offset_bottom = 776.0
+color = Color(0, 0, 0, 1)
+
+[node name="Toucinho" type="AnimatedSprite2D" parent="."]
+position = Vector2(780.707, 337.414)
+scale = Vector2(0.824, 0.824)
+sprite_frames = SubResource("SpriteFrames_8ash2")
+autoplay = "default"
+frame_progress = 0.60653
+
+[node name="Panceta" type="AnimatedSprite2D" parent="."]
+position = Vector2(556.707, 337.414)
+scale = Vector2(0.824, 0.824)
+sprite_frames = SubResource("SpriteFrames_olj77")
+animation = &"antigo"
+autoplay = "antigo"
+frame_progress = 0.312627
+
+[node name="Lombinho" type="AnimatedSprite2D" parent="."]
+position = Vector2(316.707, 337.414)
+scale = Vector2(0.824, 0.824)
+sprite_frames = SubResource("SpriteFrames_hiqo1")
+animation = &"antigo"
+autoplay = "antigo"
+frame_progress = 0.818983
+
+[node name="Pergaminhos" type="Node2D" parent="."]
+position = Vector2(1256, 0)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pergaminho1" type="Sprite2D" parent="Pergaminhos"]
+position = Vector2(408, 364)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("20_rvr8o")
+
+[node name="Pergaminho2" type="Sprite2D" parent="Pergaminhos"]
+position = Vector2(1048, 364)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("21_boujt")
+
+[node name="Pergaminho3" type="Sprite2D" parent="Pergaminhos"]
+position = Vector2(1816, 376)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("22_2xc4o")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cguf6")
+}
+autoplay = "camera 1"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 361)

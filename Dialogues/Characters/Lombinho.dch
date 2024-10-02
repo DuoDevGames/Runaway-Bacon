@@ -20,8 +20,8 @@
 "image": "\"res://Dialogues/Portraits/Lombinho/LombinhoAssustado.png\""
 },
 "mirror": false,
-"offset": Vector2(-90, 0),
-"scale": 0.5,
+"offset": Vector2(0, 45),
+"scale": 1.0,
 "scene": ""
 },
 "Chorando": {
@@ -29,17 +29,26 @@
 "image": "\"res://Dialogues/Portraits/Lombinho/LombinhoChorando.png\""
 },
 "mirror": false,
-"offset": Vector2(-90, 0),
-"scale": 0.5,
+"offset": Vector2(0, 45),
+"scale": 1.0,
+"scene": ""
+},
+"Com Sobrancelha": {
+"export_overrides": {
+"image": "\"res://Dialogues/Portraits/Lombinho/LombinhoSobrancelha.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 45),
+"scale": 1.0,
 "scene": ""
 },
 "Padrão": {
 "export_overrides": {
-"image": "\"res://Dialogues/Portraits/LombinhoPARADO.png\""
+"image": "\"res://Dialogues/Portraits/Lombinho/LombinhoNormal.png\""
 },
 "mirror": false,
-"offset": Vector2(-54, 0),
-"scale": 0.5,
+"offset": Vector2(0, 45),
+"scale": 1.0,
 "scene": ""
 }
 },

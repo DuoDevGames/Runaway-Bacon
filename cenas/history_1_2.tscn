@@ -1,10 +1,34 @@
-[gd_scene load_steps=7 format=3 uid="uid://dre244edhhlug"]
+[gd_scene load_steps=42 format=4 uid="uid://dre244edhhlug"]
 
 [ext_resource type="Script" path="res://Scripts/historyn.gd" id="1_62khk"]
 [ext_resource type="Script" path="res://Scripts/transition.gd" id="1_asyg1"]
+[ext_resource type="Texture2D" uid="uid://r27fl4av5g8y" path="res://Background/Céu Chuvoso.png" id="2_44ohq"]
 [ext_resource type="Shader" path="res://Shaders/transition.gdshader" id="2_wq5v4"]
 [ext_resource type="Script" path="res://Scripts/ColorRect1.gd" id="3_aykap"]
 [ext_resource type="PackedScene" uid="uid://kkc843kytbij" path="res://cenas/history_node.tscn" id="4_1aajk"]
+[ext_resource type="Texture2D" uid="uid://cdu5uoy4hteew" path="res://Objetos - Mundo 1/Cerca.png" id="8_2tdoo"]
+[ext_resource type="Texture2D" uid="uid://ceebufbahgf22" path="res://Background/Céu Meio Chuvoso.png" id="8_bfrvd"]
+[ext_resource type="PackedScene" uid="uid://bdbvw66kqee3m" path="res://Objetos - Mundo 1/sol.tscn" id="9_8t50p"]
+[ext_resource type="PackedScene" uid="uid://c2ol35j6yp6bx" path="res://Blocks/agua-topo.tscn" id="9_pvyar"]
+[ext_resource type="PackedScene" uid="uid://ddfgd8cvpb7qj" path="res://Objetos - Mundo 1/Background/Montanha 1.tscn" id="10_h4i45"]
+[ext_resource type="PackedScene" uid="uid://cir6vc8eknq02" path="res://Objetos - Mundo 1/Gramas/Grama 1.tscn" id="11_c2j55"]
+[ext_resource type="Texture2D" uid="uid://dbvbjpxk2y6ud" path="res://Background/Montanhas2.png" id="11_dugc4"]
+[ext_resource type="Texture2D" uid="uid://dl0xv4mvnseyb" path="res://Objetos - Mundo 1/Vaca Pulável/VacaPulavel3.png" id="12_8gtj0"]
+[ext_resource type="Shader" path="res://Shaders/movimento_nuvens.gdshader" id="12_qmrn8"]
+[ext_resource type="Texture2D" uid="uid://i26w3l1g8esx" path="res://Objetos - Mundo 1/Casinha de Palha.png" id="12_rx5vd"]
+[ext_resource type="Texture2D" uid="uid://bd5y6yyb1sjfp" path="res://Background/Nuvens2.png" id="13_r1u2x"]
+[ext_resource type="PackedScene" uid="uid://c5ao0y3h5abue" path="res://Objetos - Mundo 1/Gramas/Flores/Flor 1.tscn" id="13_sd4vn"]
+[ext_resource type="Texture2D" uid="uid://cx3fkstetx6r4" path="res://Background/Montanhas1.png" id="14_0s2wi"]
+[ext_resource type="Texture2D" uid="uid://ougyxiptac3h" path="res://Objetos - Mundo 1/TileMap.png" id="14_twlmn"]
+[ext_resource type="Texture2D" uid="uid://d4khxur25i7ck" path="res://Objetos - Mundo 1/TM_Madeiras_Lajes.png" id="15_7dytv"]
+[ext_resource type="PackedScene" uid="uid://d2i68ucnoyogs" path="res://Objetos - Mundo 1/Background/Montanha 2.tscn" id="15_heq8i"]
+[ext_resource type="PackedScene" uid="uid://ciw4l8lpon3i2" path="res://Objetos - Mundo 1/Background/Montanha 3.tscn" id="16_u6rfg"]
+[ext_resource type="Texture2D" uid="uid://d0l8mtptb4out" path="res://Background/Nuvens1.png" id="18_kkyax"]
+[ext_resource type="Texture2D" uid="uid://duut15v5cj3pw" path="res://Sprites - MA/Correndo/Marco Antonio Correndo1.png" id="25_lefva"]
+[ext_resource type="Texture2D" uid="uid://biaan6fasyfo8" path="res://Sprites - MA/Correndo/Marco Antonio Correndo2.png" id="26_ksrtg"]
+[ext_resource type="Texture2D" uid="uid://bsbwh3j7ljfy5" path="res://Sprites - MA/Correndo/Marco Antonio Correndo3.png" id="27_r1maq"]
+[ext_resource type="Texture2D" uid="uid://dmlwkumot81e4" path="res://Sprites - MA/Correndo/Marco Antonio Correndo4.png" id="28_f2sm1"]
+[ext_resource type="Texture2D" uid="uid://d0hk180bq44i6" path="res://Sprites - MA/Marco Aurelio Parado.png" id="29_vqkob"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jw4qw"]
 shader = ExtResource("2_wq5v4")
@@ -12,6 +36,562 @@ shader_parameter/lines = 10.0
 shader_parameter/threshold = 0.0
 shader_parameter/line_color_a = Color(0.984314, 0.635294, 0.768627, 1)
 shader_parameter/line_color_b = Color(0.188235, 0.188235, 0.188235, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nifui"]
+shader = ExtResource("12_qmrn8")
+shader_parameter/velocidade = 0.05
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ps7vv"]
+size = Vector2(40, 496)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_hy6gx"]
+tile_data = PackedInt32Array(0, 65538, 1610612736, 1, 2, 1610612736, 2, 2, 1610612737)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43afi"]
+resource_name = "Terreno"
+texture = ExtResource("14_twlmn")
+texture_region_size = Vector2i(128, 128)
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -55.875, -64, -3, 64, -1, 64, -55.875)
+1:0/0/terrains_peering_bit/bottom_right_corner = 0
+1:0/0/terrains_peering_bit/bottom_left_corner = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -55.625, 47.1994, -55.6847, 46, 64, -64, 3)
+2:0/0/terrains_peering_bit/bottom_left_corner = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 0
+1:1/0/terrains_peering_bit/top_left_corner = 0
+1:1/0/terrains_peering_bit/top_right_corner = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/terrains_peering_bit/bottom_left_corner = 0
+2:1/0/terrains_peering_bit/top_left_corner = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+21:1/0 = 0
+22:1/0 = 0
+1:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+21:2/0 = 0
+22:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+21:3/0 = 0
+22:3/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+20:7/0 = 0
+21:7/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+21:8/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+21:9/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+16:10/0 = 0
+17:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+16:11/0 = 0
+17:11/0 = 0
+18:11/0 = 0
+19:11/0 = 0
+20:11/0 = 0
+21:11/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+16:12/0 = 0
+17:12/0 = 0
+18:12/0 = 0
+19:12/0 = 0
+20:12/0 = 0
+21:12/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+12:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+16:13/0 = 0
+17:13/0 = 0
+18:13/0 = 0
+19:13/0 = 0
+20:13/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+12:14/0 = 0
+13:14/0 = 0
+14:14/0 = 0
+15:14/0 = 0
+16:14/0 = 0
+17:14/0 = 0
+18:14/0 = 0
+19:14/0 = 0
+20:14/0 = 0
+21:14/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+6:15/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+11:15/0 = 0
+12:15/0 = 0
+13:15/0 = 0
+14:15/0 = 0
+15:15/0 = 0
+16:15/0 = 0
+17:15/0 = 0
+18:15/0 = 0
+19:15/0 = 0
+20:15/0 = 0
+21:15/0 = 0
+8:16/0 = 0
+9:16/0 = 0
+10:16/0 = 0
+11:16/0 = 0
+12:16/0 = 0
+13:16/0 = 0
+14:16/0 = 0
+15:16/0 = 0
+8:17/0 = 0
+9:17/0 = 0
+10:17/0 = 0
+11:17/0 = 0
+12:17/0 = 0
+13:17/0 = 0
+14:17/0 = 0
+15:17/0 = 0
+8:18/0 = 0
+9:18/0 = 0
+10:18/0 = 0
+11:18/0 = 0
+12:18/0 = 0
+13:18/0 = 0
+14:18/0 = 0
+15:18/0 = 0
+8:19/0 = 0
+9:19/0 = 0
+10:19/0 = 0
+11:19/0 = 0
+12:19/0 = 0
+13:19/0 = 0
+14:19/0 = 0
+15:19/0 = 0
+8:20/0 = 0
+9:20/0 = 0
+10:20/0 = 0
+11:20/0 = 0
+12:20/0 = 0
+13:20/0 = 0
+14:20/0 = 0
+15:20/0 = 0
+8:21/0 = 0
+9:21/0 = 0
+10:21/0 = 0
+11:21/0 = 0
+12:21/0 = 0
+13:21/0 = 0
+14:21/0 = 0
+15:21/0 = 0
+8:22/0 = 0
+9:22/0 = 0
+10:22/0 = 0
+11:22/0 = 0
+12:22/0 = 0
+13:22/0 = 0
+14:22/0 = 0
+15:22/0 = 0
+8:23/0 = 0
+9:23/0 = 0
+10:23/0 = 0
+11:23/0 = 0
+12:23/0 = 0
+13:23/0 = 0
+14:23/0 = 0
+15:23/0 = 0
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-42, -56, -23, 64, 64, 7, 64, -55.6847)
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/terrains_peering_bit/bottom_right_corner = 0
+0:1/0/terrains_peering_bit/top_right_corner = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5rhe0"]
+resource_name = "Terreno_sem_colisao"
+texture = ExtResource("14_twlmn")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c1l6p"]
+texture = ExtResource("15_7dytv")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, 18, -64, 64, 64, 64, 64, 18)
+
+[sub_resource type="TileSet" id="TileSet_3gw5x"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 5
+terrain_set_0/mode = 1
+terrain_set_0/terrain_0/name = "Piso"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+terrain_set_0/terrain_1/name = "Obstaculos"
+terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
+sources/0 = SubResource("TileSetAtlasSource_43afi")
+sources/1 = SubResource("TileSetAtlasSource_5rhe0")
+sources/2 = SubResource("TileSetAtlasSource_c1l6p")
+pattern_0 = SubResource("TileMapPattern_hy6gx")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0efuj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_lefva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ksrtg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_r1maq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_f2sm1")
+}],
+"loop": true,
+"name": &"correndo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_vqkob")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_qld0d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marco Aurélio:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(136, 520)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Marco Aurélio:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+
+[sub_resource type="Animation" id="Animation_iyikh"]
+resource_name = "corrida_marco"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marco Aurélio:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.66667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(136, 520), Vector2(405, 520)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Marco Aurélio:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 1.66667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"correndo", &"default"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xhy11"]
+_data = {
+"RESET": SubResource("Animation_qld0d"),
+"corrida_marco": SubResource("Animation_iyikh")
+}
 
 [node name="history1_2" type="Node2D"]
 script = ExtResource("1_62khk")
@@ -34,8 +614,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
 visible = false
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 1275.0
+offset_bottom = 179.0
 text = "
 Lombinho constroi sua casinha e se esconde da chuva. 
 Quando ele menos espera, em meio uma tempestade, o Lobo Agiota Marco Antônio aparece: 
@@ -43,3 +623,226 @@ Quando ele menos espera, em meio uma tempestade, o Lobo Agiota Marco Antônio ap
 -Eu não tenho dinheiro Marco, minha plantação era da erva errada e eu descobri tarde demais - disse Lombinho quase chorando 
 -POIS BEM, VOU SER OBRIGADO A TE MOSTRAR O QUE ACONTECE COM QUEM NÃO ME PAGA - grita Marco Antônio enquanto destroe a casinha de palha de lombinho. 
 Assim Lombinho começa a correr em direção a casa de seu irmão Panceta..."
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Céu" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Céu"]
+position = Vector2(0, -648)
+scale = Vector2(1, 2.92308)
+texture = ExtResource("2_44ohq")
+centered = false
+
+[node name="Céu Chuvoso" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
+position = Vector2(10295, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Céu Chuvoso"]
+position = Vector2(-15, -648)
+scale = Vector2(2.39266, 2.92308)
+texture = ExtResource("2_44ohq")
+centered = false
+
+[node name="Céu Meio Chuvoso" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Céu Meio Chuvoso"]
+position = Vector2(9561, -648)
+scale = Vector2(1, 2.92308)
+texture = ExtResource("8_bfrvd")
+centered = false
+
+[node name="Sol" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+motion_scale = Vector2(0, 0)
+
+[node name="Sol" parent="ParallaxBackground/Sol" instance=ExtResource("9_8t50p")]
+position = Vector2(482, 108)
+
+[node name="Montanhas 1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Montanha1" parent="ParallaxBackground/Montanhas 1" instance=ExtResource("10_h4i45")]
+position = Vector2(64, 592)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Montanhas 1"]
+visible = false
+texture = ExtResource("11_dugc4")
+centered = false
+
+[node name="Núvens 1" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(8, 224)
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="nuvens_fundo" type="Sprite2D" parent="ParallaxBackground/Núvens 1"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_nifui")
+texture = ExtResource("13_r1u2x")
+centered = false
+
+[node name="Montanhas 4" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(1, 0)
+motion_scale = Vector2(0.5, 1)
+motion_offset = Vector2(1, 0)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Montanhas 4"]
+visible = false
+texture_filter = 1
+texture = ExtResource("14_0s2wi")
+centered = false
+
+[node name="Montanha2" parent="ParallaxBackground/Montanhas 4" instance=ExtResource("15_heq8i")]
+position = Vector2(-241, 536)
+rotation = 0.122173
+
+[node name="Montanhas 3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(1, 0)
+motion_scale = Vector2(0.6, 1)
+motion_offset = Vector2(1, 0)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Montanhas 3"]
+visible = false
+texture_filter = 1
+texture = ExtResource("14_0s2wi")
+centered = false
+
+[node name="Montanha2" parent="ParallaxBackground/Montanhas 3" instance=ExtResource("15_heq8i")]
+visible = false
+position = Vector2(-57, 432)
+rotation = 0.122173
+
+[node name="Montanha3" parent="ParallaxBackground/Montanhas 3" instance=ExtResource("16_u6rfg")]
+position = Vector2(647, 456)
+
+[node name="Montanhas 2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(1, 0)
+motion_scale = Vector2(0.7, 1)
+motion_offset = Vector2(1, 0)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Montanhas 2"]
+visible = false
+texture_filter = 1
+texture = ExtResource("14_0s2wi")
+centered = false
+
+[node name="Montanha2" parent="ParallaxBackground/Montanhas 2" instance=ExtResource("15_heq8i")]
+position = Vector2(247, 616)
+
+[node name="01" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(736, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/01"]
+texture = ExtResource("18_kkyax")
+centered = false
+
+[node name="CanvasModulate" type="CanvasModulate" parent="ParallaxBackground"]
+color = Color(0.341176, 0.407843, 0.6, 1)
+
+[node name="Cerca" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(479, 592)
+texture = ExtResource("8_2tdoo")
+
+[node name="Cerca2" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(514, 592)
+texture = ExtResource("8_2tdoo")
+
+[node name="Cerca3" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(800, 592)
+texture = ExtResource("8_2tdoo")
+
+[node name="Cerca4" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(835, 592)
+texture = ExtResource("8_2tdoo")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(896, 443)
+shape = SubResource("RectangleShape2D_ps7vv")
+
+[node name="agua-topo5" parent="." instance=ExtResource("9_pvyar")]
+z_index = -1
+position = Vector2(1886, 1004)
+
+[node name="agua-topo6" parent="." instance=ExtResource("9_pvyar")]
+z_index = -1
+position = Vector2(1918, 1004)
+
+[node name="agua-topo7" parent="." instance=ExtResource("9_pvyar")]
+z_index = -1
+position = Vector2(1950, 1004)
+
+[node name="agua-topo8" parent="." instance=ExtResource("9_pvyar")]
+z_index = -1
+position = Vector2(2014, 1004)
+
+[node name="agua-topo9" parent="." instance=ExtResource("9_pvyar")]
+z_index = -1
+position = Vector2(1982, 1004)
+
+[node name="agua-topo10" parent="." instance=ExtResource("9_pvyar")]
+z_index = -1
+position = Vector2(2046, 1004)
+
+[node name="agua-topo11" parent="." instance=ExtResource("9_pvyar")]
+z_index = -1
+position = Vector2(2136, 1004)
+
+[node name="Grama1" parent="." instance=ExtResource("11_c2j55")]
+position = Vector2(304, 594)
+
+[node name="Grama2" parent="." instance=ExtResource("11_c2j55")]
+position = Vector2(336, 593)
+
+[node name="VacaPulavel3" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(776, 595)
+texture = ExtResource("12_8gtj0")
+
+[node name="Flor4" parent="." instance=ExtResource("13_sd4vn")]
+position = Vector2(864, 593)
+
+[node name="CasinhaDePalha" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(664, 460)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("12_rx5vd")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.341176, 0.407843, 0.6, 1)
+
+[node name="Terrain-l3" type="TileMapLayer" parent="."]
+z_index = -1
+position = Vector2(857, 1376)
+scale = Vector2(0.25, 0.25)
+tile_map_data = PackedByteArray("AAAdAdT/AgAAAAEAAGAcAdT/AgAAAAAAAGAbAdT/AgAAAAAAAGAaAdT/AgAAAAAAAGAZAdT/AgAAAAAAAGAWAdT/AgABAAAAAGAXAdT/AgAAAAAAAGAYAdT/AgAAAAAAAGAtAeD/AgABAAEAAAAwAeL/AgABAAEAAAAuAeT/AgABAAEAAAAjAdv/AgAAAAEAAFAkAdv/AgABAAAAAFAmAd//AgAAAAEAAAAmAd7/AgAAAAEAAAAmAd3/AgABAAAAAAAqAeD/AgABAAEAAAAzAeb/AgABAAEAADA0Aeb/AgABAAEAADA1AeX/AgABAAEAAAA2AeX/AgABAAEAAAA3AeX/AgABAAEAAAA4AeX/AgABAAEAAAA5Aeb/AgABAAEAADA6Aeb/AgABAAEAADDq/+j/AAAAAAAAAADr/+j/AAABAAAAAADs/+j/AAABAAAAAADt/+j/AAABAAAAAADu/+j/AAABAAAAAADv/+j/AAABAAAAAADw/+j/AAABAAAAAADx/+j/AAABAAAAAADy/+j/AAABAAAAAADz/+j/AAABAAAAAAD0/+j/AAABAAAAAAD1/+j/AAABAAAAAAD2/+j/AAABAAAAAAD3/+j/AAABAAAAAAD4/+j/AAABAAAAAAD5/+j/AAABAAAAAAD6/+j/AAABAAAAAAD7/+j/AAABAAAAAAD8/+j/AAABAAAAAAD9/+j/AAABAAAAAAD+/+j/AAABAAAAAAD//+j/AAABAAAAAAAAAOj/AAABAAAAAAABAOj/AAABAAAAAAACAOj/AAABAAAAAAADAOj/AAABAAAAAADr/+n/AAABAAEAAADs/+n/AAABAAEAAADt/+n/AAABAAEAAADt/+r/AAABAAEAAADu/+n/AAABAAEAAADv/+n/AAABAAEAAADv/+r/AAABAAEAAADw/+r/AAABAAEAAADx/+r/AAABAAEAAADy/+r/AAABAAEAAADz/+r/AAABAAEAAAD0/+r/AAABAAEAAAD1/+r/AAABAAEAAAD2/+v/AAABAAEAAAD3/+v/AAABAAEAAAD4/+v/AAABAAEAAAD5/+v/AAABAAEAAAD6/+v/AAABAAEAAAD7/+v/AAABAAEAAAD7/+r/AAABAAEAAAD8/+r/AAABAAEAAAD9/+r/AAABAAEAAAD+/+r/AAABAAEAAAD//+r/AAABAAEAAAD//+n/AAABAAEAAAD+/+n/AAABAAEAAAD9/+n/AAABAAEAAAD8/+n/AAABAAEAAAD7/+n/AAABAAEAAAD6/+n/AAABAAEAAAD5/+n/AAABAAEAAAD4/+n/AAABAAEAAAD4/+r/AAABAAEAAAD3/+r/AAABAAEAAAD2/+r/AAABAAEAAADr/+r/AAABAAIAAADr/+v/AAABAAIAAADr/+z/AAABAAIAAADs/+z/AAABAAIAAADt/+z/AAABAAIAAADu/+z/AAABAAIAAADv/+z/AAABAAIAAADw/+z/AAABAAIAAADx/+v/AAABAAIAAADy/+v/AAABAAIAAADz/+v/AAABAAIAAADz/+z/AAABAAIAAAD0/+z/AAABAAIAAAD1/+z/AAABAAIAAADw/+n/AAABAAIAAADx/+n/AAABAAIAAADy/+n/AAABAAIAAADz/+n/AAABAAIAAAD0/+n/AAABAAIAAAD1/+n/AAABAAIAAAD2/+n/AAABAAIAAAD3/+n/AAABAAIAAADs/+r/AAABAAIAAADs/+v/AAABAAIAAADt/+v/AAABAAIAAADu/+v/AAABAAIAAADv/+v/AAABAAIAAADu/+r/AAABAAIAAADw/+v/AAABAAIAAADx/+z/AAABAAIAAADy/+z/AAABAAIAAAD0/+v/AAABAAIAAAD1/+v/AAABAAIAAAD2/+z/AAABAAIAAAD3/+z/AAABAAIAAAD4/+z/AAABAAIAAAD5/+z/AAABAAIAAAD6/+z/AAABAAIAAAD7/+z/AAABAAIAAAD8/+z/AAABAAIAAAD9/+z/AAABAAIAAAD5/+r/AAABAAIAAAD6/+r/AAABAAIAAAD8/+v/AAABAAIAAAD9/+v/AAABAAIAAAD+/+v/AAABAAIAAAD//+v/AAABAAIAAAAAAOv/AAABAAIAAAADAOn/AAABAAIAAAACAOn/AAABAAIAAAABAOn/AAABAAIAAAAAAOn/AAABAAIAAAAAAOr/AAABAAIAAAABAOr/AAABAAIAAAACAOr/AAABAAIAAAADAOr/AAABAAIAAAADAOv/AAABAAIAAAACAOv/AAABAAIAAAABAOv/AAABAAIAAAD+/+z/AAABAAIAAAD//+z/AAABAAIAAAAAAOz/AAABAAIAAAABAOz/AAABAAIAAAACAOz/AAABAAIAAAADAOz/AAABAAIAAADq/+n/AAAAAAEAAADq/+r/AAAAAAEAAADq/+v/AAAAAAEAAADq/+z/AAAAAAEAAAA=")
+tile_set = SubResource("TileSet_3gw5x")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(552, 584)
+zoom = Vector2(2, 2)
+
+[node name="Marco Aurélio" type="AnimatedSprite2D" parent="."]
+position = Vector2(136, 520)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_0efuj")
+autoplay = "correndo"
+frame_progress = 0.133659
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xhy11")
+}

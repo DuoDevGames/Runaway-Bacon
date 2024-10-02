@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cir6vc8eknq02"]
+
+[ext_resource type="Texture2D" uid="uid://67nmbuge1pfj" path="res://Objetos - Mundo 1/Gramas/Grama1/Grama1.png" id="1_8ivph"]
+[ext_resource type="Texture2D" uid="uid://cbn182x8a487a" path="res://Objetos - Mundo 1/Gramas/Grama1/Grama2.png" id="2_uulc2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ibppf"]
+animations = [{
+"frames": [{
+"duration": 1.7,
+"texture": ExtResource("1_8ivph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_uulc2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Grama1" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = -1
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_ibppf")
+autoplay = "default"
+frame_progress = 0.757708

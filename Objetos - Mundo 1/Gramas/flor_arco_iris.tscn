@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://b1v45v40xa5i7"]
+
+[ext_resource type="Script" path="res://Objetos - Mundo 1/Gramas/flor_arco_iris.gd" id="1_cpisj"]
+[ext_resource type="Texture2D" uid="uid://dxo6axl5e4m46" path="res://Objetos - Mundo 1/Gramas/Flor Arco íris/Flor Arco Iris1.png" id="1_tfl06"]
+[ext_resource type="Texture2D" uid="uid://ciy60gj4tlrsd" path="res://Objetos - Mundo 1/Gramas/Flor Arco íris/Flor Arco Iris2.png" id="2_g6f4e"]
+[ext_resource type="Texture2D" uid="uid://bkn51bxhl8hp7" path="res://Objetos - Mundo 1/Gramas/Flor Arco íris/Flor Arco Iris3.png" id="3_40joy"]
+[ext_resource type="Texture2D" uid="uid://der3i4wr3ej8m" path="res://Objetos - Mundo 1/Gramas/Flor Arco íris/Flor Arco Iris4.png" id="4_ff65y"]
+[ext_resource type="Texture2D" uid="uid://dcxmq5hvvbqk2" path="res://Objetos - Mundo 1/Gramas/Flor Arco íris/Flor Arco Iris5.png" id="5_f6evf"]
+[ext_resource type="Texture2D" uid="uid://broj68wcpfp5p" path="res://Objetos - Mundo 1/Gramas/Flor Arco íris/Flor Arco Iris6.png" id="6_kr4y4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p3jgw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tfl06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g6f4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_40joy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ff65y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_f6evf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kr4y4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxsqq"]
+size = Vector2(48, 48)
+
+[node name="FlorArcoIris" type="Area2D"]
+script = ExtResource("1_cpisj")
+
+[node name="Sprites" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_p3jgw")
+autoplay = "default"
+frame_progress = 0.21791
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_gxsqq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

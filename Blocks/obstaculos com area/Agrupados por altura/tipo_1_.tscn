@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://0nh7safyi0w4"]
+
+[ext_resource type="PackedScene" uid="uid://cnmcp8137tn8k" path="res://Blocks/obstaculos com area/cima_obstaculo_com_area.tscn" id="1_8k6bl"]
+
+[node name="Tipo1_" type="Node2D"]
+
+[node name="ObstaculoComArea" parent="." instance=ExtResource("1_8k6bl")]

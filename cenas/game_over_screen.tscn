@@ -2,9 +2,9 @@
 
 [ext_resource type="FontFile" uid="uid://d0xjs1baebxx" path="res://HUD/Fonte/pixChicago.ttf" id="1_swe58"]
 [ext_resource type="Script" path="res://Scripts/game_over_screen.gd" id="1_vareh"]
-[ext_resource type="Texture2D" uid="uid://bcdlgflfdeca7" path="res://HUD/Game Over Marco.png" id="2_p5ixk"]
 [ext_resource type="Texture2D" uid="uid://xmhrlbai5358" path="res://UI/Button.png" id="3_w4di5"]
 [ext_resource type="Theme" uid="uid://bgu3ycq7govpl" path="res://pause_menu_theme.tres" id="4_fo1ax"]
+[ext_resource type="Texture2D" uid="uid://bp27tbofgm0r" path="res://UI/Game-Over.png" id="5_sxbm6"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ee7h6"]
 
@@ -30,15 +30,39 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.8)
 
+[node name="Button2" type="Sprite2D" parent="."]
+position = Vector2(661, 615)
+scale = Vector2(0.691037, 0.614679)
+texture = ExtResource("3_w4di5")
+
+[node name="RestartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -121.0
+offset_top = -123.75
+offset_right = 157.0
+offset_bottom = -85.75
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("4_fo1ax")
+theme_override_fonts/font = ExtResource("1_swe58")
+theme_override_font_sizes/font_size = 20
+text = "Tentar Novamente
+"
+
 [node name="GameOverMarco" type="Sprite2D" parent="."]
-position = Vector2(638, 286)
-texture = ExtResource("2_p5ixk")
+position = Vector2(638, 342)
+texture = ExtResource("5_sxbm6")
 
 [node name="Label" type="Label" parent="GameOverMarco"]
-offset_left = -84.0
-offset_top = -44.0
-offset_right = 363.0
-offset_bottom = 116.0
+offset_left = -80.0
+offset_top = -86.0
+offset_right = 367.0
+offset_bottom = 74.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_swe58")
 theme_override_font_sizes/font_size = 19
@@ -47,29 +71,6 @@ abrir um restaurante.
 	Acho que tenho um talento para
 preparar carne de porco!"
 horizontal_alignment = 1
-
-[node name="Button2" type="Sprite2D" parent="GameOverMarco"]
-position = Vector2(16.617, 329)
-scale = Vector2(0.623996, 0.555046)
-texture = ExtResource("3_w4di5")
-
-[node name="RestartButton" type="Button" parent="GameOverMarco"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -528.0
-offset_top = -222.0
-offset_right = -242.0
-offset_bottom = -176.0
-grow_horizontal = 2
-grow_vertical = 0
-theme = ExtResource("4_fo1ax")
-theme_override_fonts/font = ExtResource("1_swe58")
-theme_override_font_sizes/font_size = 20
-text = "Tentar Novamente
-"
 
 [node name="Panel" type="Panel" parent="."]
 visible = false
@@ -102,4 +103,4 @@ theme_override_font_sizes/font_size = 75
 text = "Game over
 "
 
-[connection signal="pressed" from="GameOverMarco/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]

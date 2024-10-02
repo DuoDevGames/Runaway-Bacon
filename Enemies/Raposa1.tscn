@@ -109,7 +109,7 @@ shape = SubResource("RectangleShape2D_fjh01")
 [node name="Obstaculo" type="RayCast2D" parent="."]
 position = Vector2(0, -16)
 target_position = Vector2(-31, 0)
-collision_mask = 68
+collision_mask = 70
 
 [node name="Chao" type="RayCast2D" parent="."]
 position = Vector2(-14, -3)

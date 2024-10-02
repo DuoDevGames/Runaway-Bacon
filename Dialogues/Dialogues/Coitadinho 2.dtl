@@ -1,0 +1,12 @@
+join Coitadinho 1
+Coitadinho: Você conseguiu achar minha meia?
+Coitadinho: Muito obrigado!
+Coitadinho (Dormindo): Agora posso dormir tranquilo...
+leave Coitadinho
+join Lombinho 1
+Lombinho: ...
+leave Lombinho
+join Coitadinho (Dormindo) 1
+Coitadinho (Dormindo): Ah é. Você quer as palhas.
+Coitadinho (Dormindo): Pode pegar ali atrás.
+leave 

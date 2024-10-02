@@ -1,14 +1,41 @@
-join Narrador 1
-Lombinho constroi sua casinha e se esconde da chuva.
-Quando ele menos espera, em meio uma tempestade, o Lobo Agiota Marco Antônio aparece!
-leave Narrador
+join Maritaca 1 [animation="Slide In Up" length="2"]
+Maritaca: Lombinho constrói sua casinha\
+Fugindo da chuva sorrateira
+Maritaca: Mal se acalma e relaxa\
+Eis que o Lobo Agiota surge à beira!
+leave Maritaca
 join "Marco Aurélio" 1
 "Marco Aurélio": Lombinho, Lombinho, você aproveitou meu dinheiro, agora chegou a hora de pagar!
 leave "Marco Aurélio"
 join Lombinho (Chorando) 1
-Lombinho: Eu não tenho dinheiro Marco, minha plantação era da erva errada e eu descobri tarde demais!
+Lombinho (Assustado): Eu não tenho dinheiro Marco, minha plantação era da erva errada e eu descobri tarde demais!
 leave Lombinho
 join "Marco Aurélio" 1
-"Marco Aurélio": Pois bem, Vou ser obrigado a te mostrar o que acontece com quem não me paga!!!
+"Marco Aurélio": Isso não é problema meu. Vou ser obrigado a te mostrar o que acontece com quem não me paga!!!
 leave "Marco Aurélio"
-[end_timeline]
+join Lombinho (Assustado) 1
+Lombinho (Assustado): O que eu faço agora!?
+- Trancar a porta [if {História Fase 1.escolha1} == 0]
+	set {História Fase 1.escolha1} = 1
+- Fugir para a floresta [if {História Fase 1.escolha1} == 0]
+	set {História Fase 1.escolha1} = 2
+leave --All--
+if {História Fase 1.escolha1} == 1:
+	join "Marco Aurélio" 1
+	"Marco Aurélio" (Rindo): Shahahaha!\
+Acha mesmo que essa porta de palha pode me parar?
+	leave --All--
+	join Maritaca 1
+	Maritaca: Marco Aruélio, com força, derruba a casa do Lombinho\
+Agora ele corre na mata, fugindo do destino de baconzinho
+	leave --All--
+if {História Fase 1.escolha1} == 2:
+	join "Marco Aurélio" (Padrão) 1
+	Maritaca: Lombinho corre pra floresta, procurando o irmão com aflição\
+Mas o Lobo Agiota não vai deixar, é um mestre da perseguição
+	leave --All--
+	join "Marco Aurélio" 1
+	"Marco Aurélio": Shahahaha!\
+Acha mesmo que pode fugir de mim? Vamos ver quem corre mais!
+	leave --All-- [animation="Slide Out Down" length="3"]
+	[end_timeline]

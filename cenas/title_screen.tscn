@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ddch1tmdhlspw"]
+[gd_scene load_steps=15 format=3 uid="uid://ddch1tmdhlspw"]
 
 [ext_resource type="Script" path="res://Scripts/TitleScreen.gd" id="1_wmk3u"]
 [ext_resource type="Texture2D" uid="uid://d157kkgr7wkum" path="res://UI/RB-Logo.png" id="2_28ida"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cx3fkstetx6r4" path="res://Background/Montanhas1.png" id="6_xm45b"]
 [ext_resource type="Texture2D" uid="uid://d0l8mtptb4out" path="res://Background/Nuvens1.png" id="7_b4u51"]
 [ext_resource type="Texture2D" uid="uid://e06riggoykb3" path="res://UI/Sunset.png" id="8_qjcen"]
+[ext_resource type="Texture2D" uid="uid://brifu3xdo7dwb" path="res://UI/Logo_titlescreen.png" id="9_185on"]
 [ext_resource type="Texture2D" uid="uid://xmhrlbai5358" path="res://UI/Button.png" id="9_k3ex8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oe6fe"]
@@ -93,11 +94,18 @@ scale = Vector2(0.676562, 0.687963)
 texture = ExtResource("8_qjcen")
 
 [node name="Título" type="Sprite2D" parent="."]
+position = Vector2(650, 229)
+scale = Vector2(0.345257, 0.345257)
+texture = ExtResource("9_185on")
+
+[node name="Título2" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(654, 229)
 scale = Vector2(0.317293, 0.317293)
 texture = ExtResource("2_28ida")
 
 [node name="Botoes" type="Node2D" parent="."]
+position = Vector2(-18, 11)
 
 [node name="Button3" type="Sprite2D" parent="Botoes"]
 position = Vector2(673.766, 579)
@@ -115,7 +123,7 @@ scale = Vector2(0.473097, 0.579129)
 texture = ExtResource("9_k3ex8")
 
 [node name="MarginContainer" type="MarginContainer" parent="Botoes"]
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 572.766

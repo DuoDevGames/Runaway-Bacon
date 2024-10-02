@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://2f4q3g02yoeb"]
+
+[ext_resource type="Texture2D" uid="uid://ddbh4ti65grkm" path="res://Objetos - Mundo 1/Chão/Terra CAVERNA 1.png" id="1_22je4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gkbqw"]
+size = Vector2(22, 20)
+
+[node name="TerraTopoCaverna" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_22je4")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(21, 10)
+shape = SubResource("RectangleShape2D_gkbqw")

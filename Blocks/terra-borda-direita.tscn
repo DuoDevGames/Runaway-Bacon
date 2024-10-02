@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d0oo5pjdvy18m"]
 
-[ext_resource type="Texture2D" uid="uid://c355ohercae63" path="res://Objetos - Mundo 1/Chão canto direito.png" id="1_2w78d"]
+[ext_resource type="Texture2D" uid="uid://cf4aovyw1q8mq" path="res://Objetos - Mundo 1/Chão/Terra CD.png" id="1_5wxf2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_noyqo"]
 size = Vector2(26, 32)
@@ -12,4 +12,5 @@ position = Vector2(-3, 0)
 shape = SubResource("RectangleShape2D_noyqo")
 
 [node name="ChãoCantoDireito" type="Sprite2D" parent="."]
-texture = ExtResource("1_2w78d")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_5wxf2")

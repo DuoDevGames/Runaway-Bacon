@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://ytyxpyayfdjc"]
+
+[ext_resource type="Texture2D" uid="uid://crhjwybgl1rui" path="res://Sprites - Coitadinho/Coitadinho1.png" id="1_681dv"]
+[ext_resource type="Script" path="res://Characters/area_2d.gd" id="2_comoa"]
+[ext_resource type="Texture2D" uid="uid://brh4vd6i50pdg" path="res://Sprites - Coitadinho/Coitadinho3.png" id="2_gdqb2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hioh6"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("1_681dv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gdqb2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cb20i"]
+size = Vector2(88, 56)
+
+[node name="Coitadinho" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_hioh6")
+autoplay = "default"
+frame_progress = 0.444746
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4096
+collision_mask = 2147483648
+script = ExtResource("2_comoa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-16, 0)
+shape = SubResource("RectangleShape2D_cb20i")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

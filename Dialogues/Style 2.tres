@@ -1,0 +1,79 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=17 format=3 uid="uid://x12dmqbvs7j1"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_1qula"]
+[ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_5scok"]
+[ext_resource type="PackedScene" uid="uid://by6waso0mjpjp" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/textbox_with_speaker_portrait.tscn" id="3_1tjbq"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="4_7yac8"]
+[ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="5_liqd3"]
+[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="6_1660f"]
+[ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="7_2je3f"]
+[ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="8_t0jlb"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="9_qybsk"]
+
+[sub_resource type="Resource" id="Resource_wsa3q"]
+script = ExtResource("1_1qula")
+scene = ExtResource("2_5scok")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_fr3u0"]
+script = ExtResource("1_1qula")
+scene = ExtResource("3_1tjbq")
+overrides = {
+"box_modulate_custom_color": "Color(1, 0.823529, 0.733333, 1)",
+"box_modulate_global_color": "false",
+"box_size": "Vector2(700, 200)",
+"custom_normal_font": "\"res://HUD/Fonte/pixChicago.ttf\"",
+"name_label_color_mode": "2",
+"name_label_custom_color": "Color(1, 0.470588, 0.392157, 1)",
+"name_label_custom_size": "12.0",
+"name_label_customfont": "\"res://HUD/Fonte/pixChicago.ttf\"",
+"name_label_use_global_size": "false",
+"portrait_bg_modulate": "Color(1, 0.470588, 0.392157, 1)",
+"text_custom_color": "Color(0.776471, 0.0862745, 0.254902, 1)",
+"text_use_global_color": "false",
+"text_use_global_size": "false"
+}
+
+[sub_resource type="Resource" id="Resource_7e0lo"]
+script = ExtResource("1_1qula")
+scene = ExtResource("4_7yac8")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_alm7r"]
+script = ExtResource("1_1qula")
+scene = ExtResource("5_liqd3")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_mva27"]
+script = ExtResource("1_1qula")
+scene = ExtResource("6_1660f")
+overrides = {
+"boxes_stylebox_focused": "\"choice_panel_focus.tres\"",
+"boxes_stylebox_hovered": "\"choice_panel_hover.tres\"",
+"font_custom": "\"res://HUD/Fonte/pixChicago.ttf\"",
+"font_size_use_global": "false",
+"font_use_global": "false",
+"text_color_custom": "Color(0.776471, 0.0862745, 0.254902, 1)",
+"text_color_focused": "Color(0.776471, 0.0862745, 0.254902, 1)",
+"text_color_pressed": "Color(0.776471, 0.0862745, 0.254902, 1)",
+"text_color_use_global": "false"
+}
+
+[sub_resource type="Resource" id="Resource_xswve"]
+script = ExtResource("1_1qula")
+scene = ExtResource("8_t0jlb")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_eap6c"]
+script = ExtResource("1_1qula")
+scene = ExtResource("7_2je3f")
+overrides = {}
+
+[resource]
+script = ExtResource("9_qybsk")
+name = "Style 2"
+base_overrides = {
+"global_bg_color": "Color(0.298039, 0.2, 0.113725, 0.901961)"
+}
+layers = Array[ExtResource("1_1qula")]([SubResource("Resource_wsa3q"), SubResource("Resource_fr3u0"), SubResource("Resource_7e0lo"), SubResource("Resource_alm7r"), SubResource("Resource_mva27"), SubResource("Resource_xswve"), SubResource("Resource_eap6c")])
+metadata/_latest_layer = 1

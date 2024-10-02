@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bvsjqy6cqtwv5"]
+
+[ext_resource type="FontFile" uid="uid://hdhavjxsrwrd" path="res://Objetos - Cena 0/Fonte/PixelScript.ttf" id="1_8u8uo"]
+
+[resource]
+font = ExtResource("1_8u8uo")
+font_size = 41
+font_color = Color(0, 0, 0, 1)

@@ -15,6 +15,3 @@ func _process(_delta):
 	if !player:
 		await get_tree().create_timer(1).timeout
 		gos.visible = true
-
-
-

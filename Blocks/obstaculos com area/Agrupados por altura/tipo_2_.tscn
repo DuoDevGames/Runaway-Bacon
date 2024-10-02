@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c33suml4qwypf"]
+
+[ext_resource type="PackedScene" uid="uid://djspu74auelwm" path="res://Blocks/obstaculos com area/baixo_obstaculo_com_area.tscn" id="1_iqani"]
+[ext_resource type="PackedScene" uid="uid://cnmcp8137tn8k" path="res://Blocks/obstaculos com area/cima_obstaculo_com_area.tscn" id="2_u20ld"]
+
+[node name="Tipo2_" type="Node2D"]
+
+[node name="ObstaculoComArea" parent="." instance=ExtResource("1_iqani")]
+
+[node name="ObstaculoComArea2" parent="." instance=ExtResource("2_u20ld")]
+position = Vector2(0, -32)

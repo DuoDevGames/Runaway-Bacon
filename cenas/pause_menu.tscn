@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_ep1er"]
 [ext_resource type="Theme" uid="uid://bgu3ycq7govpl" path="res://pause_menu_theme.tres" id="1_x7nmk"]
-[ext_resource type="Texture2D" uid="uid://dxnonvynvdirf" path="res://HUD/Pause.png" id="2_tb814"]
+[ext_resource type="Texture2D" uid="uid://cxmmlrr850wpr" path="res://UI/Pause.png" id="2_aaudd"]
 [ext_resource type="Texture2D" uid="uid://j1hn6tii8t8e" path="res://HUD/Lombinho/LombinhoPARADO.png" id="4_b5k84"]
 [ext_resource type="Texture2D" uid="uid://cd6fllsorulxh" path="res://HUD/Lombinho/LombinhoPARADO2.png" id="5_hvx7m"]
 
@@ -61,7 +61,7 @@ color = Color(0, 0, 0, 0.8)
 
 [node name="Pause" type="Sprite2D" parent="."]
 position = Vector2(631, 341)
-texture = ExtResource("2_tb814")
+texture = ExtResource("2_aaudd")
 
 [node name="menu_holder" type="VBoxContainer" parent="."]
 anchors_preset = 14

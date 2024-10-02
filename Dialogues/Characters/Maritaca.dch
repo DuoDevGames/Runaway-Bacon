@@ -21,7 +21,7 @@
 },
 "default_portrait": "Padrão",
 "description": "",
-"display_name": "Maritaca",
+"display_name": "Ninmu",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
@@ -31,7 +31,7 @@
 "image": "\"res://Dialogues/Portraits/Maritaca2.png\""
 },
 "mirror": false,
-"offset": Vector2(-60, 70),
+"offset": Vector2(0, 20),
 "scale": 1.0,
 "scene": ""
 }

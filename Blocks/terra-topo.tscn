@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d3lnsqb2tdxdv"]
 
-[ext_resource type="Texture2D" uid="uid://g28ga4ptd70n" path="res://Objetos - Mundo 1/Terra 01.png" id="1_qpwyi"]
+[ext_resource type="Texture2D" uid="uid://tsenace4npnh" path="res://Objetos - Mundo 1/Chão/Terra MEIO .png" id="1_53574"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ds86o"]
 size = Vector2(32, 31)
@@ -14,4 +14,5 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_ds86o")
 
 [node name="Terra01" type="Sprite2D" parent="."]
-texture = ExtResource("1_qpwyi")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_53574")
