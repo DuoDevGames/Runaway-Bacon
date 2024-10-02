@@ -19,17 +19,17 @@ func _process(_delta):
 					if(Global.flores_arco_iris == 1):
 						start_dialog("Gato 2")
 						player_is_on_area = false
-					if(Global.flores_arco_iris == 0):
+					elif(Global.flores_arco_iris == 0):
 						start_dialog("Gato 5")
 						player_is_on_area = false
-					if(Global.flores_arco_iris == 2):
+					elif(Global.flores_arco_iris == 2):
 						start_dialog("Gato 3")
 						player_is_on_area = false
-					if(Global.flores_arco_iris == 3):
-						start_dialog("Gato 4")
+					elif(Global.flores_arco_iris == 3):
 						Dialogic.timeline_ended.connect(receber_palhas)
+						start_dialog("Gato 4")
+						Dialogic.timeline_ended.disconnect(receber_palhas)
 						player_is_on_area = false
-						#ADICIONAR MAIS CÓDIGO AQUI!!!!!!!!!!!!!!!1
 						Global.missao_gato_completa = true
 				
 	

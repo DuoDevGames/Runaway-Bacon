@@ -54,7 +54,6 @@ func _physics_process(delta):
 		move_and_slide()
 
 func die():
-	Global.palhas = 0
 	Global.coracoes = 3
 	Global.score = 0
 	queue_free()

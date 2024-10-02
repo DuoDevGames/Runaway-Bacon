@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=4 uid="uid://c81kq738lr4mf"]
+[gd_scene load_steps=96 format=4 uid="uid://c81kq738lr4mf"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-02.gd" id="1_ucuin"]
 [ext_resource type="PackedScene" uid="uid://c8q4vxqrdjdpd" path="res://Characters/lombinho.tscn" id="2_tbf1r"]
@@ -396,11 +396,14 @@ scale_min = 1.2
 scale_max = 1.2
 color = Color(0, 0.403922, 1, 0.921569)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_elge5"]
+size = Vector2(48.1695, 187)
+
 [node name="Fase-02" type="Node2D"]
 script = ExtResource("1_ucuin")
 
 [node name="fimdefase" parent="." instance=ExtResource("36_bt5sj")]
-position = Vector2(11688, 424)
+position = Vector2(11704, 432)
 next_level = "res://cenas/history_2_3.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -451,6 +454,7 @@ theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
 
 [node name="coracao-container" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
@@ -602,6 +606,7 @@ centered = false
 
 [node name="Lobo" parent="." instance=ExtResource("41_fed36")]
 position = Vector2(118, 387)
+collision_mask = 16387
 
 [node name="fundofloresta" type="ParallaxBackground" parent="."]
 visible = false
@@ -748,6 +753,15 @@ position = Vector2(11184, 432)
 
 [node name="Lombinho" parent="." instance=ExtResource("2_tbf1r")]
 position = Vector2(304, 416)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(11595.3, 424.473)
+collision_layer = 16384
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-27.2881, -72.4734)
+shape = SubResource("RectangleShape2D_elge5")
 
 [connection signal="timeout" from="HUD/Control/MarginContainer/timer/Timer" to="HUD/Control" method="_on_timer_timeout"]
 [connection signal="body_entered" from="trocadefundo" to="." method="_on_area_2d_body_entered"]
