@@ -746,6 +746,9 @@ motion_mirroring = Vector2(736, 0)
 texture = ExtResource("18_kkyax")
 centered = false
 
+[node name="CanvasModulate" type="CanvasModulate" parent="ParallaxBackground"]
+color = Color(0.341176, 0.407843, 0.6, 1)
+
 [node name="Cerca" type="Sprite2D" parent="."]
 z_index = 5
 position = Vector2(479, 592)
@@ -818,6 +821,9 @@ position = Vector2(664, 460)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("12_rx5vd")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.341176, 0.407843, 0.6, 1)
+
 [node name="Terrain-l3" type="TileMapLayer" parent="."]
 z_index = -1
 position = Vector2(857, 1376)
@@ -834,7 +840,7 @@ position = Vector2(136, 520)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_0efuj")
 autoplay = "correndo"
-frame_progress = 0.146293
+frame_progress = 0.43495
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
