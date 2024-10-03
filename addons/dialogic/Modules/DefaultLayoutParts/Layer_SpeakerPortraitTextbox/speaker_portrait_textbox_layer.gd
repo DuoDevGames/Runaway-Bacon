@@ -36,7 +36,7 @@ enum NameLabelColorModes {GLOBAL_COLOR, CHARACTER_COLOR, CUSTOM_COLOR}
 
 @export_group('Box')
 @export_subgroup("Box")
-@export_file('*.tres') var box_panel: String = this_folder.path_join("default_stylebox.tres")
+@export_file('*.tres') var box_panel: String = "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/default_stylebox.tres"
 @export var box_modulate_global_color: bool = true
 @export var box_modulate_custom_color: Color = Color(0.47247135639191, 0.31728461384773, 0.16592600941658)
 @export var box_size: Vector2 = Vector2(600, 160)

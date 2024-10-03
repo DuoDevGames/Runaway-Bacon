@@ -10,6 +10,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	MusicController.stop_fase1_music()
 	Global.palhas = 10
 	player.SPEED = 300
 	Global.fase2 = true

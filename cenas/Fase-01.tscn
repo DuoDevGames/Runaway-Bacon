@@ -4213,7 +4213,6 @@ texture = ExtResource("24_hkukr")
 
 [node name="Bloco Atravessavel 3" type="Sprite2D" parent="Obstaculos"]
 position = Vector2(1888, 496)
-scale = Vector2(1, 1)
 texture = ExtResource("24_hkukr")
 
 [node name="Bloco Voador 3" parent="Obstaculos" instance=ExtResource("58_nj7g2")]
