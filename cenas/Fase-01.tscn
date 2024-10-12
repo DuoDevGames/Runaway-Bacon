@@ -1,4 +1,4 @@
-[gd_scene load_steps=126 format=4 uid="uid://ctp0qyrr86hdc"]
+[gd_scene load_steps=125 format=4 uid="uid://ctp0qyrr86hdc"]
 
 [ext_resource type="Script" path="res://Scripts/Fase-01.gd" id="1_162om"]
 [ext_resource type="Texture2D" uid="uid://caovh0w484aiw" path="res://Background/Céu.png" id="1_a4tlf"]
@@ -70,7 +70,6 @@
 [ext_resource type="Texture2D" uid="uid://dxydexj8poe2g" path="res://Objetos - Mundo 1/Chão/Terra DENTRO CAVERNA 1.png" id="47_j0x6g"]
 [ext_resource type="Texture2D" uid="uid://dfokngta2jukl" path="res://Objetos - Mundo 1/Árvores/Arvore1.png" id="52_ep8lo"]
 [ext_resource type="Texture2D" uid="uid://cdu5uoy4hteew" path="res://Objetos - Mundo 1/Cerca.png" id="53_7i67l"]
-[ext_resource type="Texture2D" uid="uid://bg446ap2fi1qj" path="res://Objetos - Mundo 1/MadeiraEmPéCima.png" id="53_th53b"]
 [ext_resource type="PackedScene" uid="uid://bt5ygil0hku1j" path="res://Enemies/Raposa1.tscn" id="56_800oj"]
 [ext_resource type="PackedScene" uid="uid://pdd43txu2ir5" path="res://cenas/game_over_screen.tscn" id="56_oqbwd"]
 [ext_resource type="PackedScene" uid="uid://5cia04jkurn0" path="res://Blocks/bloco_voador_azul.tscn" id="58_nj7g2"]
@@ -4136,7 +4135,7 @@ position = Vector2(1920, 496)
 position = Vector2(1792, 496)
 
 [node name="StaticBody2D26" parent="Obstaculos" instance=ExtResource("11_dfgtr")]
-position = Vector2(1888, 408)
+position = Vector2(1888, 400)
 
 [node name="StaticBody2D27" parent="Obstaculos" instance=ExtResource("11_dfgtr")]
 position = Vector2(1856, 432)
@@ -4154,7 +4153,7 @@ position = Vector2(1920, 400)
 position = Vector2(1920, 464)
 
 [node name="StaticBody2D99" parent="Obstaculos" instance=ExtResource("12_kkjsa")]
-position = Vector2(1888, 440)
+position = Vector2(1888, 432)
 
 [node name="StaticBody2D51" parent="Obstaculos" instance=ExtResource("10_61aou")]
 position = Vector2(2096, 496)
@@ -4200,16 +4199,8 @@ position = Vector2(5872, 304)
 move_speed = 4
 distance = 120
 
-[node name="Bloco Atravessavel 1" type="Sprite2D" parent="Obstaculos"]
-position = Vector2(1856, 464)
-texture = ExtResource("23_q7r4t")
-
-[node name="Bloco Atravessavel 6" type="Sprite2D" parent="Obstaculos"]
-position = Vector2(1824, 464)
-texture = ExtResource("53_th53b")
-
 [node name="Bloco Atravessavel 4" type="Sprite2D" parent="Obstaculos"]
-position = Vector2(1888, 472)
+position = Vector2(1888, 464)
 texture = ExtResource("23_q7r4t")
 
 [node name="Bloco Atravessavel 2" type="Sprite2D" parent="Obstaculos"]
@@ -4221,8 +4212,7 @@ position = Vector2(1824, 496)
 texture = ExtResource("24_hkukr")
 
 [node name="Bloco Atravessavel 3" type="Sprite2D" parent="Obstaculos"]
-position = Vector2(1888, 500)
-scale = Vector2(1, 0.75)
+position = Vector2(1888, 496)
 texture = ExtResource("24_hkukr")
 
 [node name="Bloco Voador 3" parent="Obstaculos" instance=ExtResource("58_nj7g2")]
@@ -5246,6 +5236,12 @@ position = Vector2(52, 287)
 
 [node name="Teleporter-out" parent="." instance=ExtResource("70_k1tic")]
 position = Vector2(3715, 467)
+
+[node name="StaticBody2D27" parent="." instance=ExtResource("11_dfgtr")]
+position = Vector2(1824, 464)
+
+[node name="StaticBody2D99" parent="." instance=ExtResource("12_kkjsa")]
+position = Vector2(1856, 464)
 
 [connection signal="body_entered" from="Missao/UpdateArea" to="." method="_on_update_area_body_entered"]
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]

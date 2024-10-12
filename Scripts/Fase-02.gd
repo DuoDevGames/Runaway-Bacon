@@ -10,6 +10,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	MusicController.stop_fase1_music()
+	Global.palhas = 10
 	player.SPEED = 300
 	Global.fase2 = true
 	_reset_var()
@@ -26,7 +28,7 @@ func _process(_delta):
 #func _on_area_2d_body_entered(body):
 #	if body.name == player.name:
 #		fundofloresta.visible = true
-#d		fundofazenda.visible = false
+#		fundofazenda.visible = false
 
 func _reset_var():
 	Global.coracoes = 1
